@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'LTFunctional_Example' do
+  pod 'LTFunctional', :path => '../'
+
+  target 'LTFunctional_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  end
+end
