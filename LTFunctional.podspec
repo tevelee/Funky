@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LTFunctional'
-  s.version          = '0.1.0'
+  s.version          = '0.1'
   s.summary          = 'A short description of LTFunctional.'
 
 # This description is used to generate tags and improve search results.
@@ -29,14 +29,40 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.frameworks = 'Foundation'
 
-  s.source_files = 'LTFunctional/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'LTFunctional' => ['LTFunctional/Assets/*.png']
-  # }
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'LTFunctional/Core/**/*'
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'Collections' do |ss|
+    ss.subspec 'Array' do |sss|
+      sss.source_files = 'LTFunctional/Collections/Array/**/*'
+    end
+
+    ss.subspec 'Set' do |sss|
+      sss.source_files = 'LTFunctional/Collections/Set/**/*'
+    end
+
+    ss.subspec 'Dictionary' do |sss|
+      sss.source_files = 'LTFunctional/Collections/Dictionary/**/*'
+    end
+  end
+
+  s.subspec 'Interface' do |ss|
+    ss.subspec 'Array' do |sss|
+      sss.source_files = 'LTFunctional/Interface/Array/**/*'
+      sss.dependency 'LTFunctional/Core'
+    end
+
+    ss.subspec 'Set' do |sss|
+      sss.source_files = 'LTFunctional/Interface/Set/**/*'
+      sss.dependency 'LTFunctional/Core'
+    end
+
+    ss.subspec 'Dictionary' do |sss|
+      sss.source_files = 'LTFunctional/Interface/Dictionary/**/*'
+      sss.dependency 'LTFunctional/Core'
+    end
+  end
 end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1D81FC1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1D81FB1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m */; };
+		3AC28F461E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC28F451E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m */; };
+		3AC28F481E82EDE8008251A2 /* LTNSArraySubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC28F471E82EDE8008251A2 /* LTNSArraySubclassTests.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -38,9 +41,12 @@
 
 /* Begin PBXFileReference section */
 		19B394B466610E6E349DFBD6 /* Pods-LTFunctional_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTFunctional_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTFunctional_Tests/Pods-LTFunctional_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A1D81FB1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCollectionUtilitiesTests.m; sourceTree = "<group>"; };
+		3AC28F451E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTNilTolerantNSArrayTests.m; sourceTree = "<group>"; };
+		3AC28F471E82EDE8008251A2 /* LTNSArraySubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTNSArraySubclassTests.m; sourceTree = "<group>"; };
 		3B4FB3DEB95A7CF9258573DD /* Pods_LTFunctional_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTFunctional_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4D80BF1D440C5AF59D79B1 /* Pods-LTFunctional_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTFunctional_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTFunctional_Tests/Pods-LTFunctional_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4D582700A5044CD3B612A857 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4D582700A5044CD3B612A857 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LTFunctional_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTFunctional_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,8 +71,8 @@
 		99ACC254D846631E2D51D27F /* Pods-LTFunctional_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTFunctional_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTFunctional_Example/Pods-LTFunctional_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B2CEA67F446A347461104995 /* Pods-LTFunctional_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTFunctional_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTFunctional_Example/Pods-LTFunctional_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D9AB7CCF8E506B18696679F6 /* Pods_LTFunctional_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTFunctional_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF14B277059DDE0014A5ADDD /* LTFunctional.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LTFunctional.podspec; path = ../LTFunctional.podspec; sourceTree = "<group>"; };
-		F38F184A1DF26439875A480C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EF14B277059DDE0014A5ADDD /* LTFunctional.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LTFunctional.podspec; path = ../LTFunctional.podspec; sourceTree = "<group>"; };
+		F38F184A1DF26439875A480C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,9 @@
 			children = (
 				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				3A1D81FB1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m */,
+				3AC28F451E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m */,
+				3AC28F471E82EDE8008251A2 /* LTNSArraySubclassTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -404,6 +413,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC28F461E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m in Sources */,
+				3A1D81FC1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m in Sources */,
+				3AC28F481E82EDE8008251A2 /* LTNSArraySubclassTests.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

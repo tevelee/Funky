@@ -1,0 +1,43 @@
+PODS:
+  - Expecta (1.0.5)
+  - LTFunctional (0.1):
+    - LTFunctional/Collections (= 0.1)
+    - LTFunctional/Core (= 0.1)
+    - LTFunctional/Interface (= 0.1)
+  - LTFunctional/Collections (0.1):
+    - LTFunctional/Collections/Array (= 0.1)
+    - LTFunctional/Collections/Dictionary (= 0.1)
+    - LTFunctional/Collections/Set (= 0.1)
+  - LTFunctional/Collections/Array (0.1)
+  - LTFunctional/Collections/Dictionary (0.1)
+  - LTFunctional/Collections/Set (0.1)
+  - LTFunctional/Core (0.1)
+  - LTFunctional/Interface (0.1):
+    - LTFunctional/Interface/Array (= 0.1)
+    - LTFunctional/Interface/Dictionary (= 0.1)
+    - LTFunctional/Interface/Set (= 0.1)
+  - LTFunctional/Interface/Array (0.1):
+    - LTFunctional/Core
+  - LTFunctional/Interface/Dictionary (0.1):
+    - LTFunctional/Core
+  - LTFunctional/Interface/Set (0.1):
+    - LTFunctional/Core
+  - Specta (1.0.6)
+
+DEPENDENCIES:
+  - Expecta
+  - LTFunctional (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  LTFunctional:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  LTFunctional: 0ec6088ed5888a783a51fcea9ca1e4ab4fc96f7c
+  Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
+
+PODFILE CHECKSUM: fdc0787da1c504552e1f8778320e37eeb595db26
+
+COCOAPODS: 1.1.1
