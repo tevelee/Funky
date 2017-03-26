@@ -11,4 +11,6 @@
 
 @interface NSMutableArraySubclass : NSMutableArray <Counterpart>
 
+- (NSMutableArray*)NSMutableArray;
+
 @end

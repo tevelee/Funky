@@ -17,6 +17,11 @@
 
 @implementation NSArraySubclass
 
+- (NSArray *)NSArray
+{
+    return [NSArray arrayWithArray:self.backingArray];
+}
+
 #pragma mark - NSArray initializers
 
 - (instancetype)initWithArray:(NSArray *)array

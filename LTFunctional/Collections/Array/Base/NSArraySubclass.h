@@ -11,4 +11,6 @@
 
 @interface NSArraySubclass : NSArray <Counterpart>
 
+- (NSArray*)NSArray;
+
 @end

@@ -17,7 +17,25 @@
 
 @implementation NSMutableArraySubclass
 
+- (NSMutableArray *)NSMutableArray
+{
+    return [NSMutableArray arrayWithArray:self.backingArray];
+}
+
 #pragma mark - NSArray initializers
+
+- (instancetype)initWithCapacity:(NSUInteger)numItems
+{
+    self = [super init];
+    
+    if (self == nil) {
+        return nil;
+    }
+    
+    _backingArray = [NSMutableArray arrayWithCapacity:numItems];
+    
+    return self;
+}
 
 - (instancetype)initWithArray:(NSArray *)array
 {
