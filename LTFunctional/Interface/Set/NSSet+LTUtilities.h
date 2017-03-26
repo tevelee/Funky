@@ -8,34 +8,34 @@
 
 #import <Foundation/Foundation.h>
 #import "LTMutableCollectionWithCapacityProtocol.h"
-#import "LTCollectionCounterpartProtocol.h"
 
-@interface NSSet <__covariant ObjectType> (LTUtilities) <LTCollectionCounterpart>
+@interface NSSet <__covariant ObjectType> (LTUtilities)
 
 - (BOOL)all:(BOOL(^)(ObjectType item))block;
 - (BOOL)none:(BOOL(^)(ObjectType item))block;
 - (BOOL)contains:(BOOL(^)(ObjectType item))block;
+- (NSUInteger)count:(BOOL(^)(ObjectType item))block;
 
-- (NSArray*)map:(id(^)(ObjectType item))block;
-- (NSArray*)flatMap:(id(^)(ObjectType item))block;
-- (NSArray*)filter:(BOOL(^)(ObjectType item))block;
-- (NSArray*)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
-- (NSArray*)flattened;
-- (NSArray*)merge:(NSArray*)collection;
+- (NSSet*)map:(id(^)(ObjectType item))block;
+- (NSSet*)flatMap:(id(^)(ObjectType item))block;
+- (NSSet*)filter:(BOOL(^)(ObjectType item))block;
+- (id)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
+- (NSSet*)flattened;
+- (NSSet*)merge:(NSSet*)collection;
 
 - (void)forEach:(void(^)(ObjectType item))block;
 - (void)forEachWithIndex:(void(^)(NSUInteger index, ObjectType item))block;
 
-- (NSDictionary*)groupByUsingFirst:(id(^)(ObjectType item))block;
-- (NSDictionary*)groupByUsingLast:(id(^)(ObjectType item))block;
+- (NSDictionary*)groupBy:(id(^)(ObjectType item))block;
 - (NSDictionary<id, NSArray*>*)associateBy:(id(^)(ObjectType item))block;
 
 - (double)sum:(double(^)(ObjectType item))block;
+- (double)average:(double(^)(ObjectType item))block;
 - (double)minValue:(double(^)(ObjectType item))block;
 - (double)maxValue:(double(^)(ObjectType item))block;
 
-- (NSArray*)minItems:(double(^)(ObjectType item))block;
-- (NSArray*)maxItems:(double(^)(ObjectType item))block;
+- (NSSet*)minItems:(double(^)(ObjectType item))block;
+- (NSSet*)maxItems:(double(^)(ObjectType item))block;
 
 @end
 

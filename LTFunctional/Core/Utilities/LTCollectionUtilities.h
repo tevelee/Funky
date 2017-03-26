@@ -22,6 +22,7 @@
 - (BOOL)all:(BOOL(^)(id item))block;
 - (BOOL)none:(BOOL(^)(id item))block;
 - (BOOL)contains:(BOOL(^)(id item))block;
+- (NSUInteger)count:(BOOL(^)(id item))block;
 - (id)reduce:(id(^)(id value, id item))block withInitialValue:(id)start;
 - (id)flattened;
 - (id)merge:(id)collection;
@@ -32,6 +33,7 @@
 - (NSDictionary<id, NSArray*>*)associateBy:(id(^)(id item))block;
 
 - (double)sum:(double(^)(id item))block;
+- (double)average:(double(^)(id item))block;
 - (double)minValue:(double(^)(id item))block;
 - (double)maxValue:(double(^)(id item))block;
 - (id)minItems:(double(^)(id item))block;

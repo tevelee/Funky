@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <LTFunctional/NSArray+LTUtilities.h>
-#import <LTFunctional/NSArray+LTComparator.h>
+#import <LTFunctional/LTSort.h>
 
 @interface Person : NSObject
 
@@ -64,7 +64,7 @@
     }];
     LTSortingBucket* allTheRest = [LTSortingBucket bucketWithAllTheRest];
     
-    NSArray* sorted = [self.items sortedArrayUsingComparator:[NSArray comparatorWithBuckets:@[allTheRest, firstNameL] defaultInnerBucketComparator:self.personComparator]];
+    NSArray* sorted = [self.items sortedArrayUsingComparator:[LTSort comparatorWithBuckets:@[allTheRest, firstNameL] defaultInnerBucketComparator:self.personComparator]];
     
     XCTAssertEqualObjects([sorted[5] firstName], @"L");
     XCTAssertEqualObjects([sorted[5] lastName], @"E");
@@ -90,7 +90,7 @@
     }];
     LTSortingBucket* allTheRest = [LTSortingBucket bucketWithAllTheRest];
     
-    NSArray* sorted = [self.items sortedArrayUsingComparator:[NSArray comparatorWithBuckets:@[firstNameL, lastNameT, allTheRest, ageOver28] defaultInnerBucketComparator:self.personComparator]];
+    NSArray* sorted = [self.items sortedArrayUsingComparator:[LTSort comparatorWithBuckets:@[firstNameL, lastNameT, allTheRest, ageOver28] defaultInnerBucketComparator:self.personComparator]];
     
     XCTAssertEqualObjects([sorted[0] firstName], @"L");
     XCTAssertEqualObjects([sorted[0] lastName], @"E");
@@ -133,16 +133,16 @@
 
 - (NSComparator)personComparator
 {
-    NSComparator firstName = [NSArray propertyComparator:^id(Person* person) {
+    NSComparator firstName = [LTSort propertyComparator:^id(Person* person) {
         return person.firstName;
     }];
-    NSComparator lastName = [NSArray propertyComparator:^id(Person* person) {
+    NSComparator lastName = [LTSort propertyComparator:^id(Person* person) {
         return person.lastName;
     }];
-    NSComparator age = [NSArray propertyComparator:^id(Person* person) {
+    NSComparator age = [LTSort propertyComparator:^id(Person* person) {
         return @(person.age);
     }];
-    return [NSArray prioritizedComparator:@[firstName, lastName, age]];
+    return [LTSort prioritizedComparator:@[firstName, lastName, age]];
 }
 
 - (void)testBoolComparator
@@ -150,12 +150,12 @@
     NSArray* numbers = @[@10, @9, @1, @2, @7, @6, @8, @3, @5, @4, @0, @5];
     
     NSArray* sortedAsc = @[@0, @1, @2, @3, @4, @5, @5, @6, @7, @8, @9, @10];
-    XCTAssertEqualObjects(sortedAsc, [numbers sortedArrayUsingComparator:[NSArray boolComparator:^BOOL(NSNumber* obj1, NSNumber* obj2) {
+    XCTAssertEqualObjects(sortedAsc, [numbers sortedArrayUsingComparator:[LTSort boolComparator:^BOOL(NSNumber* obj1, NSNumber* obj2) {
         return obj1.intValue < obj2.intValue;
     }]]);
     
     NSArray* sortedDesc = @[@10, @9, @8, @7, @6, @5, @5, @4, @3, @2, @1, @0];
-    XCTAssertEqualObjects(sortedDesc, [numbers sortedArrayUsingComparator:[NSArray boolComparator:^BOOL(NSNumber* obj1, NSNumber* obj2) {
+    XCTAssertEqualObjects(sortedDesc, [numbers sortedArrayUsingComparator:[LTSort boolComparator:^BOOL(NSNumber* obj1, NSNumber* obj2) {
         return obj1.intValue > obj2.intValue;
     }]]);
 }

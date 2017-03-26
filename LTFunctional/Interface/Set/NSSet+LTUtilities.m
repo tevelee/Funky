@@ -8,86 +8,65 @@
 
 #import "NSSet+LTUtilities.h"
 #import "LTArrayUtilities.h"
+#import "NSSet+LTCore.h"
 
 @implementation NSSet (LTUtilities)
-
-#pragma mark - LTCollectionCounterpart
-
-+ (Class)classForImmutableCounterPart
-{
-    return [NSSet class];
-}
-
-+ (Class)classForMutableCounterPart
-{
-    return [NSMutableSet class];
-}
-
-+ (Class)classToFlatten
-{
-    return [NSSet class];
-}
 
 #pragma mark - Utilities
 
 - (BOOL)all:(BOOL (^)(id))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils all:block];
+    return [self.utilities all:block];
 }
 
 - (BOOL)none:(BOOL (^)(id))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils none:block];
+    return [self.utilities none:block];
 }
 
 - (BOOL)contains:(BOOL (^)(id))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils contains:block];
+    return [self.utilities contains:block];
 }
 
-- (NSArray*)map:(id(^)(id))block
+- (NSUInteger)count:(BOOL(^)(id item))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils map:block];
+    return [self.utilities count:block];
 }
 
-- (NSArray *)flatMap:(id (^)(id))block
+- (NSSet*)map:(id(^)(id))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils flatMap:block];
+    return [self.utilities map:block];
 }
 
-- (NSArray *)filter:(BOOL (^)(id))block
+- (NSSet *)flatMap:(id (^)(id))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils filter:block];
+    return [self.utilities flatMap:block];
 }
 
-- (NSArray*)reduce:(id(^)(id value, id item))block withInitialValue:(id)start
+- (NSSet *)filter:(BOOL (^)(id))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils reduce:block withInitialValue:start];
+    return [self.utilities filter:block];
 }
 
-- (NSArray*)flattened
+- (id)reduce:(id(^)(id value, id item))block withInitialValue:(id)start
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils flattened];
+    return [self.utilities reduce:block withInitialValue:start];
 }
 
-- (NSArray*)merge:(NSArray*)collection
+- (NSSet*)flattened
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils merge:collection];
+    return [self.utilities flattened];
+}
+
+- (NSSet*)merge:(NSSet*)collection
+{
+    return [self.utilities merge:collection];
 }
 
 - (void)forEach:(void(^)(id item))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils forEach:block];
+    return [self.utilities forEach:block];
 }
 
 - (void)forEachWithIndex:(void(^)(NSUInteger index, id item))block
@@ -96,52 +75,44 @@
     return [utils forEachWithIndex:block];
 }
 
-- (NSDictionary*)groupByUsingFirst:(id(^)(id item))block
+- (NSDictionary*)groupBy:(id(^)(id item))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils groupByUsingFirst:block];
-}
-
-- (NSDictionary*)groupByUsingLast:(id(^)(id item))block
-{
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils groupByUsingLast:block];
+    return [self.utilities groupByUsingLast:block];
 }
 
 - (NSDictionary<id, NSArray*>*)associateBy:(id(^)(id item))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils associateBy:block];
+    return [self.utilities associateBy:block];
 }
 
 - (double)sum:(double(^)(id item))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils sum:block];
+    return [self.utilities sum:block];
+}
+
+- (double)average:(double(^)(id item))block
+{
+    return [self.utilities average:block];
 }
 
 - (double)minValue:(double(^)(id item))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils minValue:block];
+    return [self.utilities minValue:block];
 }
 
 - (double)maxValue:(double(^)(id item))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils maxValue:block];
+    return [self.utilities maxValue:block];
 }
 
-- (NSArray*)minItems:(double(^)(id item))block
+- (NSSet*)minItems:(double(^)(id item))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils minItems:block];
+    return [self.utilities minItems:block];
 }
 
-- (NSArray*)maxItems:(double(^)(id item))block
+- (NSSet*)maxItems:(double(^)(id item))block
 {
-    LTCollectionUtilities* utils = [LTCollectionUtilities utilitiesWithObject:self];
-    return [utils maxItems:block];
+    return [self.utilities maxItems:block];
 }
 
 @end

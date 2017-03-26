@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LTCollectionUtilities.h"
 #import "LTSortingBucket.h"
+#import "LTFilterPredicateProtocol.h"
 
 @interface LTArrayUtilities : LTCollectionUtilities
 
@@ -42,5 +43,11 @@
 - (NSComparator)comparatorWithBuckets:(NSArray<LTSortingBucket*>*)buckets;
 - (NSComparator)comparatorWithBuckets:(NSArray<LTSortingBucket*>*)buckets defaultInnerBucketComparator:(NSComparator)defaultInnerBucketComparator;
 - (NSComparator)boolComparator:(BOOL(^)(id obj1, id obj2))comparator;
+
+- (LTFilterPredicate)predicateForEquality:(id)object;
+- (LTFilterPredicate)predicateForSubclass:(Class)objectClass;
+- (LTFilterPredicate)predicateForClass:(Class)objectClass;
+- (LTFilterPredicate)predicateForSelector:(SEL)selector;
+
 
 @end

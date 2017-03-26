@@ -279,4 +279,34 @@
     };
 }
 
+#pragma mark - Filter
+
+- (LTFilterPredicate)predicateForEquality:(id)object
+{
+    return ^BOOL(id other) {
+        return [other isEqual:object];
+    };
+}
+
+- (LTFilterPredicate)predicateForSubclass:(Class)objectClass
+{
+    return ^BOOL(id other) {
+        return [other isKindOfClass:objectClass];
+    };
+}
+
+- (LTFilterPredicate)predicateForClass:(Class)objectClass
+{
+    return ^BOOL(id other) {
+        return [other isMemberOfClass:objectClass];
+    };
+}
+
+- (LTFilterPredicate)predicateForSelector:(SEL)selector
+{
+    return ^BOOL(id other) {
+        return [other respondsToSelector:selector];
+    };
+}
+
 @end

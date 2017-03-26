@@ -26,11 +26,13 @@ PODS:
     - LTFunctional/Core
   - LTFunctional/Interface/Set (0.1):
     - LTFunctional/Core
+  - OCMock (3.4)
   - Specta (1.0.6)
 
 DEPENDENCIES:
   - Expecta
   - LTFunctional (from `../`)
+  - OCMock
   - Specta
 
 EXTERNAL SOURCES:
@@ -40,8 +42,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   LTFunctional: 964f95247c35e65d6b704d073ca3dc6d427728d6
+  OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: fdc0787da1c504552e1f8778320e37eeb595db26
+PODFILE CHECKSUM: a30549a362c22cfeba4a3bcece566bb4185e45e1
 
 COCOAPODS: 1.1.1

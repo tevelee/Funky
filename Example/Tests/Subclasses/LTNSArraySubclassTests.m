@@ -162,7 +162,7 @@
 
 #pragma mark - nil
 
-- (void)test_addNil_fails {
+- (void)test_addingNil_throwsException {
     @try {
         NSNumber* nilValue = nil;
         [LTNilStoringNSArray arrayWithObject:nilValue];

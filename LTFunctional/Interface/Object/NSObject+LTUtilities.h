@@ -10,4 +10,6 @@
 
 @interface NSObject (LTUtilities)
 
+- (instancetype)apply:(void (^)(id object))block;
+
 @end

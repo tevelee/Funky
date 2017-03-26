@@ -55,6 +55,17 @@
     return NO;
 }
 
+- (NSUInteger)count:(BOOL(^)(id item))block
+{
+    NSInteger count = 0;
+    for (id item in self.object) {
+        if (block(item)) {
+            count++;
+        }
+    }
+    return count;
+}
+
 - (BOOL)all:(BOOL (^)(id))block
 {
     for (id item in self.object) {
@@ -88,9 +99,9 @@
 {
     return [self mapToAnother:^(id item, id<LTMutableCollection> collection) {
         if ([item isKindOfClass:[collection.class classToFlatten]]) {
-            for (id current in item) {
-                LTCollectionUtilities* utilsForItem = [LTCollectionUtilities utilitiesWithObject:current];
-                [collection addObject:[utilsForItem flattened]];
+            LTCollectionUtilities* utilsForItem = [LTCollectionUtilities utilitiesWithObject:item];
+            for (id current in [utilsForItem flattened]) {
+                [collection addObject:current];
             }
         } else {
             [collection addObject:item];
@@ -141,9 +152,12 @@
     
     [self forEach:^(id item) {
         id key = block(item);
-        NSArray* items = dictionary[key] ?: @[];
-        items = [items arrayByAddingObject:item];
-        dictionary[key] = items;
+        id<LTCollection> items = dictionary[key] ?: [[self.object.class classForImmutableCounterPart] new];
+        
+        id<LTMutableCollection> mutableItems = [items mutableCopy];
+        [mutableItems addObject:item];
+        
+        dictionary[key] = [mutableItems copy];
     }];
     
     return dictionary.copy;
@@ -180,6 +194,11 @@
     } withInitialValue:@0] doubleValue];
 }
 
+- (double)average:(double (^)(id))block
+{
+    return [self sum:block] / [self.object count];
+}
+
 - (id)minItems:(double (^)(id))block
 {
     __block NSNumber* minValue = nil;
@@ -191,6 +210,7 @@
         if (value == minValue.doubleValue) {
             [collection addObject:item];
         } else if (value < minValue.doubleValue) {
+            minValue = @(value);
             [collection removeAllObjects];
             [collection addObject:item];
         }
@@ -208,6 +228,7 @@
         if (value == maxValue.doubleValue) {
             [collection addObject:item];
         } else if (value > maxValue.doubleValue) {
+            maxValue = @(value);
             [collection removeAllObjects];
             [collection addObject:item];
         }

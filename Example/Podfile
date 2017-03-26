@@ -5,8 +5,8 @@ target 'LTFunctional_Example' do
 
   target 'LTFunctional_Tests' do
     inherit! :search_paths
-
+    pod 'OCMock'
     pod 'Specta'
-  pod 'Expecta'
+    pod 'Expecta'
   end
 end

@@ -1,5 +1,5 @@
 //
-//  NSArray+LTComparator.h
+//  LTSort.h
 //  Pods
 //
 //  Created by László Teveli on 2017. 03. 26..
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LTSortingBucket.h"
 
-@interface NSArray (LTComparator)
+@interface LTSort : NSObject
 
 + (NSComparator)lexicographicalComparator;
 + (NSComparator)propertyComparator:(LTSortComparablePropertyProviderBlock)propertyBlock;

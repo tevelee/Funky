@@ -5,12 +5,29 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6003F5AD195388D20070C39A"
+               BuildableName = "LTFunctional_Tests.xctest"
+               BlueprintName = "LTFunctional_Tests"
+               ReferencedContainer = "container:LTFunctional.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -21,6 +38,11 @@
                BlueprintName = "LTFunctional_Tests"
                ReferencedContainer = "container:LTFunctional.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "LTNSArray_UtilitiesTests/test_map_callsUtilitiyClass">
+               </Test>
+            </SkippedTests>
             <LocationScenarioReference
                identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
                referenceType = "1">
@@ -30,9 +52,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F589195388D20070C39A"
-            BuildableName = "LTFunctional_Example.app"
-            BlueprintName = "LTFunctional_Example"
+            BlueprintIdentifier = "6003F5AD195388D20070C39A"
+            BuildableName = "LTFunctional_Tests.xctest"
+            BlueprintName = "LTFunctional_Tests"
             ReferencedContainer = "container:LTFunctional.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -49,6 +71,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6003F5AD195388D20070C39A"
+            BuildableName = "LTFunctional_Tests.xctest"
+            BlueprintName = "LTFunctional_Tests"
+            ReferencedContainer = "container:LTFunctional.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -58,6 +89,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6003F5AD195388D20070C39A"
+            BuildableName = "LTFunctional_Tests.xctest"
+            BlueprintName = "LTFunctional_Tests"
+            ReferencedContainer = "container:LTFunctional.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

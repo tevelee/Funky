@@ -8,14 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "LTMutableCollectionWithCapacityProtocol.h"
-#import "LTCollectionCounterpartProtocol.h"
 
-
-@interface NSArray <__covariant ObjectType> (LTUtilities) <LTCollectionCounterpart>
+@interface NSArray <__covariant ObjectType> (LTUtilities)
 
 - (BOOL)all:(BOOL(^)(ObjectType item))block;
 - (BOOL)none:(BOOL(^)(ObjectType item))block;
 - (BOOL)contains:(BOOL(^)(ObjectType item))block;
+- (NSUInteger)count:(BOOL(^)(ObjectType item))block;
 
 - (NSArray*)map:(id(^)(ObjectType item))block;
 - (NSArray*)flatMap:(id(^)(ObjectType item))block;
@@ -32,6 +31,7 @@
 - (NSDictionary<id, NSArray*>*)associateBy:(id(^)(ObjectType item))block;
 
 - (double)sum:(double(^)(ObjectType item))block;
+- (double)average:(double(^)(ObjectType item))block;
 - (double)minValue:(double(^)(ObjectType item))block;
 - (double)maxValue:(double(^)(ObjectType item))block;
 
