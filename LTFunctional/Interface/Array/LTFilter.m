@@ -7,33 +7,35 @@
 //
 
 #import "LTFilter.h"
-#import "LTArrayUtilities.h"
 
 @implementation LTFilter
 
-+ (LTArrayUtilities*)utilities
-{
-    return [LTArrayUtilities utilitiesWithObject:self];
-}
-
 + (LTFilterPredicate)equalTo:(id)object
 {
-    return [self.utilities predicateForEquality:object];
+    return ^BOOL(id other) {
+        return [other isEqual:object];
+    };
 }
 
 + (LTFilterPredicate)isKindOfClass:(Class)objectClass
 {
-    return [self.utilities predicateForSubclass:objectClass];
+    return ^BOOL(id other) {
+        return [other isKindOfClass:objectClass];
+    };
 }
 
 + (LTFilterPredicate)isMemberOfClass:(Class)objectClass
 {
-    return [self.utilities predicateForClass:objectClass];
+    return ^BOOL(id other) {
+        return [other isMemberOfClass:objectClass];
+    };
 }
 
 + (LTFilterPredicate)respondsToSelector:(SEL)selector
 {
-    return [self.utilities predicateForSelector:selector];
+    return ^BOOL(id other) {
+        return [other respondsToSelector:selector];
+    };
 }
 
 @end

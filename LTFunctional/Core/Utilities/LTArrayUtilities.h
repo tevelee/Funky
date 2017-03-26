@@ -8,46 +8,52 @@
 
 #import <Foundation/Foundation.h>
 #import "LTCollectionUtilities.h"
-#import "LTSortingBucket.h"
 #import "LTFilterPredicateProtocol.h"
 
 @interface LTArrayUtilities : LTCollectionUtilities
 
-- (NSInteger)minIndex;
-- (NSInteger)maxIndex;
+- (NSUInteger)firstIndex;
+- (NSUInteger)lastIndex;
+
+- (NSArray*)mapWithIndex:(id(^)(NSUInteger index, id item))block;
+- (NSArray*)flatMapWithIndex:(id(^)(NSUInteger index, id item))block;
 
 - (id)first:(BOOL(^)(id item))block;
+- (NSUInteger)firstIndex:(BOOL(^)(id item))block;
 - (id)last:(BOOL(^)(id item))block;
+- (NSUInteger)lastIndex:(BOOL(^)(id item))block;
 
-- (id)take:(BOOL(^)(id item))block;
-- (id)takeLast:(BOOL(^)(id item))block;
+- (NSArray*)take:(BOOL(^)(id item))block;
+- (NSArray*)takeLast:(BOOL(^)(id item))block;
 
-- (id)untilValue:(id)value;
-- (id)untilIndex:(NSInteger)index;
+- (NSArray*)fromValueExclusive:(id)value;
+- (NSArray*)fromValueInclusive:(id)value;
+- (NSArray*)fromIndexExclusive:(NSInteger)index;
+- (NSArray*)fromIndexInclusive:(NSInteger)index;
 
-- (id)fromValue:(id)value;
-- (id)fromIndex:(NSInteger)index;
+- (NSArray*)untilValueExclusive:(id)value;
+- (NSArray*)untilValueInclusive:(id)value;
+- (NSArray*)untilIndexExclusive:(NSInteger)index;
+- (NSArray*)untilIndexInclusive:(NSInteger)index;
 
-- (id)fromValue:(id)from untilValue:(id)until;
-- (id)fromIndex:(NSInteger)from untilIndex:(NSInteger)until;
+- (NSArray*)fromValueExclusive:(id)from untilValueExclusive:(id)until;
+- (NSArray*)fromValueExclusive:(id)from untilValueInclusive:(id)until;
+- (NSArray*)fromValueInclusive:(id)from untilValueExclusive:(id)until;
+- (NSArray*)fromValueInclusive:(id)from untilValueInclusive:(id)until;
+
+- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
+- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
+- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
+- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
 
 - (void)forEachWithIndex:(void(^)(NSUInteger index, id item))block;
 
-- (id)unique;
-- (id)reversed;
-- (id)shuffled;
+- (NSArray*)unique;
+- (NSArray*)reversed;
+- (NSArray*)shuffled;
 
-- (NSComparator)lexicographicalComparator;
-- (NSComparator)propertyComparator:(LTSortComparablePropertyProviderBlock)propertyBlock;
-- (NSComparator)prioritizedComparator:(NSArray<NSComparator>*)comparators;
-- (NSComparator)comparatorWithBuckets:(NSArray<LTSortingBucket*>*)buckets;
-- (NSComparator)comparatorWithBuckets:(NSArray<LTSortingBucket*>*)buckets defaultInnerBucketComparator:(NSComparator)defaultInnerBucketComparator;
-- (NSComparator)boolComparator:(BOOL(^)(id obj1, id obj2))comparator;
-
-- (LTFilterPredicate)predicateForEquality:(id)object;
-- (LTFilterPredicate)predicateForSubclass:(Class)objectClass;
-- (LTFilterPredicate)predicateForClass:(Class)objectClass;
-- (LTFilterPredicate)predicateForSelector:(SEL)selector;
-
++ (NSArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat;
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until;
 
 @end

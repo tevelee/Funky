@@ -39,9 +39,19 @@
     return [self.utilities map:block];
 }
 
+- (NSArray*)mapWithIndex:(id (^)(NSUInteger, id))block
+{
+    return [self.utilities mapWithIndex:block];
+}
+
 - (NSArray *)flatMap:(id (^)(id))block
 {
     return [self.utilities flatMap:block];
+}
+
+- (NSArray *)flatMapWithIndex:(id (^)(NSUInteger, id))block
+{
+    return [self.utilities flatMapWithIndex:block];
 }
 
 - (NSArray *)filter:(BOOL (^)(id))block
@@ -119,24 +129,34 @@
     return [self.utilities maxItems:block];
 }
 
-- (NSInteger)minIndex
+- (NSInteger)firstIndex
 {
-    return [self.utilities minIndex];
+    return [self.utilities firstIndex];
 }
 
-- (NSInteger)maxIndex
+- (NSInteger)lastIndex
 {
-    return [self.utilities maxIndex];
+    return [self.utilities lastIndex];
 }
 
-- (NSArray*)first:(BOOL(^)(id item))block
+- (id)first:(BOOL (^)(id))block
 {
     return [self.utilities first:block];
 }
 
-- (NSArray*)last:(BOOL(^)(id item))block
+- (NSUInteger)firstIndex:(BOOL (^)(id))block
+{
+    return [self.utilities firstIndex:block];
+}
+
+- (id)last:(BOOL(^)(id item))block
 {
     return [self.utilities last:block];
+}
+
+- (NSUInteger)lastIndex:(BOOL (^)(id))block
+{
+    return [self.utilities lastIndex:block];
 }
 
 - (NSArray*)take:(BOOL(^)(id item))block
@@ -149,34 +169,84 @@
     return [self.utilities takeLast:block];
 }
 
-- (NSArray*)untilValue:(id)value
+- (NSArray*)fromValueExclusive:(id)value
 {
-    return [self.utilities untilValue:value];
+    return [self.utilities fromValueExclusive:value];
 }
 
-- (NSArray*)untilIndex:(NSInteger)index
+- (NSArray*)fromValueInclusive:(id)value
 {
-    return [self.utilities untilIndex:index];
+    return [self.utilities fromValueInclusive:value];
 }
 
-- (NSArray*)fromValue:(id)value
+- (NSArray*)fromIndexExclusive:(NSInteger)index
 {
-    return [self.utilities fromValue:value];
+    return [self.utilities fromIndexExclusive:index];
 }
 
-- (NSArray*)fromIndex:(NSInteger)index
+- (NSArray*)fromIndexInclusive:(NSInteger)index
 {
-    return [self.utilities fromIndex:index];
+    return [self.utilities fromIndexInclusive:index];
 }
 
-- (NSArray*)fromValue:(id)from untilValue:(id)until
+- (NSArray*)untilValueExclusive:(id)value
 {
-    return [self.utilities fromValue:from untilValue:until];
+    return [self.utilities untilValueExclusive:value];
 }
 
-- (NSArray*)fromIndex:(NSInteger)from untilIndex:(NSInteger)until
+- (NSArray*)untilValueInclusive:(id)value
 {
-    return [self.utilities fromIndex:from untilIndex:until];
+    return [self.utilities untilValueInclusive:value];
+}
+
+- (NSArray*)untilIndexExclusive:(NSInteger)index
+{
+    return [self.utilities untilIndexExclusive:index];
+}
+
+- (NSArray*)untilIndexInclusive:(NSInteger)index
+{
+    return [self.utilities untilIndexInclusive:index];
+}
+
+- (NSArray*)fromValueExclusive:(id)from untilValueExclusive:(id)until
+{
+    return [self.utilities fromValueExclusive:from untilValueExclusive:until];
+}
+
+- (NSArray*)fromValueExclusive:(id)from untilValueInclusive:(id)until
+{
+    return [self.utilities fromValueExclusive:from untilValueInclusive:until];
+}
+
+- (NSArray*)fromValueInclusive:(id)from untilValueExclusive:(id)until
+{
+    return [self.utilities fromValueInclusive:from untilValueExclusive:until];
+}
+
+- (NSArray*)fromValueInclusive:(id)from untilValueInclusive:(id)until
+{
+    return [self.utilities fromValueInclusive:from untilValueInclusive:until];
+}
+
+- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until
+{
+    return [self.utilities fromIndexExclusive:from untilIndexExclusive:until];
+}
+
+- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until
+{
+    return [self.utilities fromIndexExclusive:from untilIndexInclusive:until];
+}
+
+- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until
+{
+    return [self.utilities fromIndexInclusive:from untilIndexExclusive:until];
+}
+
+- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until
+{
+    return [self.utilities fromIndexInclusive:from untilIndexInclusive:until];
 }
 
 - (NSArray*)unique
@@ -194,9 +264,24 @@
     return [self.utilities shuffled];
 }
 
-- (NSArray*)sort:(NSComparator)comparator
+- (NSArray*)sorted:(NSComparator)comparator
 {
     return [self sortedArrayUsingComparator:comparator];
+}
+
++ (NSArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat
+{
+    return [LTArrayUtilities arrayWithItem:item repeated:repeat];
+}
+
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat
+{
+    return [LTArrayUtilities arrayWithArray:array nextItem:block repeated:repeat];
+}
+
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until
+{
+    return [LTArrayUtilities arrayWithArray:array nextItem:block until:until];
 }
 
 @end

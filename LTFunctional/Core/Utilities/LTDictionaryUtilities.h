@@ -18,7 +18,7 @@
 - (NSDictionary*)merge:(NSDictionary*)other;
 - (void)forEach:(void(^)(id key, id value))block;
 
-- (id)filter:(BOOL(^)(id key, id value))block;
+- (NSDictionary*)filter:(BOOL(^)(id key, id value))block;
 - (BOOL)all:(BOOL(^)(id key, id value))block;
 - (BOOL)none:(BOOL(^)(id key, id value))block;
 - (BOOL)contains:(BOOL(^)(id key, id value))block;

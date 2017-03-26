@@ -17,7 +17,9 @@
 - (NSUInteger)count:(BOOL(^)(ObjectType item))block;
 
 - (NSArray*)map:(id(^)(ObjectType item))block;
+- (NSArray*)mapWithIndex:(id(^)(NSUInteger index, ObjectType item))block;
 - (NSArray*)flatMap:(id(^)(ObjectType item))block;
+- (NSArray*)flatMapWithIndex:(id(^)(NSUInteger index, ObjectType item))block;
 - (NSArray*)filter:(BOOL(^)(ObjectType item))block;
 - (NSArray*)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
 - (NSArray*)flattened;
@@ -38,29 +40,46 @@
 - (NSArray*)minItems:(double(^)(ObjectType item))block;
 - (NSArray*)maxItems:(double(^)(ObjectType item))block;
 
-- (NSInteger)minIndex;
-- (NSInteger)maxIndex;
+- (NSUInteger)firstIndex;
+- (NSUInteger)lastIndex;
 
-- (NSArray*)first:(BOOL(^)(ObjectType item))block;
-- (NSArray*)last:(BOOL(^)(ObjectType item))block;
+- (id)first:(BOOL(^)(ObjectType item))block;
+- (NSUInteger)firstIndex:(BOOL(^)(ObjectType item))block;
+- (id)last:(BOOL(^)(ObjectType item))block;
+- (NSUInteger)lastIndex:(BOOL(^)(ObjectType item))block;
 
 - (NSArray*)take:(BOOL(^)(ObjectType item))block;
 - (NSArray*)takeLast:(BOOL(^)(ObjectType item))block;
 
-- (NSArray*)untilValue:(id)value;
-- (NSArray*)untilIndex:(NSInteger)index;
+- (NSArray*)fromValueExclusive:(id)value;
+- (NSArray*)fromValueInclusive:(id)value;
+- (NSArray*)fromIndexExclusive:(NSInteger)index;
+- (NSArray*)fromIndexInclusive:(NSInteger)index;
 
-- (NSArray*)fromValue:(id)value;
-- (NSArray*)fromIndex:(NSInteger)index;
+- (NSArray*)untilValueExclusive:(id)value;
+- (NSArray*)untilValueInclusive:(id)value;
+- (NSArray*)untilIndexExclusive:(NSInteger)index;
+- (NSArray*)untilIndexInclusive:(NSInteger)index;
 
-- (NSArray*)fromValue:(id)from untilValue:(id)until;
-- (NSArray*)fromIndex:(NSInteger)from untilIndex:(NSInteger)until;
+- (NSArray*)fromValueExclusive:(id)from untilValueExclusive:(id)until;
+- (NSArray*)fromValueExclusive:(id)from untilValueInclusive:(id)until;
+- (NSArray*)fromValueInclusive:(id)from untilValueExclusive:(id)until;
+- (NSArray*)fromValueInclusive:(id)from untilValueInclusive:(id)until;
+
+- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
+- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
+- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
+- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
 
 - (NSArray*)unique;
 - (NSArray*)reversed;
 - (NSArray*)shuffled;
 
-- (NSArray*)sort:(NSComparator)comparator;
+- (NSArray*)sorted:(NSComparator)comparator;
+
++ (NSArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat;
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until;
 
 @end
 

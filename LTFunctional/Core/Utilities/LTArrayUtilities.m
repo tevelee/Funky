@@ -16,14 +16,47 @@
 
 @implementation LTArrayUtilities
 
-- (NSInteger)minIndex
+- (id)mapToAnotherWithIndex:(void(^)(NSUInteger index, id item, id<LTMutableCollection> collection))block
+{
+    id<LTMutableCollection> mutableCollection = [[self.object.class classForMutableCounterPart] newWithCapacity:self.object.count];
+    
+    [self forEachWithIndex:^(NSUInteger index, id item) {
+        block(index, item, mutableCollection);
+    }];
+    
+    return mutableCollection.copy;
+}
+
+- (NSUInteger)firstIndex
 {
     return 0;
 }
 
-- (NSInteger)maxIndex
+- (NSUInteger)lastIndex
 {
     return [self.object count] - 1;
+}
+
+- (NSArray*)mapWithIndex:(id (^)(NSUInteger, id))block
+{
+    return [self mapToAnotherWithIndex:^(NSUInteger index, id item, id<LTMutableCollection> collection) {
+        id mapped = block(index, item);
+        [collection addObject:mapped];
+    }];
+}
+
+- (NSArray*)flatMapWithIndex:(id (^)(NSUInteger, id))block
+{
+    return [self mapToAnotherWithIndex:^(NSUInteger index, id item, id<LTMutableCollection> collection) {
+        id mapped = block(index, item);
+        if ([mapped isKindOfClass:[collection.class classToFlatten]]) {
+            for (id current in mapped) {
+                [collection addObject:current];
+            }
+        } else {
+            [collection addObject:mapped];
+        }
+    }];
 }
 
 - (id)first:(BOOL (^)(id))block
@@ -36,9 +69,32 @@
     return nil;
 }
 
+- (NSUInteger)firstIndex:(BOOL (^)(id))block
+{
+    for (NSUInteger i = 0; i < self.object.count - 1; ++i) {
+        id item = self.object[i];
+        if (block(item)) {
+            return i;
+        }
+    }
+    return NSNotFound;
+}
+
 - (id)last:(BOOL (^)(id))block
 {
-    return [self.reversed first:block];
+    LTArrayUtilities* utilities = [LTArrayUtilities utilitiesWithObject:self.reversed];
+    return [utilities first:block];
+}
+
+- (NSUInteger)lastIndex:(BOOL (^)(id))block
+{
+    __block NSUInteger lastMatching = NSNotFound;
+    [self forEachWithIndex:^(NSUInteger index, id item) {
+        if (block(item)) {
+            lastMatching = index;
+        }
+    }];
+    return lastMatching;
 }
 
 - (id)take:(BOOL(^)(id item))block;
@@ -54,7 +110,7 @@
     return mutableArray.copy;
 }
 
-- (id)takeLast:(BOOL(^)(id item))block;
+- (NSArray*)takeLast:(BOOL(^)(id item))block;
 {
     NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
     for (id item in self.object) {
@@ -67,33 +123,7 @@
     return mutableArray.copy;
 }
 
-- (id)untilValue:(id)value
-{
-    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
-    for (id item in self.object) {
-        if ([item isEqual:value]) {
-            break;
-        } else {
-            [mutableArray addObject:item];
-        }
-    }
-    return mutableArray.copy;
-}
-
-- (id)untilIndex:(NSInteger)index
-{
-    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
-    
-    NSUInteger lastIndex = MIN(index, self.object.count - 1);
-    for (NSUInteger i = 0; i < lastIndex; ++i) {
-        id item = self.object[i];
-        [mutableArray addObject:item];
-    }
-    
-    return mutableArray.copy;
-}
-
-- (id)fromValue:(id)value
+- (NSArray*)fromValueExclusive:(id)value
 {
     NSMutableArray* mutableArray = nil;
     for (id item in self.object) {
@@ -106,12 +136,24 @@
     return mutableArray.copy;
 }
 
-- (id)fromIndex:(NSInteger)index
+- (NSArray*)fromValueInclusive:(id)value
+{
+    NSMutableArray* mutableArray = nil;
+    for (id item in self.object) {
+        if ([item isEqual:value]) {
+            mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+        }
+        [mutableArray addObject:item];
+    }
+    return mutableArray.copy;
+}
+
+- (NSArray*)fromIndexExclusive:(NSInteger)index
 {
     NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
     
-    NSUInteger firstIndex = MAX(index, 0);
-    for (NSUInteger i = firstIndex; i < self.object.count - 1; ++i) {
+    NSUInteger firstIndex = MAX(index + 1 + (index < 0 ? self.object.count : 0), 0);
+    for (NSUInteger i = firstIndex; i < self.object.count; ++i) {
         id item = self.object[i];
         [mutableArray addObject:item];
     }
@@ -119,7 +161,71 @@
     return mutableArray.copy;
 }
 
-- (id)fromValue:(id)from untilValue:(id)until
+- (NSArray*)fromIndexInclusive:(NSInteger)index
+{
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+    
+    NSUInteger firstIndex = MAX(index + (index < 0 ? self.object.count : 0), 0);
+    for (NSUInteger i = firstIndex; i < self.object.count; ++i) {
+        id item = self.object[i];
+        [mutableArray addObject:item];
+    }
+    
+    return mutableArray.copy;
+}
+
+- (NSArray*)untilValueExclusive:(id)value
+{
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+    for (id item in self.object) {
+        if ([item isEqual:value]) {
+            break;
+        } else {
+            [mutableArray addObject:item];
+        }
+    }
+    return mutableArray.copy;
+}
+
+- (NSArray*)untilValueInclusive:(id)value
+{
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+    for (id item in self.object) {
+        [mutableArray addObject:item];
+        if ([item isEqual:value]) {
+            break;
+        }
+    }
+    return mutableArray.copy;
+}
+
+- (NSArray*)untilIndexExclusive:(NSInteger)index
+{
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+    
+    NSUInteger lastIndex = MIN(index - 1 + (index < 0 ? self.object.count : 0), self.object.count);
+    for (NSUInteger i = 0; i <= lastIndex; ++i) {
+        id item = self.object[i];
+        [mutableArray addObject:item];
+    }
+    
+    return mutableArray.copy;
+}
+
+- (NSArray*)untilIndexInclusive:(NSInteger)index
+{
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+    
+    NSUInteger lastIndex = MIN(index + (index < 0 ? self.object.count : 0), self.object.count);
+    for (NSUInteger i = 0; i <= lastIndex; ++i) {
+        id item = self.object[i];
+        [mutableArray addObject:item];
+    }
+    
+    return mutableArray.copy;
+}
+
+- (NSArray*)fromValueExclusive:(id)from untilValueExclusive:(id)until
 {
     NSMutableArray* mutableArray = nil;
     for (id item in self.object) {
@@ -134,14 +240,63 @@
     return mutableArray.copy;
 }
 
-- (id)fromIndex:(NSInteger)from untilIndex:(NSInteger)until
+- (NSArray*)fromValueExclusive:(id)from untilValueInclusive:(id)until
+{
+    NSMutableArray* mutableArray = nil;
+    for (id item in self.object) {
+        if ([item isEqual:from]) {
+            mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+        } else {
+            [mutableArray addObject:item];
+            if ([item isEqual:until]) {
+                break;
+            }
+        }
+    }
+    return mutableArray.copy;
+}
+
+- (NSArray*)fromValueInclusive:(id)from untilValueExclusive:(id)until
+{
+    NSMutableArray* mutableArray = nil;
+    for (id item in self.object) {
+        if ([item isEqual:from]) {
+            mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+            [mutableArray addObject:item];
+        } else if ([item isEqual:until]) {
+            break;
+        } else {
+            [mutableArray addObject:item];
+        }
+    }
+    return mutableArray.copy;
+}
+
+- (NSArray*)fromValueInclusive:(id)from untilValueInclusive:(id)until
+{
+    NSMutableArray* mutableArray = nil;
+    for (id item in self.object) {
+        if ([item isEqual:from]) {
+            mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+        }
+        
+        [mutableArray addObject:item];
+        
+        if ([item isEqual:until]) {
+            break;
+        }
+    }
+    return mutableArray.copy;
+}
+
+- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until
 {
     NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
     
-    NSUInteger firstIndex = MAX(from, 0);
-    NSUInteger lastIndex = MIN(until, self.object.count - 1);
-    
-    for (NSUInteger i = firstIndex; i < lastIndex; ++i) {
+    NSUInteger firstIndex = MAX(from + 1 + (from < 0 ? self.object.count : 0), 0);
+    NSUInteger lastIndex = MIN(until - 1 + (until < 0 ? self.object.count : 0), self.object.count);
+
+    for (NSUInteger i = firstIndex; i <= lastIndex; ++i) {
         id item = self.object[i];
         [mutableArray addObject:item];
     }
@@ -149,10 +304,56 @@
     return mutableArray.copy;
 }
 
-- (id)unique
+- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until
+{
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+    
+    NSUInteger firstIndex = MAX(from + 1 + (from < 0 ? self.object.count : 0), 0);
+    NSUInteger lastIndex = MIN(until + (until < 0 ? self.object.count : 0), self.object.count);
+
+    for (NSUInteger i = firstIndex; i <= lastIndex; ++i) {
+        id item = self.object[i];
+        [mutableArray addObject:item];
+    }
+    
+    return mutableArray.copy;
+}
+
+- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until
+{
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+    
+    NSUInteger firstIndex = MAX(from + (from < 0 ? self.object.count : 0), 0);
+    NSUInteger lastIndex = MIN(until - 1 + (until < 0 ? self.object.count : 0), self.object.count);
+    
+    for (NSUInteger i = firstIndex; i <= lastIndex; ++i) {
+        id item = self.object[i];
+        [mutableArray addObject:item];
+    }
+    
+    return mutableArray.copy;
+}
+
+- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
+{
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:self.object.count];
+    
+    NSUInteger firstIndex = MAX(from + (from < 0 ? self.object.count : 0), 0);
+    NSUInteger lastIndex = MIN(until + (until < 0 ? self.object.count : 0), self.object.count);
+    
+    for (NSUInteger i = firstIndex; i <= lastIndex; ++i) {
+        id item = self.object[i];
+        [mutableArray addObject:item];
+    }
+    
+    return mutableArray.copy;
+}
+
+- (NSArray*)unique
 {
     return [self mapToAnother:^(id item, id<LTMutableCollection> collection) {
-        if (![self contains:^BOOL(id current) {
+        LTArrayUtilities* utils = [LTArrayUtilities utilitiesWithObject:collection];
+        if (![utils contains:^BOOL(id current) {
             return [item isEqual:current];
         }]) {
             [collection addObject:item];
@@ -160,12 +361,12 @@
     }];
 }
 
-- (id)reversed
+- (NSArray*)reversed
 {
     return [self.object.reverseObjectEnumerator allObjects];
 }
 
-- (id)shuffled
+- (NSArray*)shuffled
 {
     NSMutableArray* mutableArray = [self.object mutableCopy];
     
@@ -180,133 +381,44 @@
 
 - (void)forEachWithIndex:(void(^)(NSUInteger index, id item))block
 {
-    for (NSUInteger i = 0; i < self.object.count - 1; ++i) {
+    for (NSUInteger i = 0; i < self.object.count; ++i) {
         block(i, self.object[i]);
     }
 }
 
-#pragma mark - Sort
-
-- (NSComparator)lexicographicalComparator
++ (NSArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat
 {
-    return [self propertyComparator:nil];
-}
-
-- (NSComparator)propertyComparator:(LTSortComparablePropertyProviderBlock)propertyBlock
-{
-    return ^NSComparisonResult(id obj1, id obj2) {
-        id<LTSortComparable> prop1 = propertyBlock ? propertyBlock(obj1) : obj1;
-        id<LTSortComparable> prop2 = propertyBlock ? propertyBlock(obj2) : obj2;
-        
-        if ([prop1 isEqual:prop2]) {
-            return NSOrderedSame;
-        } else if ([prop1 respondsToSelector:@selector(compare:)]) {
-            return [prop1 compare:prop2];
-        } else {
-            return prop1 < prop2 ? NSOrderedAscending : NSOrderedDescending;
-        }
-    };
-}
-
-- (NSComparator)prioritizedComparator:(NSArray<NSComparator>*)comparators
-{
-    return ^NSComparisonResult(id obj1, id obj2) {
-        for (NSComparator comparator in comparators) {
-            NSComparisonResult result = comparator(obj1, obj2);
-            if (result != NSOrderedSame) {
-                return result;
-            }
-        }
-        return NSOrderedSame;
-    };
-}
-
-- (NSComparator)comparatorWithBuckets:(NSArray<LTSortingBucket*>*)buckets
-{
-    return [self comparatorWithBuckets:buckets defaultInnerBucketComparator:[self lexicographicalComparator]];
-}
-
-- (NSComparator)comparatorWithBuckets:(NSArray<LTSortingBucket*>*)buckets defaultInnerBucketComparator:(NSComparator)defaultInnerBucketComparator
-{
-    NSIndexSet* collectorBuckets = [buckets indexesOfObjectsPassingTest:^BOOL(LTSortingBucket* bucket, NSUInteger index, BOOL* stop) {
-        return bucket.isCollectorBucket;
-    }];
+    NSMutableArray* array = [NSMutableArray arrayWithCapacity:repeat];
     
-    NSInteger indexOfCollectorBucket = collectorBuckets.firstIndex;
-    if (indexOfCollectorBucket == NSNotFound) {
-        indexOfCollectorBucket = buckets.count;
-        buckets = [buckets arrayByAddingObject:[LTSortingBucket bucketWithAllTheRest]];
+    for (NSInteger i = 0; i < repeat; i++) {
+        [array addObject:item];
     }
     
-    return ^NSComparisonResult(id obj1, id obj2) {
-        NSInteger bucketIndexFor1 = [self indexOfObject:obj1 inBuckets:buckets indexOfCollectorBucket:indexOfCollectorBucket];
-        NSInteger bucketIndexFor2 = [self indexOfObject:obj2 inBuckets:buckets indexOfCollectorBucket:indexOfCollectorBucket];
-        if (bucketIndexFor1 == bucketIndexFor2) {
-            LTSortingBucket* bucket = [buckets objectAtIndex:bucketIndexFor1];
-            NSComparator innerBucketComparator = bucket.innerBucketComparator ?: defaultInnerBucketComparator;
-            return innerBucketComparator(obj1, obj2);
-        } else {
-            return [@(bucketIndexFor1) compare:@(bucketIndexFor2)];
-        }
-    };
+    return array.copy;
 }
 
-- (NSInteger)indexOfObject:(id)object inBuckets:(NSArray<LTSortingBucket*>*)buckets indexOfCollectorBucket:(NSInteger)indexOfCollectorBucket
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat
 {
-    NSInteger index = [buckets indexOfObjectPassingTest:^BOOL(LTSortingBucket* bucket, NSUInteger idx, BOOL* stop) {
-        if (bucket.filterBlock && bucket.filterBlock(object)) {
-            *stop = YES;
-            return YES;
-        } else {
-            return NO;
-        }
-    }];
-    return index == NSNotFound ? indexOfCollectorBucket : index;
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithArray:array];
+    
+    for (NSInteger i = 0; i < repeat; i++) {
+        id item = block(mutableArray);
+        [mutableArray addObject:item];
+    }
+    
+    return mutableArray.copy;
 }
 
-- (NSComparator)boolComparator:(BOOL(^)(id obj1, id obj2))comparator
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until
 {
-    return ^NSComparisonResult(id obj1, id obj2) {
-        BOOL resultOneWay = comparator(obj1, obj2);
-        BOOL resultOtherWay = comparator(obj2, obj1);
-        if (resultOneWay && !resultOtherWay) {
-            return NSOrderedAscending;
-        } else if (resultOtherWay && !resultOneWay) {
-            return NSOrderedDescending;
-        } else {
-            return NSOrderedSame;
-        }
-    };
-}
-
-#pragma mark - Filter
-
-- (LTFilterPredicate)predicateForEquality:(id)object
-{
-    return ^BOOL(id other) {
-        return [other isEqual:object];
-    };
-}
-
-- (LTFilterPredicate)predicateForSubclass:(Class)objectClass
-{
-    return ^BOOL(id other) {
-        return [other isKindOfClass:objectClass];
-    };
-}
-
-- (LTFilterPredicate)predicateForClass:(Class)objectClass
-{
-    return ^BOOL(id other) {
-        return [other isMemberOfClass:objectClass];
-    };
-}
-
-- (LTFilterPredicate)predicateForSelector:(SEL)selector
-{
-    return ^BOOL(id other) {
-        return [other respondsToSelector:selector];
-    };
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithArray:array];
+    
+    while (until(mutableArray)) {
+        id item = block(mutableArray);
+        [mutableArray addObject:item];
+    }
+    
+    return mutableArray.copy;
 }
 
 @end

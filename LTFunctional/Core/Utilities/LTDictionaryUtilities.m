@@ -79,7 +79,7 @@
     }
 }
 
-- (id)filter:(BOOL(^)(id key, id value))block
+- (NSDictionary*)filter:(BOOL(^)(id key, id value))block
 {
     return [self mapToAnother:^(id key, id value, NSMutableDictionary *mutableDictionary) {
         if (block(key, value)) {
