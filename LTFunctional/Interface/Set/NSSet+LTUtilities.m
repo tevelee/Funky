@@ -69,12 +69,6 @@
     return [self.utilities forEach:block];
 }
 
-- (void)forEachWithIndex:(void(^)(NSUInteger index, id item))block
-{
-    LTArrayUtilities* utils = [LTArrayUtilities utilitiesWithObject:self];
-    return [utils forEachWithIndex:block];
-}
-
 - (NSDictionary*)groupBy:(id(^)(id item))block
 {
     return [self.utilities groupByUsingLast:block];

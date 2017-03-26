@@ -218,4 +218,14 @@
     XCTAssertEqualObjects(expected, result);
 }
 
+- (void)test_forEach
+{
+    NSSet* set = [NSSet setWithArray:@[@0, @1, @2, @3, @10, @5, @4, @6, @8, @7, @9]];
+    NSMutableSet* visitedObjects = [NSMutableSet setWithCapacity:set.count];
+    [set forEach:^(id item) {
+        [visitedObjects addObject:item];
+    }];
+    XCTAssertEqualObjects(visitedObjects, set);
+}
+
 @end

@@ -24,7 +24,6 @@
 - (NSSet*)merge:(NSSet*)collection;
 
 - (void)forEach:(void(^)(ObjectType item))block;
-- (void)forEachWithIndex:(void(^)(NSUInteger index, ObjectType item))block;
 
 - (NSDictionary*)groupBy:(id(^)(ObjectType item))block;
 - (NSDictionary<id, NSArray*>*)associateBy:(id(^)(ObjectType item))block;

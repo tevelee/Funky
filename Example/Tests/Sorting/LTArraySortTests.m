@@ -113,7 +113,23 @@
     XCTAssertEqual([sorted[7] age], 59);
 }
 
-- (void)testPrioritizedComparator {
+- (void)testBucketComparatorWithoutCollector {
+    LTSortingBucket* even = [LTSortingBucket bucketWithBlock:^BOOL(NSNumber* value) {
+        return value.integerValue % 2 == 0;
+    }];
+    NSArray* result = [@[@0, @1, @0, @3, @10, @6, @7] sorted:[LTSort comparatorWithBuckets:@[even]]];
+    NSArray* expected = @[@0, @0, @6, @10, @1, @3, @7];
+    XCTAssertEqualObjects(result, expected);
+}
+
+- (void)testPrioritizedComparatorEqual {
+    NSArray* result = [@[@0, @0, @0, @0] sorted:[LTSort prioritizedComparator:@[^NSComparisonResult(id obj1, id obj2) { return NSOrderedSame; },
+                                                                                [LTSort lexicographicalComparator]]]];
+    NSArray* expected = @[@0, @0, @0, @0];
+    XCTAssertEqualObjects(result, expected);
+}
+
+- (void)testPrioritizedComparatorNotEqual {
     NSArray* sorted = [self.items sortedArrayUsingComparator:self.personComparator];
     
     XCTAssertEqualObjects([sorted[0] firstName], @"C");
