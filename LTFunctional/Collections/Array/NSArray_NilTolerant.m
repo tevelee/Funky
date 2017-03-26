@@ -48,6 +48,11 @@
     return [NSMutableArray_NilTolerant class];
 }
 
++ (Class)classToFlatten
+{
+    return [NSArray class];
+}
+
 @end
 
 @implementation NSMutableArray_NilTolerant
@@ -117,6 +122,11 @@
 + (Class)classForMutableCounterPart
 {
     return [NSMutableArray_NilTolerant class];
+}
+
++ (Class)classToFlatten
+{
+    return [NSArray class];
 }
 
 @end

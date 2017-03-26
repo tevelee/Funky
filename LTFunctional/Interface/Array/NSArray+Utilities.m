@@ -23,12 +23,28 @@
     return [NSMutableArray class];
 }
 
++ (Class)classToFlatten
+{
+    return [NSArray class];
+}
+
 #pragma mark - Utilities
 
 - (NSArray*)map:(id(^)(id))block
 {
-    CollectionUtilities* utils = [CollectionUtilities utilitiesWithCollection:self];
+    CollectionUtilities* utils = [CollectionUtilities utilitiesWithObject:self];
     return [utils map:block];
+}
+
+@end
+
+@implementation NSMutableArray (Utilities)
+
+#pragma mark - Capacity
+
++ (id)newWithCapacity:(NSUInteger)capacity
+{
+    return [self arrayWithCapacity:capacity];
 }
 
 @end

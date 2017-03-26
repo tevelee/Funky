@@ -32,6 +32,9 @@
     
     NSArray* a = @[@0, @1, @2].nilTolerant;
     a = [a arrayByAddingObject:nilValue];
+    [a map:^id(id item) {
+        return nil;
+    }];
     
     NSMutableArray* b = [NSMutableArray_NilTolerant arrayWithObject:@0];
     [b addObject:nilValue];

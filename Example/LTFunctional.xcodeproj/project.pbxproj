@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A1D81FC1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1D81FB1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m */; };
+		3A4CFD741E867F58005C9496 /* LTArraySortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CFD731E867F58005C9496 /* LTArraySortTests.m */; };
 		3AC28F461E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC28F451E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m */; };
 		3AC28F481E82EDE8008251A2 /* LTNSArraySubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC28F471E82EDE8008251A2 /* LTNSArraySubclassTests.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		19B394B466610E6E349DFBD6 /* Pods-LTFunctional_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTFunctional_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTFunctional_Tests/Pods-LTFunctional_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1D81FB1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCollectionUtilitiesTests.m; sourceTree = "<group>"; };
+		3A4CFD731E867F58005C9496 /* LTArraySortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTArraySortTests.m; sourceTree = "<group>"; };
 		3AC28F451E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTNilTolerantNSArrayTests.m; sourceTree = "<group>"; };
 		3AC28F471E82EDE8008251A2 /* LTNSArraySubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTNSArraySubclassTests.m; sourceTree = "<group>"; };
 		3B4FB3DEB95A7CF9258573DD /* Pods_LTFunctional_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTFunctional_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +172,7 @@
 				3A1D81FB1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m */,
 				3AC28F451E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m */,
 				3AC28F471E82EDE8008251A2 /* LTNSArraySubclassTests.m */,
+				3A4CFD731E867F58005C9496 /* LTArraySortTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AC28F461E82EDD7008251A2 /* LTNilTolerantNSArrayTests.m in Sources */,
+				3A4CFD741E867F58005C9496 /* LTArraySortTests.m in Sources */,
 				3A1D81FC1E81DE1100260FC5 /* LTCollectionUtilitiesTests.m in Sources */,
 				3AC28F481E82EDE8008251A2 /* LTNSArraySubclassTests.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,

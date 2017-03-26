@@ -14,3 +14,7 @@
 - (NSSet*)map:(id(^)(ObjectType item))block;
 
 @end
+
+@interface NSMutableSet () <Capacity>
+
+@end

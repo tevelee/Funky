@@ -23,12 +23,28 @@
     return [NSMutableSet class];
 }
 
++ (Class)classToFlatten
+{
+    return [NSSet class];
+}
+
 #pragma mark - Utilities
 
 - (NSSet*)map:(id(^)(id))block
 {
-    CollectionUtilities* utils = [CollectionUtilities utilitiesWithCollection:self];
+    CollectionUtilities* utils = [CollectionUtilities utilitiesWithObject:self];
     return [utils map:block];
+}
+
+@end
+
+@implementation NSMutableSet (Utilities)
+
+#pragma mark - Capacity
+
++ (id)newWithCapacity:(NSUInteger)capacity
+{
+    return [self setWithCapacity:capacity];
 }
 
 @end

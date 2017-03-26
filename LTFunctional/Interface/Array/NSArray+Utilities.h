@@ -14,3 +14,7 @@
 - (NSArray*)map:(id(^)(ObjectType item))block;
 
 @end
+
+@interface NSMutableArray (Utilities) <Capacity>
+
+@end

@@ -56,6 +56,11 @@
     return [NSMutableArray_NilStoring class];
 }
 
++ (Class)classToFlatten
+{
+    return [NSArray class];
+}
+
 @end
 
 @implementation NSMutableArray_NilStoring
@@ -130,6 +135,11 @@
 + (Class)classForMutableCounterPart
 {
     return [NSMutableArray_NilStoring class];
+}
+
++ (Class)classToFlatten
+{
+    return [NSArray class];
 }
 
 @end
