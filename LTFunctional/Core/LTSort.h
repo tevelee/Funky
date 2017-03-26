@@ -36,5 +36,6 @@ typedef id(^ComparablePropertyProviderBlock)(id item);
 + (NSComparator)prioritizedComparator:(NSArray<NSComparator>*)comparators;
 + (NSComparator)comparatorWithBuckets:(NSArray<LTSortingBucket*>*)buckets;
 + (NSComparator)comparatorWithBuckets:(NSArray<LTSortingBucket*>*)buckets defaultInnerBucketComparator:(NSComparator)defaultInnerBucketComparator;
++ (NSComparator)boolComparator:(BOOL(^)(id obj1, id obj2))comparator;
 
 @end

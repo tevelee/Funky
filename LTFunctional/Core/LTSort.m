@@ -109,4 +109,19 @@
     return index == NSNotFound ? indexOfCollectorBucket : index;
 }
 
++ (NSComparator)boolComparator:(BOOL(^)(id obj1, id obj2))comparator
+{
+    return ^NSComparisonResult(id obj1, id obj2) {
+        BOOL resultOneWay = comparator(obj1, obj2);
+        BOOL resultOtherWay = comparator(obj2, obj1);
+        if (resultOneWay && !resultOtherWay) {
+            return NSOrderedAscending;
+        } else if (resultOtherWay && !resultOneWay) {
+            return NSOrderedDescending;
+        } else {
+            return NSOrderedSame;
+        }
+    };
+}
+
 @end
