@@ -7,10 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <LTFunctional/CollectionUtilities.h>
-#import <LTFunctional/NSSet+Utilities.h>
-#import <LTFunctional/NSArray+Utilities.h>
-#import <LTFunctional/NSArray_NilTolerant.h>
+#import <LTFunctional/LTCollectionUtilities.h>
+#import <LTFunctional/NSSet+LTUtilities.h>
+#import <LTFunctional/NSArray+LTUtilities.h>
+#import <LTFunctional/LTNilTolerantNSArray.h>
 
 @interface LTArrayUtilitiesTests : XCTestCase
 

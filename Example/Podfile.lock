@@ -13,12 +13,16 @@ PODS:
   - LTFunctional/Collections/Set (0.1)
   - LTFunctional/Core (0.1)
   - LTFunctional/Interface (0.1):
+    - LTFunctional/Core
     - LTFunctional/Interface/Array (= 0.1)
     - LTFunctional/Interface/Dictionary (= 0.1)
+    - LTFunctional/Interface/Object (= 0.1)
     - LTFunctional/Interface/Set (= 0.1)
   - LTFunctional/Interface/Array (0.1):
     - LTFunctional/Core
   - LTFunctional/Interface/Dictionary (0.1):
+    - LTFunctional/Core
+  - LTFunctional/Interface/Object (0.1):
     - LTFunctional/Core
   - LTFunctional/Interface/Set (0.1):
     - LTFunctional/Core
@@ -35,7 +39,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  LTFunctional: 0ec6088ed5888a783a51fcea9ca1e4ab4fc96f7c
+  LTFunctional: 964f95247c35e65d6b704d073ca3dc6d427728d6
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
 PODFILE CHECKSUM: fdc0787da1c504552e1f8778320e37eeb595db26

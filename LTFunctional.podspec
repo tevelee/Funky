@@ -50,19 +50,22 @@ TODO: Add long description of the pod here.
   end
 
   s.subspec 'Interface' do |ss|
+    ss.dependency 'LTFunctional/Core'
+
+    ss.subspec 'Object' do |sss|
+      sss.source_files = 'LTFunctional/Interface/Object/**/*'
+    end
+
     ss.subspec 'Array' do |sss|
       sss.source_files = 'LTFunctional/Interface/Array/**/*'
-      sss.dependency 'LTFunctional/Core'
     end
 
     ss.subspec 'Set' do |sss|
       sss.source_files = 'LTFunctional/Interface/Set/**/*'
-      sss.dependency 'LTFunctional/Core'
     end
 
     ss.subspec 'Dictionary' do |sss|
       sss.source_files = 'LTFunctional/Interface/Dictionary/**/*'
-      sss.dependency 'LTFunctional/Core'
     end
   end
 end

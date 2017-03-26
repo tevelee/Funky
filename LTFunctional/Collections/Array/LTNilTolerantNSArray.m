@@ -1,16 +1,16 @@
 //
-//  NSArray_NilTolerant.m
+//  LTNilTolerantNSArray.m
 //  Pods
 //
 //  Created by László Teveli on 2017. 03. 21..
 //
 //
 
-#import "NSArray_NilTolerant.h"
+#import "LTNilTolerantNSArray.h"
 
 #pragma mark - NSArray Subclasses
 
-@implementation NSArray_NilTolerant
+@implementation LTNilTolerantNSArray
 
 - (NSArray *)arrayByAddingObject:(id)anObject
 {
@@ -40,7 +40,7 @@
 
 + (Class)classForImmutableCounterPart
 {
-    return [NSArray_NilTolerant class];
+    return [LTNilTolerantNSArray class];
 }
 
 + (Class)classForMutableCounterPart
@@ -116,7 +116,7 @@
 
 + (Class)classForImmutableCounterPart
 {
-    return [NSArray_NilTolerant class];
+    return [LTNilTolerantNSArray class];
 }
 
 + (Class)classForMutableCounterPart
@@ -133,16 +133,16 @@
 
 #pragma mark - NSArray Categories
 
-@implementation NSArray (NilTolerant)
+@implementation NSArray (LTNilTolerant)
 
-- (NSArray_NilTolerant *)nilTolerant
+- (LTNilTolerantNSArray *)nilTolerant
 {
-    return [NSArray_NilTolerant arrayWithArray:self];
+    return [LTNilTolerantNSArray arrayWithArray:self];
 }
 
 @end
 
-@implementation NSMutableArray (NilTolerant)
+@implementation NSMutableArray (LTNilTolerant)
 
 - (NSMutableArray_NilTolerant *)nilTolerant
 {

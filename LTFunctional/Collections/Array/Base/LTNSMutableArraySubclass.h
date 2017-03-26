@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Counterpart.h"
+#import "LTCollectionCounterpartProtocol.h"
 
-@interface NSMutableArraySubclass : NSMutableArray <Counterpart>
+@interface LTNSMutableArraySubclass : NSMutableArray <LTCollectionCounterpart>
 
 - (NSMutableArray*)NSMutableArray;
 

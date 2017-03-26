@@ -1,16 +1,16 @@
 //
-//  NSArray_NilStoring.m
+//  LTNilStoringNSArray.m
 //  Pods
 //
 //  Created by László Teveli on 2017. 03. 21..
 //
 //
 
-#import "NSArray_NilStoring.h"
+#import "LTNilStoringNSArray.h"
 
 #pragma mark - NSArray Subclasses
 
-@implementation NSArray_NilStoring
+@implementation LTNilStoringNSArray
 
 - (NSArray *)arrayByAddingObject:(id)anObject
 {
@@ -48,7 +48,7 @@
 
 + (Class)classForImmutableCounterPart
 {
-    return [NSArray_NilStoring class];
+    return [LTNilStoringNSArray class];
 }
 
 + (Class)classForMutableCounterPart
@@ -129,7 +129,7 @@
 
 + (Class)classForImmutableCounterPart
 {
-    return [NSArray_NilStoring class];
+    return [LTNilStoringNSArray class];
 }
 
 + (Class)classForMutableCounterPart
@@ -146,16 +146,16 @@
 
 #pragma mark - NSArray Categories
 
-@implementation NSArray (NilStoring)
+@implementation NSArray (LTNilStoring)
 
-- (NSArray_NilStoring *)nilStoring
+- (LTNilStoringNSArray *)nilStoring
 {
-    return [NSArray_NilStoring arrayWithArray:self];
+    return [LTNilStoringNSArray arrayWithArray:self];
 }
 
 @end
 
-@implementation NSMutableArray (NilStoring)
+@implementation NSMutableArray (LTNilStoring)
 
 - (NSMutableArray_NilStoring *)nilStoring
 {

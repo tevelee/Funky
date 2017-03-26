@@ -6,16 +6,16 @@
 //
 //
 
-#import "NSMutableArraySubclass.h"
-#import "NSArraySubclass.h"
+#import "LTNSMutableArraySubclass.h"
+#import "LTNSArraySubclass.h"
 
-@interface NSMutableArraySubclass ()
+@interface LTNSMutableArraySubclass ()
 
 @property (nonatomic, strong, readonly) NSMutableArray *backingArray;
 
 @end
 
-@implementation NSMutableArraySubclass
+@implementation LTNSMutableArraySubclass
 
 - (NSMutableArray *)NSMutableArray
 {
@@ -99,12 +99,12 @@
 
 + (Class)classForImmutableCounterPart
 {
-    return [NSArraySubclass class];
+    return [LTNSArraySubclass class];
 }
 
 + (Class)classForMutableCounterPart
 {
-    return [NSMutableArraySubclass class];
+    return [LTNSMutableArraySubclass class];
 }
 
 #pragma mark - <NSCopying>

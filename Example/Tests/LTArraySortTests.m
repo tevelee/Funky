@@ -7,7 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <LTFunctional/LTSort.h>
+#import <LTFunctional/NSArray+LTUtilities.h>
+#import <LTFunctional/NSArray+LTComparator.h>
 
 @interface Person : NSObject
 
