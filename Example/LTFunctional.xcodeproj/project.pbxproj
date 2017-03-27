@@ -17,6 +17,8 @@
 		3A05223E1E87F38C00A10E4A /* LTArrayUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522391E87F38C00A10E4A /* LTArrayUtilitiesTests.m */; };
 		3A0522401E87F58800A10E4A /* LTNSArray+UtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A05223F1E87F58800A10E4A /* LTNSArray+UtilitiesTests.m */; };
 		3A0522571E887AC600A10E4A /* LTArrayFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522561E887AC600A10E4A /* LTArrayFilterTests.m */; };
+		3AFE37311E89BD16004CCD02 /* LTNSMutableArraySubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE37301E89BD16004CCD02 /* LTNSMutableArraySubclassTests.m */; };
+		3AFE37331E89BD24004CCD02 /* LTNilStoringNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE37321E89BD24004CCD02 /* LTNilStoringNSArrayTests.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -57,6 +59,8 @@
 		3A0522391E87F38C00A10E4A /* LTArrayUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTArrayUtilitiesTests.m; sourceTree = "<group>"; };
 		3A05223F1E87F58800A10E4A /* LTNSArray+UtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LTNSArray+UtilitiesTests.m"; sourceTree = "<group>"; };
 		3A0522561E887AC600A10E4A /* LTArrayFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTArrayFilterTests.m; sourceTree = "<group>"; };
+		3AFE37301E89BD16004CCD02 /* LTNSMutableArraySubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTNSMutableArraySubclassTests.m; sourceTree = "<group>"; };
+		3AFE37321E89BD24004CCD02 /* LTNilStoringNSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTNilStoringNSArrayTests.m; sourceTree = "<group>"; };
 		3B4FB3DEB95A7CF9258573DD /* Pods_LTFunctional_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTFunctional_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4D80BF1D440C5AF59D79B1 /* Pods-LTFunctional_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTFunctional_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTFunctional_Tests/Pods-LTFunctional_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4D582700A5044CD3B612A857 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -146,7 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				3A05222F1E87F2B400A10E4A /* LTNilTolerantNSArrayTests.m */,
+				3AFE37321E89BD24004CCD02 /* LTNilStoringNSArrayTests.m */,
 				3A0522301E87F2B400A10E4A /* LTNSArraySubclassTests.m */,
+				3AFE37301E89BD16004CCD02 /* LTNSMutableArraySubclassTests.m */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -471,6 +477,8 @@
 				3A0522341E87F2B400A10E4A /* LTNSArraySubclassTests.m in Sources */,
 				3A0522401E87F58800A10E4A /* LTNSArray+UtilitiesTests.m in Sources */,
 				3A0522571E887AC600A10E4A /* LTArrayFilterTests.m in Sources */,
+				3AFE37311E89BD16004CCD02 /* LTNSMutableArraySubclassTests.m in Sources */,
+				3AFE37331E89BD24004CCD02 /* LTNilStoringNSArrayTests.m in Sources */,
 				3A05223B1E87F38C00A10E4A /* LTDictionaryUtilitiesTests.m in Sources */,
 				3A0522331E87F2B400A10E4A /* LTNilTolerantNSArrayTests.m in Sources */,
 			);

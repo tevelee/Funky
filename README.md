@@ -1,4 +1,4 @@
-# LTFunctional
+# Funky
 
 [![CI Status](http://img.shields.io/travis/tevelee/LTFunctional.svg?style=flat)](https://travis-ci.org/tevelee/LTFunctional)
 [![Version](https://img.shields.io/cocoapods/v/LTFunctional.svg?style=flat)](http://cocoapods.org/pods/LTFunctional)

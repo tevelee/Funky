@@ -15,7 +15,7 @@
 
 @end
 
-@interface NSMutableArray_NilTolerant : LTNSMutableArraySubclass
+@interface LTNilTolerantNSMutableArray : LTNSMutableArraySubclass
 
 @end
 
@@ -29,6 +29,6 @@
 
 @interface NSMutableArray (LTNilTolerant)
 
-- (NSMutableArray_NilTolerant*)nilTolerant;
+- (LTNilTolerantNSMutableArray*)nilTolerant;
 
 @end

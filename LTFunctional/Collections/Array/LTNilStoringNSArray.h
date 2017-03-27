@@ -15,7 +15,7 @@
 
 @end
 
-@interface NSMutableArray_NilStoring : LTNSMutableArraySubclass
+@interface LTNilStoringNSMutableArray : LTNSMutableArraySubclass
 
 @end
 
@@ -29,6 +29,6 @@
 
 @interface NSMutableArray (LTNilStoring)
 
-- (NSMutableArray_NilStoring*)nilStoring;
+- (LTNilStoringNSMutableArray*)nilStoring;
 
 @end

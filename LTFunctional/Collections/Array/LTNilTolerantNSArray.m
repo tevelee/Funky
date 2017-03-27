@@ -20,20 +20,12 @@
         return [super arrayByAddingObject:anObject];
 }
 
-- (NSArray *)arrayByAddingObjectsFromArray:(NSArray *)otherArray
-{
-    if (otherArray == nil)
-        return self;
-    else
-        return [super arrayByAddingObjectsFromArray:otherArray];
-}
-
-- (BOOL)containsObject:(id)anObject
++ (instancetype)arrayWithObject:(id)anObject
 {
     if (anObject == nil)
-        return NO;
+        return [super array];
     else
-        return [super containsObject:anObject];
+        return [super arrayWithObject:anObject];
 }
 
 #pragma mark - Counterpart
@@ -45,7 +37,7 @@
 
 + (Class)classForMutableCounterPart
 {
-    return [NSMutableArray_NilTolerant class];
+    return [LTNilTolerantNSMutableArray class];
 }
 
 + (Class)classToFlatten
@@ -55,7 +47,7 @@
 
 @end
 
-@implementation NSMutableArray_NilTolerant
+@implementation LTNilTolerantNSMutableArray
 
 - (NSArray *)arrayByAddingObject:(id)anObject
 {
@@ -65,25 +57,12 @@
         return [super arrayByAddingObject:anObject];
 }
 
-- (NSArray *)arrayByAddingObjectsFromArray:(NSArray *)otherArray
-{
-    if (otherArray == nil)
-        return self;
-    else
-        return [super arrayByAddingObjectsFromArray:otherArray];
-}
-
-- (BOOL)containsObject:(id)anObject
++ (instancetype)arrayWithObject:(id)anObject
 {
     if (anObject == nil)
-        return NO;
+        return [super array];
     else
-        return [super containsObject:anObject];
-}
-
-- (id)mutableCopy
-{
-    return [NSMutableArray_NilTolerant arrayWithArray:self];
+        return [super arrayWithObject:anObject];
 }
 
 #pragma mark -
@@ -92,12 +71,6 @@
 {
     if (anObject != nil)
         [super addObject:anObject];
-}
-
-- (void)addObjectsFromArray:(NSArray *)otherArray
-{
-    if (otherArray != nil)
-        [super addObjectsFromArray:otherArray];
 }
 
 - (void)insertObject:(id)anObject atIndex:(NSUInteger)index
@@ -121,7 +94,7 @@
 
 + (Class)classForMutableCounterPart
 {
-    return [NSMutableArray_NilTolerant class];
+    return [LTNilTolerantNSMutableArray class];
 }
 
 + (Class)classToFlatten
@@ -144,9 +117,9 @@
 
 @implementation NSMutableArray (LTNilTolerant)
 
-- (NSMutableArray_NilTolerant *)nilTolerant
+- (LTNilTolerantNSMutableArray *)nilTolerant
 {
-    return [NSMutableArray_NilTolerant arrayWithArray:self];
+    return [LTNilTolerantNSMutableArray arrayWithArray:self];
 }
 
 @end

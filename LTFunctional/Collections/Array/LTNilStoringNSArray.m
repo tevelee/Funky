@@ -12,6 +12,11 @@
 
 @implementation LTNilStoringNSArray
 
++ (instancetype)arrayWithObject:(id)anObject
+{
+    return [super arrayWithObject:anObject ?: [NSNull null]];
+}
+
 - (NSArray *)arrayByAddingObject:(id)anObject
 {
     return [super arrayByAddingObject:anObject ?: [NSNull null]];
@@ -53,7 +58,7 @@
 
 + (Class)classForMutableCounterPart
 {
-    return [NSMutableArray_NilStoring class];
+    return [LTNilStoringNSMutableArray class];
 }
 
 + (Class)classToFlatten
@@ -63,7 +68,12 @@
 
 @end
 
-@implementation NSMutableArray_NilStoring
+@implementation LTNilStoringNSMutableArray
+
++ (instancetype)arrayWithObject:(id)anObject
+{
+    return [super arrayWithObject:anObject ?: [NSNull null]];
+}
 
 - (NSArray *)arrayByAddingObject:(id)anObject
 {
@@ -99,7 +109,7 @@
 
 - (id)mutableCopy
 {
-    return [NSMutableArray_NilStoring arrayWithArray:self];
+    return [LTNilStoringNSMutableArray arrayWithArray:self];
 }
 
 #pragma mark - 
@@ -134,7 +144,7 @@
 
 + (Class)classForMutableCounterPart
 {
-    return [NSMutableArray_NilStoring class];
+    return [LTNilStoringNSMutableArray class];
 }
 
 + (Class)classToFlatten
@@ -157,9 +167,9 @@
 
 @implementation NSMutableArray (LTNilStoring)
 
-- (NSMutableArray_NilStoring *)nilStoring
+- (LTNilStoringNSMutableArray *)nilStoring
 {
-    return [NSMutableArray_NilStoring arrayWithArray:self];
+    return [LTNilStoringNSMutableArray arrayWithArray:self];
 }
 
 @end

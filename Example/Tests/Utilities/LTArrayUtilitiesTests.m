@@ -42,6 +42,11 @@
         return [item doubleValue] > 4.5;
     }];
     XCTAssertEqualObjects(result, @10);
+    
+    result = [self.items first:^BOOL(id item) {
+        return [item doubleValue] == 123;
+    }];
+    XCTAssertNil(result);
 }
 
 - (void)test_last
@@ -58,6 +63,11 @@
         return [item doubleValue] > 4.5;
     }];
     XCTAssertEqual(result, 6);
+    
+    result = [self.items firstIndex:^BOOL(id item) {
+        return [item doubleValue] == 123;
+    }];
+    XCTAssertEqual(result, NSNotFound);
 }
 
 - (void)test_lastIndex
@@ -208,6 +218,12 @@
 
 - (void)test_forEach
 {
+    __block NSInteger numberOfVisitedItems = 0;
+    [self.items forEach:^(id item) {
+        numberOfVisitedItems++;
+    }];
+    XCTAssertEqual(numberOfVisitedItems, self.items.count);
+    
     NSMutableArray* visitedIndices = [NSMutableArray arrayWithCapacity:self.items.count];
     [self.items forEachWithIndex:^(NSUInteger index, id item) {
         [visitedIndices addObject:@(index)];
