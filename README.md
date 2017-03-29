@@ -1,9 +1,9 @@
 # Funky
 
 [![CI Status](https://travis-ci.org/tevelee/Funky.svg?branch=master&style=flat)](https://travis-ci.org/tevelee/Funky)
-[![Version](https://img.shields.io/cocoapods/v/Funky.svg?style=flat)](http://cocoapods.org/pods/Funky)
-[![License](https://img.shields.io/cocoapods/l/Funky.svg?style=flat)](http://cocoapods.org/pods/Funky)
-[![Platform](https://img.shields.io/cocoapods/p/Funky.svg?style=flat)](http://cocoapods.org/pods/Funky)
+[![Version](https://img.shields.io/cocoapods/v/FunkyObjC.svg?style=flat)](http://cocoapods.org/pods/Funky)
+[![License](https://img.shields.io/cocoapods/l/FunkyObjC.svg?style=flat)](http://cocoapods.org/pods/Funky)
+[![Platform](https://img.shields.io/cocoapods/p/FunkyObjC.svg?style=flat)](http://cocoapods.org/pods/Funky)
 
 Funky is a collection utility with functional extensions, written in Objective-C.
 
@@ -18,7 +18,7 @@ $ sudo gem install cocoapods
 To install Funky, simply add the following line to your `Podfile`:
 
 ```ruby
-pod "Funky"
+pod "FunkyObjC"
 ```
 
 then import using any of these 

@@ -1,7 +1,9 @@
 use_frameworks!
 
+project 'Funky.xcodeproj'
+
 target 'Funky_Example' do
-  pod 'Funky', :path => '../'
+  pod 'FunkyObjC', :path => '../'
 
   target 'Funky_Tests' do
     inherit! :search_paths

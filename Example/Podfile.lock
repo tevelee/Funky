@@ -1,50 +1,50 @@
 PODS:
   - Expecta (1.0.5)
-  - Funky (1.0):
-    - Funky/Collections (= 1.0)
-    - Funky/Core (= 1.0)
-    - Funky/Interface (= 1.0)
-  - Funky/Collections (1.0):
-    - Funky/Collections/Array (= 1.0)
-    - Funky/Collections/Dictionary (= 1.0)
-    - Funky/Collections/Set (= 1.0)
-  - Funky/Collections/Array (1.0)
-  - Funky/Collections/Dictionary (1.0)
-  - Funky/Collections/Set (1.0)
-  - Funky/Core (1.0)
-  - Funky/Interface (1.0):
-    - Funky/Core
-    - Funky/Interface/Array (= 1.0)
-    - Funky/Interface/Dictionary (= 1.0)
-    - Funky/Interface/Object (= 1.0)
-    - Funky/Interface/Set (= 1.0)
-  - Funky/Interface/Array (1.0):
-    - Funky/Core
-  - Funky/Interface/Dictionary (1.0):
-    - Funky/Core
-  - Funky/Interface/Object (1.0):
-    - Funky/Core
-  - Funky/Interface/Set (1.0):
-    - Funky/Core
+  - FunkyObjC (1.0):
+    - FunkyObjC/Collections (= 1.0)
+    - FunkyObjC/Core (= 1.0)
+    - FunkyObjC/Interface (= 1.0)
+  - FunkyObjC/Collections (1.0):
+    - FunkyObjC/Collections/Array (= 1.0)
+    - FunkyObjC/Collections/Dictionary (= 1.0)
+    - FunkyObjC/Collections/Set (= 1.0)
+  - FunkyObjC/Collections/Array (1.0)
+  - FunkyObjC/Collections/Dictionary (1.0)
+  - FunkyObjC/Collections/Set (1.0)
+  - FunkyObjC/Core (1.0)
+  - FunkyObjC/Interface (1.0):
+    - FunkyObjC/Core
+    - FunkyObjC/Interface/Array (= 1.0)
+    - FunkyObjC/Interface/Dictionary (= 1.0)
+    - FunkyObjC/Interface/Object (= 1.0)
+    - FunkyObjC/Interface/Set (= 1.0)
+  - FunkyObjC/Interface/Array (1.0):
+    - FunkyObjC/Core
+  - FunkyObjC/Interface/Dictionary (1.0):
+    - FunkyObjC/Core
+  - FunkyObjC/Interface/Object (1.0):
+    - FunkyObjC/Core
+  - FunkyObjC/Interface/Set (1.0):
+    - FunkyObjC/Core
   - OCMock (3.4)
   - Specta (1.0.6)
 
 DEPENDENCIES:
   - Expecta
-  - Funky (from `../`)
+  - FunkyObjC (from `../`)
   - OCMock
   - Specta
 
 EXTERNAL SOURCES:
-  Funky:
+  FunkyObjC:
     :path: "../"
 
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  Funky: 087cfc4c4c10956934a66acc47a76b3725c0acc1
+  FunkyObjC: 225e6fb92e20767455da2111748c6bf81325f7a6
   OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: 1049c75a6b245a21e63a00709e81729cc6ec8c3f
+PODFILE CHECKSUM: a5baae9f415e37d4976ba23ef59f23c2527ae0d1
 
 COCOAPODS: 1.1.1

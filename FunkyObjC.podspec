@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'Funky'
+  s.name             = 'FunkyObjC'
   s.version          = '1.0'
   s.summary          = 'Funky is a collection utility with functional extensions.'
 
@@ -12,8 +12,8 @@ DESC
   s.author           = { 'Laszlo Teveli' => 'tevelee@gmail.com' }
   s.source           = { :git => 'https://github.com/tevelee/Funky.git', :tag => s.version.to_s }
 
-  s.header_dir = s.name
-  s.module_name = s.name
+  s.header_dir = 'Funky'
+  s.module_name = 'Funky'
 
   s.ios.deployment_target = '8.0'
   s.frameworks = 'Foundation'
@@ -37,7 +37,7 @@ DESC
   end
 
   s.subspec 'Interface' do |ss|
-    ss.dependency 'Funky/Core'
+    ss.dependency 'FunkyObjC/Core'
 
     ss.subspec 'Object' do |sss|
       sss.source_files = 'Source/Interface/Object/**/*'
