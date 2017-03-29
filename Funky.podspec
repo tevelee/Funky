@@ -37,7 +37,7 @@ DESC
   end
 
   s.subspec 'Interface' do |ss|
-    ss.dependency 'Source/Core'
+    ss.dependency 'Funky/Core'
 
     ss.subspec 'Object' do |sss|
       sss.source_files = 'Source/Interface/Object/**/*'

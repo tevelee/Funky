@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'LTFunctional_Example' do
-  pod 'LTFunctional', :path => '../'
+target 'Funky_Example' do
+  pod 'Funky', :path => '../'
 
-  target 'LTFunctional_Tests' do
+  target 'Funky_Tests' do
     inherit! :search_paths
     pod 'OCMock'
     pod 'Specta'
