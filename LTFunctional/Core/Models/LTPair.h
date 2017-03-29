@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LTPair : NSObject
+@interface LTPair<__covariant KeyType: id<NSCopying>, __covariant ObjectType> : NSObject
 
-@property (nonatomic, strong) id<NSCopying> key;
-@property (nonatomic, strong) id value;
+@property (nonatomic, strong) KeyType key;
+@property (nonatomic, strong) ObjectType value;
+
++ (instancetype)pairWithKey:(KeyType)key value:(ObjectType)value;
+
+- (LTPair*)pairByModifyingKey:(KeyType)key;
+- (LTPair*)pairByModifyingValue:(ObjectType)value;
 
 @end

@@ -13,8 +13,6 @@
 @interface LTDictionaryUtilities : LTGeneralUtilities
 
 - (NSDictionary*)map:(LTPair*(^)(id key, id value))block;
-- (NSDictionary*)flatMap:(LTPair*(^)(id key, id value))block;
-- (NSDictionary*)flattened;
 - (NSDictionary*)merge:(NSDictionary*)other;
 - (void)forEach:(void(^)(id key, id value))block;
 

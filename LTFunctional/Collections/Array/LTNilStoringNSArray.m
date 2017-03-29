@@ -19,15 +19,7 @@
 
 - (NSArray *)arrayByAddingObject:(id)anObject
 {
-    return [super arrayByAddingObject:anObject ?: [NSNull null]];
-}
-
-- (NSArray *)arrayByAddingObjectsFromArray:(NSArray *)otherArray
-{
-    if (otherArray == nil)
-        return self;
-    else
-        return [super arrayByAddingObjectsFromArray:otherArray];
+    return [self.NSArray arrayByAddingObject:anObject ?: [NSNull null]].nilStoring;
 }
 
 - (id)objectAtIndex:(NSUInteger)index
@@ -77,15 +69,7 @@
 
 - (NSArray *)arrayByAddingObject:(id)anObject
 {
-    return [super arrayByAddingObject:anObject ?: [NSNull null]];
-}
-
-- (NSArray *)arrayByAddingObjectsFromArray:(NSArray *)otherArray
-{
-    if (otherArray == nil)
-        return self;
-    else
-        return [super arrayByAddingObjectsFromArray:otherArray];
+    return [self.NSMutableArray arrayByAddingObject:anObject ?: [NSNull null]].nilStoring;
 }
 
 - (id)objectAtIndex:(NSUInteger)index
@@ -117,12 +101,6 @@
 - (void)addObject:(id)anObject
 {
     return [super addObject:anObject ?: [NSNull null]];
-}
-
-- (void)addObjectsFromArray:(NSArray *)otherArray
-{
-    if (otherArray != nil)
-        [super addObjectsFromArray:otherArray];
 }
 
 - (void)insertObject:(id)anObject atIndex:(NSUInteger)index

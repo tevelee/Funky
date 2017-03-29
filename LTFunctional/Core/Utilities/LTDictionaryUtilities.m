@@ -35,36 +35,6 @@
     }];
 }
 
-- (NSDictionary*)flatMap:(LTPair*(^)(id key, id value))block
-{
-    return [self mapToAnother:^(id key, id value, NSMutableDictionary *mutableDictionary) {
-        LTPair* pair = block(key, value);
-        if ([pair.value isKindOfClass:[mutableDictionary.class classToFlatten]]) {
-            for (id currentKey in pair.value) {
-                id currentValue = pair.value[currentKey];
-                mutableDictionary[currentKey] = currentValue;
-            }
-        } else {
-            mutableDictionary[pair.key] = pair.value;
-        }
-    }];
-}
-
-- (NSDictionary*)flattened
-{
-    return [self mapToAnother:^(id key, id value, NSMutableDictionary<LTCollectionCounterpart>* mutableDictionary) {
-        if ([value isKindOfClass:[mutableDictionary.class classToFlatten]]) {
-            for (id currentKey in value) {
-                id currentValue = value[currentKey];
-                LTDictionaryUtilities* utilsForItem = [LTDictionaryUtilities utilitiesWithObject:currentValue];
-                mutableDictionary[currentKey] = [utilsForItem flattened];
-            }
-        } else {
-            mutableDictionary[key] = value;
-        }
-    }];
-}
-
 - (NSDictionary*)merge:(NSDictionary*)other
 {
     NSMutableDictionary* mutableDictionary = [self.object mutableCopy];
@@ -88,33 +58,33 @@
     }];
 }
 
-- (BOOL)contains:(BOOL (^)(id))block
+- (BOOL)contains:(BOOL (^)(id key, id value))block
 {
     for (id key in self.object) {
         id item = self.object[key];
-        if (block(item)) {
+        if (block(key, item)) {
             return YES;
         }
     }
     return NO;
 }
 
-- (BOOL)all:(BOOL (^)(id))block
+- (BOOL)all:(BOOL (^)(id key, id value))block
 {
     for (id key in self.object) {
         id item = self.object[key];
-        if (!block(item)) {
+        if (!block(key, item)) {
             return NO;
         }
     }
     return YES;
 }
 
-- (BOOL)none:(BOOL (^)(id))block
+- (BOOL)none:(BOOL (^)(id key, id value))block
 {
     for (id key in self.object) {
         id item = self.object[key];
-        if (block(item)) {
+        if (block(key, item)) {
             return NO;
         }
     }
