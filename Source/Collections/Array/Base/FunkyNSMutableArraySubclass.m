@@ -107,6 +107,11 @@
     return [FunkyNSMutableArraySubclass class];
 }
 
++ (Class)classToFlatten
+{
+    return [FunkyNSArraySubclass class];
+}
+
 #pragma mark - <NSCopying>
 
 - (id)copyWithZone:(NSZone *)zone
