@@ -16,7 +16,7 @@
 
 @end
 
-@interface NSArray (FunkyCore)
+@interface NSMutableArray (FunkyCore)
 
 - (FunkyMutableArrayUtilities*)utilities;
 

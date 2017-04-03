@@ -39,7 +39,8 @@
 }
 
 - (void)test_initialisesWithEmptyArray_withBuiltInInit {
-    NSMutableArray* array = [[FunkyNSMutableArraySubclass alloc] initWithObjects:nil];
+    id nilValue = nil;
+    NSMutableArray* array = [[FunkyNSMutableArraySubclass alloc] initWithObjects:nilValue, nil];
     XCTAssertNotNil(array);
 }
 
