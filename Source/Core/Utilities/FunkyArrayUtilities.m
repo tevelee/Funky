@@ -381,23 +381,24 @@
 
 - (void)forEachWithIndex:(void(^)(NSUInteger index, id item))block
 {
-    for (NSUInteger i = 0; i < self.object.count; ++i) {
-        block(i, self.object[i]);
+    NSArray* object = self.object.copy;
+    for (NSUInteger i = 0; i < object.count; ++i) {
+        block(i, object[i]);
     }
 }
 
-+ (NSArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat
++ (NSArray*)mutableArrayWithItem:(id)item repeated:(NSUInteger)repeat
 {
-    NSMutableArray* array = [NSMutableArray arrayWithCapacity:repeat];
+    NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:repeat];
     
     for (NSInteger i = 0; i < repeat; i++) {
-        [array addObject:item];
+        [mutableArray addObject:item];
     }
     
-    return array.copy;
+    return mutableArray;
 }
 
-+ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat
++ (NSArray*)mutableArrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat
 {
     NSMutableArray* mutableArray = [NSMutableArray arrayWithArray:array];
     
@@ -409,7 +410,7 @@
     return mutableArray.copy;
 }
 
-+ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until
++ (NSArray*)mutableArrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until
 {
     NSMutableArray* mutableArray = [NSMutableArray arrayWithArray:array];
     
@@ -418,7 +419,81 @@
         [mutableArray addObject:item];
     }
     
-    return mutableArray.copy;
+    return mutableArray;
+}
+
++ (NSArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat
+{
+    return [self mutableArrayWithItem:item repeated:repeat].copy;
+}
+
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat
+{
+    return [self mutableArrayWithArray:array nextItem:block repeated:repeat];
+}
+
++ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until
+{
+    return [self mutableArrayWithArray:array nextItem:block until:until];
+}
+
+@end
+
+@interface FunkyMutableArrayUtilities ()
+
+@property (nonatomic, strong) NSMutableArray* object;
+
+@end
+
+@implementation FunkyMutableArrayUtilities
+
+- (NSMutableArray*)removeDuplicates
+{
+    NSMutableDictionary* objects = [self associateBy:^id(id item) {
+        return item;
+    }];
+    
+    for (id key in objects)
+    {
+        NSArray* duplicates = objects[key];
+        for (NSInteger i = 1; i < duplicates.count; ++i)
+        {
+            id object = duplicates[i];
+            [self.object removeObject:object];
+        }
+    }
+}
+
+- (NSMutableArray*)reverse
+{
+    [self forEachWithIndex:^(NSUInteger index, id item) {
+        NSInteger otherSide = self.object.count - 1 - index;
+        [self.object exchangeObjectAtIndex:index withObjectAtIndex:otherSide];
+    }];
+}
+
+- (NSMutableArray*)shuffle
+{
+    [self forEachWithIndex:^(NSUInteger index, id item) {
+        NSInteger remainingCount = self.object.count - index;
+        NSInteger exchangeIndex = index + arc4random_uniform((u_int32_t )remainingCount);
+        [self.object exchangeObjectAtIndex:index withObjectAtIndex:exchangeIndex];
+    }];
+}
+
++ (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat
+{
+    return [self mutableArrayWithItem:item repeated:repeat].copy;
+}
+
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat
+{
+    return [self mutableArrayWithArray:array nextItem:block repeated:repeat];
+}
+
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until
+{
+    return [self mutableArrayWithArray:array nextItem:block until:until];
 }
 
 @end

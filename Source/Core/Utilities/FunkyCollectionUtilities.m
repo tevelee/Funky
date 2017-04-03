@@ -165,7 +165,7 @@
 
 - (void)forEach:(void (^)(id))block
 {
-    for (id item in self.object) {
+    for (id item in self.object.copy) {
         block(item);
     }
 }

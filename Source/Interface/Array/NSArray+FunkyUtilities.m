@@ -295,4 +295,31 @@
     return [self arrayWithCapacity:capacity];
 }
 
+#pragma mark - Utilities
+
+- (NSMutableArray*)reverse
+{
+    return [self.utilities reverse];
+}
+
+- (NSMutableArray*)shuffle
+{
+    return [self.utilities shuffle];
+}
+
++ (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat
+{
+    return [FunkyMutableArrayUtilities arrayWithItem:item repeated:repeat];
+}
+
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat
+{
+    return [FunkyMutableArrayUtilities arrayWithArray:array nextItem:block repeated:repeat];
+}
+
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until
+{
+    return [FunkyMutableArrayUtilities arrayWithArray:array nextItem:block until:until];
+}
+
 @end

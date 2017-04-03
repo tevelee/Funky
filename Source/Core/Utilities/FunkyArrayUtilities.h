@@ -57,3 +57,15 @@
 + (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until;
 
 @end
+
+@interface FunkyMutableArrayUtilities : FunkyArrayUtilities
+
+- (NSMutableArray*)removeDuplicates;
+- (NSMutableArray*)reverse;
+- (NSMutableArray*)shuffle;
+
++ (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat;
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until;
+
+@end

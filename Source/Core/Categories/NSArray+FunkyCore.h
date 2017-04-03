@@ -15,3 +15,9 @@
 - (FunkyArrayUtilities*)utilities;
 
 @end
+
+@interface NSArray (FunkyCore)
+
+- (FunkyMutableArrayUtilities*)utilities;
+
+@end

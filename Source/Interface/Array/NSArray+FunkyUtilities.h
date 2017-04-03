@@ -83,6 +83,13 @@
 
 @end
 
-@interface NSMutableArray (FunkyUtilities) <FunkyMutableCollectionWithCapacity>
+@interface NSMutableArray <ObjectType> (FunkyUtilities) <FunkyMutableCollectionWithCapacity>
+
+- (NSMutableArray*)reverse;
+- (NSMutableArray*)shuffle;
+
++ (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat;
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until;
 
 @end

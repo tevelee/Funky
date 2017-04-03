@@ -33,3 +33,12 @@
 }
 
 @end
+
+@implementation NSMutableArray (FunkyCore)
+
+- (FunkyMutableArrayUtilities*)utilities
+{
+    return [FunkyMutableArrayUtilities utilitiesWithObject:self];
+}
+
+@end
