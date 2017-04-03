@@ -37,13 +37,13 @@
     return self;
 }
 
+#pragma mark - NSArray primitives
+
 - (instancetype)initWithObjects:(const id [])objects count:(NSUInteger)count
 {
     NSArray *array = [[NSArray alloc] initWithObjects: objects count: count];
     return [self initWithArray:array];
 }
-
-#pragma mark - NSArray primitives
 
 - (NSUInteger)count
 {

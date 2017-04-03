@@ -28,6 +28,14 @@ DESC
     ss.subspec 'Array' do |sss|
       sss.source_files = 'Source/Collections/Array/**/*'
     end
+
+    ss.subspec 'Set' do |sss|
+      sss.source_files = 'Source/Collections/Set/**/*'
+    end
+
+    ss.subspec 'Dictionary' do |sss|
+      sss.source_files = 'Source/Collections/Dictionary/**/*'
+    end
   end
 
   s.subspec 'Interface' do |ss|
