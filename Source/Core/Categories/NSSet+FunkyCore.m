@@ -10,9 +10,9 @@
 
 @implementation NSSet (FunkyCore)
 
-- (FunkyCollectionUtilities*)utilities
+- (FunkySetUtilities*)utilities
 {
-    return [FunkyCollectionUtilities utilitiesWithObject:self];
+    return [FunkySetUtilities utilitiesWithObject:self];
 }
 
 #pragma mark - FunkyCollectionCounterpart

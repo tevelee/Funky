@@ -28,8 +28,6 @@
 - (id)merge:(id)collection;
 - (void)forEach:(void(^)(id item))block;
 
-- (NSDictionary*)groupByUsingFirst:(id(^)(id item))block;
-- (NSDictionary*)groupByUsingLast:(id(^)(id item))block;
 - (NSDictionary<id, NSArray*>*)associateBy:(id(^)(id item))block;
 
 - (double)sum:(double(^)(id item))block;

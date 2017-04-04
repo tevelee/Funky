@@ -84,16 +84,6 @@
     return [self.utilities forEachWithIndex:block];
 }
 
-- (NSDictionary*)groupByUsingFirst:(id(^)(id item))block
-{
-    return [self.utilities groupByUsingFirst:block];
-}
-
-- (NSDictionary*)groupByUsingLast:(id(^)(id item))block
-{
-    return [self.utilities groupByUsingLast:block];
-}
-
 - (NSDictionary<id, NSArray*>*)associateBy:(id(^)(id item))block
 {
     return [self.utilities associateBy:block];
@@ -262,6 +252,16 @@
 - (NSArray*)shuffled
 {
     return [self.utilities shuffled];
+}
+
+- (NSDictionary*)groupByUsingFirst:(id(^)(id item))block
+{
+    return [self.utilities groupByUsingFirst:block];
+}
+
+- (NSDictionary*)groupByUsingLast:(id(^)(id item))block
+{
+    return [self.utilities groupByUsingLast:block];
 }
 
 - (NSArray*)sorted:(NSComparator)comparator

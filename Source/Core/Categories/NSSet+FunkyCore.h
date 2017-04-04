@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "FunkyCollectionCounterpartProtocol.h"
-#import "FunkyCollectionUtilities.h"
+#import "FunkySetUtilities.h"
 
 @interface NSSet (FunkyCore) <FunkyCollectionCounterpart>
 
-- (FunkyCollectionUtilities*)utilities;
+- (FunkySetUtilities*)utilities;
 
 @end

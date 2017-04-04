@@ -46,6 +46,9 @@
 - (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
 - (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
 
+- (NSDictionary*)groupByUsingFirst:(id(^)(id item))block;
+- (NSDictionary*)groupByUsingLast:(id(^)(id item))block;
+
 - (void)forEachWithIndex:(void(^)(NSUInteger index, id item))block;
 
 - (NSArray*)unique;

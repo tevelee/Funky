@@ -120,32 +120,6 @@
     return mutableCollection.copy;
 }
 
-- (NSDictionary *)groupByUsingFirst:(id (^)(id))block
-{
-    NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithCapacity:self.object.count];
-    
-    [self forEach:^(id item) {
-        id key = block(item);
-        if (dictionary[key] == nil) {
-            dictionary[key] = item;
-        }
-    }];
-    
-    return dictionary.copy;
-}
-
-- (NSDictionary*)groupByUsingLast:(id (^)(id))block
-{
-    NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithCapacity:self.object.count];
-    
-    [self forEach:^(id item) {
-        id key = block(item);
-        dictionary[key] = item;
-    }];
-    
-    return dictionary.copy;
-}
-
 - (NSDictionary<id,NSArray *> *)associateBy:(id (^)(id))block
 {
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithCapacity:self.object.count];

@@ -71,7 +71,7 @@
 
 - (NSDictionary*)groupBy:(id(^)(id item))block
 {
-    return [self.utilities groupByUsingLast:block];
+    return [self.utilities groupBy:block];
 }
 
 - (NSDictionary<id, NSArray*>*)associateBy:(id(^)(id item))block
