@@ -67,6 +67,8 @@
 - (NSMutableArray*)reverse;
 - (NSMutableArray*)shuffle;
 
+- (NSMutableArray*)merge:(NSArray*)array;
+
 + (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
 + (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat;
 + (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until;

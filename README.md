@@ -33,7 +33,7 @@ then import using any of these
 
 Funky provides a set of extension methods on NSArray, NSDictionary and NSSet  for you to help dealing with common operations (usually in a functional way).
 
-On NSArray you have:
+### NSArray
 
 ```obj-c
 - (BOOL)all:(BOOL(^)(ObjectType item))block;
@@ -48,7 +48,7 @@ On NSArray you have:
 - (NSArray*)filter:(BOOL(^)(ObjectType item))block;
 - (NSArray*)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
 - (NSArray*)flattened;
-- (NSArray*)merge:(NSArray*)collection;
+- (NSArray*)merged:(NSArray*)array;
 	
 - (void)forEach:(void(^)(ObjectType item))block;
 - (void)forEachWithIndex:(void(^)(NSUInteger index, ObjectType item))block;
@@ -107,13 +107,29 @@ On NSArray you have:
 + (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until;
 ```
 
-On NSDicitonary:
+### NSMutableArray
+
+```obj-c
+- (NSMutableArray*)removeDuplicates;
+- (NSMutableArray*)reverse;
+- (NSMutableArray*)shuffle;
+
+- (NSMutableArray*)merge:(NSArray*)array;
+
++ (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat;
++ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until;
+```
+
+### NSDicitonary
 
 ```obj-c
 - (NSDictionary*)map:(FunkyPair*(^)(KeyType key, ObjectType value))block;
-- (NSDictionary*)merge:(NSDictionary*)other;
+- (NSDictionary*)merged:(NSDictionary*)dictionary;
 - (void)forEach:(void(^)(KeyType key, ObjectType value))block;
 	
+- (NSDictionary*)invertedObjectsAndKeys;
+
 - (NSDictionary*)filter:(BOOL(^)(KeyType key, ObjectType value))block;
 - (BOOL)all:(BOOL(^)(KeyType key, ObjectType value))block;
 - (BOOL)none:(BOOL(^)(KeyType key, ObjectType value))block;
@@ -121,7 +137,13 @@ On NSDicitonary:
 - (id)reduce:(id(^)(id previousValue, KeyType key, ObjectType value))block withInitialValue:(id)start;
 ```
 
-On NSSet:
+### NSMutableDictionary
+
+```obj-c
+- (NSMutableDictionary*)merge:(NSDictionary*)dictionary;
+```
+
+### NSSet
 
 ```obj-c
 - (BOOL)all:(BOOL(^)(ObjectType item))block;
@@ -134,7 +156,9 @@ On NSSet:
 - (NSSet*)filter:(BOOL(^)(ObjectType item))block;
 - (id)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
 - (NSSet*)flattened;
-- (NSSet*)merge:(NSSet*)collection;
+- (NSSet*)takingUnion:(NSSet*)set;
+- (NSSet*)takingMinus:(NSSet*)set;
+- (NSSet*)takingIntersection:(NSSet*)set;
 	
 - (void)forEach:(void(^)(ObjectType item))block;
 	
@@ -148,6 +172,14 @@ On NSSet:
 	
 - (NSSet*)minItems:(double(^)(ObjectType item))block;
 - (NSSet*)maxItems:(double(^)(ObjectType item))block;
+```
+
+### NSMutableSet
+
+```obj-c
+- (NSMutableSet*)takeUnion:(NSSet*)set;
+- (NSMutableSet*)takeMinus:(NSSet*)set;
+- (NSMutableSet*)takeIntersection:(NSSet*)set;
 ```
 
 Funky also comes with some special collections, which makes you handle nil values easily. It might happen that during a map operation you return nil in the block. Handling it in an easy way by adding an if statement can lead to much bigger issues later on, because you expect the same number of elements before and after the mapping, and maybe you just accidentally returned that nil value. 
@@ -179,15 +211,10 @@ NSLog(@"Item: %@", array[1]);
 Under the hood it transforms nil values to `[NSNull null]` objects, and transforms them back to nil values when accessing using `objectAtIndex:`. Works of course for adding, insertion, replacing, retrieval. Every use-case is covered properly.
 You can even copy, mutableCopy them, encode with coder or transform back to original array instances.
 
-### Short-term plans
+### Future plans
 
 - Keep the >95% code coverage.
-- Introduce utilities for mutable arrays, sets and dictionaries.
-- Introduce nil storing and nil tolerant dictionaries and sets as well.
 - Doing proper documentation.
-
-### Long-term plans
-
 - Active maintenance. 
 - Accepting suggestions and pull requests from the community.
 - Figuring out ways for lazy collections, so the order of map/filter/take won't matter and always compute only the most necessary computations. So in a 2000 size array you call map, but take only the first object later, the filter should only be run once for that one occasion.

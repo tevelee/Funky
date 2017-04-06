@@ -109,7 +109,7 @@
     }];
 }
 
-- (id)merge:(id)collection
+- (id)merged:(id)collection
 {
     id<FunkyMutableCollection> mutableCollection = [self.object mutableCopy];
     

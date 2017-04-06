@@ -33,3 +33,12 @@
 }
 
 @end
+
+@implementation NSMutableSet (FunkyCore)
+
+- (FunkyMutableSetUtilities*)utilities
+{
+    return [FunkyMutableSetUtilities utilitiesWithObject:self];
+}
+
+@end

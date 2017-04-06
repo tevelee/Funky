@@ -15,3 +15,9 @@
 - (FunkySetUtilities*)utilities;
 
 @end
+
+@interface NSMutableSet (FunkyCore)
+
+- (FunkyMutableSetUtilities*)utilities;
+
+@end

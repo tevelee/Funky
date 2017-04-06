@@ -25,7 +25,7 @@
 - (NSUInteger)count:(BOOL(^)(id item))block;
 - (id)reduce:(id(^)(id value, id item))block withInitialValue:(id)start;
 - (id)flattened;
-- (id)merge:(id)collection;
+- (id)merged:(id)collection;
 - (void)forEach:(void(^)(id item))block;
 
 - (NSDictionary<id, NSArray*>*)associateBy:(id(^)(id item))block;

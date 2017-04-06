@@ -507,6 +507,13 @@
     }];
 }
 
+- (NSMutableArray*)merge:(NSArray*)array
+{
+    return [self apply:^(NSMutableArray* current) {
+        [current addObjectsFromArray:array];
+    }];
+}
+
 + (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat
 {
     return [self mutableArrayWithItem:item repeated:repeat].copy;

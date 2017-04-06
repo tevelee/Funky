@@ -142,9 +142,9 @@
     XCTAssertEqualObjects(expected, result);
 }
 
-- (void)test_merge
+- (void)test_union
 {
-    NSSet* result = [[NSSet setWithArray:@[@0, @1]] merge:[NSSet setWithArray:@[@2, @3]]];
+    NSSet* result = [[NSSet setWithArray:@[@0, @1]] takingUnion:[NSSet setWithArray:@[@2, @3]]];
     NSSet* expected = [NSSet setWithArray:@[@0, @1, @2, @3]];
     XCTAssertEqualObjects(expected, result);
 }

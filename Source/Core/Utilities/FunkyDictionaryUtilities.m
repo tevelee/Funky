@@ -35,7 +35,7 @@
     }];
 }
 
-- (NSDictionary*)merge:(NSDictionary*)other
+- (NSDictionary*)merged:(NSDictionary*)other
 {
     NSMutableDictionary* mutableDictionary = [self.object mutableCopy];
     [mutableDictionary addEntriesFromDictionary:other];
@@ -47,6 +47,13 @@
     for (id key in self.object) {
         block(key, self.object[key]);
     }
+}
+
+- (NSDictionary*)invertedObjectsAndKeys
+{
+    return [self map:^FunkyPair *(id key, id value) {
+        return [FunkyPair pairWithKey:value value:key];
+    }];
 }
 
 - (NSDictionary*)filter:(BOOL(^)(id key, id value))block
@@ -98,6 +105,23 @@
         mutatingValue = block(mutatingValue, key, value);
     }];
     return mutatingValue;
+}
+
+@end
+
+@interface FunkyMutableDictionaryUtilities ()
+
+@property (nonatomic, strong) NSMutableDictionary* object;
+
+@end
+
+@implementation FunkyMutableDictionaryUtilities
+
+- (NSMutableDictionary*)merge:(NSDictionary*)dictionary
+{
+    return [self apply:^(NSMutableDictionary* current) {
+        [current addEntriesFromDictionary:dictionary];
+    }];
 }
 
 @end

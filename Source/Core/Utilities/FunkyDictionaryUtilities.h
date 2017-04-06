@@ -13,13 +13,21 @@
 @interface FunkyDictionaryUtilities : FunkyGeneralUtilities
 
 - (NSDictionary*)map:(FunkyPair*(^)(id key, id value))block;
-- (NSDictionary*)merge:(NSDictionary*)other;
+- (NSDictionary*)merged:(NSDictionary*)other;
 - (void)forEach:(void(^)(id key, id value))block;
+
+- (NSDictionary*)invertedObjectsAndKeys;
 
 - (NSDictionary*)filter:(BOOL(^)(id key, id value))block;
 - (BOOL)all:(BOOL(^)(id key, id value))block;
 - (BOOL)none:(BOOL(^)(id key, id value))block;
 - (BOOL)contains:(BOOL(^)(id key, id value))block;
 - (id)reduce:(id(^)(id previousValue, id key, id value))block withInitialValue:(id)start;
+
+@end
+
+@interface FunkyMutableDictionaryUtilities : FunkyDictionaryUtilities
+
+- (NSMutableDictionary*)merge:(NSDictionary*)dictionary;
 
 @end

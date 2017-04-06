@@ -20,25 +20,25 @@
 - (NSArray*)mapWithIndex:(id(^)(NSUInteger index, ObjectType item))block;
 - (NSArray*)flatMap:(id(^)(ObjectType item))block;
 - (NSArray*)flatMapWithIndex:(id(^)(NSUInteger index, ObjectType item))block;
-- (NSArray*)filter:(BOOL(^)(ObjectType item))block;
-- (NSArray*)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
-- (NSArray*)flattened;
-- (NSArray*)merge:(NSArray*)collection;
+- (NSArray<ObjectType>*)filter:(BOOL(^)(ObjectType item))block;
+- (id)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
+- (NSArray<ObjectType>*)flattened;
+- (NSArray*)merged:(NSArray*)array;
 
 - (void)forEach:(void(^)(ObjectType item))block;
 - (void)forEachWithIndex:(void(^)(NSUInteger index, ObjectType item))block;
 
-- (NSDictionary*)groupByUsingFirst:(id(^)(ObjectType item))block;
-- (NSDictionary*)groupByUsingLast:(id(^)(ObjectType item))block;
-- (NSDictionary<id, NSArray*>*)associateBy:(id(^)(ObjectType item))block;
+- (NSDictionary<id, ObjectType>*)groupByUsingFirst:(id(^)(ObjectType item))block;
+- (NSDictionary<id, ObjectType>*)groupByUsingLast:(id(^)(ObjectType item))block;
+- (NSDictionary<id, NSArray<ObjectType>*>*)associateBy:(id(^)(ObjectType item))block;
 
 - (double)sum:(double(^)(ObjectType item))block;
 - (double)average:(double(^)(ObjectType item))block;
 - (double)minValue:(double(^)(ObjectType item))block;
 - (double)maxValue:(double(^)(ObjectType item))block;
 
-- (NSArray*)minItems:(double(^)(ObjectType item))block;
-- (NSArray*)maxItems:(double(^)(ObjectType item))block;
+- (NSArray<ObjectType>*)minItems:(double(^)(ObjectType item))block;
+- (NSArray<ObjectType>*)maxItems:(double(^)(ObjectType item))block;
 
 - (NSUInteger)firstIndex;
 - (NSUInteger)lastIndex;
@@ -48,48 +48,50 @@
 - (id)last:(BOOL(^)(ObjectType item))block;
 - (NSUInteger)lastIndex:(BOOL(^)(ObjectType item))block;
 
-- (NSArray*)take:(BOOL(^)(ObjectType item))block;
-- (NSArray*)takeLast:(BOOL(^)(ObjectType item))block;
+- (NSArray<ObjectType>*)take:(BOOL(^)(ObjectType item))block;
+- (NSArray<ObjectType>*)takeLast:(BOOL(^)(ObjectType item))block;
 
-- (NSArray*)fromValueExclusive:(id)value;
-- (NSArray*)fromValueInclusive:(id)value;
-- (NSArray*)fromIndexExclusive:(NSInteger)index;
-- (NSArray*)fromIndexInclusive:(NSInteger)index;
+- (NSArray<ObjectType>*)fromValueExclusive:(id)value;
+- (NSArray<ObjectType>*)fromValueInclusive:(id)value;
+- (NSArray<ObjectType>*)fromIndexExclusive:(NSInteger)index;
+- (NSArray<ObjectType>*)fromIndexInclusive:(NSInteger)index;
 
-- (NSArray*)untilValueExclusive:(id)value;
-- (NSArray*)untilValueInclusive:(id)value;
-- (NSArray*)untilIndexExclusive:(NSInteger)index;
-- (NSArray*)untilIndexInclusive:(NSInteger)index;
+- (NSArray<ObjectType>*)untilValueExclusive:(id)value;
+- (NSArray<ObjectType>*)untilValueInclusive:(id)value;
+- (NSArray<ObjectType>*)untilIndexExclusive:(NSInteger)index;
+- (NSArray<ObjectType>*)untilIndexInclusive:(NSInteger)index;
 
-- (NSArray*)fromValueExclusive:(id)from untilValueExclusive:(id)until;
-- (NSArray*)fromValueExclusive:(id)from untilValueInclusive:(id)until;
-- (NSArray*)fromValueInclusive:(id)from untilValueExclusive:(id)until;
-- (NSArray*)fromValueInclusive:(id)from untilValueInclusive:(id)until;
+- (NSArray<ObjectType>*)fromValueExclusive:(id)from untilValueExclusive:(id)until;
+- (NSArray<ObjectType>*)fromValueExclusive:(id)from untilValueInclusive:(id)until;
+- (NSArray<ObjectType>*)fromValueInclusive:(id)from untilValueExclusive:(id)until;
+- (NSArray<ObjectType>*)fromValueInclusive:(id)from untilValueInclusive:(id)until;
 
-- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
-- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
-- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
-- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
+- (NSArray<ObjectType>*)fromIndexExclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
+- (NSArray<ObjectType>*)fromIndexExclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
+- (NSArray<ObjectType>*)fromIndexInclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
+- (NSArray<ObjectType>*)fromIndexInclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
 
-- (NSArray*)unique;
-- (NSArray*)reversed;
-- (NSArray*)shuffled;
+- (NSArray<ObjectType>*)unique;
+- (NSArray<ObjectType>*)reversed;
+- (NSArray<ObjectType>*)shuffled;
 
-- (NSArray*)sorted:(NSComparator)comparator;
+- (NSArray<ObjectType>*)sorted:(NSComparator)comparator;
 
-+ (NSArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
-+ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat;
-+ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until;
++ (NSArray<ObjectType>*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
++ (NSArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSArray<ObjectType>* array))block repeated:(NSUInteger)repeat;
++ (NSArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSArray<ObjectType>* array))block until:(BOOL(^)(NSArray<ObjectType>* array))until;
 
 @end
 
 @interface NSMutableArray <ObjectType> (FunkyUtilities) <FunkyMutableCollectionWithCapacity>
 
-- (NSMutableArray*)reverse;
-- (NSMutableArray*)shuffle;
+- (NSMutableArray<ObjectType>*)reverse;
+- (NSMutableArray<ObjectType>*)shuffle;
 
-+ (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
-+ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat;
-+ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until;
+- (NSMutableArray<ObjectType>*)merge:(NSArray<ObjectType>*)array;
+
++ (NSMutableArray<ObjectType>*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
++ (NSMutableArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSMutableArray<ObjectType>* array))block repeated:(NSUInteger)repeat;
++ (NSMutableArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSMutableArray<ObjectType>* array))block until:(BOOL(^)(NSArray<ObjectType>* array))until;
 
 @end

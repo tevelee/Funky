@@ -40,7 +40,7 @@
 }
 
 - (void)test_merge {
-    NSDictionary* merged = [self.items merge:@{@"d": @"d"}];
+    NSDictionary* merged = [self.items merged:@{@"d": @"d"}];
     NSDictionary* expected = @{@"a": @0, @"b": @1, @"c": @2, @"d": @"d"};
     XCTAssertEqualObjects(merged, expected);
 }

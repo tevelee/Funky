@@ -18,26 +18,33 @@
 
 - (NSSet*)map:(id(^)(ObjectType item))block;
 - (NSSet*)flatMap:(id(^)(ObjectType item))block;
-- (NSSet*)filter:(BOOL(^)(ObjectType item))block;
+- (NSSet<ObjectType>*)filter:(BOOL(^)(ObjectType item))block;
 - (id)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
-- (NSSet*)flattened;
-- (NSSet*)merge:(NSSet*)collection;
+- (NSSet<ObjectType>*)flattened;
+
+- (NSSet*)takingUnion:(NSSet*)set;
+- (NSSet<ObjectType>*)takingMinus:(NSSet<ObjectType>*)set;
+- (NSSet<ObjectType>*)takingIntersection:(NSSet<ObjectType>*)set;
 
 - (void)forEach:(void(^)(ObjectType item))block;
 
-- (NSDictionary*)groupBy:(id(^)(ObjectType item))block;
-- (NSDictionary<id, NSArray*>*)associateBy:(id(^)(ObjectType item))block;
+- (NSDictionary<id, ObjectType>*)groupBy:(id(^)(ObjectType item))block;
+- (NSDictionary<id, NSArray<ObjectType>*>*)associateBy:(id(^)(ObjectType item))block;
 
 - (double)sum:(double(^)(ObjectType item))block;
 - (double)average:(double(^)(ObjectType item))block;
 - (double)minValue:(double(^)(ObjectType item))block;
 - (double)maxValue:(double(^)(ObjectType item))block;
 
-- (NSSet*)minItems:(double(^)(ObjectType item))block;
-- (NSSet*)maxItems:(double(^)(ObjectType item))block;
+- (NSSet<ObjectType>*)minItems:(double(^)(ObjectType item))block;
+- (NSSet<ObjectType>*)maxItems:(double(^)(ObjectType item))block;
 
 @end
 
-@interface NSMutableSet (FunkyUtilities) <FunkyMutableCollectionWithCapacity>
+@interface NSMutableSet <ObjectType> (FunkyUtilities) <FunkyMutableCollectionWithCapacity>
+
+- (NSMutableSet*)takeUnion:(NSSet*)set;
+- (NSMutableSet<ObjectType>*)takeMinus:(NSSet<ObjectType>*)set;
+- (NSMutableSet<ObjectType>*)takeIntersection:(NSSet<ObjectType>*)set;
 
 @end

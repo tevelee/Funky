@@ -15,3 +15,9 @@
 - (FunkyDictionaryUtilities*)utilities;
 
 @end
+
+@interface NSMutableDictionary (FunkyCore)
+
+- (FunkyMutableDictionaryUtilities*)utilities;
+
+@end

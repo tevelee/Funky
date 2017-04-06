@@ -59,9 +59,19 @@
     return [self.utilities flattened];
 }
 
-- (NSSet*)merge:(NSSet*)collection
+- (NSSet*)takingUnion:(NSSet *)set
 {
-    return [self.utilities merge:collection];
+    return [self.utilities takingUnion:set];
+}
+
+- (NSSet*)takingMinus:(NSSet*)set
+{
+    return [self.utilities takingMinus:set];
+}
+
+- (NSSet*)takingIntersection:(NSSet*)set
+{
+    return [self.utilities takingIntersection:set];
 }
 
 - (void)forEach:(void(^)(id item))block
@@ -118,6 +128,23 @@
 + (id)newWithCapacity:(NSUInteger)capacity
 {
     return [self setWithCapacity:capacity];
+}
+
+#pragma mark - Utilities
+
+- (NSMutableSet*)takeUnion:(NSSet *)set
+{
+    return [self.utilities takeUnion:set];
+}
+
+- (NSMutableSet*)takeMinus:(NSSet*)set
+{
+    return [self.utilities takeMinus:set];
+}
+
+- (NSMutableSet*)takeIntersection:(NSSet*)set
+{
+    return [self.utilities takeIntersection:set];
 }
 
 @end

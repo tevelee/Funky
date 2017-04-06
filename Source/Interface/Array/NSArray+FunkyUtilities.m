@@ -69,9 +69,9 @@
     return [self.utilities flattened];
 }
 
-- (NSArray*)merge:(NSArray*)collection
+- (NSArray*)merged:(NSArray*)collection
 {
-    return [self.utilities merge:collection];
+    return [self.utilities merged:collection];
 }
 
 - (void)forEach:(void(^)(id item))block
@@ -305,6 +305,11 @@
 - (NSMutableArray*)shuffle
 {
     return [self.utilities shuffle];
+}
+
+- (NSMutableArray*)merge:(NSArray*)array
+{
+    return [self.utilities merge:array];
 }
 
 + (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat

@@ -33,3 +33,12 @@
 }
 
 @end
+
+@implementation NSMutableDictionary (FunkyCore)
+
+- (FunkyMutableDictionaryUtilities*)utilities
+{
+    return [FunkyMutableDictionaryUtilities utilitiesWithObject:self];
+}
+
+@end

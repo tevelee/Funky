@@ -141,7 +141,7 @@
 
 - (void)test_merge
 {
-    NSArray* result = [@[@0, @1] merge:@[@2, @3]];
+    NSArray* result = [@[@0, @1] merged:@[@2, @3]];
     NSArray* expected = @[@0, @1, @2, @3];
     XCTAssertEqualObjects(expected, result);
 }
