@@ -7,9 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <Funky/NSObject+FunkyUtilities.h>
+#import <Funky/FunkyGeneralUtilities.h>
 
 @interface FunkyObjectUtilitiesTests : XCTestCase
+
+@property (nonatomic, strong) FunkyGeneralUtilities* utils;
 
 @end
 
@@ -17,7 +19,8 @@
 
 - (void)setUp {
     [super setUp];
-    
+    NSMutableString* string = [NSMutableString stringWithString:@"Test"];
+    self.utils = [FunkyGeneralUtilities utilitiesWithObject:string];
 }
 
 - (void)tearDown {
@@ -25,16 +28,14 @@
 }
 
 - (void)test_apply_returnsTheSameObject {
-    NSMutableString* string = [NSMutableString stringWithString:@"Test"];
-    id result = [string apply:^(NSMutableString* string) {
+    id result = [self.utils apply:^(NSMutableString* string) {
         [string appendString:@" that it works"];
     }];
-    XCTAssertEqual(string, result);
+    XCTAssertEqual(self.utils.object, result);
 }
 
 - (void)test_apply_performsTheOperation {
-    NSMutableString* string = [NSMutableString stringWithString:@"Test"];
-    id result = [string apply:^(NSMutableString* string) {
+    id result = [self.utils apply:^(NSMutableString* string) {
         [string appendString:@" that it works"];
     }];
     XCTAssertEqualObjects(result, @"Test that it works");

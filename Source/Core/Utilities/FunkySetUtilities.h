@@ -11,6 +11,8 @@
 
 @interface FunkySetUtilities : FunkyCollectionUtilities
 
+@property (nonatomic, strong) NSSet* object;
+
 - (NSDictionary*)groupBy:(id(^)(id item))block;
 - (NSSet*)takingUnion:(NSSet*)set;
 - (NSSet*)takingMinus:(NSSet*)set;
@@ -19,6 +21,8 @@
 @end
 
 @interface FunkyMutableSetUtilities : FunkySetUtilities
+
+@property (nonatomic, strong) NSMutableSet* object;
 
 - (NSMutableSet*)takeUnion:(NSSet*)set;
 - (NSMutableSet*)takeMinus:(NSSet*)set;

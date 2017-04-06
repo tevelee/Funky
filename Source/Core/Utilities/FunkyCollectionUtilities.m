@@ -7,6 +7,7 @@
 //
 
 #import "FunkyCollectionUtilities.h"
+#import "FunkyCollectionProtocol.h"
 
 @interface FunkyCollectionUtilities ()
 

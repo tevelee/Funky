@@ -7,14 +7,13 @@
 //
 
 #import "NSObject+FunkyUtilities.h"
-#import "FunkyGeneralUtilities.h"
+#import "NSObject+FunkyCore.h"
 
 @implementation NSObject (FunkyUtilities)
 
 - (instancetype)apply:(void (^)(id object))block
 {
-    FunkyGeneralUtilities* utilities = [FunkyGeneralUtilities utilitiesWithObject:self];
-    return [utilities apply:block];
+    return [self.utilities apply:block];
 }
 
 @end

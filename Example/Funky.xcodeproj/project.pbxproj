@@ -8,22 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		3A0522321E87F2B400A10E4A /* FunkyArraySortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A05222D1E87F2B400A10E4A /* FunkyArraySortTests.m */; };
-		3A0522331E87F2B400A10E4A /* FunkyNilTolerantNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A05222F1E87F2B400A10E4A /* FunkyNilTolerantNSArrayTests.m */; };
-		3A0522341E87F2B400A10E4A /* FunkyNSArraySubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522301E87F2B400A10E4A /* FunkyNSArraySubclassTests.m */; };
 		3A05223A1E87F38C00A10E4A /* FunkyObjectUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522351E87F38C00A10E4A /* FunkyObjectUtilitiesTests.m */; };
 		3A05223B1E87F38C00A10E4A /* FunkyDictionaryUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522361E87F38C00A10E4A /* FunkyDictionaryUtilitiesTests.m */; };
 		3A05223C1E87F38C00A10E4A /* FunkyCollectionUtilitiesOnSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522371E87F38C00A10E4A /* FunkyCollectionUtilitiesOnSetTests.m */; };
 		3A05223D1E87F38C00A10E4A /* FunkyCollectionUtilitiesOnArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522381E87F38C00A10E4A /* FunkyCollectionUtilitiesOnArrayTests.m */; };
 		3A05223E1E87F38C00A10E4A /* FunkyArrayUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522391E87F38C00A10E4A /* FunkyArrayUtilitiesTests.m */; };
-		3A0522401E87F58800A10E4A /* FunkyNSArray+UtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A05223F1E87F58800A10E4A /* FunkyNSArray+UtilitiesTests.m */; };
 		3A0522571E887AC600A10E4A /* FunkyArrayFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0522561E887AC600A10E4A /* FunkyArrayFilterTests.m */; };
-		3ACD65011E96E54300E42AE3 /* FunkyNSMutableArray+UtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACD65001E96E54300E42AE3 /* FunkyNSMutableArray+UtilitiesTests.m */; };
-		3ACD65041E96E80800E42AE3 /* FunkyNSArray+PrefixedUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACD65021E96E80800E42AE3 /* FunkyNSArray+PrefixedUtilitiesTests.m */; };
-		3ACD65051E96E80800E42AE3 /* FunkyNSMutableArray+PrefixedUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACD65031E96E80800E42AE3 /* FunkyNSMutableArray+PrefixedUtilitiesTests.m */; };
-		3ACD65081E96F28F00E42AE3 /* MockedArrayUtilties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACD65071E96F28F00E42AE3 /* MockedArrayUtilties.m */; };
-		3ACD650E1E96F48500E42AE3 /* MockedMutableArrayUtilties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACD650D1E96F48500E42AE3 /* MockedMutableArrayUtilties.m */; };
-		3AFE37311E89BD16004CCD02 /* FunkyNSMutableArraySubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE37301E89BD16004CCD02 /* FunkyNSMutableArraySubclassTests.m */; };
-		3AFE37331E89BD24004CCD02 /* FunkyNilStoringNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE37321E89BD24004CCD02 /* FunkyNilStoringNSArrayTests.m */; };
+		3A2AF8661E96F800006ED09C /* FunkyNSArrayPrefixedUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF85D1E96F800006ED09C /* FunkyNSArrayPrefixedUtilitiesTests.m */; };
+		3A2AF8671E96F800006ED09C /* FunkyNSArrayUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF85E1E96F800006ED09C /* FunkyNSArrayUtilitiesTests.m */; };
+		3A2AF8681E96F800006ED09C /* FunkyNSMutableArrayPrefixedUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF85F1E96F800006ED09C /* FunkyNSMutableArrayPrefixedUtilitiesTests.m */; };
+		3A2AF8691E96F800006ED09C /* FunkyNSMutableArrayUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF8601E96F800006ED09C /* FunkyNSMutableArrayUtilitiesTests.m */; };
+		3A2AF86A1E96F800006ED09C /* MockedArrayUtilties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF8631E96F800006ED09C /* MockedArrayUtilties.m */; };
+		3A2AF86B1E96F800006ED09C /* MockedMutableArrayUtilties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF8651E96F800006ED09C /* MockedMutableArrayUtilties.m */; };
+		3A2AF8711E96F818006ED09C /* FunkyNilStoringNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF86D1E96F818006ED09C /* FunkyNilStoringNSArrayTests.m */; };
+		3A2AF8721E96F818006ED09C /* FunkyNilTolerantNSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF86E1E96F818006ED09C /* FunkyNilTolerantNSArrayTests.m */; };
+		3A2AF8731E96F818006ED09C /* FunkyNSArraySubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF86F1E96F818006ED09C /* FunkyNSArraySubclassTests.m */; };
+		3A2AF8741E96F818006ED09C /* FunkyNSMutableArraySubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF8701E96F818006ED09C /* FunkyNSMutableArraySubclassTests.m */; };
+		3A2AF8821E96F8DA006ED09C /* FunkyNSObjectUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF8811E96F8DA006ED09C /* FunkyNSObjectUtilitiesTests.m */; };
+		3A2AF8851E96FA1F006ED09C /* MockedObjectUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF8841E96FA1F006ED09C /* MockedObjectUtilities.m */; };
+		3A2AF88B1E96FEFA006ED09C /* FunkyNSObjectPrefixedUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2AF88A1E96FEFA006ED09C /* FunkyNSObjectPrefixedUtilitiesTests.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -55,24 +58,28 @@
 /* Begin PBXFileReference section */
 		19B394B466610E6E349DFBD6 /* Pods-Funky_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Funky_Tests/Pods-Funky_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A05222D1E87F2B400A10E4A /* FunkyArraySortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyArraySortTests.m; sourceTree = "<group>"; };
-		3A05222F1E87F2B400A10E4A /* FunkyNilTolerantNSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNilTolerantNSArrayTests.m; sourceTree = "<group>"; };
-		3A0522301E87F2B400A10E4A /* FunkyNSArraySubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSArraySubclassTests.m; sourceTree = "<group>"; };
 		3A0522351E87F38C00A10E4A /* FunkyObjectUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyObjectUtilitiesTests.m; sourceTree = "<group>"; };
 		3A0522361E87F38C00A10E4A /* FunkyDictionaryUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyDictionaryUtilitiesTests.m; sourceTree = "<group>"; };
 		3A0522371E87F38C00A10E4A /* FunkyCollectionUtilitiesOnSetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyCollectionUtilitiesOnSetTests.m; sourceTree = "<group>"; };
 		3A0522381E87F38C00A10E4A /* FunkyCollectionUtilitiesOnArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyCollectionUtilitiesOnArrayTests.m; sourceTree = "<group>"; };
 		3A0522391E87F38C00A10E4A /* FunkyArrayUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyArrayUtilitiesTests.m; sourceTree = "<group>"; };
-		3A05223F1E87F58800A10E4A /* FunkyNSArray+UtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FunkyNSArray+UtilitiesTests.m"; sourceTree = "<group>"; };
 		3A0522561E887AC600A10E4A /* FunkyArrayFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyArrayFilterTests.m; sourceTree = "<group>"; };
-		3ACD65001E96E54300E42AE3 /* FunkyNSMutableArray+UtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FunkyNSMutableArray+UtilitiesTests.m"; sourceTree = "<group>"; };
-		3ACD65021E96E80800E42AE3 /* FunkyNSArray+PrefixedUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FunkyNSArray+PrefixedUtilitiesTests.m"; sourceTree = "<group>"; };
-		3ACD65031E96E80800E42AE3 /* FunkyNSMutableArray+PrefixedUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FunkyNSMutableArray+PrefixedUtilitiesTests.m"; sourceTree = "<group>"; };
-		3ACD65061E96F28F00E42AE3 /* MockedArrayUtilties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedArrayUtilties.h; sourceTree = "<group>"; };
-		3ACD65071E96F28F00E42AE3 /* MockedArrayUtilties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockedArrayUtilties.m; sourceTree = "<group>"; };
-		3ACD650C1E96F48500E42AE3 /* MockedMutableArrayUtilties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedMutableArrayUtilties.h; sourceTree = "<group>"; };
-		3ACD650D1E96F48500E42AE3 /* MockedMutableArrayUtilties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockedMutableArrayUtilties.m; sourceTree = "<group>"; };
-		3AFE37301E89BD16004CCD02 /* FunkyNSMutableArraySubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSMutableArraySubclassTests.m; sourceTree = "<group>"; };
-		3AFE37321E89BD24004CCD02 /* FunkyNilStoringNSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNilStoringNSArrayTests.m; sourceTree = "<group>"; };
+		3A2AF85D1E96F800006ED09C /* FunkyNSArrayPrefixedUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSArrayPrefixedUtilitiesTests.m; sourceTree = "<group>"; };
+		3A2AF85E1E96F800006ED09C /* FunkyNSArrayUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSArrayUtilitiesTests.m; sourceTree = "<group>"; };
+		3A2AF85F1E96F800006ED09C /* FunkyNSMutableArrayPrefixedUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSMutableArrayPrefixedUtilitiesTests.m; sourceTree = "<group>"; };
+		3A2AF8601E96F800006ED09C /* FunkyNSMutableArrayUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSMutableArrayUtilitiesTests.m; sourceTree = "<group>"; };
+		3A2AF8621E96F800006ED09C /* MockedArrayUtilties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedArrayUtilties.h; sourceTree = "<group>"; };
+		3A2AF8631E96F800006ED09C /* MockedArrayUtilties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockedArrayUtilties.m; sourceTree = "<group>"; };
+		3A2AF8641E96F800006ED09C /* MockedMutableArrayUtilties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedMutableArrayUtilties.h; sourceTree = "<group>"; };
+		3A2AF8651E96F800006ED09C /* MockedMutableArrayUtilties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockedMutableArrayUtilties.m; sourceTree = "<group>"; };
+		3A2AF86D1E96F818006ED09C /* FunkyNilStoringNSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNilStoringNSArrayTests.m; sourceTree = "<group>"; };
+		3A2AF86E1E96F818006ED09C /* FunkyNilTolerantNSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNilTolerantNSArrayTests.m; sourceTree = "<group>"; };
+		3A2AF86F1E96F818006ED09C /* FunkyNSArraySubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSArraySubclassTests.m; sourceTree = "<group>"; };
+		3A2AF8701E96F818006ED09C /* FunkyNSMutableArraySubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSMutableArraySubclassTests.m; sourceTree = "<group>"; };
+		3A2AF8811E96F8DA006ED09C /* FunkyNSObjectUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSObjectUtilitiesTests.m; sourceTree = "<group>"; };
+		3A2AF8831E96FA1F006ED09C /* MockedObjectUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedObjectUtilities.h; sourceTree = "<group>"; };
+		3A2AF8841E96FA1F006ED09C /* MockedObjectUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockedObjectUtilities.m; sourceTree = "<group>"; };
+		3A2AF88A1E96FEFA006ED09C /* FunkyNSObjectPrefixedUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSObjectPrefixedUtilitiesTests.m; sourceTree = "<group>"; };
 		3B4FB3DEB95A7CF9258573DD /* Pods_Funky_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funky_Example.framework; sourceTree = BUIFunky_PRODUCTS_DIR; };
 		3C4D80BF1D440C5AF59D79B1 /* Pods-Funky_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Funky_Tests/Pods-Funky_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4D582700A5044CD3B612A857 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -132,14 +139,10 @@
 		3A0522291E87F2B400A10E4A /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				3A05223F1E87F58800A10E4A /* FunkyNSArray+UtilitiesTests.m */,
-				3ACD65001E96E54300E42AE3 /* FunkyNSMutableArray+UtilitiesTests.m */,
-				3ACD65021E96E80800E42AE3 /* FunkyNSArray+PrefixedUtilitiesTests.m */,
-				3ACD65031E96E80800E42AE3 /* FunkyNSMutableArray+PrefixedUtilitiesTests.m */,
-				3ACD65061E96F28F00E42AE3 /* MockedArrayUtilties.h */,
-				3ACD65071E96F28F00E42AE3 /* MockedArrayUtilties.m */,
-				3ACD650C1E96F48500E42AE3 /* MockedMutableArrayUtilties.h */,
-				3ACD650D1E96F48500E42AE3 /* MockedMutableArrayUtilties.m */,
+				3A2AF85C1E96F800006ED09C /* Array */,
+				3A2AF8771E96F863006ED09C /* Dictionary */,
+				3A2AF8791E96F863006ED09C /* Object */,
+				3A2AF87B1E96F863006ED09C /* Set */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -168,12 +171,108 @@
 		3A05222E1E87F2B400A10E4A /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
-				3A05222F1E87F2B400A10E4A /* FunkyNilTolerantNSArrayTests.m */,
-				3AFE37321E89BD24004CCD02 /* FunkyNilStoringNSArrayTests.m */,
-				3A0522301E87F2B400A10E4A /* FunkyNSArraySubclassTests.m */,
-				3AFE37301E89BD16004CCD02 /* FunkyNSMutableArraySubclassTests.m */,
+				3A2AF86C1E96F817006ED09C /* Array */,
+				3A2AF8751E96F847006ED09C /* Dictionary */,
+				3A2AF8761E96F847006ED09C /* Set */,
 			);
 			path = Subclasses;
+			sourceTree = "<group>";
+		};
+		3A2AF85C1E96F800006ED09C /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				3A2AF85D1E96F800006ED09C /* FunkyNSArrayPrefixedUtilitiesTests.m */,
+				3A2AF85E1E96F800006ED09C /* FunkyNSArrayUtilitiesTests.m */,
+				3A2AF85F1E96F800006ED09C /* FunkyNSMutableArrayPrefixedUtilitiesTests.m */,
+				3A2AF8601E96F800006ED09C /* FunkyNSMutableArrayUtilitiesTests.m */,
+				3A2AF8611E96F800006ED09C /* Mock */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		3A2AF8611E96F800006ED09C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3A2AF8621E96F800006ED09C /* MockedArrayUtilties.h */,
+				3A2AF8631E96F800006ED09C /* MockedArrayUtilties.m */,
+				3A2AF8641E96F800006ED09C /* MockedMutableArrayUtilties.h */,
+				3A2AF8651E96F800006ED09C /* MockedMutableArrayUtilties.m */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		3A2AF86C1E96F817006ED09C /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				3A2AF86D1E96F818006ED09C /* FunkyNilStoringNSArrayTests.m */,
+				3A2AF86E1E96F818006ED09C /* FunkyNilTolerantNSArrayTests.m */,
+				3A2AF86F1E96F818006ED09C /* FunkyNSArraySubclassTests.m */,
+				3A2AF8701E96F818006ED09C /* FunkyNSMutableArraySubclassTests.m */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		3A2AF8751E96F847006ED09C /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		3A2AF8761E96F847006ED09C /* Set */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		3A2AF8771E96F863006ED09C /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				3A2AF8781E96F863006ED09C /* Mock */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		3A2AF8781E96F863006ED09C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		3A2AF8791E96F863006ED09C /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				3A2AF87A1E96F863006ED09C /* Mock */,
+				3A2AF8811E96F8DA006ED09C /* FunkyNSObjectUtilitiesTests.m */,
+				3A2AF88A1E96FEFA006ED09C /* FunkyNSObjectPrefixedUtilitiesTests.m */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		3A2AF87A1E96F863006ED09C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3A2AF8831E96FA1F006ED09C /* MockedObjectUtilities.h */,
+				3A2AF8841E96FA1F006ED09C /* MockedObjectUtilities.m */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		3A2AF87B1E96F863006ED09C /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				3A2AF87C1E96F863006ED09C /* Mock */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		3A2AF87C1E96F863006ED09C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -479,7 +578,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* FunkyAppDelegate.m in Sources */,
-				3ACD65081E96F28F00E42AE3 /* MockedArrayUtilties.m in Sources */,
 				6003F5A7195388D20070C39A /* FunkyViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -491,20 +589,24 @@
 			files = (
 				3A05223E1E87F38C00A10E4A /* FunkyArrayUtilitiesTests.m in Sources */,
 				3A05223D1E87F38C00A10E4A /* FunkyCollectionUtilitiesOnArrayTests.m in Sources */,
-				3ACD65051E96E80800E42AE3 /* FunkyNSMutableArray+PrefixedUtilitiesTests.m in Sources */,
 				3A0522321E87F2B400A10E4A /* FunkyArraySortTests.m in Sources */,
 				3A05223A1E87F38C00A10E4A /* FunkyObjectUtilitiesTests.m in Sources */,
-				3ACD65011E96E54300E42AE3 /* FunkyNSMutableArray+UtilitiesTests.m in Sources */,
-				3ACD650E1E96F48500E42AE3 /* MockedMutableArrayUtilties.m in Sources */,
+				3A2AF8681E96F800006ED09C /* FunkyNSMutableArrayPrefixedUtilitiesTests.m in Sources */,
+				3A2AF86A1E96F800006ED09C /* MockedArrayUtilties.m in Sources */,
+				3A2AF8731E96F818006ED09C /* FunkyNSArraySubclassTests.m in Sources */,
+				3A2AF88B1E96FEFA006ED09C /* FunkyNSObjectPrefixedUtilitiesTests.m in Sources */,
+				3A2AF8691E96F800006ED09C /* FunkyNSMutableArrayUtilitiesTests.m in Sources */,
+				3A2AF8851E96FA1F006ED09C /* MockedObjectUtilities.m in Sources */,
 				3A05223C1E87F38C00A10E4A /* FunkyCollectionUtilitiesOnSetTests.m in Sources */,
-				3A0522341E87F2B400A10E4A /* FunkyNSArraySubclassTests.m in Sources */,
-				3A0522401E87F58800A10E4A /* FunkyNSArray+UtilitiesTests.m in Sources */,
-				3ACD65041E96E80800E42AE3 /* FunkyNSArray+PrefixedUtilitiesTests.m in Sources */,
+				3A2AF8721E96F818006ED09C /* FunkyNilTolerantNSArrayTests.m in Sources */,
+				3A2AF86B1E96F800006ED09C /* MockedMutableArrayUtilties.m in Sources */,
 				3A0522571E887AC600A10E4A /* FunkyArrayFilterTests.m in Sources */,
-				3AFE37311E89BD16004CCD02 /* FunkyNSMutableArraySubclassTests.m in Sources */,
-				3AFE37331E89BD24004CCD02 /* FunkyNilStoringNSArrayTests.m in Sources */,
+				3A2AF8711E96F818006ED09C /* FunkyNilStoringNSArrayTests.m in Sources */,
+				3A2AF8671E96F800006ED09C /* FunkyNSArrayUtilitiesTests.m in Sources */,
+				3A2AF8821E96F8DA006ED09C /* FunkyNSObjectUtilitiesTests.m in Sources */,
+				3A2AF8661E96F800006ED09C /* FunkyNSArrayPrefixedUtilitiesTests.m in Sources */,
+				3A2AF8741E96F818006ED09C /* FunkyNSMutableArraySubclassTests.m in Sources */,
 				3A05223B1E87F38C00A10E4A /* FunkyDictionaryUtilitiesTests.m in Sources */,
-				3A0522331E87F2B400A10E4A /* FunkyNilTolerantNSArrayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

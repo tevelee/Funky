@@ -8,12 +8,6 @@
 
 #import "FunkyGeneralUtilities.h"
 
-@interface FunkyGeneralUtilities ()
-
-@property (nonatomic, strong) id<NSObject> object;
-
-@end
-
 @implementation FunkyGeneralUtilities
 
 + (instancetype)utilitiesWithObject:(id<NSObject>)object

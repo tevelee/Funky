@@ -8,12 +8,6 @@
 
 #import "FunkySetUtilities.h"
 
-@interface FunkySetUtilities ()
-
-@property (nonatomic, strong) NSSet* object;
-
-@end
-
 @implementation FunkySetUtilities
 
 - (NSDictionary *)groupBy:(id (^)(id))block
@@ -50,12 +44,6 @@
     [mutableSet intersectSet:set];
     return mutableSet.copy;
 }
-
-@end
-
-@interface FunkyMutableSetUtilities ()
-
-@property (nonatomic, strong) NSMutableSet* object;
 
 @end
 

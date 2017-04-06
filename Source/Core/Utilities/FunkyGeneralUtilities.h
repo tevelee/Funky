@@ -11,6 +11,8 @@
 
 @interface FunkyGeneralUtilities : NSObject
 
+@property (nonatomic, strong) id<NSObject> object;
+
 + (instancetype)utilitiesWithObject:(id<NSObject>)object;
 
 - (id)apply:(void(^)(id item))block;

@@ -55,7 +55,7 @@ Funky provides a set of extension methods on NSArray, NSDictionary and NSSet  fo
 	
 - (NSDictionary*)groupByUsingFirst:(id(^)(ObjectType item))block;
 - (NSDictionary*)groupByUsingLast:(id(^)(ObjectType item))block;
-- (NSDictionary<id, NSArray*>*)associateBy:(id(^)(ObjectType item))block;
+- (NSDictionary*)associateBy:(id(^)(ObjectType item))block;
 	
 - (double)sum:(double(^)(ObjectType item))block;
 - (double)average:(double(^)(ObjectType item))block;
@@ -163,7 +163,7 @@ Funky provides a set of extension methods on NSArray, NSDictionary and NSSet  fo
 - (void)forEach:(void(^)(ObjectType item))block;
 	
 - (NSDictionary*)groupBy:(id(^)(ObjectType item))block;
-- (NSDictionary<id, NSArray*>*)associateBy:(id(^)(ObjectType item))block;
+- (NSDictionary*)associateBy:(id(^)(ObjectType item))block;
 	
 - (double)sum:(double(^)(ObjectType item))block;
 - (double)average:(double(^)(ObjectType item))block;

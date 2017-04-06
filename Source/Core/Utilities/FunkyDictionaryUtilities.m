@@ -8,12 +8,6 @@
 
 #import "FunkyDictionaryUtilities.h"
 
-@interface FunkyDictionaryUtilities ()
-
-@property (nonatomic, strong) NSDictionary* object;
-
-@end
-
 @implementation FunkyDictionaryUtilities
 
 - (id)mapToAnother:(void(^)(id key, id value, NSMutableDictionary* mutableDictionary))block
@@ -106,12 +100,6 @@
     }];
     return mutatingValue;
 }
-
-@end
-
-@interface FunkyMutableDictionaryUtilities ()
-
-@property (nonatomic, strong) NSMutableDictionary* object;
 
 @end
 

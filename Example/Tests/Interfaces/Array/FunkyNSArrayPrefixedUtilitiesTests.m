@@ -13,11 +13,11 @@
 #import <OCMock/OCMock.h>
 #import "MockedArrayUtilties.h"
 
-@interface FunkyNSArray_PrefixedUtilitiesTests : XCTestCase
+@interface FunkyNSArrayPrefixedUtilitiesTests : XCTestCase
 
 @end
 
-@implementation FunkyNSArray_PrefixedUtilitiesTests
+@implementation FunkyNSArrayPrefixedUtilitiesTests
 {
     NSArray* array;
 }

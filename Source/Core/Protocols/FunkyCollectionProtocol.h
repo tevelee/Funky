@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FunkyMutableCollectionWithCapacityProtocol.h"
+#import "FunkyCollectionCounterpartProtocol.h"
 
 @protocol FunkyMutableCollection;
 
