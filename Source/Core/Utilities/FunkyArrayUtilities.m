@@ -71,7 +71,7 @@
 
 - (NSUInteger)firstIndex:(BOOL (^)(id))block
 {
-    for (NSUInteger i = 0; i < self.object.count - 1; ++i) {
+    for (NSUInteger i = 0; i < self.object.count; ++i) {
         id item = self.object[i];
         if (block(item)) {
             return i;
@@ -488,6 +488,8 @@
             [self.object removeObject:object];
         }
     }
+    
+    return self.object;
 }
 
 - (NSMutableArray*)reverse
@@ -496,6 +498,8 @@
         NSInteger otherSide = self.object.count - 1 - index;
         [self.object exchangeObjectAtIndex:index withObjectAtIndex:otherSide];
     }];
+    
+    return self.object;
 }
 
 - (NSMutableArray*)shuffle
@@ -505,6 +509,8 @@
         NSInteger exchangeIndex = index + arc4random_uniform((u_int32_t )remainingCount);
         [self.object exchangeObjectAtIndex:index withObjectAtIndex:exchangeIndex];
     }];
+    
+    return self.object;
 }
 
 - (NSMutableArray*)merge:(NSArray*)array

@@ -307,6 +307,11 @@
     return [self.utilities shuffle];
 }
 
+- (NSMutableArray*)removeDuplicates
+{
+    return [self.utilities removeDuplicates];
+}
+
 - (NSMutableArray*)merge:(NSArray*)array
 {
     return [self.utilities merge:array];

@@ -87,6 +87,7 @@
 
 - (NSMutableArray<ObjectType>*)reverse;
 - (NSMutableArray<ObjectType>*)shuffle;
+- (NSMutableArray<ObjectType>*)removeDuplicates;
 
 - (NSMutableArray<ObjectType>*)merge:(NSArray<ObjectType>*)array;
 

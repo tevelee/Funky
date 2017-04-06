@@ -38,11 +38,6 @@
                BlueprintName = "Funky_Tests"
                ReferencedContainer = "container:Funky.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "FunkyNSArray_UtilitiesTests/test_map_callsUtilitiyClass">
-               </Test>
-            </SkippedTests>
             <LocationScenarioReference
                identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
                referenceType = "1">
