@@ -12,6 +12,8 @@
 
 @interface FunkyArrayUtilities : FunkyCollectionUtilities
 
+@property (nonatomic, strong) NSArray* object;
+
 - (NSUInteger)firstIndex;
 - (NSUInteger)lastIndex;
 
@@ -62,6 +64,8 @@
 @end
 
 @interface FunkyMutableArrayUtilities : FunkyArrayUtilities
+
+@property (nonatomic, strong) NSMutableArray* object;
 
 - (NSMutableArray*)removeDuplicates;
 - (NSMutableArray*)reverse;

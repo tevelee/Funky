@@ -8,12 +8,6 @@
 
 #import "FunkyArrayUtilities.h"
 
-@interface FunkyArrayUtilities ()
-
-@property (nonatomic, strong) NSArray* object;
-
-@end
-
 @implementation FunkyArrayUtilities
 
 - (id)mapToAnotherWithIndex:(void(^)(NSUInteger index, id item, id<FunkyMutableCollection> collection))block
@@ -462,12 +456,6 @@
 {
     return [self mutableArrayWithArray:array nextItem:block until:until];
 }
-
-@end
-
-@interface FunkyMutableArrayUtilities ()
-
-@property (nonatomic, strong) NSMutableArray* object;
 
 @end
 
