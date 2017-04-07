@@ -33,6 +33,12 @@
 		3AF528B61E97F2660029015F /* MockedMutableDictionaryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF528B51E97F2660029015F /* MockedMutableDictionaryUtilities.m */; };
 		3AFA06B81E97F902007084D0 /* MockedArrayUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06B41E97F902007084D0 /* MockedArrayUtilities.m */; };
 		3AFA06B91E97F902007084D0 /* MockedMutableArrayUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06B71E97F902007084D0 /* MockedMutableArrayUtilities.m */; };
+		3AFA06BC1E97FC89007084D0 /* MockedSetUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06BB1E97FC89007084D0 /* MockedSetUtilities.m */; };
+		3AFA06BF1E97FC98007084D0 /* MockedMutableSetUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06BE1E97FC98007084D0 /* MockedMutableSetUtilities.m */; };
+		3AFA06C11E97FCA7007084D0 /* FunkyNSSetUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06C01E97FCA7007084D0 /* FunkyNSSetUtilitiesTests.m */; };
+		3AFA06C31E97FCB5007084D0 /* FunkyNSMutableSetUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06C21E97FCB5007084D0 /* FunkyNSMutableSetUtilitiesTests.m */; };
+		3AFA06C51E97FCC1007084D0 /* FunkyNSSetPrefixedUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06C41E97FCC1007084D0 /* FunkyNSSetPrefixedUtilitiesTests.m */; };
+		3AFA06C71E97FCCF007084D0 /* FunkyNSMutableSetPrefixedUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06C61E97FCCF007084D0 /* FunkyNSMutableSetPrefixedUtilitiesTests.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -94,6 +100,14 @@
 		3AFA06B51E97F902007084D0 /* MockedMutableArrayUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedMutableArrayUtilities.h; sourceTree = "<group>"; };
 		3AFA06B61E97F902007084D0 /* MockedArrayUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedArrayUtilities.h; sourceTree = "<group>"; };
 		3AFA06B71E97F902007084D0 /* MockedMutableArrayUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockedMutableArrayUtilities.m; sourceTree = "<group>"; };
+		3AFA06BA1E97FC89007084D0 /* MockedSetUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedSetUtilities.h; sourceTree = "<group>"; };
+		3AFA06BB1E97FC89007084D0 /* MockedSetUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockedSetUtilities.m; sourceTree = "<group>"; };
+		3AFA06BD1E97FC98007084D0 /* MockedMutableSetUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedMutableSetUtilities.h; sourceTree = "<group>"; };
+		3AFA06BE1E97FC98007084D0 /* MockedMutableSetUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockedMutableSetUtilities.m; sourceTree = "<group>"; };
+		3AFA06C01E97FCA7007084D0 /* FunkyNSSetUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSSetUtilitiesTests.m; sourceTree = "<group>"; };
+		3AFA06C21E97FCB5007084D0 /* FunkyNSMutableSetUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSMutableSetUtilitiesTests.m; sourceTree = "<group>"; };
+		3AFA06C41E97FCC1007084D0 /* FunkyNSSetPrefixedUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSSetPrefixedUtilitiesTests.m; sourceTree = "<group>"; };
+		3AFA06C61E97FCCF007084D0 /* FunkyNSMutableSetPrefixedUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSMutableSetPrefixedUtilitiesTests.m; sourceTree = "<group>"; };
 		3B4FB3DEB95A7CF9258573DD /* Pods_Funky_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funky_Example.framework; sourceTree = BUIFunky_PRODUCTS_DIR; };
 		3C4D80BF1D440C5AF59D79B1 /* Pods-Funky_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Funky_Tests/Pods-Funky_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4D582700A5044CD3B612A857 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -207,9 +221,9 @@
 		3A2AF8611E96F800006ED09C /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				3AFA06B61E97F902007084D0 /* MockedArrayUtilities.h */,
 				3AFA06B41E97F902007084D0 /* MockedArrayUtilities.m */,
 				3AFA06B51E97F902007084D0 /* MockedMutableArrayUtilities.h */,
-				3AFA06B61E97F902007084D0 /* MockedArrayUtilities.h */,
 				3AFA06B71E97F902007084D0 /* MockedMutableArrayUtilities.m */,
 			);
 			path = Mock;
@@ -286,6 +300,10 @@
 			isa = PBXGroup;
 			children = (
 				3A2AF87C1E96F863006ED09C /* Mock */,
+				3AFA06C01E97FCA7007084D0 /* FunkyNSSetUtilitiesTests.m */,
+				3AFA06C21E97FCB5007084D0 /* FunkyNSMutableSetUtilitiesTests.m */,
+				3AFA06C41E97FCC1007084D0 /* FunkyNSSetPrefixedUtilitiesTests.m */,
+				3AFA06C61E97FCCF007084D0 /* FunkyNSMutableSetPrefixedUtilitiesTests.m */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -293,6 +311,10 @@
 		3A2AF87C1E96F863006ED09C /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				3AFA06BA1E97FC89007084D0 /* MockedSetUtilities.h */,
+				3AFA06BB1E97FC89007084D0 /* MockedSetUtilities.m */,
+				3AFA06BD1E97FC98007084D0 /* MockedMutableSetUtilities.h */,
+				3AFA06BE1E97FC98007084D0 /* MockedMutableSetUtilities.m */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -612,7 +634,9 @@
 				3AF528B11E97F2430029015F /* FunkyNSMutableDictionaryUtilitiesTests.m in Sources */,
 				3A05223E1E87F38C00A10E4A /* FunkyArrayUtilitiesTests.m in Sources */,
 				3AF528B61E97F2660029015F /* MockedMutableDictionaryUtilities.m in Sources */,
+				3AFA06BF1E97FC98007084D0 /* MockedMutableSetUtilities.m in Sources */,
 				3A05223D1E87F38C00A10E4A /* FunkyCollectionUtilitiesOnArrayTests.m in Sources */,
+				3AFA06C51E97FCC1007084D0 /* FunkyNSSetPrefixedUtilitiesTests.m in Sources */,
 				3A0522321E87F2B400A10E4A /* FunkyArraySortTests.m in Sources */,
 				3AFA06B81E97F902007084D0 /* MockedArrayUtilities.m in Sources */,
 				3AF528AF1E97F1CC0029015F /* FunkyNSDictionaryPrefixedUtilitiesTests.m in Sources */,
@@ -620,9 +644,13 @@
 				3AFA06B91E97F902007084D0 /* MockedMutableArrayUtilities.m in Sources */,
 				3A2AF8681E96F800006ED09C /* FunkyNSMutableArrayPrefixedUtilitiesTests.m in Sources */,
 				3A2AF8731E96F818006ED09C /* FunkyNSArraySubclassTests.m in Sources */,
+				3AFA06BC1E97FC89007084D0 /* MockedSetUtilities.m in Sources */,
+				3AFA06C71E97FCCF007084D0 /* FunkyNSMutableSetPrefixedUtilitiesTests.m in Sources */,
+				3AFA06C11E97FCA7007084D0 /* FunkyNSSetUtilitiesTests.m in Sources */,
 				3A2AF88B1E96FEFA006ED09C /* FunkyNSObjectPrefixedUtilitiesTests.m in Sources */,
 				3A2AF8691E96F800006ED09C /* FunkyNSMutableArrayUtilitiesTests.m in Sources */,
 				3AF528AD1E97F1B20029015F /* FunkyNSDictionaryUtilitiesTests.m in Sources */,
+				3AFA06C31E97FCB5007084D0 /* FunkyNSMutableSetUtilitiesTests.m in Sources */,
 				3A2AF8851E96FA1F006ED09C /* MockedObjectUtilities.m in Sources */,
 				3A05223C1E87F38C00A10E4A /* FunkyCollectionUtilitiesOnSetTests.m in Sources */,
 				3A2AF8721E96F818006ED09C /* FunkyNilTolerantNSArrayTests.m in Sources */,
