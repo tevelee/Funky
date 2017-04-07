@@ -1,12 +1,12 @@
 //
-//  MockedArrayUtilties.m
+//  MockedArrayUtilities.m
 //  Funky
 //
 //  Created by László Teveli on 2017. 04. 07..
 //  Copyright © 2017. tevelee. All rights reserved.
 //
 
-#import "MockedArrayUtilties.h"
+#import "MockedArrayUtilities.h"
 
 id mockedArrayUtilsWithClass = nil;
 FunkyArrayUtilities* mockedArrayUtils = nil;

@@ -1,5 +1,5 @@
 //
-//  MockedArrayUtilties.h
+//  MockedArrayUtilities.h
 //  Funky
 //
 //  Created by László Teveli on 2017. 04. 07..
@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <Funky/FunkyArrayUtilities.h>
 
-FOUNDATION_EXPORT id mockedArrayUtilsWithClass;
-FOUNDATION_EXPORT FunkyArrayUtilities* mockedArrayUtils;
+FOUNDATION_EXPORT id mockedMutableArrayUtilsWithClass;
+FOUNDATION_EXPORT FunkyMutableArrayUtilities* mockedMutableArrayUtils;
 
-@interface NSArray (Mocked)
+@interface NSMutableArray (Mocked)
 
 @end

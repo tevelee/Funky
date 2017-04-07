@@ -22,6 +22,7 @@
 - (BOOL)funky_all:(BOOL(^)(KeyType key, ObjectType value))block;
 - (BOOL)funky_none:(BOOL(^)(KeyType key, ObjectType value))block;
 - (BOOL)funky_contains:(BOOL(^)(KeyType key, ObjectType value))block;
+- (NSInteger)funky_count:(BOOL(^)(KeyType key, ObjectType value))block;
 - (id)funky_reduce:(id(^)(id previousValue, KeyType key, ObjectType value))block withInitialValue:(id)start;
 
 @end

@@ -92,6 +92,18 @@
     return YES;
 }
 
+- (NSInteger)count:(BOOL (^)(id key, id value))block
+{
+    NSInteger count = 0;
+    for (id key in self.object) {
+        id item = self.object[key];
+        if (block(key, item)) {
+            count++;
+        }
+    }
+    return count;
+}
+
 - (id)reduce:(id(^)(id previousValue, id key, id value))block withInitialValue:(id)start
 {
     __block id mutatingValue = start;

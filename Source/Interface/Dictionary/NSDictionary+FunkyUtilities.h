@@ -22,6 +22,7 @@
 - (BOOL)all:(BOOL(^)(KeyType key, ObjectType value))block;
 - (BOOL)none:(BOOL(^)(KeyType key, ObjectType value))block;
 - (BOOL)contains:(BOOL(^)(KeyType key, ObjectType value))block;
+- (NSInteger)count:(BOOL(^)(KeyType key, ObjectType value))block;
 - (id)reduce:(id(^)(id previousValue, KeyType key, ObjectType value))block withInitialValue:(id)start;
 
 @end

@@ -51,6 +51,11 @@
     return [self.utilities contains:block];
 }
 
+- (NSInteger)funky_count:(BOOL(^)(id key, id value))block
+{
+    return [self.utilities count:block];
+}
+
 - (id)funky_reduce:(id(^)(id previousValue, id key, id value))block withInitialValue:(id)start
 {
     return [self.utilities reduce:block withInitialValue:start];

@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <Funky/NSDictionary+FunkyUtilities.h>
+#import <Funky/FunkyDictionaryUtilities.h>
 
 @interface FunkyDictionaryUtilitiesTests : XCTestCase
 
-@property (nonatomic, strong) NSDictionary<NSString*, NSNumber*>* items;
+@property (nonatomic, strong) FunkyDictionaryUtilities* items;
 
 @end
 
@@ -19,7 +19,8 @@
 
 - (void)setUp {
     [super setUp];
-    self.items = @{@"a": @0, @"b": @1, @"c": @2};
+    NSDictionary* items = @{@"a": @0, @"b": @1, @"c": @2};
+    self.items = [FunkyDictionaryUtilities utilitiesWithObject:items];
 }
 
 - (void)tearDown {
@@ -46,11 +47,11 @@
 }
 
 - (void)test_forEach {
-    NSMutableSet* items = [NSMutableSet setWithCapacity:self.items.count];
+    NSMutableSet* items = [NSMutableSet setWithCapacity:self.items.object.count];
     [self.items forEach:^(NSString *key, NSNumber *value) {
         [items addObject:key];
     }];
-    NSSet* expected = [NSSet setWithArray:self.items.allKeys];
+    NSSet* expected = [NSSet setWithArray:self.items.object.allKeys];
     XCTAssertEqualObjects(items, expected);
 }
 

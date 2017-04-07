@@ -11,7 +11,7 @@
 #import <Funky/NSArray+FunkyPrefixedUtilities.h>
 #import <Funky/NSArray+FunkyCore.h>
 #import <OCMock/OCMock.h>
-#import "MockedMutableArrayUtilties.h"
+#import "MockedMutableArrayUtilities.h"
 
 @interface FunkyNSMutableArrayPrefixedUtilitiesTests : XCTestCase
 

@@ -24,6 +24,7 @@
 - (BOOL)all:(BOOL(^)(id key, id value))block;
 - (BOOL)none:(BOOL(^)(id key, id value))block;
 - (BOOL)contains:(BOOL(^)(id key, id value))block;
+- (NSInteger)count:(BOOL(^)(id key, id value))block;
 - (id)reduce:(id(^)(id previousValue, id key, id value))block withInitialValue:(id)start;
 
 @end
