@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FunkyCollectionCounterpartProtocol.h"
 
-@interface FunkyNSArraySubclass : NSArray <FunkyCollectionCounterpart>
+@interface FunkyNSArraySubclass : NSArray
 
 - (NSArray*)NSArray;
 

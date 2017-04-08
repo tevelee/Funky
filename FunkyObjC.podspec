@@ -20,11 +20,12 @@ DESC
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'Source/Core/**/*'
+    ss.private_header_files = 'Source/Core/Categories/*.h', 'Source/Core/Utilities/*.h'
   end
 
   s.subspec 'Collections' do |ss|
     ss.dependency 'FunkyObjC/Core'
-    
+
     ss.subspec 'Array' do |sss|
       sss.source_files = 'Source/Collections/Array/**/*'
     end
@@ -40,6 +41,7 @@ DESC
 
   s.subspec 'Interface' do |ss|
     ss.dependency 'FunkyObjC/Core'
+    ss.source_files = 'Source/Interface/*.h'
 
     ss.subspec 'Object' do |sss|
       sss.source_files = 'Source/Interface/Object/**/*'

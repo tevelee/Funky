@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FunkyCollectionCounterpartProtocol.h"
 #import "FunkyArrayUtilities.h"
+#import "FunkyMutableCollectionWithCapacityProtocol.h"
 
 @interface NSArray (FunkyCore) <FunkyCollectionCounterpart>
 
@@ -16,7 +17,7 @@
 
 @end
 
-@interface NSMutableArray (FunkyCore)
+@interface NSMutableArray (FunkyCore) <FunkyMutableCollectionWithCapacity>
 
 - (FunkyMutableArrayUtilities*)utilities;
 

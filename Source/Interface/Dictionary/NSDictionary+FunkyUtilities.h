@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FunkyMutableCollectionWithCapacityProtocol.h"
 #import "FunkyPair.h"
 
 @interface NSDictionary<__covariant KeyType, __covariant ObjectType> (FunkyUtilities)
@@ -27,7 +26,7 @@
 
 @end
 
-@interface NSMutableDictionary<KeyType, ObjectType> (FunkyUtilities) <FunkyMutableCollectionWithCapacity>
+@interface NSMutableDictionary<KeyType, ObjectType> (FunkyUtilities)
 
 - (NSMutableDictionary<KeyType, ObjectType>*)merge:(NSDictionary<KeyType, ObjectType>*)dictionary;
 

@@ -7,6 +7,7 @@
 //
 
 #import "FunkyViewController.h"
+#import <Funky/NSArray+FunkyUtilities.h>
 
 @interface FunkyViewController ()
 

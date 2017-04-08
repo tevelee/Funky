@@ -36,6 +36,15 @@
 
 @implementation NSMutableSet (FunkyCore)
 
+#pragma mark - FunkyMutableCollectionWithCapacity
+
++ (id)newWithCapacity:(NSUInteger)capacity
+{
+    return [self setWithCapacity:capacity];
+}
+
+#pragma mark - Utilities
+
 - (FunkyMutableSetUtilities*)utilities
 {
     return [FunkyMutableSetUtilities utilitiesWithObject:self];

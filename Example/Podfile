@@ -1,8 +1,7 @@
-use_frameworks!
-
 project 'Funky.xcodeproj'
 
 target 'Funky_Example' do
+  use_frameworks!
   pod 'FunkyObjC', :path => '../'
 
   target 'Funky_Tests' do

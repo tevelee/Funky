@@ -123,13 +123,6 @@
 
 @implementation NSMutableSet (FunkyUtilities)
 
-#pragma mark - FunkyMutableCollectionWithCapacity
-
-+ (id)newWithCapacity:(NSUInteger)capacity
-{
-    return [self setWithCapacity:capacity];
-}
-
 #pragma mark - Utilities
 
 - (NSMutableSet*)takeUnion:(NSSet *)set

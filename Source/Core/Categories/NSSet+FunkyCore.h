@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FunkyCollectionCounterpartProtocol.h"
 #import "FunkySetUtilities.h"
+#import "FunkyMutableCollectionWithCapacityProtocol.h"
 
 @interface NSSet (FunkyCore) <FunkyCollectionCounterpart>
 
@@ -16,7 +17,7 @@
 
 @end
 
-@interface NSMutableSet (FunkyCore)
+@interface NSMutableSet (FunkyCore) <FunkyMutableCollectionWithCapacity>
 
 - (FunkyMutableSetUtilities*)utilities;
 

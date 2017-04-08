@@ -8,8 +8,9 @@
 
 #import "FunkyNSMutableSetSubclass.h"
 #import "FunkyNSSetSubclass.h"
+#import "FunkyCollectionCounterpartProtocol.h"
 
-@interface FunkyNSMutableSetSubclass ()
+@interface FunkyNSMutableSetSubclass () <FunkyCollectionCounterpart>
 
 @property (nonatomic, strong, readonly) NSMutableSet *backingSet;
 

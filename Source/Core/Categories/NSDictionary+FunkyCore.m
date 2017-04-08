@@ -36,6 +36,15 @@
 
 @implementation NSMutableDictionary (FunkyCore)
 
+#pragma mark - FunkyMutableCollectionWithCapacity
+
++ (id)newWithCapacity:(NSUInteger)capacity
+{
+    return [self dictionaryWithCapacity:capacity];
+}
+
+#pragma mark - Utilities
+
 - (FunkyMutableDictionaryUtilities*)utilities
 {
     return [FunkyMutableDictionaryUtilities utilitiesWithObject:self];
