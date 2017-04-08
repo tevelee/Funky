@@ -43,6 +43,10 @@
 		3AFA06CD1E980352007084D0 /* FunkyNilTolerantNSSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06CC1E980352007084D0 /* FunkyNilTolerantNSSetTests.m */; };
 		3AFA06D11E99099A007084D0 /* FunkyNSSetSubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06D01E99099A007084D0 /* FunkyNSSetSubclassTests.m */; };
 		3AFA06D31E9909AA007084D0 /* FunkyNSMutableSetSubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06D21E9909AA007084D0 /* FunkyNSMutableSetSubclassTests.m */; };
+		3AFA06D51E9919F7007084D0 /* FunkyNSDictionarySubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06D41E9919F7007084D0 /* FunkyNSDictionarySubclassTests.m */; };
+		3AFA06D71E991A02007084D0 /* FunkyNSMutableDictionarySubclassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06D61E991A02007084D0 /* FunkyNSMutableDictionarySubclassTests.m */; };
+		3AFA06D91E991A15007084D0 /* FunkyNilStoringNSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06D81E991A15007084D0 /* FunkyNilStoringNSDictionaryTests.m */; };
+		3AFA06DB1E991A24007084D0 /* FunkyNilTolerantNSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA06DA1E991A24007084D0 /* FunkyNilTolerantNSDictionaryTests.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -116,6 +120,10 @@
 		3AFA06CC1E980352007084D0 /* FunkyNilTolerantNSSetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNilTolerantNSSetTests.m; sourceTree = "<group>"; };
 		3AFA06D01E99099A007084D0 /* FunkyNSSetSubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSSetSubclassTests.m; sourceTree = "<group>"; };
 		3AFA06D21E9909AA007084D0 /* FunkyNSMutableSetSubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSMutableSetSubclassTests.m; sourceTree = "<group>"; };
+		3AFA06D41E9919F7007084D0 /* FunkyNSDictionarySubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSDictionarySubclassTests.m; sourceTree = "<group>"; };
+		3AFA06D61E991A02007084D0 /* FunkyNSMutableDictionarySubclassTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNSMutableDictionarySubclassTests.m; sourceTree = "<group>"; };
+		3AFA06D81E991A15007084D0 /* FunkyNilStoringNSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNilStoringNSDictionaryTests.m; sourceTree = "<group>"; };
+		3AFA06DA1E991A24007084D0 /* FunkyNilTolerantNSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunkyNilTolerantNSDictionaryTests.m; sourceTree = "<group>"; };
 		3B4FB3DEB95A7CF9258573DD /* Pods_Funky_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funky_Example.framework; sourceTree = BUIFunky_PRODUCTS_DIR; };
 		3C4D80BF1D440C5AF59D79B1 /* Pods-Funky_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funky_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Funky_Tests/Pods-Funky_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4D582700A5044CD3B612A857 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -251,6 +259,10 @@
 		3A2AF8751E96F847006ED09C /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
+				3AFA06D41E9919F7007084D0 /* FunkyNSDictionarySubclassTests.m */,
+				3AFA06D61E991A02007084D0 /* FunkyNSMutableDictionarySubclassTests.m */,
+				3AFA06D81E991A15007084D0 /* FunkyNilStoringNSDictionaryTests.m */,
+				3AFA06DA1E991A24007084D0 /* FunkyNilTolerantNSDictionaryTests.m */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -644,9 +656,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF528B11E97F2430029015F /* FunkyNSMutableDictionaryUtilitiesTests.m in Sources */,
+				3AFA06D71E991A02007084D0 /* FunkyNSMutableDictionarySubclassTests.m in Sources */,
 				3A05223E1E87F38C00A10E4A /* FunkyArrayUtilitiesTests.m in Sources */,
 				3AF528B61E97F2660029015F /* MockedMutableDictionaryUtilities.m in Sources */,
 				3AFA06BF1E97FC98007084D0 /* MockedMutableSetUtilities.m in Sources */,
+				3AFA06D91E991A15007084D0 /* FunkyNilStoringNSDictionaryTests.m in Sources */,
 				3A05223D1E87F38C00A10E4A /* FunkyCollectionUtilitiesOnArrayTests.m in Sources */,
 				3AFA06C51E97FCC1007084D0 /* FunkyNSSetPrefixedUtilitiesTests.m in Sources */,
 				3A0522321E87F2B400A10E4A /* FunkyArraySortTests.m in Sources */,
@@ -666,6 +680,7 @@
 				3AFA06D31E9909AA007084D0 /* FunkyNSMutableSetSubclassTests.m in Sources */,
 				3AFA06C31E97FCB5007084D0 /* FunkyNSMutableSetUtilitiesTests.m in Sources */,
 				3A2AF8851E96FA1F006ED09C /* MockedObjectUtilities.m in Sources */,
+				3AFA06DB1E991A24007084D0 /* FunkyNilTolerantNSDictionaryTests.m in Sources */,
 				3A05223C1E87F38C00A10E4A /* FunkyCollectionUtilitiesOnSetTests.m in Sources */,
 				3A2AF8721E96F818006ED09C /* FunkyNilTolerantNSArrayTests.m in Sources */,
 				3AFA06C91E980337007084D0 /* FunkyNilStoringNSSetTests.m in Sources */,
@@ -674,6 +689,7 @@
 				3A2AF8711E96F818006ED09C /* FunkyNilStoringNSArrayTests.m in Sources */,
 				3A2AF8671E96F800006ED09C /* FunkyNSArrayUtilitiesTests.m in Sources */,
 				3AFA06D11E99099A007084D0 /* FunkyNSSetSubclassTests.m in Sources */,
+				3AFA06D51E9919F7007084D0 /* FunkyNSDictionarySubclassTests.m in Sources */,
 				3AF528B31E97F24D0029015F /* FunkyNSMutableDictionaryPrefixedUtilitiesTests.m in Sources */,
 				3A2AF8821E96F8DA006ED09C /* FunkyNSObjectUtilitiesTests.m in Sources */,
 				3A2AF8661E96F800006ED09C /* FunkyNSArrayPrefixedUtilitiesTests.m in Sources */,
