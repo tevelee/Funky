@@ -185,4 +185,12 @@
     OCMVerify([mockedSetUtils minItems:[OCMArg any]]);
 }
 
+- (void)test_groupBy_callsUtilitiesClass
+{
+    [set funky_groupBy:^id(id item) {
+        return item;
+    }];
+    OCMVerify([mockedSetUtils groupBy:[OCMArg any]]);
+}
+
 @end

@@ -20,13 +20,18 @@
     return [self.NSSet setByAddingObject:anObject ?: [NSNull null]].nilStoring;
 }
 
-- (id)member:(id)object
+- (id)anyObject
 {
-    id check = [super member:object];
-    if ([check isEqual:[NSNull null]])
+    id object = [super anyObject];
+    if ([object isEqual:[NSNull null]])
         return nil;
     else
         return object;
+}
+
+- (BOOL)containsObject:(id)anObject
+{
+    return [super containsObject:anObject ?: [NSNull null]];
 }
 
 #pragma mark - Counterpart
@@ -60,13 +65,18 @@
     return [self.NSMutableSet setByAddingObject:anObject ?: [NSNull null]].nilStoring;
 }
 
-- (id)member:(id)object
+- (id)anyObject
 {
-    id check = [super member:object];
-    if ([check isEqual:[NSNull null]])
+    id object = [super anyObject];
+    if ([object isEqual:[NSNull null]])
         return nil;
     else
         return object;
+}
+
+- (BOOL)containsObject:(id)anObject
+{
+    return [super containsObject:anObject ?: [NSNull null]];
 }
 
 #pragma mark -

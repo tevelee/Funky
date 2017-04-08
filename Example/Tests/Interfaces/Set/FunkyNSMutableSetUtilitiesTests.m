@@ -52,4 +52,10 @@
     OCMVerify([mockedMutableSetUtils takeIntersection:[OCMArg any]]);
 }
 
+- (void)test_capacity_constructor
+{
+    id result = [NSMutableSet newWithCapacity:1];
+    XCTAssertNotNil(result);
+}
+
 @end
