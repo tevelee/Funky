@@ -12,5 +12,7 @@ before_install:
 - pod repo update
 - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/Funky.xcworkspace -scheme Funky-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/Funky.xcworkspace -scheme Funky-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
 - pod lib lint --allow-warnings
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

@@ -1,6 +1,7 @@
 # Funky
 
 [![CI Status](https://travis-ci.org/tevelee/Funky.svg?branch=master&style=flat)](https://travis-ci.org/tevelee/Funky)
+[![codecov.io](https://codecov.io/github/tevelee/Funky/coverage.svg?branch=master)](https://codecov.io/github/tevelee/Funky?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/FunkyObjC.svg?style=flat)](http://cocoapods.org/pods/Funky)
 [![License](https://img.shields.io/cocoapods/l/FunkyObjC.svg?style=flat)](http://cocoapods.org/pods/Funky)
 [![Platform](https://img.shields.io/cocoapods/p/FunkyObjC.svg?style=flat)](http://cocoapods.org/pods/Funky)
