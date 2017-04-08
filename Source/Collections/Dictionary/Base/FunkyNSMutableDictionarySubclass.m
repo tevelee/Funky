@@ -8,8 +8,9 @@
 
 #import "FunkyNSMutableDictionarySubclass.h"
 #import "FunkyNSDictionarySubclass.h"
+#import "FunkyCollectionCounterpartProtocol.h"
 
-@interface FunkyNSMutableDictionarySubclass ()
+@interface FunkyNSMutableDictionarySubclass () <FunkyCollectionCounterpart>
 
 @property (nonatomic, strong, readonly) NSMutableDictionary *backingDictionary;
 

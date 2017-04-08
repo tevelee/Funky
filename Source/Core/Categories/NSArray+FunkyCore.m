@@ -36,6 +36,15 @@
 
 @implementation NSMutableArray (FunkyCore)
 
+#pragma mark - FunkyMutableCollectionWithCapacity
+
++ (id)newWithCapacity:(NSUInteger)capacity
+{
+    return [self arrayWithCapacity:capacity];
+}
+
+#pragma mark - Utilities
+
 - (FunkyMutableArrayUtilities*)utilities
 {
     return [FunkyMutableArrayUtilities utilitiesWithObject:self];

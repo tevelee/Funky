@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FunkyMutableCollectionWithCapacityProtocol.h"
 
 @interface NSArray <__covariant ObjectType> (FunkyUtilities)
 
@@ -83,7 +82,7 @@
 
 @end
 
-@interface NSMutableArray <ObjectType> (FunkyUtilities) <FunkyMutableCollectionWithCapacity>
+@interface NSMutableArray <ObjectType> (FunkyUtilities)
 
 - (NSMutableArray<ObjectType>*)reverse;
 - (NSMutableArray<ObjectType>*)shuffle;

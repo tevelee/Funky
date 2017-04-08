@@ -8,8 +8,9 @@
 
 #import "FunkyNSArraySubclass.h"
 #import "FunkyNSMutableArraySubclass.h"
+#import "FunkyCollectionCounterpartProtocol.h"
 
-@interface FunkyNSArraySubclass ()
+@interface FunkyNSArraySubclass () <FunkyCollectionCounterpart>
 
 @property (nonatomic, strong, readonly) NSArray *backingArray;
 

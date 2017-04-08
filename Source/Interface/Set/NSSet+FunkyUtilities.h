@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FunkyMutableCollectionWithCapacityProtocol.h"
 
 @interface NSSet <__covariant ObjectType> (FunkyUtilities)
 
@@ -41,7 +40,7 @@
 
 @end
 
-@interface NSMutableSet <ObjectType> (FunkyUtilities) <FunkyMutableCollectionWithCapacity>
+@interface NSMutableSet <ObjectType> (FunkyUtilities)
 
 - (NSMutableSet*)takeUnion:(NSSet*)set;
 - (NSMutableSet<ObjectType>*)takeMinus:(NSSet<ObjectType>*)set;

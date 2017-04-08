@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FunkyCollectionCounterpartProtocol.h"
 
-@interface FunkyNSSetSubclass : NSSet <FunkyCollectionCounterpart>
+@interface FunkyNSSetSubclass : NSSet
 
 - (NSSet*)NSSet;
 
