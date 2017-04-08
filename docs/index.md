@@ -1,0 +1,2 @@
+# Funky docs
+Hello
