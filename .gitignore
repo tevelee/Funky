@@ -1,8 +1,7 @@
-# OS X
+# macOS
 .DS_Store
 
 # Xcode
-build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -13,14 +12,34 @@ build/
 !default.perspectivev3
 xcuserdata/
 *.xccheckout
+*.xcuserstate
+*.xcscmblueprint
 profile
 *.moved-aside
-DerivedData
 *.hmap
 *.ipa
+
+# Build generated
+.build
+build/
+vendor/
+DerivedData
+
+# Code coverage related
+FunkyTests.xctest.coverage.txt
 
 # Bundler
 .bundle
 
 # CocoaPods
 Pods/
+
+# Carthage
+Carthage/Build
+
+# fastlane
+fastlane/report.xml
+fastlane/screenshots
+
+# Documentation
+Documentation/Output/
