@@ -41,7 +41,6 @@ DESC
 
   s.subspec 'Interface' do |ss|
     ss.dependency 'FunkyObjC/Core'
-    ss.source_files = 'Source/Interface/*.h'
 
     ss.subspec 'Object' do |sss|
       sss.source_files = 'Source/Interface/Object/**/*'

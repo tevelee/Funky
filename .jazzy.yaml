@@ -1,0 +1,24 @@
+author: Spotify
+author_url: https://tevelee.github.io/Funky
+readme: README.md
+
+documentation: Documentation/*.md
+
+module: Funky
+module_version: v1.0
+
+output: Documentation/Output
+theme: fullwidth
+
+github_url: https://github.com/tevelee/Funky
+github_file_prefix: https://github.com/tevelee/Funky/tree/master
+
+root_url: https://tevelee.github.io/Funky
+
+clean: true
+objc: true
+sdk: iphonesimulator
+
+framework_root: .
+umbrella_header: Example/Pods/Target Support Files/FunkyObjC/FunkyObjC-umbrella.h
+source_directory: Source
