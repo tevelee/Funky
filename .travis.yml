@@ -37,7 +37,6 @@ before_install:
   - xcpretty --version
   - xcodebuild -version
   - xcodebuild -showsdks
-  - pod setup --silent > /dev/null
   - pod repo update --silent
   - pod install --project-directory=Example
 script:
@@ -48,24 +47,17 @@ script:
 matrix:
   fast_finish: true
   include:
-    # Main job; builds, tests, validates the changes and updates documentation. Xcode 8.3, iOS 10
     - osx_image: xcode7.3
       rvm: 2.2.5
       env: LINT=YES RUN_TESTS=YES RUN_DANGER=YES BUILD_EXAMPLE_APP=YES UPDATE_DOCUMENTATION=YES FASTLANE_ENV=ios9.3
-    # Compatibility job; makes sure the library is buildable by Xcode 7.3, iOS 8.1
     - osx_image: xcode7.3
       rvm: 2.2.5
       env: LINT=YES RUN_TESTS=YES RUN_DANGER=NO BUILD_EXAMPLE_APP=NO UPDATE_DOCUMENTATION=NO FASTLANE_ENV=ios8.1
-    # Compatibility job; makes sure the library is buildable by Xcode 7.3, iOS 9.3
-    - osx_image: xcode7.3
-      rvm: 2.2.5
-      env: LINT=YES RUN_TESTS=YES RUN_DANGER=NO BUILD_EXAMPLE_APP=NO UPDATE_DOCUMENTATION=NO FASTLANE_ENV=ios9.3
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 after_failure:
   - cat -n ~/Library/Logs/scan/*
   - cat -n $TMPDIR/com.apple.dt.XCTest-status/Session*.log
   - cat -n ~/Library/Logs/DiagnosticReports/xctest*.crash
-  - cat -n build/logs/example/xcodebuild.log
 notifications:
   email: true

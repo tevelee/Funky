@@ -5,38 +5,9 @@ platform :ios do
 
   desc 'Run unit tests'
   lane :test do
-    run_tests(scheme: 'Tests', output_label: 'tests')
-  end
-
-  private_lane :run_tests do |options|
-    scheme = options[:scheme]
-    output_label = options[:output_label]
-
-    UI.user_error!("No Xcode scheme provided") unless scheme
-    UI.user_error!("No label for the output was provided") unless output_label
-
-    system('pkill', '-9', '-x', 'Simulator')
-    UI.success('Simulator app killed')
-
-    log_directory = "build/logs/#{output_label}"
-    output_directory = "build/#{output_label}"
-    ENV['XCPRETTY_JSON_FILE_OUTPUT'] = "#{output_directory}/summary.json"
-
-    scan(
-      :scheme => scheme,
-      :derived_data_path => 'build/DerivedData',
-      :output_directory => output_directory,
-      :buildlog_path => log_directory,
-      :code_coverage => true,
-      :fail_build => false,
-      :formatter => 'xcpretty-json-formatter'
-    )
-
-    trainer(
-      path: 'build',
-      output_directory: output_directory,
-      extension: '.junit'
-    )
+    sdk = ENV['SCAN_SDK']
+    # Using the xcodebuild manually instead of the fastlane built in function, because this way I can manually set custom build settings, which disable code signing
+    sh 'cd .. && set -o pipefail && xcodebuild test -workspace Example/Funky.xcworkspace -scheme Tests -sdk iphonesimulator9.3 -derivedDataPath "build/DerivedData" ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | tee "build/logs/tests/xcodebuild.log" | xcpretty --color --formatter `xcpretty-json-formatter` || true'
   end
 
   desc 'Build the example app'
@@ -52,7 +23,7 @@ platform :ios do
 
   desc 'Validate changes according to a set of rules'
   lane :validation do
-    danger
+    danger if ENV['TRAVIS'] == 'true'
   end
 
   desc 'Update the framework documentation and publish it'
@@ -65,7 +36,7 @@ platform :ios do
 
   desc 'Report test coverage'
   private_lane :report_coverage do
-    codecov() if ENV['CODECOV_TOKEN'] or ENV['TRAVIS'] == 'true'
+    sh 'cd .. && bash <(curl -s https://codecov.io/bash)' if ENV['CODECOV_TOKEN'] or ENV['TRAVIS'] == 'true'
   end
 
   desc 'Continous integration'
@@ -77,8 +48,8 @@ platform :ios do
   lane :ci do
     lint if shouldPerformStep('LINT')
     test if shouldPerformStep('RUN_TESTS')
-    example if shouldPerformStep('BUILD_EXAMPLE_APP')
     report_coverage if shouldPerformStep('RUN_TESTS')
+    example if shouldPerformStep('BUILD_EXAMPLE_APP')
     validation if shouldPerformStep('RUN_DANGER')
     update_docs if shouldPerformStep('UPDATE_DOCUMENTATION')
   end
