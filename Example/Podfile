@@ -1,10 +1,10 @@
 project 'Funky.xcodeproj'
 
-target 'Funky_Example' do
+target 'iOS-Example' do
   use_frameworks!
   pod 'FunkyObjC', :path => '../'
 
-  target 'Funky_Tests' do
+  target 'Tests' do
     inherit! :search_paths
     pod 'OCMock'
     pod 'Specta'

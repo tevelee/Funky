@@ -1,0 +1,15 @@
+coverage:
+  ignore:
+  - Applications/Xcode.app/.*
+  - build/.*
+  - Documentation/.*
+  - fastlane/.*
+  - tasks/.*
+  - vendor/.*
+  status:
+    patch:
+      default:
+        target: '99'
+    project:
+      default:
+        target: auto
