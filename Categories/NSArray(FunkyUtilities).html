@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (0% documented)
+         (1% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -40,7 +40,7 @@
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Ftevelee%2Egithub%2Eio%2Fdocsets%2FFunky%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Ftevelee%2Egithub%2Eio%2FFunky%2Fdocsets%2FFunky%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -287,11 +287,42 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns whether the condition matches all elements in the array
+- parameter: block The condition given as a BOOL expression</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">all</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">all</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The condition given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -309,11 +340,42 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns whether the condition matches no elements in the array
+- parameter: block The condition given as a BOOL expression</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">none</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">none</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The condition given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -331,11 +393,42 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns whether the condition matches at least one element in the array
+- parameter: block The condition given as a BOOL expression</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">contains</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">contains</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The condition given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -353,11 +446,42 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the number of elements the given condition matches in the array, like if you would filter the array.
+- parameter: block The condition given as a BOOL expression</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">count</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">count</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The condition given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -375,11 +499,42 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns a new NSArray instance with the same amount of elements, where each element is transformed to another by returning a new object in the block parameter.
+- parameter: block The transformator code which should return a new value based on the existing one.</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nf">map</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">map</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The transformator code which should return a new value based on the existing one.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -400,9 +555,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -421,9 +573,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -444,9 +593,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -463,11 +609,42 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns a new NSArray instance with the element, that are passing the returned expression in the original array.
+- parameter: block The filtering predicate given as a BOOL expression</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">filter</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The filtering predicate given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -488,9 +665,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -509,9 +683,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -532,9 +703,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -553,9 +721,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -576,9 +741,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -597,9 +759,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -620,9 +779,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -641,9 +797,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -664,9 +817,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -685,9 +835,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -708,9 +855,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -729,9 +873,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -752,9 +893,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -773,9 +911,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -796,9 +931,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -817,9 +949,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -840,9 +969,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -861,9 +987,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -884,9 +1007,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -905,9 +1025,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -928,9 +1045,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -949,9 +1063,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -972,9 +1083,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -993,9 +1101,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1016,9 +1121,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1037,9 +1139,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1060,9 +1159,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1081,9 +1177,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1104,9 +1197,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1125,9 +1215,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1148,9 +1235,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1169,9 +1253,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1192,9 +1273,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1213,9 +1291,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1236,9 +1311,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1257,9 +1329,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1280,9 +1349,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1301,9 +1367,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1324,9 +1387,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1345,9 +1405,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1368,9 +1425,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1389,9 +1443,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1412,9 +1463,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1434,9 +1482,6 @@
                         <p>Undocumented</p>
 
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1455,9 +1500,6 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
