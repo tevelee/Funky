@@ -77,8 +77,8 @@
 - (NSArray<ObjectType>*)sorted:(NSComparator)comparator;
 
 + (NSArray<ObjectType>*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
-+ (NSArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSArray<ObjectType>* array))block repeated:(NSUInteger)repeat;
-+ (NSArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSArray<ObjectType>* array))block until:(BOOL(^)(NSArray<ObjectType>* array))until;
++ (NSArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat;
++ (NSArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until;
 
 @end
 
@@ -91,7 +91,7 @@
 - (NSMutableArray<ObjectType>*)merge:(NSArray<ObjectType>*)array;
 
 + (NSMutableArray<ObjectType>*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
-+ (NSMutableArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSMutableArray<ObjectType>* array))block repeated:(NSUInteger)repeat;
-+ (NSMutableArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSMutableArray<ObjectType>* array))block until:(BOOL(^)(NSArray<ObjectType>* array))until;
++ (NSMutableArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat;
++ (NSMutableArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until;
 
 @end

@@ -10,6 +10,8 @@
 
 @implementation FunkySetUtilities
 
+@synthesize object = _set;
+
 - (NSDictionary *)groupBy:(id (^)(id))block
 {
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithCapacity:self.object.count];
@@ -48,6 +50,8 @@
 @end
 
 @implementation FunkyMutableSetUtilities
+
+@synthesize object = _mutableSet;
 
 - (NSMutableSet *)takeUnion:(NSSet *)set
 {

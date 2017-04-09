@@ -15,8 +15,8 @@
 @protocol FunkyCollection <NSFastEnumeration, FunkyCollectionCounterpart>
 
 - (NSInteger)count;
-- (id<FunkyCollection>)copy;
-- (id<FunkyMutableCollection>)mutableCopy;
+- (id)copy;
+- (id)mutableCopy;
 
 @end
 

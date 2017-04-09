@@ -7,6 +7,7 @@
 //
 
 #import "MockedArrayUtilities.h"
+#import <Funky/NSArray+FunkyCore.h>
 
 id mockedMutableArrayUtilsWithClass = nil;
 FunkyMutableArrayUtilities* mockedMutableArrayUtils = nil;
@@ -15,7 +16,7 @@ FunkyMutableArrayUtilities* mockedMutableArrayUtils = nil;
 
 - (FunkyMutableArrayUtilities *)utilities
 {
-    return mockedMutableArrayUtilsWithClass ?: mockedMutableArrayUtils ?: [FunkyMutableArrayUtilities utilitiesWithObject:(id<FunkyCollection>)self];
+    return mockedMutableArrayUtilsWithClass ?: mockedMutableArrayUtils ?: [FunkyMutableArrayUtilities utilitiesWithObject:self];
 }
 
 @end

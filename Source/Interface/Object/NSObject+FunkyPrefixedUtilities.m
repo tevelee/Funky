@@ -9,7 +9,7 @@
 #import "NSObject+FunkyUtilities.h"
 #import "NSObject+FunkyCore.h"
 
-@implementation NSObject (FunkyUtilities)
+@implementation NSObject (FunkyPrefixedUtilities)
 
 - (instancetype)funky_apply:(void (^)(id object))block
 {

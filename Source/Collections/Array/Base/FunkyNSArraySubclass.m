@@ -40,11 +40,14 @@
 
 #pragma mark - NSArray primitives
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 - (instancetype)initWithObjects:(const id [])objects count:(NSUInteger)count
 {
     NSArray *array = [[NSArray alloc] initWithObjects: objects count: count];
     return [self initWithArray:array];
 }
+#pragma clang diagnostic pop
 
 - (NSUInteger)count
 {
@@ -68,6 +71,11 @@
     return [FunkyNSMutableArraySubclass class];
 }
 
++ (Class)classToFlatten
+{
+    return [FunkyNSArraySubclass class];
+}
+
 #pragma mark - <NSCopying>
 
 - (id)copyWithZone:(NSZone *)zone
@@ -84,11 +92,14 @@
 
 #pragma mark - <NSCoding>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     NSArray *original = [[NSArray alloc] initWithCoder:aDecoder];
     return [self initWithArray:original];
 }
+#pragma clang diagnostic pop
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {

@@ -10,7 +10,7 @@
 #import "FunkyArrayUtilities.h"
 #import "NSSet+FunkyCore.h"
 
-@implementation NSSet (FunkyUtilities)
+@implementation NSSet (FunkyPrefixedUtilities)
 
 #pragma mark - Utilities
 
@@ -121,7 +121,7 @@
 
 @end
 
-@implementation NSMutableSet (FunkyUtilities)
+@implementation NSMutableSet (FunkyPrefixedUtilities)
 
 #pragma mark - FunkyMutableCollectionWithCapacity
 

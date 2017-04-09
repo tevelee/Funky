@@ -119,12 +119,12 @@
     return [self.utilities maxItems:block];
 }
 
-- (NSInteger)firstIndex
+- (NSUInteger)firstIndex
 {
     return [self.utilities firstIndex];
 }
 
-- (NSInteger)lastIndex
+- (NSUInteger)lastIndex
 {
     return [self.utilities lastIndex];
 }

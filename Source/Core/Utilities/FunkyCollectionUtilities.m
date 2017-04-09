@@ -17,6 +17,13 @@
 
 @implementation FunkyCollectionUtilities
 
+@synthesize object = _collection;
+
++ (instancetype)utilitiesWithObject:(id<FunkyCollection>)object
+{
+    return [super utilitiesWithObject:object];
+}
+
 - (id)mapToAnother:(void(^)(id item, id<FunkyMutableCollection> collection))block
 {
     id<FunkyMutableCollection> mutableCollection = [[self.object.class classForMutableCounterPart] newWithCapacity:self.object.count];

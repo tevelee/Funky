@@ -10,6 +10,8 @@
 
 @implementation FunkyDictionaryUtilities
 
+@synthesize object = _dictionary;
+
 - (id)mapToAnother:(void(^)(id key, id value, NSMutableDictionary* mutableDictionary))block
 {
     NSMutableDictionary* mutableDictionary = [NSMutableDictionary dictionaryWithCapacity:self.object.count];
@@ -116,6 +118,8 @@
 @end
 
 @implementation FunkyMutableDictionaryUtilities
+
+@synthesize object = _mutableDictionary;
 
 - (NSMutableDictionary*)merge:(NSDictionary*)dictionary
 {

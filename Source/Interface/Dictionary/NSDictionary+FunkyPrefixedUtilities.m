@@ -9,7 +9,7 @@
 #import "NSDictionary+FunkyUtilities.h"
 #import "NSDictionary+FunkyCore.h"
 
-@implementation NSDictionary (FunkyUtilities)
+@implementation NSDictionary (FunkyPrefixedUtilities)
 
 - (NSDictionary*)funky_map:(FunkyPair*(^)(id key, id value))block
 {
@@ -63,7 +63,7 @@
 
 @end
 
-@implementation NSMutableDictionary (FunkyUtilities)
+@implementation NSMutableDictionary (FunkyPrefixedUtilities)
 
 #pragma mark - FunkyMutableCollectionWithCapacity
 

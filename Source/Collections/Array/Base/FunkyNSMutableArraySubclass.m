@@ -129,11 +129,14 @@
 
 #pragma mark - <NSCoding>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     NSArray *original = [[NSArray alloc] initWithCoder:aDecoder];
     return [self initWithArray:original];
 }
+#pragma clang diagnostic pop
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {

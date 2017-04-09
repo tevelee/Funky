@@ -40,11 +40,14 @@
 
 #pragma mark - NSDictionary primitives
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 - (instancetype)initWithObjects:(const id [])objects forKeys:(id<NSCopying>  _Nonnull const __unsafe_unretained *)keys count:(NSUInteger)count
 {
     NSDictionary *dictionary = [[NSDictionary alloc] initWithObjects: objects forKeys:keys count:count];
     return [self initWithDictionary:dictionary];
 }
+#pragma clang diagnostic pop
 
 - (NSUInteger)count
 {
@@ -73,6 +76,11 @@
     return [FunkyNSMutableDictionarySubclass class];
 }
 
++ (Class)classToFlatten
+{
+    return [FunkyNSDictionarySubclass class];
+}
+
 #pragma mark - <NSCopying>
 
 - (id)copyWithZone:(NSZone *)zone
@@ -89,11 +97,14 @@
 
 #pragma mark - <NSCoding>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     NSDictionary *original = [[NSDictionary alloc] initWithCoder:aDecoder];
     return [self initWithDictionary:original];
 }
+#pragma clang diagnostic pop
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {

@@ -7,6 +7,7 @@
 //
 
 #import "MockedMutableSetUtilities.h"
+#import <Funky/NSSet+FunkyCore.h>
 
 id mockedMutableSetUtilsWithClass = nil;
 FunkyMutableSetUtilities* mockedMutableSetUtils = nil;
@@ -15,7 +16,7 @@ FunkyMutableSetUtilities* mockedMutableSetUtils = nil;
 
 - (FunkyMutableSetUtilities *)utilities
 {
-    return mockedMutableSetUtilsWithClass ?: mockedMutableSetUtils ?: [FunkyMutableSetUtilities utilitiesWithObject:(id<FunkyCollection>)self];
+    return mockedMutableSetUtilsWithClass ?: mockedMutableSetUtils ?: [FunkyMutableSetUtilities utilitiesWithObject:self];
 }
 
 @end

@@ -7,8 +7,11 @@
 //
 
 #import "FunkyArrayUtilities.h"
+#import "NSArray+FunkyCore.h"
 
 @implementation FunkyArrayUtilities
+
+@synthesize object = _array;
 
 - (id)mapToAnotherWithIndex:(void(^)(NSUInteger index, id item, id<FunkyMutableCollection> collection))block
 {
@@ -407,7 +410,7 @@
     }
 }
 
-+ (NSArray*)mutableArrayWithItem:(id)item repeated:(NSUInteger)repeat
++ (NSMutableArray*)mutableArrayWithItem:(id)item repeated:(NSUInteger)repeat
 {
     NSMutableArray* mutableArray = [NSMutableArray arrayWithCapacity:repeat];
     
@@ -418,7 +421,7 @@
     return mutableArray;
 }
 
-+ (NSArray*)mutableArrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat
++ (NSMutableArray*)mutableArrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat
 {
     NSMutableArray* mutableArray = [NSMutableArray arrayWithArray:array];
     
@@ -427,10 +430,10 @@
         [mutableArray addObject:item];
     }
     
-    return mutableArray.copy;
+    return mutableArray;
 }
 
-+ (NSArray*)mutableArrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until
++ (NSMutableArray*)mutableArrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until
 {
     NSMutableArray* mutableArray = [NSMutableArray arrayWithArray:array];
     
@@ -461,9 +464,11 @@
 
 @implementation FunkyMutableArrayUtilities
 
+@synthesize object = _mutableArray;
+
 - (NSMutableArray*)removeDuplicates
 {
-    NSMutableDictionary* objects = [self associateBy:^id(id item) {
+    NSDictionary* objects = [self associateBy:^id(id item) {
         return item;
     }];
     

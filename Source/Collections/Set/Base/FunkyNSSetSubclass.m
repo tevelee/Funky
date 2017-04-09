@@ -40,11 +40,14 @@
 
 #pragma mark - NSSet primitives
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 - (instancetype)initWithObjects:(const id [])objects count:(NSUInteger)count
 {
     NSSet *set = [[NSSet alloc] initWithObjects: objects count: count];
     return [self initWithSet:set];
 }
+#pragma clang diagnostic pop
 
 - (NSUInteger)count
 {
@@ -73,6 +76,11 @@
     return [FunkyNSMutableSetSubclass class];
 }
 
++ (Class)classToFlatten
+{
+    return [FunkyNSSetSubclass class];
+}
+
 #pragma mark - <NSCopying>
 
 - (id)copyWithZone:(NSZone *)zone
@@ -89,11 +97,14 @@
 
 #pragma mark - <NSCoding>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     NSSet *original = [[NSSet alloc] initWithCoder:aDecoder];
     return [self initWithSet:original];
 }
+#pragma clang diagnostic pop
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
