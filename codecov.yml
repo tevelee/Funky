@@ -3,7 +3,7 @@ coverage:
   - Applications/Xcode.app/.*
   - build/.*
   - Documentation/.*
-  - fastlane/.*
+  - Example/Pods/.*
   - tasks/.*
   - vendor/.*
   status:

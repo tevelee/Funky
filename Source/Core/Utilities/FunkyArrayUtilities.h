@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FunkyCollectionUtilities.h"
-#import "FunkyFilterPredicateProtocol.h"
+#import "FunkyFilterPredicate.h"
 
 @interface FunkyArrayUtilities : FunkyCollectionUtilities
 

@@ -12,7 +12,7 @@ require 'yaml'
 #
 
 # The default path for the Jazzy config file
-CONFIG_PATH_DEFAULT = '.jazzy.yaml'
+CONFIG_PATH_DEFAULT = '.jazzy.yml'
 
 # The default branch of the repo to which we publish documentation
 PUBLISH_REPO_BRANCH_DEFAULT = 'gh-pages'

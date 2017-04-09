@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef BOOL(^FunkyFilterPredicate)(id object);
+#import "FunkyFilterPredicate.h"
 
 @interface FunkyFilter : NSObject
 

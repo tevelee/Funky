@@ -1,63 +1,16 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
+osx_image: xcode8.3
 language: objective-c
-osx_image: xcode7.3
-env:
-  global:
-    - LC_CTYPE=en_US.UTF-8
-    - LANG=en_US.UTF-8
-    # Make fastlane open the simulator before running tests. A workaround for error 65.
-    - FASTLANE_EXPLICIT_OPEN_SIMULATOR=2
-    - TEST_DEVICE_NAME="iPhone 6s"
-    - FASTLANE_ENV=default
-    - FASTLANE_LANE=ci
-branches:
-  only:
-    - master
-    - /^feature/.*$/
-    - /^release-.*$/
-cache: 
-  bundler: true
-  cocoapods: true
-  directories:
-    - build
 podfile: Example/Podfile
 before_install:
-  - env
-  - locale
-  # Force bundler 1.12.5 because version 1.13 has issues, see https://github.com/fastlane/fastlane/issues/6065#issuecomment-246044617
-  - gem uninstall bundler -v '>1.12.5' --force --executables || echo "bundler >1.12.5 is not installed"
-  - gem install bundler -v 1.12.5 --no-rdoc --no-ri --no-document --quiet
-  - gem install fastlane --no-rdoc --no-ri --no-document --quiet
-  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-  - pod --version
-  - xcpretty --version
-  - xcodebuild -version
-  - xcodebuild -showsdks
   - pod repo update --silent
   - pod install --project-directory=Example
 script:
-  - bundle exec fastlane $FASTLANE_LANE --env $FASTLANE_ENV
-  # This is a workaround for a Travis-CI bug where the log might get cut-off.
-  # See the [Travis-CI issue #4716](https://github.com/travis-ci/travis-ci/issues/4716).
+  - set -o pipefail
+  - xcodebuild clean build -workspace Example/Funky.xcworkspace -scheme iOS-Example -sdk iphonesimulator10.3 -configuration Release | xcpretty --color
+  - xcodebuild test -workspace Example/Funky.xcworkspace -scheme iOS-Example -sdk iphonesimulator10.3 -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty --color
+  - pod lib lint --allow-warnings
+  - danger || true
+  - rake docs:all || true
   - sleep 3
-matrix:
-  fast_finish: true
-  include:
-    - osx_image: xcode7.3
-      rvm: 2.2.5
-      env: LINT=YES RUN_TESTS=YES RUN_DANGER=YES BUILD_EXAMPLE_APP=YES UPDATE_DOCUMENTATION=YES FASTLANE_ENV=ios9.3
-    - osx_image: xcode7.3
-      rvm: 2.2.5
-      env: LINT=YES RUN_TESTS=YES RUN_DANGER=NO BUILD_EXAMPLE_APP=NO UPDATE_DOCUMENTATION=NO FASTLANE_ENV=ios8.1
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-after_failure:
-  - cat -n ~/Library/Logs/scan/*
-  - cat -n $TMPDIR/com.apple.dt.XCTest-status/Session*.log
-  - cat -n ~/Library/Logs/DiagnosticReports/xctest*.crash
-notifications:
-  email: true
