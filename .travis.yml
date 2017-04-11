@@ -2,15 +2,27 @@ osx_image: xcode8.3
 language: objective-c
 podfile: Example/Podfile
 before_install:
-  - pod repo update --silent
-  - pod install --project-directory=Example
+- pod repo update --silent
+- pod install --project-directory=Example
+before_script:
+- git config --global user.email "tevelee@gmail.com"
+- git config --global user.name "Travis-CI"
 script:
-  - set -o pipefail
-  - xcodebuild clean build -workspace Example/Funky.xcworkspace -scheme iOS-Example -sdk iphonesimulator10.3 -configuration Release | xcpretty --color
-  - xcodebuild test -workspace Example/Funky.xcworkspace -scheme iOS-Example -sdk iphonesimulator10.3 -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty --color
-  - pod lib lint --allow-warnings
-  - danger || true
-  - rake docs:all || true
-  - sleep 3
+- set -o pipefail
+- xcodebuild clean build -workspace Example/Funky.xcworkspace -scheme iOS-Example
+  -sdk iphonesimulator10.3 -configuration Release | xcpretty --color
+- xcodebuild test -workspace Example/Funky.xcworkspace -scheme iOS-Example -sdk iphonesimulator10.3
+  -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' ONLY_ACTIVE_ARCH=NO
+  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
+  --color
+- pod lib lint --allow-warnings
+- danger || true
+- sleep 3
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials
+- rake docs:all || true
+- bash <(curl -s https://codecov.io/bash)
+env:
+  global:
+    secure: Vj3neDXPYyFWUYQ76N8vX3gXdUa2ZkvUVn5xN04UE2uZF6n5b2WQBkI3clNq9ykDAePlhxceOf9fgZRCGek5xEqXo/rigmXin5PBHaC3g5zknlFUau/FtYBysO2p5stlv0BmsqY5GsWD8XVkdXrHwiTlfL0EYbIw9BlOb5vktgLmwiU+eDqpa6XWs8rbxsd/auu/jllGDZBn3WEcbZE63oJIAMqdgx5PxyUD8oYgva9u2dptWfWUvV5+x6JdEhew4J4vLMjVcN2b993nz7KXPg4eiXgczByCUQlAxG9lcq+/LJnwNlqMNy3tj2VQSx2WwZoEnvqAvrbLYhhvBuKoloafW12duDqOXW4TG1zEVBSnq/jur04ioczH3AyJjsfpb02Tf0ekstHOmpgzyZuVcNSfmX0yHR1l4iAv1YTWj2VgksWzSz8nnpDwwupJphJw1VbOdbMJYp9yRIoBgEdH00GfRnsFRmWfVRYEQuY9bMQshaiZSVKITp8OTAHXv4QgYSndkIoluyIS42UGOwmvhym1nUtwnZRATJe54PWBq/O/TexqZdLrslObmKw+dzRcamzq3NzMfGIRWcq9sjqnblsPkqV6Rs+WeZgnAmB9HvhPH1HRVBHz+qGtLa06NfrZkU8G0dP+01gZF26jyGT2Zb6uGz5T6RsS4Bl4V00puc8=
