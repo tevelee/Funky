@@ -15,6 +15,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyFilterPredicate.h",
+      "line": 11,
+      "symbol": "FunkyFilterPredicate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/build/DerivedData/Build/Products/Debug-iphoneos/FunkyObjC/Funky.framework/Headers/FunkyCollectionCounterpartProtocol.h",
       "line": 11,
       "symbol": "FunkyCollectionCounterpart",
@@ -131,13 +138,6 @@
       "line": 18,
       "symbol": "FunkyFilter.+respondsToSelector:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/build/DerivedData/Build/Products/Debug-iphoneos/FunkyObjC/Funky.framework/Headers/FunkyFilterPredicateProtocol.h",
-      "line": 11,
-      "symbol": "FunkyFilterPredicate",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
