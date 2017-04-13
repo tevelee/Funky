@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (1% documented)
+         (41% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,15 @@
         <section class="section">
           <div class="section-content">
             <h1>NSMutableArray(FunkyUtilities)</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">NSMutableArray</span> <span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span>
+<span class="p">(</span><span class="n">FunkyUtilities</span><span class="p">)</span> <span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>This extension provides you with simple and easy to use functional and general utilities for NSMutableArray.
+If you need to prefix the extension methods in this category, you should import <code>NSArray+FunkyPrefixedUtilities.h</code>, where every utility method is prefixed with the <code>funky_</code> keyword for compatiblitiy reasons.</p>
 
           </div>
         </section>
@@ -273,6 +281,13 @@
         <section class="section">
           <div class="section-content">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Transform"></a>
+                <a name="//apple_ref/objc/Section/Transform" class="dashAnchor"></a>
+                <a href="#/Transform">
+                  <h3 class="section-name">Transform</h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -287,8 +302,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Puts the containing items in a reversed order.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">reverse</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">reverse</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSMutableArray</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L420">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -306,8 +337,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Shuffles the containing items in a random fashion.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">shuffle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">shuffle</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSMutableArray</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L425">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -325,12 +372,40 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Makes the array unique by removing the duplicated items from the containing items. The method does this keeping the first occurence and removes the further duplications.
+It checks equality using the <code>-isEqual:</code> method</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">removeDuplicates</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">removeDuplicates</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSMutableArray</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L431">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Merge"></a>
+                <a name="//apple_ref/objc/Section/Merge" class="dashAnchor"></a>
+                <a href="#/Merge">
+                  <h3 class="section-name">Merge</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -344,12 +419,60 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Concatenates the current array with the one given in the parameter. It does this by putting the existing elements first, and the elements in the provided array afterwards.
+- parameter: array The other collection to merge with</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">merge</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">array</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">merge</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSMutableArray</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other collection to merge with</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L439">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Constructor"></a>
+                <a name="//apple_ref/objc/Section/Constructor" class="dashAnchor"></a>
+                <a href="#/Constructor">
+                  <h3 class="section-name">Constructor</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -363,8 +486,60 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates aa mutable array by repeating the same <code>item</code> by <code>repeat</code> number of times. The size of the array is going to be qual to <code>repeat</code>, only consisting of <code>item</code> objects.
+- parameter: item The item to repeat
+- parameter: repeat Number of times to repeat the <code>item</code> parameter</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">arrayWithItem</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">item</span>
+                                     <span class="nf">repeated</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">repeat</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="cm">/*not inherited*/</span> <span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="n">repeated</span> <span class="nv">repeat</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>item</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The item to repeat</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>repeat</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Number of times to repeat the <code>item</code> parameter</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L448">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -382,8 +557,75 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a mutable array by taking an initial <code>array</code> and computing the next items by repeatedly putting the result of <code>block</code> by <code>repeated</code> number of times.
+- parameter: array Initial array
+- parameter: block The block to compute the next item in the resulting array
+- parameter: repeat Number of times to repeat calling the <code>block</code> parameter</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">arrayWithArray</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">array</span>
+                                      <span class="nf">nextItem</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSMutableArray</span> <span class="o">*</span><span class="p">))</span><span class="nv">block</span>
+                                      <span class="nf">repeated</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">repeat</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="cm">/*not inherited*/</span> <span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="n">nextItem</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSMutableArray</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">,</span> <span class="n">repeated</span> <span class="nv">repeat</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial array</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to compute the next item in the resulting array</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>repeat</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Number of times to repeat calling the <code>block</code> parameter</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L456">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -401,8 +643,75 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a mutable array by taking an initial <code>array</code> and computing the next items by repeatedly putting the result of <code>block</code> by until the block parameter <code>until</code> returns YES.
+- parameter: array Initial array
+- parameter: block The block to compute the next item in the resulting array
+- parameter: until Logic until the iteration should be repeated. Until the block returns YES, the constructor repeatedly callis the <code>block</code> parameter</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">arrayWithArray</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">array</span>
+                                      <span class="nf">nextItem</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSMutableArray</span> <span class="o">*</span><span class="p">))</span><span class="nv">block</span>
+                                         <span class="nf">until</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">))</span><span class="nv">until</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="cm">/*not inherited*/</span> <span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="n">nextItem</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSMutableArray</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">,</span> <span class="nv">until</span><span class="p">:</span> <span class="p">(([</span><span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial array</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to compute the next item in the resulting array</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>until</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Logic until the iteration should be repeated. Until the block returns YES, the constructor repeatedly callis the <code>block</code> parameter</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyUtilities.h#L464">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -415,7 +724,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-12)</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
