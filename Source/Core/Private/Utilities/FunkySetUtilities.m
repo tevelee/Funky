@@ -53,25 +53,19 @@
 
 @synthesize object = _mutableSet;
 
-- (NSMutableSet *)takeUnion:(NSSet *)set
+- (void)takeUnion:(NSSet *)set
 {
-    return [self apply:^(NSMutableSet* current) {
-        [current unionSet:set];
-    }];
+    [self.object unionSet:set];
 }
 
-- (NSMutableSet *)takeMinus:(NSSet *)set
+- (void)takeMinus:(NSSet *)set
 {
-    return [self apply:^(NSMutableSet* current) {
-        [current minusSet:set];
-    }];
+    [self.object minusSet:set];
 }
 
-- (NSMutableSet *)takeIntersection:(NSSet *)set
+- (void)takeIntersection:(NSSet *)set
 {
-    return [self apply:^(NSMutableSet* current) {
-        [current intersectSet:set];
-    }];
+    [self.object intersectSet:set];
 }
 
 @end

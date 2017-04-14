@@ -98,12 +98,12 @@
     OCMVerify([mockedArrayUtils flatMapWithIndex:[OCMArg any]]);
 }
 
-- (void)test_filter_callsUtilitiesClass
+- (void)test_filtered_callsUtilitiesClass
 {
-    [array filter:^BOOL(id item) {
+    [array filtered:^BOOL(id item) {
         return item != nil;
     }];
-    OCMVerify([mockedArrayUtils filter:[OCMArg any]]);
+    OCMVerify([mockedArrayUtils filtered:[OCMArg any]]);
 }
 
 - (void)test_reduce_callsUtilitiesClass

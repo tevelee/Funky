@@ -65,7 +65,7 @@
 - (void)test_objectForKey_doesNotThrow
 {
     NSDictionary* nilValue = nil;
-    BOOL contains = [@{} objectForKey:nilValue];
+    BOOL contains = [@{} objectForKey:nilValue] != nil;
     XCTAssertFalse(contains);
 }
 

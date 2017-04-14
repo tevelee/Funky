@@ -4,6 +4,7 @@ PODS:
     - FunkyObjC/Collections (= 1.0)
     - FunkyObjC/Core (= 1.0)
     - FunkyObjC/Interface (= 1.0)
+    - FunkyObjC/PrefixedInterface (= 1.0)
   - FunkyObjC/Collections (1.0):
     - FunkyObjC/Collections/Array (= 1.0)
     - FunkyObjC/Collections/Dictionary (= 1.0)
@@ -30,6 +31,20 @@ PODS:
     - FunkyObjC/Core
   - FunkyObjC/Interface/Set (1.0):
     - FunkyObjC/Core
+  - FunkyObjC/PrefixedInterface (1.0):
+    - FunkyObjC/Core
+    - FunkyObjC/PrefixedInterface/Array (= 1.0)
+    - FunkyObjC/PrefixedInterface/Dictionary (= 1.0)
+    - FunkyObjC/PrefixedInterface/Object (= 1.0)
+    - FunkyObjC/PrefixedInterface/Set (= 1.0)
+  - FunkyObjC/PrefixedInterface/Array (1.0):
+    - FunkyObjC/Core
+  - FunkyObjC/PrefixedInterface/Dictionary (1.0):
+    - FunkyObjC/Core
+  - FunkyObjC/PrefixedInterface/Object (1.0):
+    - FunkyObjC/Core
+  - FunkyObjC/PrefixedInterface/Set (1.0):
+    - FunkyObjC/Core
   - OCMock (3.4)
   - Specta (1.0.6)
 
@@ -45,7 +60,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  FunkyObjC: 9dfb2660e9a6e3f5c58e221e2439201a199ab728
+  FunkyObjC: 9a95064e2ee36d95bc4baed87e6e8694d34a00b1
   OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 

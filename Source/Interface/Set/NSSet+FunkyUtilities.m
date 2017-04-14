@@ -44,9 +44,9 @@
     return [self.utilities flatMap:block];
 }
 
-- (NSSet *)filter:(BOOL (^)(id))block
+- (NSSet *)filtered:(BOOL (^)(id))block
 {
-    return [self.utilities filter:block];
+    return [self.utilities filtered:block];
 }
 
 - (id)reduce:(id(^)(id value, id item))block withInitialValue:(id)start
@@ -125,19 +125,19 @@
 
 #pragma mark - Utilities
 
-- (NSMutableSet*)takeUnion:(NSSet *)set
+- (void)takeUnion:(NSSet *)set
 {
-    return [self.utilities takeUnion:set];
+    [self.utilities takeUnion:set];
 }
 
-- (NSMutableSet*)takeMinus:(NSSet*)set
+- (void)takeMinus:(NSSet*)set
 {
-    return [self.utilities takeMinus:set];
+    [self.utilities takeMinus:set];
 }
 
-- (NSMutableSet*)takeIntersection:(NSSet*)set
+- (void)takeIntersection:(NSSet*)set
 {
-    return [self.utilities takeIntersection:set];
+    [self.utilities takeIntersection:set];
 }
 
 @end

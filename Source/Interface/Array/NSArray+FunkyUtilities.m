@@ -54,9 +54,9 @@
     return [self.utilities flatMapWithIndex:block];
 }
 
-- (NSArray *)filter:(BOOL (^)(id))block
+- (NSArray *)filtered:(BOOL (^)(id))block
 {
-    return [self.utilities filter:block];
+    return [self.utilities filtered:block];
 }
 
 - (NSArray*)reduce:(id(^)(id value, id item))block withInitialValue:(id)start
@@ -266,7 +266,7 @@
 
 - (NSArray*)sorted:(NSComparator)comparator
 {
-    return [self sortedArrayUsingComparator:comparator];
+    return [self.utilities sorted:comparator];
 }
 
 + (NSArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat
@@ -290,24 +290,39 @@
 
 #pragma mark - Utilities
 
-- (NSMutableArray*)reverse
+- (void)flatten
 {
-    return [self.utilities reverse];
+    [self.utilities flatten];
 }
 
-- (NSMutableArray*)shuffle
+- (void)reverse
 {
-    return [self.utilities shuffle];
+    [self.utilities reverse];
 }
 
-- (NSMutableArray*)removeDuplicates
+- (void)shuffle
 {
-    return [self.utilities removeDuplicates];
+    [self.utilities shuffle];
 }
 
-- (NSMutableArray*)merge:(NSArray*)array
+- (void)removeDuplicates
 {
-    return [self.utilities merge:array];
+    [self.utilities removeDuplicates];
+}
+
+- (void)merge:(NSArray*)array
+{
+    [self.utilities merge:array];
+}
+
+- (void)sort:(NSComparator)comparator
+{
+    [self.utilities sort:comparator];
+}
+
+- (void)filter:(BOOL (^)(id))block
+{
+    [self.utilities filter:block];
 }
 
 + (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat

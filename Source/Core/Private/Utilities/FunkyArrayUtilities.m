@@ -402,6 +402,11 @@
     return dictionary.copy;
 }
 
+- (NSArray*)sorted:(NSComparator)block
+{
+    return [self.object sortedArrayUsingComparator:block];
+}
+
 - (void)forEachWithIndex:(void(^)(NSUInteger index, id item))block
 {
     NSArray* object = self.object.copy;
@@ -466,7 +471,21 @@
 
 @synthesize object = _mutableArray;
 
-- (NSMutableArray*)removeDuplicates
+- (void)flatten
+{
+    FunkyArrayUtilities* reversedUtils = [FunkyArrayUtilities utilitiesWithObject:[[self.object reverseObjectEnumerator] allObjects]];
+    [reversedUtils forEachWithIndex:^(NSUInteger index, id item) {
+        if ([item isKindOfClass:[self.object.class classToFlatten]]) {
+            FunkyArrayUtilities* utilsForItem = [FunkyArrayUtilities utilitiesWithObject:[[item reverseObjectEnumerator] allObjects]];
+            [self.object removeObjectAtIndex:index];
+            for (id current in [utilsForItem flattened]) {
+                [self.object insertObject:current atIndex:index];
+            }
+        }
+    }];
+}
+
+- (void)removeDuplicates
 {
     NSDictionary* objects = [self associateBy:^id(id item) {
         return item;
@@ -481,36 +500,44 @@
             [self.object removeObject:object];
         }
     }
-    
-    return self.object;
 }
 
-- (NSMutableArray*)reverse
+- (void)reverse
 {
     [self forEachWithIndex:^(NSUInteger index, id item) {
         NSInteger otherSide = self.object.count - 1 - index;
         [self.object exchangeObjectAtIndex:index withObjectAtIndex:otherSide];
     }];
-    
-    return self.object;
 }
 
-- (NSMutableArray*)shuffle
+- (void)shuffle
 {
     [self forEachWithIndex:^(NSUInteger index, id item) {
         NSInteger remainingCount = self.object.count - index;
         NSInteger exchangeIndex = index + arc4random_uniform((u_int32_t )remainingCount);
         [self.object exchangeObjectAtIndex:index withObjectAtIndex:exchangeIndex];
     }];
-    
-    return self.object;
 }
 
-- (NSMutableArray*)merge:(NSArray*)array
+- (void)merge:(NSArray*)array
 {
-    return [self apply:^(NSMutableArray* current) {
-        [current addObjectsFromArray:array];
+    [self.object addObjectsFromArray:array];
+}
+
+- (void)sort:(NSComparator)block
+{
+    [self.object sortUsingComparator:block];
+}
+
+- (void)filter:(BOOL(^)(id item))block
+{
+    NSMutableIndexSet* indices = [NSMutableIndexSet indexSet];
+    [self forEachWithIndex:^(NSUInteger index, id item) {
+        if (!block(item)) {
+            [indices addIndex:index];
+        }
     }];
+    [self.object removeObjectsAtIndexes:indices];
 }
 
 + (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat

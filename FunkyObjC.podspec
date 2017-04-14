@@ -20,7 +20,8 @@ DESC
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'Source/Core/**/*'
-    ss.private_header_files = 'Source/Core/Categories/*.h', 'Source/Core/Utilities/*.h'
+    ss.public_header_files = 'Source/Core/Public/*.h', 'Source/Core/Public/**/*.h'
+    ss.private_header_files = 'Source/Core/Private/*.h', 'Source/Core/Private/**/*.h'
   end
 
   s.subspec 'Collections' do |ss|
@@ -28,14 +29,17 @@ DESC
 
     ss.subspec 'Array' do |sss|
       sss.source_files = 'Source/Collections/Array/**/*'
+      sss.public_header_files = 'Source/Collections/Array/*.h', 'Source/Collections/Array/**/*.h'
     end
 
     ss.subspec 'Set' do |sss|
       sss.source_files = 'Source/Collections/Set/**/*'
+      sss.public_header_files = 'Source/Collections/Set/*.h', 'Source/Collections/Set/**/*.h'
     end
 
     ss.subspec 'Dictionary' do |sss|
       sss.source_files = 'Source/Collections/Dictionary/**/*'
+      sss.public_header_files = 'Source/Collections/Dictionary/*.h', 'Source/Collections/Dictionary/**/*.h'
     end
   end
 
@@ -56,6 +60,26 @@ DESC
 
     ss.subspec 'Dictionary' do |sss|
       sss.source_files = 'Source/Interface/Dictionary/**/*'
+    end
+  end
+
+  s.subspec 'PrefixedInterface' do |ss|
+    ss.dependency 'FunkyObjC/Core'
+
+    ss.subspec 'Object' do |sss|
+      sss.source_files = 'Source/PrefixedInterface/Object/**/*'
+    end
+
+    ss.subspec 'Array' do |sss|
+      sss.source_files = 'Source/PrefixedInterface/Array/**/*'
+    end
+
+    ss.subspec 'Set' do |sss|
+      sss.source_files = 'Source/PrefixedInterface/Set/**/*'
+    end
+
+    ss.subspec 'Dictionary' do |sss|
+      sss.source_files = 'Source/PrefixedInterface/Dictionary/**/*'
     end
   end
 end

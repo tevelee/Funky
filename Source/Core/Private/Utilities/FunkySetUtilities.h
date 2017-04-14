@@ -24,8 +24,8 @@
 
 @property (nonatomic, strong) NSMutableSet* object;
 
-- (NSMutableSet*)takeUnion:(NSSet*)set;
-- (NSMutableSet*)takeMinus:(NSSet*)set;
-- (NSMutableSet*)takeIntersection:(NSSet*)set;
+- (void)takeUnion:(NSSet*)set;
+- (void)takeMinus:(NSSet*)set;
+- (void)takeIntersection:(NSSet*)set;
 
 @end

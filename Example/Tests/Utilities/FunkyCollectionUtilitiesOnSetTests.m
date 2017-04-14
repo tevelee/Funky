@@ -86,8 +86,8 @@
     }], self.items.count);
 }
 
-- (void)test_filter {
-    NSSet* result = [self.items filter:^BOOL(id item) {
+- (void)test_filtered {
+    NSSet* result = [self.items filtered:^BOOL(id item) {
         return [item doubleValue] > 0;
     }];
     XCTAssertTrue([result all:^BOOL(id item) {

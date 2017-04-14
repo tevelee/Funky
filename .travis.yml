@@ -4,10 +4,8 @@ podfile: Example/Podfile
 before_install:
 - pod repo update --silent
 - pod install --project-directory=Example
-before_script:
-- git config --global user.email "tevelee@gmail.com"
-- git config --global user.name "Travis-CI"
 script:
+- rm -rf ./build || true
 - set -o pipefail
 - xcodebuild clean build -workspace Example/Funky.xcworkspace -scheme iOS-Example
   -sdk iphonesimulator10.3 -configuration Release | xcpretty --color
@@ -19,8 +17,8 @@ script:
 - danger || true
 - sleep 3
 after_success:
-- git config credential.helper "store --file=.git/credentials"
-- echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials
+- git config --global user.email "tevelee@gmail.com"
+- git config --global user.name "Travis-CI"
 - rake docs:all || true
 - bash <(curl -s https://codecov.io/bash)
 env:

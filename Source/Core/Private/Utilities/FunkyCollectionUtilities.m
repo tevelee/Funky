@@ -43,7 +43,7 @@
     }];
 }
 
-- (id)filter:(BOOL (^)(id))block
+- (id)filtered:(BOOL (^)(id))block
 {
     return [self mapToAnother:^(id item, id<FunkyMutableCollection> collection) {
         BOOL isMatching = block(item);

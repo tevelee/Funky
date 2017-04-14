@@ -67,9 +67,9 @@
 
 #pragma mark - Utilities
 
-- (NSMutableDictionary*)merge:(NSDictionary *)dictionary
+- (void)merge:(NSDictionary *)dictionary
 {
-    return [self.utilities merge:dictionary];
+    [self.utilities merge:dictionary];
 }
 
 @end

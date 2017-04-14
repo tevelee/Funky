@@ -18,7 +18,7 @@
 
 - (NSSet*)funky_map:(id(^)(ObjectType item))block;
 - (NSSet*)funky_flatMap:(id(^)(ObjectType item))block;
-- (NSSet<ObjectType>*)funky_filter:(BOOL(^)(ObjectType item))block;
+- (NSSet<ObjectType>*)funky_filtered:(BOOL(^)(ObjectType item))block;
 - (id)funky_reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
 - (NSSet<ObjectType>*)funky_flattened;
 
@@ -43,8 +43,8 @@
 
 @interface NSMutableSet <ObjectType> (FunkyPrefixedUtilities) <FunkyMutableCollectionWithCapacity>
 
-- (NSMutableSet*)funky_takeUnion:(NSSet*)set;
-- (NSMutableSet<ObjectType>*)funky_takeMinus:(NSSet<ObjectType>*)set;
-- (NSMutableSet<ObjectType>*)funky_takeIntersection:(NSSet<ObjectType>*)set;
+- (void)funky_takeUnion:(NSSet*)set;
+- (void)funky_takeMinus:(NSSet<ObjectType>*)set;
+- (void)funky_takeIntersection:(NSSet<ObjectType>*)set;
 
 @end

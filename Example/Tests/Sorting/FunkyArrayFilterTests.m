@@ -24,27 +24,27 @@
 }
 
 - (void)test_classKind {
-    NSArray* result = [self.items filter:[FunkyFilter isKindOfClass:[NSValue class]]];
+    NSArray* result = [self.items filtered:[FunkyFilter isKindOfClass:[NSValue class]]];
     XCTAssertEqualObjects(result, self.items);
 }
 
 - (void)test_classMember {
-    NSArray* result = [@[@1, @"A", @YES, [UIView new], @"B", @[], @"C", @{}] filter:[FunkyFilter isMemberOfClass:[UIView class]]];
+    NSArray* result = [@[@1, @"A", @YES, [UIView new], @"B", @[], @"C", @{}] filtered:[FunkyFilter isMemberOfClass:[UIView class]]];
     XCTAssertEqual(result.count, 1);
 }
 
 - (void)test_selector {
-    NSArray* result = [self.items filter:[FunkyFilter respondsToSelector:@selector(compare:)]];
+    NSArray* result = [self.items filtered:[FunkyFilter respondsToSelector:@selector(compare:)]];
     XCTAssertEqualObjects(result, self.items);
 }
 
 - (void)test_equal {
-    NSArray* result = [self.items filter:[FunkyFilter equalTo:@1]];
+    NSArray* result = [self.items filtered:[FunkyFilter equalTo:@1]];
     XCTAssertEqualObjects(result, @[@1]);
 }
 
 - (void)test_over5 {
-    NSArray* result = [self.items filter:^BOOL(id item) {
+    NSArray* result = [self.items filtered:^BOOL(id item) {
         return [item intValue] > 5;
     }];
     NSArray* expected = @[@8, @9, @10];

@@ -18,7 +18,7 @@
 
 - (id)map:(id(^)(id item))block;
 - (id)flatMap:(id(^)(id item))block;
-- (id)filter:(BOOL(^)(id item))block;
+- (id)filtered:(BOOL(^)(id item))block;
 - (BOOL)all:(BOOL(^)(id item))block;
 - (BOOL)none:(BOOL(^)(id item))block;
 - (BOOL)contains:(BOOL(^)(id item))block;

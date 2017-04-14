@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "FunkyCollectionUtilities.h"
-#import "FunkyFilterPredicate.h"
 
 @interface FunkyArrayUtilities : FunkyCollectionUtilities
 
@@ -51,6 +50,8 @@
 - (NSDictionary*)groupByUsingFirst:(id(^)(id item))block;
 - (NSDictionary*)groupByUsingLast:(id(^)(id item))block;
 
+- (NSArray*)sorted:(NSComparator)block;
+
 - (void)forEachWithIndex:(void(^)(NSUInteger index, id item))block;
 
 - (NSArray*)unique;
@@ -67,11 +68,14 @@
 
 @property (nonatomic, strong) NSMutableArray* object;
 
-- (NSMutableArray*)removeDuplicates;
-- (NSMutableArray*)reverse;
-- (NSMutableArray*)shuffle;
+- (void)flatten;
+- (void)removeDuplicates;
+- (void)reverse;
+- (void)shuffle;
 
-- (NSMutableArray*)merge:(NSArray*)array;
+- (void)merge:(NSArray*)array;
+- (void)sort:(NSComparator)block;
+- (void)filter:(BOOL(^)(id item))block;
 
 + (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
 + (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat;

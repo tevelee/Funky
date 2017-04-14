@@ -33,6 +33,6 @@
 
 @property (nonatomic, strong) NSMutableDictionary* object;
 
-- (NSMutableDictionary*)merge:(NSDictionary*)dictionary;
+- (void)merge:(NSDictionary*)dictionary;
 
 @end

@@ -6,7 +6,7 @@
 //
 //
 
-#import "NSSet+FunkyUtilities.h"
+#import "NSSet+FunkyPrefixedUtilities.h"
 #import "FunkyArrayUtilities.h"
 #import "NSSet+FunkyCore.h"
 
@@ -44,9 +44,9 @@
     return [self.utilities flatMap:block];
 }
 
-- (NSSet *)funky_filter:(BOOL (^)(id))block
+- (NSSet *)funky_filtered:(BOOL (^)(id))block
 {
-    return [self.utilities filter:block];
+    return [self.utilities filtered:block];
 }
 
 - (id)funky_reduce:(id(^)(id value, id item))block withInitialValue:(id)start
@@ -125,26 +125,26 @@
 
 #pragma mark - FunkyMutableCollectionWithCapacity
 
-+ (id)funky_newWithCapacity:(NSUInteger)capacity
++ (id)newWithCapacity:(NSUInteger)capacity
 {
     return [self setWithCapacity:capacity];
 }
 
 #pragma mark - Utilities
 
-- (NSMutableSet*)funky_takeUnion:(NSSet *)set
+- (void)funky_takeUnion:(NSSet *)set
 {
-    return [self.utilities takeUnion:set];
+    [self.utilities takeUnion:set];
 }
 
-- (NSMutableSet*)funky_takeMinus:(NSSet*)set
+- (void)funky_takeMinus:(NSSet*)set
 {
-    return [self.utilities takeMinus:set];
+    [self.utilities takeMinus:set];
 }
 
-- (NSMutableSet*)funky_takeIntersection:(NSSet*)set
+- (void)funky_takeIntersection:(NSSet*)set
 {
-    return [self.utilities takeIntersection:set];
+    [self.utilities takeIntersection:set];
 }
 
 @end

@@ -6,7 +6,7 @@
 //
 //
 
-#import "NSArray+FunkyUtilities.h"
+#import "NSArray+FunkyPrefixedUtilities.h"
 #import "NSArray+FunkyCore.h"
 #import "FunkyArrayUtilities.h"
 
@@ -54,9 +54,9 @@
     return [self.utilities flatMapWithIndex:block];
 }
 
-- (NSArray *)funky_filter:(BOOL (^)(id))block
+- (NSArray *)funky_filtered:(BOOL (^)(id))block
 {
-    return [self.utilities filter:block];
+    return [self.utilities filtered:block];
 }
 
 - (NSArray*)funky_reduce:(id(^)(id value, id item))block withInitialValue:(id)start
@@ -119,12 +119,12 @@
     return [self.utilities maxItems:block];
 }
 
-- (NSInteger)funky_firstIndex
+- (NSUInteger)funky_firstIndex
 {
     return [self.utilities firstIndex];
 }
 
-- (NSInteger)funky_lastIndex
+- (NSUInteger)funky_lastIndex
 {
     return [self.utilities lastIndex];
 }
@@ -266,7 +266,7 @@
 
 - (NSArray*)funky_sorted:(NSComparator)comparator
 {
-    return [self sortedArrayUsingComparator:comparator];
+    return [self.utilities sorted:comparator];
 }
 
 + (NSArray*)funky_arrayWithItem:(id)item repeated:(NSUInteger)repeat
@@ -290,31 +290,46 @@
 
 #pragma mark - FunkyMutableCollectionWithCapacity
 
-+ (id)funky_newWithCapacity:(NSUInteger)capacity
++ (id)newWithCapacity:(NSUInteger)capacity
 {
     return [self arrayWithCapacity:capacity];
 }
 
 #pragma mark - Utilities
 
-- (NSMutableArray*)funky_reverse
+- (void)funky_flatten
 {
-    return [self.utilities reverse];
+    [self.utilities flatten];
 }
 
-- (NSMutableArray*)funky_shuffle
+- (void)funky_reverse
 {
-    return [self.utilities shuffle];
+    [self.utilities reverse];
 }
 
-- (NSMutableArray*)funky_removeDuplicates
+- (void)funky_shuffle
 {
-    return [self.utilities removeDuplicates];
+    [self.utilities shuffle];
 }
 
-- (NSMutableArray*)funky_merge:(NSArray*)array
+- (void)funky_removeDuplicates
 {
-    return [self.utilities merge:array];
+    [self.utilities removeDuplicates];
+}
+
+- (void)funky_merge:(NSArray*)array
+{
+    [self.utilities merge:array];
+}
+
+- (void)funky_sort:(NSComparator)comparator
+{
+    [self.utilities sort:comparator];
+}
+
+- (void)funky_filter:(BOOL(^)(id item))block
+{
+    [self.utilities filter:block];
 }
 
 + (NSMutableArray*)funky_arrayWithItem:(id)item repeated:(NSUInteger)repeat

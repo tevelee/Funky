@@ -82,12 +82,12 @@
     OCMVerify([mockedSetUtils flatMap:[OCMArg any]]);
 }
 
-- (void)test_filter_callsUtilitiesClass
+- (void)test_filtered_callsUtilitiesClass
 {
-    [set filter:^BOOL(id item) {
+    [set filtered:^BOOL(id item) {
         return item != nil;
     }];
-    OCMVerify([mockedSetUtils filter:[OCMArg any]]);
+    OCMVerify([mockedSetUtils filtered:[OCMArg any]]);
 }
 
 - (void)test_reduce_callsUtilitiesClass

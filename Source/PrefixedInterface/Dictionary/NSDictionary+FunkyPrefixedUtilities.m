@@ -6,7 +6,7 @@
 //
 //
 
-#import "NSDictionary+FunkyUtilities.h"
+#import "NSDictionary+FunkyPrefixedUtilities.h"
 #import "NSDictionary+FunkyCore.h"
 
 @implementation NSDictionary (FunkyPrefixedUtilities)
@@ -67,16 +67,16 @@
 
 #pragma mark - FunkyMutableCollectionWithCapacity
 
-+ (id)funky_newWithCapacity:(NSUInteger)capacity
++ (id)newWithCapacity:(NSUInteger)capacity
 {
     return [self dictionaryWithCapacity:capacity];
 }
 
 #pragma mark - Utilities
 
-- (NSMutableDictionary*)funky_merge:(NSDictionary *)dictionary
+- (void)funky_merge:(NSDictionary *)dictionary
 {
-    return [self.utilities merge:dictionary];
+    [self.utilities merge:dictionary];
 }
 
 @end

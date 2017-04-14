@@ -17,7 +17,7 @@
 
 - (NSSet*)map:(id(^)(ObjectType item))block;
 - (NSSet*)flatMap:(id(^)(ObjectType item))block;
-- (NSSet<ObjectType>*)filter:(BOOL(^)(ObjectType item))block;
+- (NSSet<ObjectType>*)filtered:(BOOL(^)(ObjectType item))block;
 - (id)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
 - (NSSet<ObjectType>*)flattened;
 
@@ -42,8 +42,8 @@
 
 @interface NSMutableSet <ObjectType> (FunkyUtilities)
 
-- (NSMutableSet*)takeUnion:(NSSet*)set;
-- (NSMutableSet<ObjectType>*)takeMinus:(NSSet<ObjectType>*)set;
-- (NSMutableSet<ObjectType>*)takeIntersection:(NSSet<ObjectType>*)set;
+- (void)takeUnion:(NSSet*)set;
+- (void)takeMinus:(NSSet<ObjectType>*)set;
+- (void)takeIntersection:(NSSet<ObjectType>*)set;
 
 @end

@@ -28,6 +28,6 @@
 
 @interface NSMutableDictionary<KeyType, ObjectType> (FunkyUtilities)
 
-- (NSMutableDictionary<KeyType, ObjectType>*)merge:(NSDictionary<KeyType, ObjectType>*)dictionary;
+- (void)merge:(NSDictionary<KeyType, ObjectType>*)dictionary;
 
 @end

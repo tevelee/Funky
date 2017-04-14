@@ -29,6 +29,6 @@
 
 @interface NSMutableDictionary<KeyType, ObjectType> (FunkyPrefixedUtilities) <FunkyMutableCollectionWithCapacity>
 
-- (NSMutableDictionary<KeyType, ObjectType>*)funky_merge:(NSDictionary<KeyType, ObjectType>*)dictionary;
+- (void)funky_merge:(NSDictionary<KeyType, ObjectType>*)dictionary;
 
 @end

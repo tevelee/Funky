@@ -121,11 +121,9 @@
 
 @synthesize object = _mutableDictionary;
 
-- (NSMutableDictionary*)merge:(NSDictionary*)dictionary
+- (void)merge:(NSDictionary*)dictionary
 {
-    return [self apply:^(NSMutableDictionary* current) {
-        [current addEntriesFromDictionary:dictionary];
-    }];
+    [self.object addEntriesFromDictionary:dictionary];
 }
 
 @end

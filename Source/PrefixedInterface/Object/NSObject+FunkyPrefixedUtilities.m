@@ -6,7 +6,7 @@
 //
 //
 
-#import "NSObject+FunkyUtilities.h"
+#import "NSObject+FunkyPrefixedUtilities.h"
 #import "NSObject+FunkyCore.h"
 
 @implementation NSObject (FunkyPrefixedUtilities)
