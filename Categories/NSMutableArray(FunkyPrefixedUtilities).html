@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (41% documented)
+         (42% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -273,7 +273,19 @@
                 </div>
               </div>
             <p>This extension provides you with simple and easy to use functional and general utilities for NSMutableArray.
-All the methods in this category are prefixed with the <code>funky_</code> keyword for compatibility reasons. If you prefer unprefixed utilities, you should import <code>NSArray+FunkyUtilities.h</code>.</p>
+  All the methods in this category are prefixed with the <code>funky_</code> keyword for compatibility reasons. If you prefer unprefixed utilities, you should import <code>NSArray+FunkyUtilities.h</code>.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code>NSMutableArray(FunkyUtilities)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code>NSArray(FunkyPrefixedUtilities)</code>
+
+</div>
 
           </div>
         </section>
@@ -292,6 +304,53 @@ All the methods in this category are prefixed with the <code>funky_</code> keywo
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)NSMutableArray(im)funky_flatten"></a>
+                    <a name="//apple_ref/objc/Method/-funky_flatten" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSMutableArray(im)funky_flatten">-funky_flatten</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Makes the array structure a squence with flat elements, containing no NSArrays</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(im)funky_flattened">-[NSArray(FunkyPrefixedUtilities) funky_flattened]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(im)flatten">-[NSMutableArray(FunkyUtilities) flatten]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">funky_flatten</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_flatten</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L597">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)NSMutableArray(im)funky_reverse"></a>
                     <a name="//apple_ref/objc/Method/-funky_reverse" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)NSMutableArray(im)funky_reverse">-funky_reverse</a>
@@ -302,24 +361,36 @@ All the methods in this category are prefixed with the <code>funky_</code> keywo
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Puts the containing items in a reversed order.</p>
+                        <p>Puts the containing items (in place) in a reversed order.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(im)funky_reversed">-[NSArray(FunkyPrefixedUtilities) funky_reversed]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(im)reverse">-[NSMutableArray(FunkyUtilities) reverse]</a></code>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">funky_reverse</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">funky_reverse</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_reverse</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSMutableArray</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_reverse</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyPrefixedUtilities.h#L420">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L605">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -337,24 +408,36 @@ All the methods in this category are prefixed with the <code>funky_</code> keywo
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Shuffles the containing items in a random fashion.</p>
+                        <p>Shuffles the containing items (in place) in a random fashion.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(im)funky_shuffled">-[NSArray(FunkyPrefixedUtilities) funky_shuffled]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(im)shuffle">-[NSMutableArray(FunkyUtilities) shuffle]</a></code>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">funky_shuffle</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">funky_shuffle</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_shuffle</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSMutableArray</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_shuffle</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyPrefixedUtilities.h#L425">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L613">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -372,25 +455,37 @@ All the methods in this category are prefixed with the <code>funky_</code> keywo
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Makes the array unique by removing the duplicated items from the containing items. The method does this keeping the first occurence and removes the further duplications.
-It checks equality using the <code>-isEqual:</code> method</p>
+                        <p>Makes the array unique (in place) by removing the duplicated items from the containing items. The method does this keeping the first occurence and removes the further duplications.
+  It checks equality using the <code>-isEqual:</code> method</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(im)funky_unique">-[NSArray(FunkyPrefixedUtilities) funky_unique]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(im)removeDuplicates">-[NSMutableArray(FunkyUtilities) removeDuplicates]</a></code>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">funky_removeDuplicates</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">funky_removeDuplicates</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_removeDuplicates</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSMutableArray</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_removeDuplicates</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyPrefixedUtilities.h#L431">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L622">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -419,20 +514,31 @@ It checks equality using the <code>-isEqual:</code> method</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Concatenates the current array with the one given in the parameter. It does this by putting the existing elements first, and the elements in the provided array afterwards.
-- parameter: array The other collection to merge with</p>
+                        <p>Concatenates the current array (in place) with the one given in the parameter. It does this by putting the existing elements first, and the elements in the provided array afterwards.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(im)funky_merged:">-[NSArray(FunkyPrefixedUtilities) funky_merged:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(im)merge:">-[NSMutableArray(FunkyUtilities) merge:]</a></code>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_merge</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">array</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">funky_merge</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">array</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_merge</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSMutableArray</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_merge</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -457,7 +563,163 @@ It checks equality using the <code>-isEqual:</code> method</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyPrefixedUtilities.h#L439">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L633">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Sort"></a>
+                <a name="//apple_ref/objc/Section/Sort" class="dashAnchor"></a>
+                <a href="#/Sort">
+                  <h3 class="section-name">Sort</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSMutableArray(im)funky_sort:"></a>
+                    <a name="//apple_ref/objc/Method/-funky_sort:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSMutableArray(im)funky_sort:">-funky_sort:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sorts the array (in place) using the given comparator.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(im)funky_sorted:">-[NSArray(FunkyPrefixedUtilities) funky_sorted:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(im)sort:">-[NSMutableArray(FunkyUtilities) sort:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">funky_sort</span><span class="p">:(</span><span class="n">NSComparator</span><span class="p">)</span><span class="nv">comparator</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_sort</span><span class="p">(</span><span class="n">_</span> <span class="nv">comparator</span><span class="p">:</span> <span class="kt">Comparator</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An NSComparator block to define the sort order.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L644">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Filter"></a>
+                <a name="//apple_ref/objc/Section/Filter" class="dashAnchor"></a>
+                <a href="#/Filter">
+                  <h3 class="section-name">Filter</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSMutableArray(im)funky_filter:"></a>
+                    <a name="//apple_ref/objc/Method/-funky_filter:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSMutableArray(im)funky_filter:">-funky_filter:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Filters the array using the given predicate, keeping the elements that are passing the test.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(im)funky_filtered:">-[NSArray(FunkyPrefixedUtilities) funky_filtered:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(im)filter:">-[NSMutableArray(FunkyUtilities) filter:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">funky_filter</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_filter</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The predicate used to filter the results.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L655">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -486,9 +748,19 @@ It checks equality using the <code>-isEqual:</code> method</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates aa mutable array by repeating the same <code>item</code> by <code>repeat</code> number of times. The size of the array is going to be qual to <code>repeat</code>, only consisting of <code>item</code> objects.
-- parameter: item The item to repeat
-- parameter: repeat Number of times to repeat the <code>item</code> parameter</p>
+                        <p>Creates a mutable array by repeating the same <code>item</code> by <code>repeat</code> number of times. The size of the array is going to be qual to <code>repeat</code>, only consisting of <code>item</code> objects.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(cm)funky_arrayWithItem:repeated:">+[NSArray(FunkyPrefixedUtilities) funky_arrayWithItem:repeated:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(cm)arrayWithItem:repeated:">+[NSMutableArray(FunkyUtilities) arrayWithItem:repeated:]</a></code>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -538,8 +810,13 @@ It checks equality using the <code>-isEqual:</code> method</p>
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSMutableArray instance with the given item repeated</p>
+
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyPrefixedUtilities.h#L448">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L668">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -557,10 +834,19 @@ It checks equality using the <code>-isEqual:</code> method</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a mutable array by taking an initial <code>array</code> and computing the next items by repeatedly putting the result of <code>block</code> by <code>repeated</code> number of times.
-- parameter: array Initial array
-- parameter: block The block to compute the next item in the resulting array
-- parameter: repeat Number of times to repeat calling the <code>block</code> parameter</p>
+                        <p>Creates a mutable array by taking an initial <code>array</code> and computing the next items by repeatedly putting the result of <code>block</code> by <code>repeated</code> number of times.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(cm)funky_arrayWithArray:nextItem:repeated:">+[NSArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:repeated:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(cm)arrayWithArray:nextItem:repeated:">+[NSMutableArray(FunkyUtilities) arrayWithArray:nextItem:repeated:]</a></code>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -625,8 +911,13 @@ It checks equality using the <code>-isEqual:</code> method</p>
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSMutableArray instance with items returned by the block</p>
+
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyPrefixedUtilities.h#L456">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L680">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -644,10 +935,19 @@ It checks equality using the <code>-isEqual:</code> method</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a mutable array by taking an initial <code>array</code> and computing the next items by repeatedly putting the result of <code>block</code> by until the block parameter <code>until</code> returns YES.
-- parameter: array Initial array
-- parameter: block The block to compute the next item in the resulting array
-- parameter: until Logic until the iteration should be repeated. Until the block returns YES, the constructor repeatedly callis the <code>block</code> parameter</p>
+                        <p>Creates a mutable array by taking an initial <code>array</code> and computing the next items by repeatedly putting the result of <code>block</code> by until the block parameter <code>until</code> returns YES.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSArray(FunkyPrefixedUtilities).html#/c:objc(cs)NSArray(cm)funky_arrayWithArray:nextItem:until:">+[NSArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:until:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableArray(FunkyUtilities).html#/c:objc(cs)NSMutableArray(cm)arrayWithArray:nextItem:until:">+[NSMutableArray(FunkyUtilities) arrayWithArray:nextItem:until:]</a></code>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -712,8 +1012,13 @@ It checks equality using the <code>-isEqual:</code> method</p>
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSMutableArray instance with items returned by the block</p>
+
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Interface/Array/NSArray+FunkyPrefixedUtilities.h#L464">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L692">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -726,7 +1031,7 @@ It checks equality using the <code>-isEqual:</code> method</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-13)</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-15)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

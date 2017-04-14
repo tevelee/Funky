@@ -351,395 +351,304 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkyPair.h",
-      "line": 11,
-      "symbol": "FunkyPair",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkyPair.h",
-      "line": 13,
-      "symbol": "FunkyPair.key",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkyPair.h",
-      "line": 14,
-      "symbol": "FunkyPair.value",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkyPair.h",
-      "line": 16,
-      "symbol": "FunkyPair.+pairWithKey:value:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkyPair.h",
-      "line": 18,
-      "symbol": "FunkyPair.-pairByModifyingKey:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkyPair.h",
-      "line": 19,
-      "symbol": "FunkyPair.-pairByModifyingValue:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkySortingBucket.h",
-      "line": 12,
-      "symbol": "FunkySortingBucket",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkySortingBucket.h",
-      "line": 14,
-      "symbol": "FunkySortingBucket.filterBlock",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkySortingBucket.h",
-      "line": 15,
-      "symbol": "FunkySortingBucket.innerBucketComparator",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkySortingBucket.h",
-      "line": 17,
-      "symbol": "FunkySortingBucket.+bucketWithBlock:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkySortingBucket.h",
-      "line": 18,
-      "symbol": "FunkySortingBucket.+bucketWithAllTheRest",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Models/FunkySortingBucket.h",
-      "line": 20,
-      "symbol": "FunkySortingBucket.-isCollectorBucket",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionCounterpartProtocol.h",
-      "line": 11,
-      "symbol": "FunkyCollectionCounterpart",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionCounterpartProtocol.h",
-      "line": 13,
-      "symbol": "FunkyCollectionCounterpart.+classForImmutableCounterPart",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionCounterpartProtocol.h",
-      "line": 14,
-      "symbol": "FunkyCollectionCounterpart.+classForMutableCounterPart",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionCounterpartProtocol.h",
-      "line": 15,
-      "symbol": "FunkyCollectionCounterpart.+classToFlatten",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionProtocol.h",
-      "line": 15,
-      "symbol": "FunkyCollection",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionProtocol.h",
-      "line": 17,
-      "symbol": "FunkyCollection.-count",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionProtocol.h",
-      "line": 18,
-      "symbol": "FunkyCollection.-copy",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionProtocol.h",
-      "line": 19,
-      "symbol": "FunkyCollection.-mutableCopy",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionProtocol.h",
-      "line": 23,
-      "symbol": "FunkyMutableCollection",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionProtocol.h",
-      "line": 25,
-      "symbol": "FunkyMutableCollection.-addObject:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyCollectionProtocol.h",
-      "line": 26,
-      "symbol": "FunkyMutableCollection.-removeAllObjects",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyFilterPredicate.h",
-      "line": 11,
-      "symbol": "FunkyFilterPredicate",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyMutableCollectionWithCapacityProtocol.h",
-      "line": 11,
-      "symbol": "FunkyMutableCollectionWithCapacity",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkyMutableCollectionWithCapacityProtocol.h",
-      "line": 13,
-      "symbol": "FunkyMutableCollectionWithCapacity.+newWithCapacity:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkySortComparableProtocol.h",
-      "line": 11,
-      "symbol": "FunkySortComparable",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkySortComparableProtocol.h",
-      "line": 13,
-      "symbol": "FunkySortComparable.-compare:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkySortComparableProtocol.h",
-      "line": 17,
-      "symbol": "FunkySortingBucketFilterBlock",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkySortComparableProtocol.h",
-      "line": 18,
-      "symbol": "FunkySortBoolComparableBlock",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Protocols/FunkySortComparableProtocol.h",
-      "line": 19,
-      "symbol": "FunkySortComparablePropertyProviderBlock",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkyFilter.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkyFilter.h",
       "line": 12,
       "symbol": "FunkyFilter",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkyFilter.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkyFilter.h",
       "line": 14,
       "symbol": "FunkyFilter.+equalTo:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkyFilter.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkyFilter.h",
       "line": 15,
       "symbol": "FunkyFilter.+isKindOfClass:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkyFilter.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkyFilter.h",
       "line": 16,
       "symbol": "FunkyFilter.+isMemberOfClass:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkyFilter.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkyFilter.h",
       "line": 17,
       "symbol": "FunkyFilter.+respondsToSelector:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkySort.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkySort.h",
       "line": 12,
       "symbol": "FunkySort",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkySort.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkySort.h",
       "line": 14,
       "symbol": "FunkySort.+lexicographicalComparator",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkySort.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkySort.h",
       "line": 15,
       "symbol": "FunkySort.+propertyComparator:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkySort.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkySort.h",
       "line": 16,
       "symbol": "FunkySort.+boolComparator:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkySort.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkySort.h",
       "line": 18,
       "symbol": "FunkySort.+prioritizedComparator:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkySort.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkySort.h",
       "line": 20,
       "symbol": "FunkySort.+comparatorWithBuckets:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Array/FunkySort.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Helpers/FunkySort.h",
       "line": 21,
       "symbol": "FunkySort.+comparatorWithBuckets:defaultInnerBucketComparator:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkyPair.h",
+      "line": 11,
+      "symbol": "FunkyPair",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkyPair.h",
       "line": 13,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities)",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "symbol": "FunkyPair.key",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
-      "line": 15,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_map:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkyPair.h",
+      "line": 14,
+      "symbol": "FunkyPair.value",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkyPair.h",
       "line": 16,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_merged:",
+      "symbol": "FunkyPair.+pairWithKey:value:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkyPair.h",
+      "line": 18,
+      "symbol": "FunkyPair.-pairByModifyingKey:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
-      "line": 17,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_forEach:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkyPair.h",
       "line": 19,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_invertedObjectsAndKeys",
+      "symbol": "FunkyPair.-pairByModifyingValue:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
-      "line": 21,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_filter:",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkySortingBucket.h",
+      "line": 12,
+      "symbol": "FunkySortingBucket",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkySortingBucket.h",
+      "line": 14,
+      "symbol": "FunkySortingBucket.filterBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkySortingBucket.h",
+      "line": 15,
+      "symbol": "FunkySortingBucket.innerBucketComparator",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkySortingBucket.h",
+      "line": 17,
+      "symbol": "FunkySortingBucket.+bucketWithBlock:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkySortingBucket.h",
+      "line": 18,
+      "symbol": "FunkySortingBucket.+bucketWithAllTheRest",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Models/FunkySortingBucket.h",
+      "line": 20,
+      "symbol": "FunkySortingBucket.-isCollectorBucket",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
-      "line": 22,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_all:",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionCounterpartProtocol.h",
+      "line": 11,
+      "symbol": "FunkyCollectionCounterpart",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionCounterpartProtocol.h",
+      "line": 13,
+      "symbol": "FunkyCollectionCounterpart.+classForImmutableCounterPart",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionCounterpartProtocol.h",
+      "line": 14,
+      "symbol": "FunkyCollectionCounterpart.+classForMutableCounterPart",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionCounterpartProtocol.h",
+      "line": 15,
+      "symbol": "FunkyCollectionCounterpart.+classToFlatten",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionProtocol.h",
+      "line": 15,
+      "symbol": "FunkyCollection",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionProtocol.h",
+      "line": 17,
+      "symbol": "FunkyCollection.-count",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionProtocol.h",
+      "line": 18,
+      "symbol": "FunkyCollection.-copy",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionProtocol.h",
+      "line": 19,
+      "symbol": "FunkyCollection.-mutableCopy",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionProtocol.h",
       "line": 23,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_none:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "symbol": "FunkyMutableCollection",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
-      "line": 24,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_contains:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionProtocol.h",
       "line": 25,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_count:",
+      "symbol": "FunkyMutableCollection.-addObject:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyCollectionProtocol.h",
       "line": 26,
-      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_reduce:withInitialValue:",
+      "symbol": "FunkyMutableCollection.-removeAllObjects",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
-      "line": 30,
-      "symbol": "NSMutableDictionary(FunkyPrefixedUtilities)",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyFilterPredicate.h",
+      "line": 11,
+      "symbol": "FunkyFilterPredicate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
-      "line": 32,
-      "symbol": "NSMutableDictionary(FunkyPrefixedUtilities).-funky_merge:",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyMutableCollectionWithCapacityProtocol.h",
+      "line": 11,
+      "symbol": "FunkyMutableCollectionWithCapacity",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkyMutableCollectionWithCapacityProtocol.h",
+      "line": 13,
+      "symbol": "FunkyMutableCollectionWithCapacity.+newWithCapacity:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkySortComparableProtocol.h",
+      "line": 11,
+      "symbol": "FunkySortComparable",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkySortComparableProtocol.h",
+      "line": 13,
+      "symbol": "FunkySortComparable.-compare:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkySortComparableProtocol.h",
+      "line": 17,
+      "symbol": "FunkySortingBucketFilterBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkySortComparableProtocol.h",
+      "line": 18,
+      "symbol": "FunkySortBoolComparableBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Core/Public/Protocols/FunkySortComparableProtocol.h",
+      "line": 19,
+      "symbol": "FunkySortComparablePropertyProviderBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
@@ -834,20 +743,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Object/NSObject+FunkyPrefixedUtilities.h",
-      "line": 11,
-      "symbol": "NSObject(FunkyPrefixedUtilities)",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Object/NSObject+FunkyPrefixedUtilities.h",
-      "line": 13,
-      "symbol": "NSObject(FunkyPrefixedUtilities).-funky_apply:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Object/NSObject+FunkyUtilities.h",
       "line": 11,
       "symbol": "NSObject(FunkyUtilities)",
@@ -858,188 +753,6 @@
       "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Object/NSObject+FunkyUtilities.h",
       "line": 13,
       "symbol": "NSObject(FunkyUtilities).-apply:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 12,
-      "symbol": "NSSet(FunkyPrefixedUtilities)",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 14,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_all:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 15,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_none:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 16,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_contains:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 17,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_count:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 19,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_map:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 20,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_flatMap:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 21,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_filter:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 22,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_reduce:withInitialValue:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 23,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_flattened",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 25,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_takingUnion:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 26,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_takingMinus:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 27,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_takingIntersection:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 29,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_forEach:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 31,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_groupBy:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 32,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_associateBy:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 34,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_sum:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 35,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_average:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 36,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_minValue:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 37,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_maxValue:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 39,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_minItems:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 40,
-      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_maxItems:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 44,
-      "symbol": "NSMutableSet(FunkyPrefixedUtilities)",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 46,
-      "symbol": "NSMutableSet(FunkyPrefixedUtilities).-funky_takeUnion:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 47,
-      "symbol": "NSMutableSet(FunkyPrefixedUtilities).-funky_takeMinus:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyPrefixedUtilities.h",
-      "line": 48,
-      "symbol": "NSMutableSet(FunkyPrefixedUtilities).-funky_takeIntersection:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
@@ -1095,7 +808,7 @@
     {
       "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyUtilities.h",
       "line": 20,
-      "symbol": "NSSet(FunkyUtilities).-filter:",
+      "symbol": "NSSet(FunkyUtilities).-filtered:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
@@ -1222,6 +935,293 @@
       "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/Interface/Set/NSSet+FunkyUtilities.h",
       "line": 47,
       "symbol": "NSMutableSet(FunkyUtilities).-takeIntersection:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 13,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 15,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_map:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 16,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_merged:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 17,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_forEach:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 19,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_invertedObjectsAndKeys",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 21,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_filter:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 22,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_all:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 23,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_none:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 24,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_contains:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 25,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_count:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 26,
+      "symbol": "NSDictionary(FunkyPrefixedUtilities).-funky_reduce:withInitialValue:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 30,
+      "symbol": "NSMutableDictionary(FunkyPrefixedUtilities)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h",
+      "line": 32,
+      "symbol": "NSMutableDictionary(FunkyPrefixedUtilities).-funky_merge:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Object/NSObject+FunkyPrefixedUtilities.h",
+      "line": 11,
+      "symbol": "NSObject(FunkyPrefixedUtilities)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Object/NSObject+FunkyPrefixedUtilities.h",
+      "line": 13,
+      "symbol": "NSObject(FunkyPrefixedUtilities).-funky_apply:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 12,
+      "symbol": "NSSet(FunkyPrefixedUtilities)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 14,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_all:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 15,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_none:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 16,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_contains:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 17,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_count:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 19,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_map:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 20,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_flatMap:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 21,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_filtered:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 22,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_reduce:withInitialValue:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 23,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_flattened",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 25,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_takingUnion:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 26,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_takingMinus:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 27,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_takingIntersection:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 29,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_forEach:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 31,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_groupBy:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 32,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_associateBy:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 34,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_sum:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 35,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_average:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 36,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_minValue:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 37,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_maxValue:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 39,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_minItems:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 40,
+      "symbol": "NSSet(FunkyPrefixedUtilities).-funky_maxItems:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 44,
+      "symbol": "NSMutableSet(FunkyPrefixedUtilities)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 46,
+      "symbol": "NSMutableSet(FunkyPrefixedUtilities).-funky_takeUnion:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 47,
+      "symbol": "NSMutableSet(FunkyPrefixedUtilities).-funky_takeMinus:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Source/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h",
+      "line": 48,
+      "symbol": "NSMutableSet(FunkyPrefixedUtilities).-funky_takeIntersection:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     }
