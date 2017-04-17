@@ -147,4 +147,14 @@
     [self.utilities takeIntersection:set];
 }
 
+- (void)funky_filter:(BOOL (^)(id))block
+{
+    [self.utilities filter:block];
+}
+
+- (void)funky_flatten
+{
+    [self.utilities flatten];
+}
+
 @end

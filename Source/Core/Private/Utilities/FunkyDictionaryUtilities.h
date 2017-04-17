@@ -20,12 +20,15 @@
 
 - (NSDictionary*)invertedObjectsAndKeys;
 
-- (NSDictionary*)filter:(BOOL(^)(id key, id value))block;
+- (NSDictionary*)filtered:(BOOL(^)(id key, id value))block;
 - (BOOL)all:(BOOL(^)(id key, id value))block;
 - (BOOL)none:(BOOL(^)(id key, id value))block;
 - (BOOL)contains:(BOOL(^)(id key, id value))block;
 - (NSInteger)count:(BOOL(^)(id key, id value))block;
 - (id)reduce:(id(^)(id previousValue, id key, id value))block withInitialValue:(id)start;
+
+- (NSArray*)keys:(BOOL(^)(id key, id value))block;
+- (NSArray*)values:(BOOL(^)(id key, id value))block;
 
 @end
 
@@ -34,5 +37,6 @@
 @property (nonatomic, strong) NSMutableDictionary* object;
 
 - (void)merge:(NSDictionary*)dictionary;
+- (void)filter:(BOOL(^)(id key, id value))block;
 
 @end

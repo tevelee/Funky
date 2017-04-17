@@ -55,8 +55,8 @@
     XCTAssertEqualObjects(items, expected);
 }
 
-- (void)test_filter {
-    NSDictionary* filtered = [self.items filter:^BOOL(NSString *key, NSNumber *value) {
+- (void)test_filtered {
+    NSDictionary* filtered = [self.items filtered:^BOOL(NSString *key, NSNumber *value) {
         return [key isEqualToString:@"a"];
     }];
     NSDictionary* expected = @{@"a": @0};

@@ -68,4 +68,26 @@
     [self.object intersectSet:set];
 }
 
+- (void)filter:(BOOL (^)(id))block
+{
+    [self forEach:^(id item) {
+        if (!block(item)) {
+            [self.object removeObject:item];
+        }
+    }];
+}
+
+- (void)flatten
+{
+    [self forEach:^(id item) {
+        if ([item isKindOfClass:[self.object.class classToFlatten]]) {
+            FunkySetUtilities* utilsForItem = [FunkySetUtilities utilitiesWithObject:[[item reverseObjectEnumerator] allObjects]];
+            [self.object removeObject:item];
+            for (id current in [utilsForItem flattened]) {
+                [self.object addObject:current];
+            }
+        }
+    }];
+}
+
 @end

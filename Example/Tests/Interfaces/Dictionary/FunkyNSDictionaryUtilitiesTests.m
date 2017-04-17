@@ -73,12 +73,12 @@
     OCMVerify([mockedDictionaryUtils map:[OCMArg any]]);
 }
 
-- (void)test_filter_callsUtilitiesClass
+- (void)test_filtered_callsUtilitiesClass
 {
-    [dictionary filter:^BOOL(id key, id item) {
+    [dictionary filtered:^BOOL(id key, id item) {
         return item != nil;
     }];
-    OCMVerify([mockedDictionaryUtils filter:[OCMArg any]]);
+    OCMVerify([mockedDictionaryUtils filtered:[OCMArg any]]);
 }
 
 - (void)test_reduce_callsUtilitiesClass

@@ -28,4 +28,7 @@
 - (void)takeMinus:(NSSet*)set;
 - (void)takeIntersection:(NSSet*)set;
 
+- (void)filter:(BOOL (^)(id))block;
+- (void)flatten;
+
 @end

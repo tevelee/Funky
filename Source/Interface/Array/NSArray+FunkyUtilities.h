@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  This extension provides you with simple and easy to use functional and general utilities for NSArray.
+ *  This extension provides simple and easy to use functional and general utilities for NSArray.
  *  If you need to prefix the extension methods in this category, you should import `NSArray+FunkyPrefixedUtilities.h`, where every utility method is prefixed with the `funky_` keyword for compatiblitiy reasons.
  *
  *  @see Prefixed counterpart `NSArray(FunkyPrefixedUtilities)`
- *  @see Mutable counterpart `NSMutableArray(FunkyPrefixedUtilities)`
+ *  @see Mutable counterpart `NSMutableArray(FunkyUtilities)`
  */
 @interface NSArray <__covariant ObjectType> (FunkyUtilities)
 
@@ -140,8 +140,6 @@
  */
 - (void)forEach:(void(^)(ObjectType item))block;
 
-#pragma mark - Grouping
-
 /**
  *  Calls every element of the array once. Same as forEach, but the block contains the index of the current element as well.
  *
@@ -149,6 +147,8 @@
  *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_forEachWithIndex:]`
  */
 - (void)forEachWithIndex:(void(^)(NSUInteger index, ObjectType item))block;
+
+#pragma mark - Grouping
 
 /**
  *  Groups elements to an NSDictionary, where the returned element serves as a key, and the objects as the value. If multiple elements are returned with the same key, this function will use the first matching element.
@@ -579,15 +579,15 @@
 @end
 
 /**
- *  This extension provides you with simple and easy to use functional and general utilities for NSMutableArray.
+ *  This extension provides simple and easy to use functional and general utilities for NSMutableArray.
  *  If you need to prefix the extension methods in this category, you should import `NSArray+FunkyPrefixedUtilities.h`, where every utility method is prefixed with the `funky_` keyword for compatiblitiy reasons.
  *
  *  @see Prefixed counterpart `NSMutableArray(FunkyPrefixedUtilities)`
- *  @see Immutable counterpart `NSArray(FunkyPrefixedUtilities)`
+ *  @see Immutable counterpart `NSArray(FunkyUtilities)`
  */
 @interface NSMutableArray <ObjectType> (FunkyUtilities)
 
-#pragma mark - Transform
+#pragma mark - Flatten
 
 /**
  *  Makes the array structure a squence with flat elements, containing no NSArrays
@@ -596,6 +596,8 @@
  *  @see Prefixed counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_flatten]`
  */
 - (void)flatten;
+
+#pragma mark - Transform
 
 /**
  *  Puts the containing items (in place) in a reversed order.

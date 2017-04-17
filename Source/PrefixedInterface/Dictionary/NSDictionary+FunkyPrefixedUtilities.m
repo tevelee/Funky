@@ -31,9 +31,9 @@
     return [self.utilities invertedObjectsAndKeys];
 }
 
-- (NSDictionary*)funky_filter:(BOOL(^)(id key, id value))block
+- (NSDictionary*)funky_filtered:(BOOL(^)(id key, id value))block
 {
-    return [self.utilities filter:block];
+    return [self.utilities filtered:block];
 }
 
 - (BOOL)funky_all:(BOOL(^)(id key, id value))block
@@ -61,6 +61,16 @@
     return [self.utilities reduce:block withInitialValue:start];
 }
 
+- (NSArray*)funky_keys:(BOOL(^)(id key, id value))block
+{
+    return [self.utilities keys:block];
+}
+
+- (NSArray*)funky_values:(BOOL(^)(id key, id value))block
+{
+    return [self.utilities values:block];
+}
+
 @end
 
 @implementation NSMutableDictionary (FunkyPrefixedUtilities)
@@ -77,6 +87,11 @@
 - (void)funky_merge:(NSDictionary *)dictionary
 {
     [self.utilities merge:dictionary];
+}
+
+- (void)funky_filter:(BOOL(^)(id key, id value))block
+{
+    [self.utilities filter:block];
 }
 
 @end

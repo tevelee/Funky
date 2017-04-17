@@ -52,7 +52,7 @@
     }];
 }
 
-- (NSDictionary*)filter:(BOOL(^)(id key, id value))block
+- (NSDictionary*)filtered:(BOOL(^)(id key, id value))block
 {
     return [self mapToAnother:^(id key, id value, NSMutableDictionary *mutableDictionary) {
         if (block(key, value)) {
@@ -115,6 +115,30 @@
     return mutatingValue;
 }
 
+- (NSArray*)keys:(BOOL(^)(id key, id value))block
+{
+    NSMutableArray* keys = [NSMutableArray arrayWithCapacity:self.object.count];
+    for (id key in self.object) {
+        id value = self.object[key];
+        if (!block(key, value)) {
+            [keys addObject:key];
+        }
+    }
+    return keys.copy;
+}
+
+- (NSArray*)values:(BOOL(^)(id key, id value))block
+{
+    NSMutableArray* values = [NSMutableArray arrayWithCapacity:self.object.count];
+    for (id key in self.object) {
+        id value = self.object[key];
+        if (!block(key, value)) {
+            [values addObject:value];
+        }
+    }
+    return values.copy;
+}
+
 @end
 
 @implementation FunkyMutableDictionaryUtilities
@@ -124,6 +148,12 @@
 - (void)merge:(NSDictionary*)dictionary
 {
     [self.object addEntriesFromDictionary:dictionary];
+}
+
+- (void)filter:(BOOL(^)(id key, id value))block
+{
+    NSArray* keys = [self keys:block];
+    [self.object removeObjectsForKeys:keys];
 }
 
 @end

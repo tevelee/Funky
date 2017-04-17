@@ -140,4 +140,14 @@
     [self.utilities takeIntersection:set];
 }
 
+- (void)filter:(BOOL (^)(id))block
+{
+    [self.utilities filter:block];
+}
+
+- (void)flatten
+{
+    [self.utilities flatten];
+}
+
 @end

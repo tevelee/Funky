@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  This extension provides you with simple and easy to use functional and general utilities for NSArray.
+ *  This extension provides simple and easy to use functional and general utilities for NSArray.
  *  All the methods in this category are prefixed with the `funky_` keyword for compatibility reasons. If you prefer unprefixed utilities, you should import `NSArray+FunkyUtilities.h`.
  *
  *  @see Unprefixed counterpart `NSArray(FunkyUtilities)`
@@ -140,8 +140,6 @@
  */
 - (void)funky_forEach:(void(^)(ObjectType item))block;
 
-#pragma mark - Grouping
-
 /**
  *  Calls every element of the array once. Same as forEach, but the block contains the index of the current element as well.
  *
@@ -149,6 +147,8 @@
  *  @see Unprefixed counterpart `-[NSArray(FunkyUtilities) forEachWithIndex:]`
  */
 - (void)funky_forEachWithIndex:(void(^)(NSUInteger index, ObjectType item))block;
+
+#pragma mark - Grouping
 
 /**
  *  Groups elements to an NSDictionary, where the returned element serves as a key, and the objects as the value. If multiple elements are returned with the same key, this function will use the first matching element.
@@ -578,7 +578,7 @@
 @end
 
 /**
- *  This extension provides you with simple and easy to use functional and general utilities for NSMutableArray.
+ *  This extension provides simple and easy to use functional and general utilities for NSMutableArray.
  *  All the methods in this category are prefixed with the `funky_` keyword for compatibility reasons. If you prefer unprefixed utilities, you should import `NSArray+FunkyUtilities.h`.
  *
  *  @see Unprefixed counterpart `NSMutableArray(FunkyUtilities)`
@@ -586,7 +586,7 @@
  */
 @interface NSMutableArray <ObjectType> (FunkyPrefixedUtilities)
 
-#pragma mark - Transform
+#pragma mark - Flatten
 
 /**
  *  Makes the array structure a squence with flat elements, containing no NSArrays
@@ -595,6 +595,8 @@
  *  @see Unprefixed counterpart `-[NSMutableArray(FunkyUtilities) flatten]`
  */
 - (void)funky_flatten;
+
+#pragma mark - Transform
 
 /**
  *  Puts the containing items (in place) in a reversed order.
