@@ -1,6 +1,8 @@
 osx_image: xcode8.3
 language: objective-c
 podfile: Example/Podfile
+env:
+- DOCS_PUBLISH_REPO_URL=git@github.com:tevelee/Funky.git
 before_install:
 - pod repo update --silent
 - pod install --project-directory=Example
@@ -17,10 +19,11 @@ script:
 - danger || true
 - sleep 3
 after_success:
+- openssl aes-256-cbc -K $encrypted_2620db1da8a0_key -iv $encrypted_2620db1da8a0_iv -in github_rsa.enc -out github_rsa -d
+- chmod 600 github_rsa
+- ssh-add github_rsa
+- ssh -o StrictHostKeyChecking=no git@github.com
 - git config --global user.email "tevelee@gmail.com"
 - git config --global user.name "Travis-CI"
 - rake docs:all || true
 - bash <(curl -s https://codecov.io/bash)
-env:
-  global:
-    secure: Vj3neDXPYyFWUYQ76N8vX3gXdUa2ZkvUVn5xN04UE2uZF6n5b2WQBkI3clNq9ykDAePlhxceOf9fgZRCGek5xEqXo/rigmXin5PBHaC3g5zknlFUau/FtYBysO2p5stlv0BmsqY5GsWD8XVkdXrHwiTlfL0EYbIw9BlOb5vktgLmwiU+eDqpa6XWs8rbxsd/auu/jllGDZBn3WEcbZE63oJIAMqdgx5PxyUD8oYgva9u2dptWfWUvV5+x6JdEhew4J4vLMjVcN2b993nz7KXPg4eiXgczByCUQlAxG9lcq+/LJnwNlqMNy3tj2VQSx2WwZoEnvqAvrbLYhhvBuKoloafW12duDqOXW4TG1zEVBSnq/jur04ioczH3AyJjsfpb02Tf0ekstHOmpgzyZuVcNSfmX0yHR1l4iAv1YTWj2VgksWzSz8nnpDwwupJphJw1VbOdbMJYp9yRIoBgEdH00GfRnsFRmWfVRYEQuY9bMQshaiZSVKITp8OTAHXv4QgYSndkIoluyIS42UGOwmvhym1nUtwnZRATJe54PWBq/O/TexqZdLrslObmKw+dzRcamzq3NzMfGIRWcq9sjqnblsPkqV6Rs+WeZgnAmB9HvhPH1HRVBHz+qGtLa06NfrZkU8G0dP+01gZF26jyGT2Zb6uGz5T6RsS4Bl4V00puc8=
