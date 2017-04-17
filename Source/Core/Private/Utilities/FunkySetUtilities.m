@@ -81,7 +81,7 @@
 {
     [self forEach:^(id item) {
         if ([item isKindOfClass:[self.object.class classToFlatten]]) {
-            FunkySetUtilities* utilsForItem = [FunkySetUtilities utilitiesWithObject:[[item reverseObjectEnumerator] allObjects]];
+            FunkySetUtilities* utilsForItem = [FunkySetUtilities utilitiesWithObject:item];
             [self.object removeObject:item];
             for (id current in [utilsForItem flattened]) {
                 [self.object addObject:current];

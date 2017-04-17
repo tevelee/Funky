@@ -16,6 +16,11 @@
     return [self.utilities map:block];
 }
 
+- (NSDictionary*)nilTolerantMap:(FunkyPair *(^)(id, id))block
+{
+    return [self.utilities nilTolerantMap:block];
+}
+
 - (NSDictionary*)merged:(NSDictionary*)other
 {
     return [self.utilities merged:other];

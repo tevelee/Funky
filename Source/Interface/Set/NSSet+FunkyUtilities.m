@@ -39,6 +39,11 @@
     return [self.utilities map:block];
 }
 
+- (NSSet*)nilTolerantMap:(id (^)(id))block
+{
+    return [self.utilities nilTolerantMap:block];
+}
+
 - (NSSet *)flatMap:(id (^)(id))block
 {
     return [self.utilities flatMap:block];

@@ -39,9 +39,19 @@
     return [self.utilities map:block];
 }
 
+- (NSArray*)nilTolerantMap:(id (^)(id))block
+{
+    return [self.utilities nilTolerantMap:block];
+}
+
 - (NSArray*)mapWithIndex:(id (^)(NSUInteger, id))block
 {
     return [self.utilities mapWithIndex:block];
+}
+
+- (NSArray*)nilTolerantMapWithIndex:(id (^)(NSUInteger, id))block
+{
+    return [self.utilities nilTolerantMapWithIndex:block];
 }
 
 - (NSArray *)flatMap:(id (^)(id))block

@@ -17,6 +17,7 @@
 - (NSUInteger)lastIndex;
 
 - (NSArray*)mapWithIndex:(id(^)(NSUInteger index, id item))block;
+- (NSArray*)nilTolerantMapWithIndex:(id(^)(NSUInteger index, id item))block;
 - (NSArray*)flatMapWithIndex:(id(^)(NSUInteger index, id item))block;
 
 - (id)first:(BOOL(^)(id item))block;

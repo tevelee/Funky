@@ -43,6 +43,16 @@
     }];
 }
 
+- (id)nilTolerantMap:(id(^)(id item))block
+{
+    return [self mapToAnother:^(id item, id<FunkyMutableCollection> collection) {
+        id mapped = block(item);
+        if (mapped) {
+            [collection addObject:mapped];
+        }
+    }];
+}
+
 - (id)filtered:(BOOL (^)(id))block
 {
     return [self mapToAnother:^(id item, id<FunkyMutableCollection> collection) {

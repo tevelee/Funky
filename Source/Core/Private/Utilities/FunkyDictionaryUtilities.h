@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) NSDictionary* object;
 
+- (NSDictionary*)nilTolerantMap:(FunkyPair*(^)(id key, id value))block;
 - (NSDictionary*)map:(FunkyPair*(^)(id key, id value))block;
 - (NSDictionary*)merged:(NSDictionary*)other;
 - (void)forEach:(void(^)(id key, id value))block;

@@ -39,9 +39,19 @@
     return [self.utilities map:block];
 }
 
+- (NSArray*)funky_nilTolerantMap:(id (^)(id))block
+{
+    return [self.utilities nilTolerantMap:block];
+}
+
 - (NSArray*)funky_mapWithIndex:(id (^)(NSUInteger, id))block
 {
     return [self.utilities mapWithIndex:block];
+}
+
+- (NSArray*)funky_nilTolerantMapWithIndex:(id (^)(NSUInteger, id))block
+{
+    return [self.utilities nilTolerantMapWithIndex:block];
 }
 
 - (NSArray *)funky_flatMap:(id (^)(id))block

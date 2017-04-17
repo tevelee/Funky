@@ -17,6 +17,7 @@
 - (id)mapToAnother:(void(^)(id item, id<FunkyMutableCollection> collection))block;
 
 - (id)map:(id(^)(id item))block;
+- (id)nilTolerantMap:(id(^)(id item))block;
 - (id)flatMap:(id(^)(id item))block;
 - (id)filtered:(BOOL(^)(id item))block;
 - (BOOL)all:(BOOL(^)(id item))block;

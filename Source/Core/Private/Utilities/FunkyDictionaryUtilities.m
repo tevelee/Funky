@@ -23,6 +23,16 @@
     return mutableDictionary.copy;
 }
 
+- (NSDictionary*)nilTolerantMap:(FunkyPair*(^)(id key, id value))block
+{
+    return [self mapToAnother:^(id key, id value, NSMutableDictionary *mutableDictionary) {
+        FunkyPair* pair = block(key, value);
+        if (pair.key && pair.value) {
+            mutableDictionary[pair.key] = pair.value;
+        }
+    }];
+}
+
 - (NSDictionary*)map:(FunkyPair*(^)(id key, id value))block
 {
     return [self mapToAnother:^(id key, id value, NSMutableDictionary *mutableDictionary) {

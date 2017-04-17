@@ -69,6 +69,15 @@
 - (NSArray*)map:(id(^)(ObjectType item))block;
 
 /**
+ *  Returns a new NSArray instance where each element is transformed to another by returning a new object in the block parameter. It ignores the nil parameters returned from the block.
+ *
+ *  @param block The transformator code which should return a new value based on the existing one.
+ *  @return A new NSArray instance where each element is formed by the result of the block calls
+ *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_nilTolerantMap:]`
+ */
+- (NSArray*)nilTolerantMap:(id(^)(ObjectType item))block;
+
+/**
  *  Same as map, but the block contains the index of the current element.
  *
  *  @param block The transformator code which should return a new value based on the index and the existing item.
@@ -76,6 +85,15 @@
  *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_mapWithIndex:]`
  */
 - (NSArray*)mapWithIndex:(id(^)(NSUInteger index, ObjectType item))block;
+
+/**
+ *  Same as nil-tolerant map, but the block contains the index of the current element.
+ *
+ *  @param block The transformator code which should return a new value based on the index and the existing item.
+ *  @return A new NSArray instance where each element is formed by the result of the block calls
+ *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_mapWithIndex:]`
+ */
+- (NSArray*)nilTolerantMapWithIndex:(id(^)(NSUInteger index, ObjectType item))block;
 
 /**
  *  Returns a new NSArray instance with the same amount of elements, where each element is transformed to another by returning a new object in the block parameter. Same as map, but the result is going to be flattened, so if you return an NSArray any iteration, it is going to be converted into a flat structure, not an array of arrays.

@@ -29,6 +29,15 @@
  */
 - (NSDictionary*)map:(FunkyPair*(^)(KeyType key, ObjectType value))block;
 
+/**
+ *  Returns a new NSDictionary instance where each element is transformed to another by returning a new object in the block parameter. It ignores the nil parameters returned from the block.
+ *
+ *  @param block The transformator code which should return a new value based on the existing one.
+ *  @return A new NSDictionary instance where each element is formed by the result of the block calls
+ *  @see Prefixed counterpart `-[NSDictionary(FunkyPrefixedUtilities) funky_nilTolerantMap:]`
+ */
+- (NSDictionary*)nilTolerantMap:(FunkyPair*(^)(KeyType key, ObjectType value))block;
+
 #pragma mark - Merge
 
 /**

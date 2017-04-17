@@ -39,6 +39,11 @@
     return [self.utilities map:block];
 }
 
+- (NSSet*)funky_nilTolerantMap:(id (^)(id))block
+{
+    return [self.utilities nilTolerantMap:block];
+}
+
 - (NSSet *)funky_flatMap:(id (^)(id))block
 {
     return [self.utilities flatMap:block];

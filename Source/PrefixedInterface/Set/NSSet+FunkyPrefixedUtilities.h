@@ -70,6 +70,15 @@
 - (NSSet*)funky_map:(id(^)(ObjectType item))block;
 
 /**
+ *  Returns a new NSSet instance where each element is transformed to another by returning a new object in the block parameter. It ignores the nil parameters returned from the block.
+ *
+ *  @param block The transformator code which should return a new value based on the existing one.
+ *  @return A new NSSet instance where each element is formed by the result of the block calls
+ *  @see Unprefixed counterpart `-[NSSet(FunkyUtilities) nilTolerantMap:]`
+ */
+- (NSSet*)funky_nilTolerantMap:(id(^)(ObjectType item))block;
+
+/**
  *  Returns a new NSSet instance with the same amount of elements, where each element is transformed to another by returning a new object in the block parameter. Same as map, but the result is going to be flattened, so if you return an NSSet any iteration, it is going to be converted into a flat structure, not an set of sets.
  *
  *  @param block The transformator code which should return a new value based on the existing one.

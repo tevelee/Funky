@@ -42,6 +42,16 @@
     }];
 }
 
+- (NSArray*)nilTolerantMapWithIndex:(id(^)(NSUInteger index, id item))block
+{
+    return [self mapToAnotherWithIndex:^(NSUInteger index, id item, id<FunkyMutableCollection> collection) {
+        id mapped = block(index, item);
+        if (mapped) {
+            [collection addObject:mapped];
+        }
+    }];
+}
+
 - (NSArray*)flatMapWithIndex:(id (^)(NSUInteger, id))block
 {
     return [self mapToAnotherWithIndex:^(NSUInteger index, id item, id<FunkyMutableCollection> collection) {
