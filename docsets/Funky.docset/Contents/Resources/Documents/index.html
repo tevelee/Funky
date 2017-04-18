@@ -56,6 +56,35 @@
       <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="getting-started.html">Getting started</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="nsarray-utilities.html">NSArray utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="nsdictionary-utilities.html">NSDictionary utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="nsset-utilities.html">NSSet utilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="subpods.html">SubPods</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="summary.html">Summary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="nil-storing-collections.html">nil-storing collections</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="nil-tolerant-collections.html">nil-tolerant collections</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="Categories.html">Categories</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -271,9 +300,15 @@
 <a href="https://tevelee.github.io/Funky"><img src="https://tevelee.github.io/Funky/badge.svg" alt="Documentation"></a>
 <a href="http://cocoapods.org/pods/FunkyObjC"><img src="https://img.shields.io/cocoapods/v/FunkyObjC.svg?style=flat" alt="Version"></a>
 <a href="http://cocoapods.org/pods/FunkyObjC"><img src="https://img.shields.io/cocoapods/l/FunkyObjC.svg?style=flat" alt="License"></a>
-<a href="http://cocoapods.org/pods/FunkyObjC"><img src="https://img.shields.io/cocoapods/p/FunkyObjC.svg?style=flat" alt="Platform"></a></p>
+<a href="http://cocoapods.org/pods/FunkyObjC"><img src="https://img.shields.io/cocoapods/p/FunkyObjC.svg?style=flat" alt="Platform"></a>
+<img src="https://img.shields.io/badge/language-Objective--C-blue.svg" alt="Language"></p>
 
-<p>Funky is a collection utility with functional extensions, written in Objective-C.</p>
+<p>Funky is a functional utility library written in Objective-C.</p>
+
+<p>It provides a set of extension methods on NSArray, NSDictionary and NSSet  for you to help dealing with common operations (usually in a functional way).</p>
+<a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='documentation'>Documentation</h2>
+
+<p>Full documentation is available at <a href="https://tevelee.github.io/Funky">tevelee.github.io/Funky</a></p>
 <a href='#installation-with-cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation-with-cocoapods'>Installation with CocoaPods</h2>
 
 <p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Swift and Objective-C Cocoa projects. You can install it with the following command:</p>
@@ -289,182 +324,59 @@
 #import &lt;Funky/NSDictionary+FunkyUtilities.h&gt;
 #import &lt;Funky/NSSet+FunkyUtilities.h&gt;
 </code></pre>
-<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>USAGE</h2>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
 
-<p>Funky provides a set of extension methods on NSArray, NSDictionary and NSSet  for you to help dealing with common operations (usually in a functional way).</p>
-<a href='#nsarray' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='nsarray'>NSArray</h3>
-<pre class="highlight plaintext"><code>- (BOOL)all:(BOOL(^)(ObjectType item))block;
-- (BOOL)none:(BOOL(^)(ObjectType item))block;
-- (BOOL)contains:(BOOL(^)(ObjectType item))block;
-- (NSUInteger)count:(BOOL(^)(ObjectType item))block;
+<p>The framework contains a set of extension methods on NSArray, NSSet and NSDictionary.</p>
 
-- (NSArray*)map:(id(^)(ObjectType item))block;
-- (NSArray*)mapWithIndex:(id(^)(NSUInteger index, ObjectType item))block;
-- (NSArray*)flatMap:(id(^)(ObjectType item))block;
-- (NSArray*)flatMapWithIndex:(id(^)(NSUInteger index, ObjectType item))block;
-- (NSArray*)filter:(BOOL(^)(ObjectType item))block;
-- (NSArray*)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
-- (NSArray*)flattened;
-- (NSArray*)merged:(NSArray*)array;
-
-- (void)forEach:(void(^)(ObjectType item))block;
-- (void)forEachWithIndex:(void(^)(NSUInteger index, ObjectType item))block;
-
-- (NSDictionary*)groupByUsingFirst:(id(^)(ObjectType item))block;
-- (NSDictionary*)groupByUsingLast:(id(^)(ObjectType item))block;
-- (NSDictionary*)associateBy:(id(^)(ObjectType item))block;
-
-- (double)sum:(double(^)(ObjectType item))block;
-- (double)average:(double(^)(ObjectType item))block;
-- (double)minValue:(double(^)(ObjectType item))block;
-- (double)maxValue:(double(^)(ObjectType item))block;
-
-- (NSArray*)minItems:(double(^)(ObjectType item))block;
-- (NSArray*)maxItems:(double(^)(ObjectType item))block;
-
-- (NSUInteger)firstIndex;
-- (NSUInteger)lastIndex;
-
-- (id)first:(BOOL(^)(ObjectType item))block;
-- (NSUInteger)firstIndex:(BOOL(^)(ObjectType item))block;
-- (id)last:(BOOL(^)(ObjectType item))block;
-- (NSUInteger)lastIndex:(BOOL(^)(ObjectType item))block;
-
-- (NSArray*)take:(BOOL(^)(ObjectType item))block;
-- (NSArray*)takeLast:(BOOL(^)(ObjectType item))block;
-
-- (NSArray*)fromValueExclusive:(id)value;
-- (NSArray*)fromValueInclusive:(id)value;
-- (NSArray*)fromIndexExclusive:(NSInteger)index;
-- (NSArray*)fromIndexInclusive:(NSInteger)index;
-
-- (NSArray*)untilValueExclusive:(id)value;
-- (NSArray*)untilValueInclusive:(id)value;
-- (NSArray*)untilIndexExclusive:(NSInteger)index;
-- (NSArray*)untilIndexInclusive:(NSInteger)index;
-
-- (NSArray*)fromValueExclusive:(id)from untilValueExclusive:(id)until;
-- (NSArray*)fromValueExclusive:(id)from untilValueInclusive:(id)until;
-- (NSArray*)fromValueInclusive:(id)from untilValueExclusive:(id)until;
-- (NSArray*)fromValueInclusive:(id)from untilValueInclusive:(id)until;
-
-- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
-- (NSArray*)fromIndexExclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
-- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
-- (NSArray*)fromIndexInclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
-
-- (NSArray*)unique;
-- (NSArray*)reversed;
-- (NSArray*)shuffled;
-
-- (NSArray*)sorted:(NSComparator)comparator;
-
-+ (NSArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
-+ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat;
-+ (NSArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until;
-</code></pre>
-<a href='#nsmutablearray' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='nsmutablearray'>NSMutableArray</h3>
-<pre class="highlight plaintext"><code>- (NSMutableArray*)removeDuplicates;
-- (NSMutableArray*)reverse;
-- (NSMutableArray*)shuffle;
-
-- (NSMutableArray*)merge:(NSArray*)array;
-
-+ (NSMutableArray*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
-+ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat;
-+ (NSMutableArray*)arrayWithArray:(NSArray*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until;
-</code></pre>
-<a href='#nsdicitonary' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='nsdicitonary'>NSDicitonary</h3>
-<pre class="highlight plaintext"><code>- (NSDictionary*)map:(FunkyPair*(^)(KeyType key, ObjectType value))block;
-- (NSDictionary*)merged:(NSDictionary*)dictionary;
-- (void)forEach:(void(^)(KeyType key, ObjectType value))block;
-
-- (NSDictionary*)invertedObjectsAndKeys;
-
-- (NSDictionary*)filter:(BOOL(^)(KeyType key, ObjectType value))block;
-- (BOOL)all:(BOOL(^)(KeyType key, ObjectType value))block;
-- (BOOL)none:(BOOL(^)(KeyType key, ObjectType value))block;
-- (BOOL)contains:(BOOL(^)(KeyType key, ObjectType value))block;
-- (id)reduce:(id(^)(id previousValue, KeyType key, ObjectType value))block withInitialValue:(id)start;
-</code></pre>
-<a href='#nsmutabledictionary' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='nsmutabledictionary'>NSMutableDictionary</h3>
-<pre class="highlight plaintext"><code>- (NSMutableDictionary*)merge:(NSDictionary*)dictionary;
-</code></pre>
-<a href='#nsset' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='nsset'>NSSet</h3>
-<pre class="highlight plaintext"><code>- (BOOL)all:(BOOL(^)(ObjectType item))block;
-- (BOOL)none:(BOOL(^)(ObjectType item))block;
-- (BOOL)contains:(BOOL(^)(ObjectType item))block;
-- (NSUInteger)count:(BOOL(^)(ObjectType item))block;
-
-- (NSSet*)map:(id(^)(ObjectType item))block;
-- (NSSet*)flatMap:(id(^)(ObjectType item))block;
-- (NSSet*)filter:(BOOL(^)(ObjectType item))block;
-- (id)reduce:(id(^)(id value, ObjectType item))block withInitialValue:(id)start;
-- (NSSet*)flattened;
-- (NSSet*)takingUnion:(NSSet*)set;
-- (NSSet*)takingMinus:(NSSet*)set;
-- (NSSet*)takingIntersection:(NSSet*)set;
-
-- (void)forEach:(void(^)(ObjectType item))block;
-
-- (NSDictionary*)groupBy:(id(^)(ObjectType item))block;
-- (NSDictionary*)associateBy:(id(^)(ObjectType item))block;
-
-- (double)sum:(double(^)(ObjectType item))block;
-- (double)average:(double(^)(ObjectType item))block;
-- (double)minValue:(double(^)(ObjectType item))block;
-- (double)maxValue:(double(^)(ObjectType item))block;
-
-- (NSSet*)minItems:(double(^)(ObjectType item))block;
-- (NSSet*)maxItems:(double(^)(ObjectType item))block;
-</code></pre>
-<a href='#nsmutableset' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='nsmutableset'>NSMutableSet</h3>
-<pre class="highlight plaintext"><code>- (NSMutableSet*)takeUnion:(NSSet*)set;
-- (NSMutableSet*)takeMinus:(NSSet*)set;
-- (NSMutableSet*)takeIntersection:(NSSet*)set;
+<p>Using them is as simle as</p>
+<pre class="highlight plaintext"><code>NSArray&lt;NSNumber*&gt;* numbers = @[@1, @2, @3];
+NSArray&lt;NSString*&gt;* strings = [numbers map:^id(NSNumber* item) {
+    return item.stringValue;
+}];
 </code></pre>
 
-<p>Funky also comes with some special collections, which makes you handle nil values easily. It might happen that during a map operation you return nil in the block. Handling it in an easy way by adding an if statement can lead to much bigger issues later on, because you expect the same number of elements before and after the mapping, and maybe you just accidentally returned that nil value. 
-Not handling it on the other hand crashes the system, because foundation collection cannot hold nil values, they will crash.</p>
+<p>or</p>
+<pre class="highlight plaintext"><code>bigNumbers = [numbers filter:^BOOL(NSNumber* item) {
+    return item.intValue &gt; 1000;
+}];
+</code></pre>
 
-<p>To overcome this limitation I made up a set of special collections which CAN handle nil values properly. For example FunkyNilTolerantNSArray is a subclass of the NSArray class-cluster. It properly handles nil values, by ignoring them, excluding all from the collection and doesn&rsquo;t make your app crash.
-It&rsquo;s a proper NSArray subclass, based on Apple&rsquo;s guidance on how to create new subclasses in the NSArray class cluster. To validate it&rsquo;s behaviour, I heavily unit tested, that it won&rsquo;t crash and won&rsquo;t leak and work exactly like the built-in Foundation NSArray. </p>
+<p><strong>For the full list of utils, please check out <a href="https://tevelee.github.io/Funky">tevelee.github.io/Funky</a></strong></p>
 
-<p>To create on you can use NSArray&rsquo;s well known initialisers, but using this class, eg. <code>[FunkyNilTolerantNSArray arrayWithObject:@1];</code> or simly transform an existing array to a nil tolerant one using <code>@[@1, @2, @3].nilTolerant</code></p>
-
-<p>So consider the following exaple:</p>
+<p>The framework includes some cool nil-tolerant collection behaviours as well:</p>
 <pre class="highlight plaintext"><code>NSArray* array = @[@0, @1, @2].nilTolerant;
 NSLog(@"Items: %@", [array arrayByAddingObject:nil]);
 </code></pre>
 
-<p>It does what you expect, leaves the array as it is and doesn&rsquo;t crash your app.</p>
+<p><strong>Again, see the <a href="https://tevelee.github.io/Funky">docs for more details</a></strong></p>
+<a href='#help-amp-bug-reporting' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='help-amp-bug-reporting'>Help &amp; Bug Reporting</h2>
 
-<p>Funky provides nil-tolerant and also nil-storing collections. It serves with NSArray and NSMutableArray subclasses as well. </p>
-<pre class="highlight plaintext"><code>NSMutableArray* array = [NSMutableArray arrayWithObject:@1].nilStoring;
-[array addObject:nil];
-[array addObject:@2];
-NSLog(@"Item: %@", array[1]);
-</code></pre>
+<p>In case you need help or want to report a bug - please file an <a href="https://github.com/tevelee/Funky/issues/new">issue</a>. Make sure to provide as much information as you can, sample code also makes it a lot easier for me to help you.</p>
+<a href='#contribution' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contribution'>Contribution</h2>
 
-<p>Under the hood it transforms nil values to <code>[NSNull null]</code> objects, and transforms them back to nil values when accessing using <code>objectAtIndex:</code>. Works of course for adding, insertion, replacing, retrieval. Every use-case is covered properly.
-You can even copy, mutableCopy them, encode with coder or transform back to original array instances.</p>
-<a href='#future-plans' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='future-plans'>Future plans</h3>
+<p>Anyone is more than welcome to contribute to Funky! It even can be an addition to the docs or to the code directly, by raising an issue or in form of a pull request. Both are equally valuable to me!</p>
+<a href='#future-plans' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='future-plans'>Future plans</h2>
+<a href='#roadmap' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='roadmap'>Roadmap</h3>
 
 <ul>
-<li>Keep the &gt;95% code coverage.</li>
-<li>Doing proper documentation.</li>
-<li>Active maintenance.</li>
-<li>Accepting suggestions and pull requests from the community.</li>
-<li>Figuring out ways for lazy collections, so the order of map/filter/take won&rsquo;t matter and always compute only the most necessary computations. So in a 2000 size array you call map, but take only the first object later, the filter should only be run once for that one occasion.</li>
+<li>Releasing v1.1 with all the new collections and cleaner utilities</li>
+<li>Figuring out ways for lazy collections, so the order of map/filter/take won&rsquo;t matter and always compute only the most necessary computations. So if you operate a map function on a huge array, but at the end you filter only for a few, the mapping should only take effect on the very few you needed.</li>
 </ul>
+<a href='#general-guidelines' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='general-guidelines'>General guidelines</h3>
 
-<p>See the included <a href="https://github.com/tevelee/Funky/tree/master/Example">Example</a> app for more.</p>
+<ul>
+<li>Active maintenance</li>
+<li>Keep the &gt;95% test and documentation coverage</li>
+<li>Accepting suggestions and pull requests from the community</li>
+</ul>
 <a href='#author' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='author'>Author</h2>
 
-<p>Laszlo Teveli, <a href="mailto:tevelee@gmail.com">tevelee@gmail.com</a></p>
+<p>I am Laszlo Teveli, software engineer, iOS evangelist.</p>
+
+<p>Feel free to reach out to me anytime via tevelee [at] gmail [dot] com.</p>
 <a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
 
-<p>Funky is available under the MIT license. See the LICENSE file for more info.</p>
+<p>Funky is available under the MIT license. See the LICENSE file for more information.</p>
 
           </div>
         </section>
