@@ -82,7 +82,6 @@ Anyone is more than welcome to contribute to Funky! It even can be an addition t
 
 ### Roadmap
 
-- Releasing v1.1 with all the new collections and cleaner utilities
 - Figuring out ways for lazy collections, so the order of map/filter/take won't matter and always compute only the most necessary computations. So if you operate a map function on a huge array, but at the end you filter only for a few, the mapping should only take effect on the very few you needed.
 
 ### General guidelines
