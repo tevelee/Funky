@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (42% documented)
+         (71% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -272,7 +272,7 @@
 
                 </div>
               </div>
-            <p>This extension provides you with simple and easy to use functional and general utilities for NSArray.
+            <p>This extension provides simple and easy to use functional and general utilities for NSArray.
   All the methods in this category are prefixed with the <code>funky_</code> keyword for compatibility reasons. If you prefer unprefixed utilities, you should import <code>NSArray+FunkyUtilities.h</code>.</p>
 
 <div class="aside aside-see">
@@ -656,6 +656,72 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)NSArray(im)funky_nilTolerantMap:"></a>
+                    <a name="//apple_ref/objc/Method/-funky_nilTolerantMap:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSArray(im)funky_nilTolerantMap:">-funky_nilTolerantMap:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new NSArray instance where each element is transformed to another by returning a new object in the block parameter. It ignores the nil parameters returned from the block.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSArray(FunkyUtilities).html#/c:objc(cs)NSArray(im)nilTolerantMap:">-[NSArray(FunkyUtilities) nilTolerantMap:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_nilTolerantMap</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_nilTolerantMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The transformator code which should return a new value based on the existing one.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSArray instance where each element is formed by the result of the block calls</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L78">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)NSArray(im)funky_mapWithIndex:"></a>
                     <a name="//apple_ref/objc/Method/-funky_mapWithIndex:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)NSArray(im)funky_mapWithIndex:">-funky_mapWithIndex:</a>
@@ -714,7 +780,74 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L78">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L87">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSArray(im)funky_nilTolerantMapWithIndex:"></a>
+                    <a name="//apple_ref/objc/Method/-funky_nilTolerantMapWithIndex:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSArray(im)funky_nilTolerantMapWithIndex:">-funky_nilTolerantMapWithIndex:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Same as nil-tolerant map, but the block contains the index of the current element.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSArray(FunkyUtilities).html#/c:objc(cs)NSArray(im)nilTolerantMapWithIndex:">-[NSArray(FunkyUtilities) nilTolerantMapWithIndex:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_nilTolerantMapWithIndex</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSUInteger</span><span class="p">,</span>
+                                                   <span class="n">ObjectType</span><span class="p">))</span><span class="n">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_nilTolerantMap</span><span class="p">(</span><span class="n">index</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The transformator code which should return a new value based on the index and the existing item.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSArray instance where each element is formed by the result of the block calls</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -780,7 +913,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L87">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -846,7 +979,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L96">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -929,7 +1062,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L108">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L126">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -992,7 +1125,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L119">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L137">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1075,7 +1208,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L131">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L149">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1147,22 +1280,11 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L141">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Grouping"></a>
-                <a name="//apple_ref/objc/Section/Grouping" class="dashAnchor"></a>
-                <a href="#/Grouping">
-                  <h3 class="section-name">Grouping</h3>
-                </a>
-              </div>
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1219,11 +1341,22 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L151">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L167">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Grouping"></a>
+                <a name="//apple_ref/objc/Section/Grouping" class="dashAnchor"></a>
+                <a href="#/Grouping">
+                  <h3 class="section-name">Grouping</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1286,7 +1419,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L160">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L178">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1353,7 +1486,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L169">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L187">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1420,7 +1553,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L178">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L196">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1510,7 +1643,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L190">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L208">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1576,7 +1709,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L199">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L217">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1642,7 +1775,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L208">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L226">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1719,7 +1852,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L219">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L237">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1785,7 +1918,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L228">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L246">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1851,7 +1984,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L237">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L255">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1917,7 +2050,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L246">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L264">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1974,7 +2107,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L256">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L274">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2020,7 +2153,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L264">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L282">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2086,7 +2219,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L273">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L291">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2152,7 +2285,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L282">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L300">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2218,7 +2351,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L291">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L309">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2284,7 +2417,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L300">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L318">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2361,7 +2494,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L311">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L329">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2427,7 +2560,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L320">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L338">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2504,7 +2637,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L331">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L349">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2570,7 +2703,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L340">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L358">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2636,7 +2769,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L349">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L367">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2702,7 +2835,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L358">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L376">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2768,7 +2901,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L367">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L385">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2834,7 +2967,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L376">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L394">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2900,7 +3033,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L385">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L403">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2966,7 +3099,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L394">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L412">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3044,7 +3177,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L406">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L424">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3127,7 +3260,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L419">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L437">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3210,7 +3343,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L432">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L450">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3293,7 +3426,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L445">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L463">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3376,7 +3509,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L458">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L476">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3459,7 +3592,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L471">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L489">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3542,7 +3675,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L484">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L502">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3625,7 +3758,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L497">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L515">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3689,7 +3822,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L509">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L527">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3741,7 +3874,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L518">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L536">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3793,7 +3926,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L527">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L545">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3876,7 +4009,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L539">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L557">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3973,7 +4106,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L552">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L570">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4073,7 +4206,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L564">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L582">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4173,7 +4306,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L576">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Array/NSArray+FunkyPrefixedUtilities.h#L594">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4186,7 +4319,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-17)</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-18)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

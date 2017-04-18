@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (42% documented)
+         (71% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,27 @@
         <section class="section">
           <div class="section-content">
             <h1>NSSet(FunkyPrefixedUtilities)</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">NSSet</span> <span class="o">&lt;</span><span class="n">__covariant</span> <span class="n">ObjectType</span><span class="o">&gt;</span>
+<span class="p">(</span><span class="n">FunkyPrefixedUtilities</span><span class="p">)</span> <span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>This extension provides simple and easy to use functional and general utilities for NSSet.
+  All the methods in this category are prefixed with the <code>funky_</code> keyword for compatibility reasons. If you prefer unprefixed utilities, you should import <code>NSSet+FunkyUtilities.h</code>.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code>NSSet(FunkyUtilities)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code>NSMutableSet(FunkyPrefixedUtilities)</code>
+
+</div>
 
           </div>
         </section>
@@ -273,6 +293,13 @@
         <section class="section">
           <div class="section-content">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Check"></a>
+                <a name="//apple_ref/objc/Section/Check" class="dashAnchor"></a>
+                <a href="#/Check">
+                  <h3 class="section-name">Check</h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -287,11 +314,55 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns whether the condition matches all elements in the set</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)all:">-[NSSet(FunkyUtilities) all:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">funky_all</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_all</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The condition given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if condition matches all elements, NO otherwise</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -309,11 +380,55 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns whether the condition matches no elements in the set</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)none:">-[NSSet(FunkyUtilities) none:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">funky_none</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_none</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The condition given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>NO if condition matches any of the elements, YES otherwise</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,15 +446,70 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns whether the condition matches at least one element in the set</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)contains:">-[NSSet(FunkyUtilities) contains:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">funky_contains</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_contains</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The condition given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if condition matches any of the elements, NO otherwise</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Count"></a>
+                <a name="//apple_ref/objc/Section/Count" class="dashAnchor"></a>
+                <a href="#/Count">
+                  <h3 class="section-name">Count</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -353,15 +523,70 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the number of elements the given condition matches in the set, like if you would filter the set.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)count:">-[NSSet(FunkyUtilities) count:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">funky_count</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_count</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The condition given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Number of occasions where the condition matches in the set</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Map"></a>
+                <a name="//apple_ref/objc/Section/Map" class="dashAnchor"></a>
+                <a href="#/Map">
+                  <h3 class="section-name">Map</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -375,11 +600,121 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns a new NSSet instance with the same amount of elements, where each element is transformed to another by returning a new object in the block parameter.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)map:">-[NSSet(FunkyUtilities) map:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_map</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_map</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The transformator code which should return a new value based on the existing one.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSSet instance where each element is formed by the result of the block calls</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSSet(im)funky_nilTolerantMap:"></a>
+                    <a name="//apple_ref/objc/Method/-funky_nilTolerantMap:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSSet(im)funky_nilTolerantMap:">-funky_nilTolerantMap:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new NSSet instance where each element is transformed to another by returning a new object in the block parameter. It ignores the nil parameters returned from the block.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)nilTolerantMap:">-[NSSet(FunkyUtilities) nilTolerantMap:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_nilTolerantMap</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_nilTolerantMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The transformator code which should return a new value based on the existing one.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSSet instance where each element is formed by the result of the block calls</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -397,15 +732,70 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns a new NSSet instance with the same amount of elements, where each element is transformed to another by returning a new object in the block parameter. Same as map, but the result is going to be flattened, so if you return an NSSet any iteration, it is going to be converted into a flat structure, not an set of sets.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)flatMap:">-[NSSet(FunkyUtilities) flatMap:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_flatMap</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_flatMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The transformator code which should return a new value based on the existing one.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSSet instance where each element is formed by the result of the flattened block calls</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Filter"></a>
+                <a name="//apple_ref/objc/Section/Filter" class="dashAnchor"></a>
+                <a href="#/Filter">
+                  <h3 class="section-name">Filter</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -419,37 +809,76 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns a new NSSet instance with the element, that are passing the returned expression in the original set.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="../Categories/NSMutableSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSMutableSet(im)funky_filter:">-[NSMutableSet(FunkyPrefixedUtilities) funky_filter:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)filtered:">-[NSSet(FunkyUtilities) filtered:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_filtered</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_filtered</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The filtering predicate given as a BOOL expression</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSSet instance where each element is selected from the original one where the block returned YES</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L100">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSSet(im)funky_reduce:withInitialValue:"></a>
-                    <a name="//apple_ref/objc/Method/-funky_reduce:withInitialValue:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSSet(im)funky_reduce:withInitialValue:">-funky_reduce:withInitialValue:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Flatten"></a>
+                <a name="//apple_ref/objc/Section/Flatten" class="dashAnchor"></a>
+                <a href="#/Flatten">
+                  <h3 class="section-name">Flatten</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -463,15 +892,56 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Flattens the set, meaning that if it consisted of Set items, they are going to be flattened into one flat structure of elements. An set of sets will transform to an set of elements from each of the previous sets. This computation is performed deeply, meaning that it contontued flattening elements, until they produce a flat structure.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code>-[NSMutableSet(FunkyPrefixedUtilities) funky_flattened]</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)flattened">-[NSSet(FunkyUtilities) flattened]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">funky_flattened</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_flattened</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSSet instance where the elements don&rsquo;t contain NSSets</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L111">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Set%20operations"></a>
+                <a name="//apple_ref/objc/Section/Set operations" class="dashAnchor"></a>
+                <a href="#/Set%20operations">
+                  <h3 class="section-name">Set operations</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -485,11 +955,61 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Takes the union of the two sets.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code>-[NSMutableSet(FunkyPrefixedUtilities) funky_merge:]</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code>-[NSSet(FunkyUtilities) merged:]</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_takingUnion</span><span class="p">:(</span><span class="n">NSSet</span> <span class="o">*</span><span class="p">)</span><span class="nv">set</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_takingUnion</span><span class="p">(</span><span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>set</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other collection to union with</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSSet which is the union of the two sets</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -507,11 +1027,61 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Takes a set which is the current minus the provided one.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code>-[NSMutableSet(FunkyPrefixedUtilities) funky_merge:]</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code>-[NSSet(FunkyUtilities) merged:]</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_takingMinus</span><span class="p">:(</span><span class="n">NSSet</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">set</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_takingMinus</span><span class="p">(</span><span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>set</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other collection to minus with</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSSet which is the minus of the two sets</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -529,15 +1099,76 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Takes the intersection of the two sets.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code>-[NSMutableSet(FunkyPrefixedUtilities) funky_merge:]</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code>-[NSSet(FunkyUtilities) merged:]</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_takingIntersection</span><span class="p">:(</span><span class="n">NSSet</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">set</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_takingIntersection</span><span class="p">(</span><span class="n">_</span> <span class="nv">set</span><span class="p">:</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>set</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other collection to intersect with</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new NSSet which is the intersection of the two sets</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/For%20each"></a>
+                <a name="//apple_ref/objc/Section/For each" class="dashAnchor"></a>
+                <a href="#/For%20each">
+                  <h3 class="section-name">For each</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -551,15 +1182,65 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Calls every element of the set once.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)forEach:">-[NSSet(FunkyUtilities) forEach:]</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">funky_forEach</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_</span><span class="p">(</span><span class="n">forEach</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block, giving the current item in each iteration.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L153">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Grouping"></a>
+                <a name="//apple_ref/objc/Section/Grouping" class="dashAnchor"></a>
+                <a href="#/Grouping">
+                  <h3 class="section-name">Grouping</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -573,11 +1254,55 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Groups elements to an NSDictionary, where the returned element serves as a key, and the objects as the value. If multiple elements are returned with the same key, the result (of which is going to get included) is unpredicatble.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code>-[NSSet(FunkyUtilities) groupByUsingFirst:]</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">id</span><span class="p">,</span> <span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_groupBy</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_group</span><span class="p">(</span><span class="n">by</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block which returns a key (based on the passed element) used as the key in the dictionary for that element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An NSDictionary where keys are produced by the result of the block call, and the values are the original elements</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -595,11 +1320,146 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Groups elements to an NSDictionary, where the returned element serves as a key, and the objects as the value. The elements in the resulting Dictionary are sets, so if multiple elements return the same keys, all of them are going to be included in the value.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)associateBy:">-[NSSet(FunkyUtilities) associateBy:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">id</span><span class="p">,</span> <span class="n">NSSet</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_associateBy</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_associate</span><span class="p">(</span><span class="n">by</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block which returns a key (based on the passed element) used as the key in the dictionary.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An NSDictionary where keys are produced by the result of the blocks, and the values are an set of original elements</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L173">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Compute"></a>
+                <a name="//apple_ref/objc/Section/Compute" class="dashAnchor"></a>
+                <a href="#/Compute">
+                  <h3 class="section-name">Compute</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSSet(im)funky_reduce:withInitialValue:"></a>
+                    <a name="//apple_ref/objc/Method/-funky_reduce:withInitialValue:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSSet(im)funky_reduce:withInitialValue:">-funky_reduce:withInitialValue:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Produces an aggregated value based on the elements of the set.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)reduce:withInitialValue:">-[NSSet(FunkyUtilities) reduce:withInitialValue:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">funky_reduce</span><span class="p">:(</span><span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">id</span><span class="p">,</span> <span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span> <span class="nf">withInitialValue</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">start</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_reduce</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?,</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?)</span><span class="o">!</span><span class="p">,</span> <span class="n">withInitialValue</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value to start with. At first this is going to be the rolling value.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The computation logic, which takes the rolling value and the current item and aggregates them using some custom logic.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A custom value which is produced by computing all the elements with a custom logic, returned in <code>block</code></p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L185">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -617,11 +1477,55 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A special use-case of reduce, which summarises the returned double values for each element in the set.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)sum:">-[NSSet(FunkyUtilities) sum:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nf">funky_sum</span><span class="p">:(</span><span class="kt">double</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_sum</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block which returns double value, based on the current element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The sum of all elements, where the numbers are computed are transformed based on the original elements</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L194">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -639,15 +1543,70 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A special use-case of reduce, which takes the average value of the returned double values for each element in the set.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)average:">-[NSSet(FunkyUtilities) average:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nf">funky_average</span><span class="p">:(</span><span class="kt">double</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_average</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block which returns double value, based on the current element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The average of all elements, where the numbers are computed are transformed based on the original elements</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L203">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Min/Max"></a>
+                <a name="//apple_ref/objc/Section/Min/Max" class="dashAnchor"></a>
+                <a href="#/Min/Max">
+                  <h3 class="section-name">Min/Max</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -661,11 +1620,55 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A special use-case of reduce, which takes the minimum of the returned double values for each element in the set.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)minValue:">-[NSSet(FunkyUtilities) minValue:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nf">funky_minValue</span><span class="p">:(</span><span class="kt">double</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_minValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block which returns double value, based on the current element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The minimum of all elements, where the numbers are computed are transformed based on the original elements</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L214">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -683,11 +1686,55 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A special use-case of reduce, which takes the maximum of the returned double values for each element in the set.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)maxValue:">-[NSSet(FunkyUtilities) maxValue:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nf">funky_maxValue</span><span class="p">:(</span><span class="kt">double</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_maxValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block which returns double value, based on the current element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The maximum of all elements, where the numbers are computed are transformed based on the original elements</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L223">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -705,11 +1752,55 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns an set with all the minimal value elements in the set, where the minimum was computed by the returned double value for each element in the set.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)minItems:">-[NSSet(FunkyUtilities) minItems:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_minItems</span><span class="p">:(</span><span class="kt">double</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_minItems</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block which returns double value, based on the current element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The set of elements with the minimal value, where the numbers are computed are transformed based on the original elements</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L232">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -727,11 +1818,55 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns an set with all the maximal value elements in the set, where the maximum was computed by the returned double value for each element in the set.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSSet(FunkyUtilities).html#/c:objc(cs)NSSet(im)maxItems:">-[NSSet(FunkyUtilities) maxItems:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSSet</span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">funky_maxItems</span><span class="p">:(</span><span class="kt">double</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_maxItems</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Double</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Set</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block which returns double value, based on the current element.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The set of elements with the maximal value, where the numbers are computed are transformed based on the original elements</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Set/NSSet+FunkyPrefixedUtilities.h#L241">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -744,7 +1879,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-17)</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-18)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

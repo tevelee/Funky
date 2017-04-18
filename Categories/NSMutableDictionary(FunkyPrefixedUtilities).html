@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (42% documented)
+         (71% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,27 @@
         <section class="section">
           <div class="section-content">
             <h1>NSMutableDictionary(FunkyPrefixedUtilities)</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">NSMutableDictionary</span> <span class="o">&lt;</span><span class="n">KeyType</span><span class="p">,</span> <span class="n">ObjectType</span><span class="o">&gt;</span>
+<span class="p">(</span><span class="n">FunkyPrefixedUtilities</span><span class="p">)</span> <span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>This extension provides simple and easy to use functional and general utilities for NSMutableDictionary.
+  All the methods in this category are prefixed with the <code>funky_</code> keyword for compatibility reasons. If you prefer unprefixed utilities, you should import <code>NSDictionary+FunkyUtilities.h</code>.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code>NSMutableDictionary(FunkyUtilities)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code>NSDictionary(FunkyPrefixedUtilities)</code>
+
+</div>
 
           </div>
         </section>
@@ -273,6 +293,13 @@
         <section class="section">
           <div class="section-content">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Merge"></a>
+                <a name="//apple_ref/objc/Section/Merge" class="dashAnchor"></a>
+                <a href="#/Merge">
+                  <h3 class="section-name">Merge</h3>
+                </a>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -287,11 +314,134 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Concatenates the current dictinoary (in place) with the one given in the parameter. It does this by putting the existing elements first, and the elements in the provided dictionary afterwards.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSDictionary(FunkyPrefixedUtilities).html#/c:objc(cs)NSDictionary(im)funky_merged:">-[NSDictionary(FunkyPrefixedUtilities) funky_merged:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Prefixed counterpart <code><a href="../Categories/NSMutableDictionary(FunkyUtilities).html#/c:objc(cs)NSMutableDictionary(im)merge:">-[NSMutableDictionary(FunkyUtilities) merge:]</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">funky_merge</span><span class="p">:(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">KeyType</span><span class="p">,</span> <span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">dictionary</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_merge</span><span class="p">(</span><span class="n">_</span> <span class="nv">dictionary</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dictionary</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other dictionary to merge with</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L177">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Filter"></a>
+                <a name="//apple_ref/objc/Section/Filter" class="dashAnchor"></a>
+                <a href="#/Filter">
+                  <h3 class="section-name">Filter</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSMutableDictionary(im)funky_filter:"></a>
+                    <a name="//apple_ref/objc/Method/-funky_filter:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSMutableDictionary(im)funky_filter:">-funky_filter:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Filters the dictionary (in palce) using the given predicate, keeping the elements that are passing the test.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="../Categories/NSDictionary(FunkyPrefixedUtilities).html#/c:objc(cs)NSDictionary(im)funky_filtered:">-[NSDictionary(FunkyPrefixedUtilities) funky_filtered:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Unprefixed counterpart <code><a href="../Categories/NSMutableDictionary(FunkyUtilities).html#/c:objc(cs)NSMutableDictionary(im)filter:">-[NSMutableDictionary(FunkyUtilities) filter:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">funky_filter</span><span class="p">:(</span><span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">KeyType</span><span class="p">,</span> <span class="n">ObjectType</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">funky_filter</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">((</span><span class="kt">Any</span><span class="p">?,</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The predicate used to filter the results.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tevelee/Funky/tree/master/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L188">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -304,7 +454,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-17)</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-18)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
