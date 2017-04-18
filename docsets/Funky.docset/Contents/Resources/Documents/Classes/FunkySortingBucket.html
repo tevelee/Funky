@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,25 @@
         <section class="section">
           <div class="section-content">
             <h1>FunkySortingBucket</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkySortingBucket</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a data structure representing a bucket of items when bucket-sorting </p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Sorting method <code><a href="../Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:">+[FunkySort comparatorWithBuckets:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Sorting method with custom default comparator <code><a href="../Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:defaultInnerBucketComparator:">+[FunkySort comparatorWithBuckets:defaultInnerBucketComparator:]</a></code>
+
+</div>
 
           </div>
         </section>
@@ -287,11 +305,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The filter to determine whether an item is belonging to the current bucket</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:FunkySortComparableProtocol.h@T@FunkySortingBucketFilterBlock">FunkySortingBucketFilterBlock</a></span> <span class="n">filterBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -309,11 +335,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A comparator to use inside the elements in this bucket</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSComparator</span> <span class="n">innerBucketComparator</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">innerBucketComparator</span><span class="p">:</span> <span class="kt">Comparator</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,11 +370,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a new bucket by initialising the <code><a href="../Classes/FunkySortingBucket.html#/c:objc(cs)FunkySortingBucket(py)filterBlock">filterBlock</a></code> with the given parameter to determine whether an item is belonging to the bucket</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">bucketWithBlock</span><span class="p">:(</span><span class="n"><a href="../Type Definitions.html#/c:FunkySortComparableProtocol.h@T@FunkySortingBucketFilterBlock">FunkySortingBucketFilterBlock</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new (specific) bucket</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -353,11 +410,35 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a new bucket by leaving the <code><a href="../Classes/FunkySortingBucket.html#/c:objc(cs)FunkySortingBucket(py)filterBlock">filterBlock</a></code> nil, to collect all the remaining items which did not fit into the specific buckets. You can only hold one collector bucket in one bucket-filtering operation</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Getter for determining whether the current bucket is a collector <code><a href="../Classes/FunkySortingBucket.html#/c:objc(cs)FunkySortingBucket(im)isCollectorBucket">-[FunkySortingBucket isCollectorBucket]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">bucketWithAllTheRest</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">withAllTheRest</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new collector bucket, holding all the other items which did not fit into specific buckets.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -375,11 +456,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The filter to determine whether an item is belonging to the current bucket</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isCollectorBucket</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isCollectorBucket</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES of the bucket is initialised with nil <code><a href="../Classes/FunkySortingBucket.html#/c:objc(cs)FunkySortingBucket(py)filterBlock">filterBlock</a></code> value, meaning that this is a special bucket used for storing the remaining elements</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

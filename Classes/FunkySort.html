@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,13 @@
         <section class="section">
           <div class="section-content">
             <h1>FunkySort</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkySort</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a collection of methods to provide comparator helpers</p>
 
           </div>
         </section>
@@ -287,11 +293,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a lexicographical comparator, so if the collection is sorted using this method, all the elements should be comparable using the <code>-compare:</code> method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSComparator</span><span class="p">)</span><span class="n">lexicographicalComparator</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">lexicographicalComparator</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Comparator</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A comparator to use when sorting collections</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -309,11 +333,50 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a property comparator, mapping the current object into another comparable one which responds to the <code>-compare:</code> method. In case of a complex object you usually return a property of it which holds a primitive value, like NSString or NSNumber</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSComparator</span><span class="p">)</span><span class="nf">propertyComparator</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Type Definitions.html#/c:FunkySortComparableProtocol.h@T@FunkySortComparablePropertyProviderBlock">FunkySortComparablePropertyProviderBlock</a></span><span class="p">)</span><span class="nv">propertyBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">propertyComparator</span><span class="p">(</span><span class="n">_</span> <span class="nv">propertyBlock</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Comparator</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>propertyBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to map the current element into a comparable one</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A comparator to use when sorting collections</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,11 +394,55 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provides a special comparator for comparing objects, but when only interested in their asending or descending information. It is usually used when comparing numbers in an array, like <code>return obj1 &lt; obj2</code> to have an ascending collection</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    The type of block to can provide is <code><a href="../Type Definitions.html#/c:FunkySortComparableProtocol.h@T@FunkySortBoolComparableBlock">FunkySortBoolComparableBlock</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSComparator</span><span class="p">)</span><span class="nf">boolComparator</span><span class="p">:(</span><span class="n"><a href="../Type Definitions.html#/c:FunkySortComparableProtocol.h@T@FunkySortBoolComparableBlock">FunkySortBoolComparableBlock</a></span><span class="p">)</span><span class="nv">comparator</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">boolComparator</span><span class="p">(</span><span class="n">_</span> <span class="nv">comparator</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Comparator</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to use when comparing two objects</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A comparator to use when sorting collections</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -353,15 +460,64 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A composite comparator, providing multiple comparators in it, so when based on one comparation the objects are equal, the next one is being used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSComparator</span><span class="p">)</span><span class="nf">prioritizedComparator</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSComparator</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">comparators</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">prioritizedComparator</span><span class="p">(</span><span class="n">_</span> <span class="nv">comparators</span><span class="p">:</span> <span class="p">[</span><span class="kt">Comparator</span><span class="p">]</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Comparator</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparators</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of comparators to use in order</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A comparator to use when sorting collections</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Bucket%20sort"></a>
+                <a name="//apple_ref/objc/Section/Bucket sort" class="dashAnchor"></a>
+                <a href="#/Bucket%20sort">
+                  <h3 class="section-name">Bucket sort</h3>
+                </a>
+              </div>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -375,11 +531,63 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A composite comparator using buckets. It orders the list in a way, that it uses so called buckets which represent a subset of the elements. So the order is going to be made up of the order of these buckets. 
+  There is a special bucket, called collector bucket (<code>-[FunkySortingBucket bucketWithAllTheRest]</code>) which hold all the remaining element which couldn&rsquo;t fit in any of the other concrete buckets. This collector bucket can be placed even in the middle of the list of buckets, so you can achieve to order a bucket at last. By default the collector is at the end.
+  In this method the default inner bucket comparator is the lexicographical one.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    The buckets to provide are <code><a href="../Classes/FunkySortingBucket.html">FunkySortingBucket</a></code> instances
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Comparator with custom inner-bucket comparator <code><a href="../Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:defaultInnerBucketComparator:">+[FunkySort comparatorWithBuckets:defaultInnerBucketComparator:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSComparator</span><span class="p">)</span><span class="nf">comparatorWithBuckets</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/FunkySortingBucket.html">FunkySortingBucket</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">buckets</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">comparator</span><span class="p">(</span><span class="n">withBuckets</span> <span class="nv">buckets</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Comparator</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>buckets</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of buckets to use in order</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A comparator to use when sorting collections</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L61">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -397,11 +605,76 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Same as <code><a href="../Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:">+[FunkySort comparatorWithBuckets:]</a></code> but with an addition to set the default inner bucket comparator.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    The buckets to provide are <code><a href="../Classes/FunkySortingBucket.html">FunkySortingBucket</a></code> instances
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Comparator with the default lexicographical inner-bucket comparator <code><a href="../Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:">+[FunkySort comparatorWithBuckets:]</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSComparator</span><span class="p">)</span><span class="nf">comparatorWithBuckets</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/FunkySortingBucket.html">FunkySortingBucket</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">buckets</span>
+         <span class="nf">defaultInnerBucketComparator</span><span class="p">:</span>
+             <span class="p">(</span><span class="n">NSComparator</span><span class="p">)</span><span class="nv">defaultInnerBucketComparator</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">comparator</span><span class="p">(</span><span class="n">withBuckets</span> <span class="nv">buckets</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="n">defaultInnerBucketComparator</span><span class="p">:</span> <span class="kt">Comparator</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Comparator</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>buckets</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of buckets to use in order</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>defaultInnerBucketComparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The default comparator to use instead of the lexicographical one</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A comparator to use when sorting collections</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

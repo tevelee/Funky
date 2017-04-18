@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -286,12 +286,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a protocol for generic collections to provide information about their mutable and immutable counterparts.</p>
 
                         <a href="Protocols/FunkyCollectionCounterpart.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">FunkyCollectionCounterpart</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">FunkyCollectionCounterpart</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyCollectionCounterpartProtocol.h#L11-L17">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyCollectionCounterpartProtocol.h#L14-L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -313,12 +326,31 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a protocol for generic collections.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Protocols/FunkyMutableCollection.html">FunkyMutableCollection</a></code>
+
+</div>
 
                         <a href="Protocols/FunkyCollection.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">FunkyCollection</span> <span class="o">&lt;</span><span class="n">NSFastEnumeration</span><span class="p">,</span> <span class="n"><a href="Protocols/FunkyCollectionCounterpart.html">FunkyCollectionCounterpart</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">FunkyCollection</span> <span class="p">:</span> <span class="kt">NSFastEnumeration</span><span class="p">,</span> <span class="kt"><a href="Protocols/FunkyCollectionCounterpart.html">FunkyCollectionCounterpart</a></span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyCollectionProtocol.h#L15-L21">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyCollectionProtocol.h#L20-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -336,12 +368,32 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a protocol for generic collections.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="Protocols/FunkyCollection.html">FunkyCollection</a></code>
+
+</div>
 
                         <a href="Protocols/FunkyMutableCollection.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@protocol</span>
+    <span class="nc">FunkyMutableCollection</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/FunkyCollection.html">FunkyCollection</a></span><span class="p">,</span> <span class="n"><a href="Protocols/FunkyMutableCollectionWithCapacity.html">FunkyMutableCollectionWithCapacity</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">FunkyMutableCollection</span> <span class="p">:</span> <span class="kt"><a href="Protocols/FunkyCollection.html">FunkyCollection</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/FunkyMutableCollectionWithCapacity.html">FunkyMutableCollectionWithCapacity</a></span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyCollectionProtocol.h#L23-L28">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyCollectionProtocol.h#L50-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -363,12 +415,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a protocol for generic mutable collections to be initialised with capacity</p>
 
                         <a href="Protocols/FunkyMutableCollectionWithCapacity.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">FunkyMutableCollectionWithCapacity</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">FunkyMutableCollectionWithCapacity</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyMutableCollectionWithCapacityProtocol.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyMutableCollectionWithCapacityProtocol.h#L14-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -390,12 +455,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a protocol for comparing objects</p>
 
                         <a href="Protocols/FunkySortComparable.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">FunkySortComparable</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">FunkySortComparable</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkySortComparableProtocol.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkySortComparableProtocol.h#L14-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

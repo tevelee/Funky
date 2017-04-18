@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,14 @@
         <section class="section">
           <div class="section-content">
             <h1>FunkyPair</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyPair</span> <span class="o">&lt;</span> <span class="n">__covariant</span> <span class="n">KeyType</span> <span class="o">:</span> <span class="n">id</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span>
+<span class="p">,</span> <span class="n">__covariant</span> <span class="n">ObjectType</span> <span class="o">&gt;</span> <span class="o">:</span> <span class="n">NSObject</span> <span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a data structure representing a key-value pair</p>
 
           </div>
         </section>
@@ -287,11 +294,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The identifier of the stored value</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">KeyType</span> <span class="n">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">KeyType</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L19">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -309,11 +329,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The value belonging to the given key</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">ObjectType</span> <span class="n">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">ObjectType</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,11 +364,62 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a new pair structure given the key and the value parameters</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">pairWithKey</span><span class="p">:(</span><span class="n">KeyType</span><span class="p">)</span><span class="nv">key</span> <span class="nf">value</span><span class="p">:(</span><span class="n">ObjectType</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">KeyType</span><span class="o">!</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">ObjectType</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The identifier</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The stored value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new pair structure with the given <code><a href="../Classes/FunkyPair.html#/c:objc(cs)FunkyPair(py)key">key</a></code> and <code><a href="../Classes/FunkyPair.html#/c:objc(cs)FunkyPair(py)value">value</a></code></p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -353,11 +437,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a new pair structure with the same value but with a new key</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">FunkyPair</span> <span class="o">*</span><span class="p">)</span><span class="nf">pairByModifyingKey</span><span class="p">:(</span><span class="n">KeyType</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">modifyingKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">KeyType</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FunkyPair</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new identifier to use for the value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new pair structure with the given the new <code><a href="../Classes/FunkyPair.html#/c:objc(cs)FunkyPair(py)key">key</a></code></p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -375,11 +497,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a new pair structure with the same key but with a new value</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">FunkyPair</span> <span class="o">*</span><span class="p">)</span><span class="nf">pairByModifyingValue</span><span class="p">:(</span><span class="n">ObjectType</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">modifyingValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">ObjectType</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FunkyPair</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new value to use for the key</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new pair structure with the given the new <code><a href="../Classes/FunkyPair.html#/c:objc(cs)FunkyPair(py)value">value</a></code></p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

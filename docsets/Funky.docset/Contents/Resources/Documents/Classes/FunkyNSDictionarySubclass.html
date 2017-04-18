@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,19 @@
         <section class="section">
           <div class="section-content">
             <h1>FunkyNSDictionarySubclass</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNSDictionarySubclass</span> <span class="p">:</span> <span class="nc">NSDictionary</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a subclass of the NSDictionary class-cluster, overriding the minimum set of getters and setters in order to further subclassing it, customizing the behaviour. This particular class is equivalent of an NSDictionary, as the implementation uses NSDictionary for the backing store.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="../Classes/FunkyNSMutableDictionarySubclass.html">FunkyNSMutableDictionarySubclass</a></code>
+
+</div>
 
           </div>
         </section>
@@ -287,11 +299,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts the current subclass into a basic NSDictionary</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="n">NSDictionary</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">nsDictionary</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An immutable NSDictionary copy of the current collection, keeping the same content</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/Base/FunkyNSDictionarySubclass.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/Base/FunkyNSDictionarySubclass.h#L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

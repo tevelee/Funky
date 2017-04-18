@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,19 @@
         <section class="section">
           <div class="section-content">
             <h1>NSMutableDictionary(FunkyNilStoring)</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">NSMutableDictionary</span> <span class="p">(</span><span class="nl">FunkyNilStoring</span><span class="p">)</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a category on NSMutableDictionary to convert the current set into a nil-storing collection.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code>NSDictionary(FunkyNilStoring)</code>
+
+</div>
 
           </div>
         </section>
@@ -287,11 +299,30 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This method converts the regular NSMutableDictionary into a nil-storing collection, with the same content.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code>NSDictionary(FunkyNilStoring)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes.html#/c:objc(cs)FunkyNilStoringNSMutableDictionary">FunkyNilStoringNSMutableDictionary</a></span> <span class="o">*</span><span class="p">)</span><span class="n">nilStoring</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A nil-storing NSMutableDictionary (a.k.a. <code><a href="../Classes.html#/c:objc(cs)FunkyNilStoringNSMutableDictionary">FunkyNilStoringNSMutableDictionary</a></code>) with the same content.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilStoringNSDictionary.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilStoringNSDictionary.h#L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

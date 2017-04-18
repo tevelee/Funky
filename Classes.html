@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -286,12 +286,31 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSArray class-cluster, overriding the minimum set of getters and setters in order to further subclassing it, customizing the behaviour. This particular class is equivalent of an NSArray, as the implementation uses NSArray for the backing store.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Classes/FunkyNSMutableArraySubclass.html">FunkyNSMutableArraySubclass</a></code>
+
+</div>
 
                         <a href="Classes/FunkyNSArraySubclass.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNSArraySubclass</span> <span class="p">:</span> <span class="nc">NSArray</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNSArraySubclass</span> <span class="p">:</span> <span class="kt">NSArray</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/Base/FunkyNSArraySubclass.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/Base/FunkyNSArraySubclass.h#L16-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -313,12 +332,31 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSMutableArray class-cluster, overriding the minimum set of getters and setters in order to further subclassing it, customizing the behaviour. This particular class is equivalent of an NSMutableArray, as the implementation uses NSMutableArray for the backing store.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code>FunkyNSMutableArraySubclass</code>
+
+</div>
 
                         <a href="Classes/FunkyNSMutableArraySubclass.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNSMutableArraySubclass</span> <span class="p">:</span> <span class="nc">NSMutableArray</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNSMutableArraySubclass</span> <span class="p">:</span> <span class="kt">NSMutableArray</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/Base/FunkyNSMutableArraySubclass.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/Base/FunkyNSMutableArraySubclass.h#L16-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -347,11 +385,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSArray class-cluster, providing nil-storing behaviour to NSArray. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSArray(FunkyNilStoring)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilStoringNSMutableArray">FunkyNilStoringNSMutableArray</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilStoringNSArray</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSArraySubclass.html">FunkyNSArraySubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilStoringNSArray</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/FunkyNilStoringNSArray.h#L14-L16">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/FunkyNilStoringNSArray.h#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -369,11 +432,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSArray class-cluster, providing nil-storing behaviour to NSArray. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSMutableArray(FunkyNilStoring)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilStoringNSArray">FunkyNilStoringNSArray</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilStoringNSMutableArray</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSMutableArraySubclass.html">FunkyNSMutableArraySubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilStoringNSMutableArray</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/FunkyNilStoringNSArray.h#L18-L20">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/FunkyNilStoringNSArray.h#L30-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -402,11 +490,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSArray class-cluster, providing nil-tolerant behaviour to NSArray. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSArray(FunkyNilTolerant)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilTolerantNSMutableArray">FunkyNilTolerantNSMutableArray</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilTolerantNSArray</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSArraySubclass.html">FunkyNSArraySubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilTolerantNSArray</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/FunkyNilTolerantNSArray.h#L14-L16">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/FunkyNilTolerantNSArray.h#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -424,11 +537,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSArray class-cluster, providing nil-tolerant behaviour to NSArray. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSMutableArray(FunkyNilTolerant)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilTolerantNSArray">FunkyNilTolerantNSArray</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilTolerantNSMutableArray</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSMutableArraySubclass.html">FunkyNSMutableArraySubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilTolerantNSMutableArray</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/FunkyNilTolerantNSArray.h#L18-L20">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/FunkyNilTolerantNSArray.h#L30-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -450,12 +588,31 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSDictionary class-cluster, overriding the minimum set of getters and setters in order to further subclassing it, customizing the behaviour. This particular class is equivalent of an NSDictionary, as the implementation uses NSDictionary for the backing store.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Classes/FunkyNSMutableDictionarySubclass.html">FunkyNSMutableDictionarySubclass</a></code>
+
+</div>
 
                         <a href="Classes/FunkyNSDictionarySubclass.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNSDictionarySubclass</span> <span class="p">:</span> <span class="nc">NSDictionary</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNSDictionarySubclass</span> <span class="p">:</span> <span class="kt">NSDictionary</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/Base/FunkyNSDictionarySubclass.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/Base/FunkyNSDictionarySubclass.h#L16-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -477,12 +634,31 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSMutableDictionary class-cluster, overriding the minimum set of getters and setters in order to further subclassing it, customizing the behaviour. This particular class is equivalent of an NSMutableDictionary, as the implementation uses NSMutableDictionary for the backing store.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code>FunkyNSMutableDictionarySubclass</code>
+
+</div>
 
                         <a href="Classes/FunkyNSMutableDictionarySubclass.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNSMutableDictionarySubclass</span> <span class="p">:</span> <span class="nc">NSMutableDictionary</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNSMutableDictionarySubclass</span> <span class="p">:</span> <span class="kt">NSMutableDictionary</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/Base/FunkyNSMutableDictionarySubclass.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/Base/FunkyNSMutableDictionarySubclass.h#L16-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -511,11 +687,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSDictionary class-cluster, providing nil-storing behaviour to NSDictionary. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSDictionary(FunkyNilStoring)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilStoringNSMutableDictionary">FunkyNilStoringNSMutableDictionary</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilStoringNSDictionary</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSDictionarySubclass.html">FunkyNSDictionarySubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilStoringNSDictionary</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilStoringNSDictionary.h#L14-L16">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilStoringNSDictionary.h#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -533,11 +734,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSDictionary class-cluster, providing nil-storing behaviour to NSDictionary. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSMutableDictionary(FunkyNilStoring)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilStoringNSDictionary">FunkyNilStoringNSDictionary</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilStoringNSMutableDictionary</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSMutableDictionarySubclass.html">FunkyNSMutableDictionarySubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilStoringNSMutableDictionary</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilStoringNSDictionary.h#L18-L20">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilStoringNSDictionary.h#L30-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -566,11 +792,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSDictionary class-cluster, providing nil-tolerant behaviour to NSDictionary. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSDictionary(FunkyNilTolerant)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilTolerantNSMutableDictionary">FunkyNilTolerantNSMutableDictionary</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilTolerantNSDictionary</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSDictionarySubclass.html">FunkyNSDictionarySubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilTolerantNSDictionary</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilTolerantNSDictionary.h#L14-L16">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilTolerantNSDictionary.h#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -588,11 +839,37 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSDictionary class-cluster, providing nil-tolerant behaviour to NSDictionary. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSMutableDictionary(FunkyNilTolerant)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilTolerantNSDictionary">FunkyNilTolerantNSDictionary</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilTolerantNSMutableDictionary</span>
+    <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSMutableDictionarySubclass.html">FunkyNSMutableDictionarySubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilTolerantNSMutableDictionary</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilTolerantNSDictionary.h#L18-L20">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Dictionary/FunkyNilTolerantNSDictionary.h#L30-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -614,12 +891,31 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSMutableSet class-cluster, overriding the minimum set of getters and setters in order to further subclassing it, customizing the behaviour. This particular class is equivalent of an NSMutableSet, as the implementation uses NSMutableSet for the backing store.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code>FunkyNSMutableSetSubclass</code>
+
+</div>
 
                         <a href="Classes/FunkyNSMutableSetSubclass.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNSMutableSetSubclass</span> <span class="p">:</span> <span class="nc">NSMutableSet</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNSMutableSetSubclass</span> <span class="p">:</span> <span class="kt">NSMutableSet</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/Base/FunkyNSMutableSetSubclass.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/Base/FunkyNSMutableSetSubclass.h#L16-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -641,12 +937,31 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSSet class-cluster, overriding the minimum set of getters and setters in order to further subclassing it, customizing the behaviour. This particular class is equivalent of an NSSet, as the implementation uses NSSet for the backing store.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Classes/FunkyNSMutableSetSubclass.html">FunkyNSMutableSetSubclass</a></code>
+
+</div>
 
                         <a href="Classes/FunkyNSSetSubclass.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNSSetSubclass</span> <span class="p">:</span> <span class="nc">NSSet</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNSSetSubclass</span> <span class="p">:</span> <span class="kt">NSSet</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/Base/FunkyNSSetSubclass.h#L11-L15">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/Base/FunkyNSSetSubclass.h#L16-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -675,11 +990,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSSet class-cluster, providing nil-storing behaviour to NSSet. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSSet(FunkyNilStoring)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilStoringNSMutableSet">FunkyNilStoringNSMutableSet</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilStoringNSSet</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSSetSubclass.html">FunkyNSSetSubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilStoringNSSet</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/FunkyNilStoringNSSet.h#L14-L16">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/FunkyNilStoringNSSet.h#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -697,11 +1037,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSSet class-cluster, providing nil-storing behaviour to NSSet. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSMutableSet(FunkyNilStoring)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilStoringNSSet">FunkyNilStoringNSSet</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilStoringNSMutableSet</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSMutableSetSubclass.html">FunkyNSMutableSetSubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilStoringNSMutableSet</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/FunkyNilStoringNSSet.h#L18-L20">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/FunkyNilStoringNSSet.h#L30-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -730,11 +1095,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSSet class-cluster, providing nil-tolerant behaviour to NSSet. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSSet(FunkyNilTolerant)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilTolerantNSMutableSet">FunkyNilTolerantNSMutableSet</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilTolerantNSSet</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSSetSubclass.html">FunkyNSSetSubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilTolerantNSSet</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/FunkyNilTolerantNSSet.h#L14-L16">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/FunkyNilTolerantNSSet.h#L20-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -752,11 +1142,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a subclass of the NSSet class-cluster, providing nil-tolerant behaviour to NSSet. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Easy access via the category <code>NSMutableSet(FunkyNilTolerant)</code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Immutable counterpart <code><a href="Classes.html#/c:objc(cs)FunkyNilTolerantNSSet">FunkyNilTolerantNSSet</a></code>
+
+</div>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNilTolerantNSMutableSet</span> <span class="p">:</span> <span class="nc"><a href="Classes/FunkyNSMutableSetSubclass.html">FunkyNSMutableSetSubclass</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyNilTolerantNSMutableSet</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/FunkyNilTolerantNSSet.h#L18-L20">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Set/FunkyNilTolerantNSSet.h#L30-L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -778,12 +1193,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a collection of methods to provide filter predicate helpers</p>
 
                         <a href="Classes/FunkyFilter.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyFilter</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyFilter</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L12-L19">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L15-L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -805,12 +1233,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a collection of methods to provide comparator helpers</p>
 
                         <a href="Classes/FunkySort.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkySort</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkySort</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L12-L23">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkySort.h#L15-L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -832,12 +1273,26 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a data structure representing a key-value pair</p>
 
                         <a href="Classes/FunkyPair.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyPair</span> <span class="o">&lt;</span> <span class="n">__covariant</span> <span class="n">KeyType</span> <span class="o">:</span> <span class="n">id</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span>
+<span class="p">,</span> <span class="n">__covariant</span> <span class="n">ObjectType</span> <span class="o">&gt;</span> <span class="o">:</span> <span class="n">NSObject</span> <span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkyPair</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L11-L21">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkyPair.h#L14-L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -859,12 +1314,37 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a data structure representing a bucket of items when bucket-sorting </p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Sorting method <code><a href="Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:">+[FunkySort comparatorWithBuckets:]</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Sorting method with custom default comparator <code><a href="Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:defaultInnerBucketComparator:">+[FunkySort comparatorWithBuckets:defaultInnerBucketComparator:]</a></code>
+
+</div>
 
                         <a href="Classes/FunkySortingBucket.html" class="slightly-smaller">See more</a>
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkySortingBucket</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">FunkySortingBucket</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L12-L22">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Models/FunkySortingBucket.h#L18-L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

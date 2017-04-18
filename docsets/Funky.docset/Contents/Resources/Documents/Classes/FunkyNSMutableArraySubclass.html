@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,19 @@
         <section class="section">
           <div class="section-content">
             <h1>FunkyNSMutableArraySubclass</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyNSMutableArraySubclass</span> <span class="p">:</span> <span class="nc">NSMutableArray</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a subclass of the NSMutableArray class-cluster, overriding the minimum set of getters and setters in order to further subclassing it, customizing the behaviour. This particular class is equivalent of an NSMutableArray, as the implementation uses NSMutableArray for the backing store.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    Mutable counterpart <code>FunkyNSMutableArraySubclass</code>
+
+</div>
 
           </div>
         </section>
@@ -287,11 +299,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Converts the current subclass into a basic NSMutableArray</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSMutableArray</span> <span class="o">*</span><span class="p">)</span><span class="n">NSMutableArray</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">nsMutableArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSMutableArray</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An NSMutableArray copy of the current collection, keeping the same content</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/Base/FunkyNSMutableArraySubclass.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Collections/Array/Base/FunkyNSMutableArraySubclass.h#L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

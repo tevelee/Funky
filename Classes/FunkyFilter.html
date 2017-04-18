@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,13 @@
         <section class="section">
           <div class="section-content">
             <h1>FunkyFilter</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">FunkyFilter</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a collection of methods to provide filter predicate helpers</p>
 
           </div>
         </section>
@@ -287,11 +293,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An equality predicate telling that the object is equal to another one</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n"><a href="../Type Definitions.html#/c:FunkyFilterPredicate.h@T@FunkyFilterPredicate">FunkyFilterPredicate</a></span><span class="p">)</span><span class="nf">equalTo</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">equal</span><span class="p">(</span><span class="n">to</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other object to compare to</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A predicate to provide for boolean utility methods, like filter and contains</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -309,11 +353,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A predicate telling that the object is a subclass (or its class is equal to) the provided class</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n"><a href="../Type Definitions.html#/c:FunkyFilterPredicate.h@T@FunkyFilterPredicate">FunkyFilterPredicate</a></span><span class="p">)</span><span class="nf">isKindOfClass</span><span class="p">:(</span><span class="n">Class</span><span class="p">)</span><span class="nv">objectClass</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">isKind</span><span class="p">(</span><span class="n">of</span> <span class="nv">objectClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objectClass</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The class to check</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A predicate to provide for boolean utility methods, like filter and contains</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,11 +413,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A predicate telling that the object&rsquo;s class is equal to the provided class</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n"><a href="../Type Definitions.html#/c:FunkyFilterPredicate.h@T@FunkyFilterPredicate">FunkyFilterPredicate</a></span><span class="p">)</span><span class="nf">isMemberOfClass</span><span class="p">:(</span><span class="n">Class</span><span class="p">)</span><span class="nv">objectClass</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">isMember</span><span class="p">(</span><span class="n">of</span> <span class="nv">objectClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objectClass</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The class to check</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A predicate to provide for boolean utility methods, like filter and contains</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -353,11 +473,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A predicate telling that the object responds to the given selector</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n"><a href="../Type Definitions.html#/c:FunkyFilterPredicate.h@T@FunkyFilterPredicate">FunkyFilterPredicate</a></span><span class="p">)</span><span class="nf">respondsToSelector</span><span class="p">:(</span><span class="n">SEL</span><span class="p">)</span><span class="nv">selector</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">responds</span><span class="p">(</span><span class="n">to</span> <span class="nv">selector</span><span class="p">:</span> <span class="kt">Selector</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>selector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The selector to respond to</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A predicate to provide for boolean utility methods, like filter and contains</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Helpers/FunkyFilter.h#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

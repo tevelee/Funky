@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -286,11 +286,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This type if being used when we need a boolean information of the elements of a collection, eg. filter or contains</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="n">FunkyFilterPredicate</span><span class="p">)(</span><span class="n">id</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">FunkyFilterPredicate</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyFilterPredicate.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyFilterPredicate.h#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -312,11 +325,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This type is used when filtering collections with <q>bucket sort</q></p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="n">FunkySortingBucketFilterBlock</span><span class="p">)(</span><span class="n">id</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">FunkySortingBucketFilterBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkySortComparableProtocol.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkySortComparableProtocol.h#L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -334,11 +360,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a protocol for comparing objects, but we&rsquo;re only interested in their asending or descending information. It is usually used when comparing numbers in an array, like <code>return obj1 &lt; obj2</code> to have an ascending collection</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="n">FunkySortBoolComparableBlock</span><span class="p">)(</span><span class="n">id</span><span class="p">,</span> <span class="n">id</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">FunkySortBoolComparableBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Any</span><span class="p">?,</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkySortComparableProtocol.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkySortComparableProtocol.h#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -356,11 +395,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This is a protocol for comparing objects via a mapped value. In case of complex objects you can return a sub-property which implements the <code>-compare:</code> method, so the collection will be sorted by that computed property.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="n">id</span> <span class="p">(</span><span class="o">^</span><span class="n">FunkySortComparablePropertyProviderBlock</span><span class="p">)(</span><span class="n">id</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">FunkySortComparablePropertyProviderBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkySortComparableProtocol.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkySortComparableProtocol.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

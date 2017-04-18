@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Funky Docs
         </a>
-         (71% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -265,7 +265,13 @@
         <section class="section">
           <div class="section-content">
             <h1>FunkyMutableCollectionWithCapacity</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">FunkyMutableCollectionWithCapacity</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>This is a protocol for generic mutable collections to be initialised with capacity</p>
 
           </div>
         </section>
@@ -287,11 +293,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This method initialises a new instance with a given capacity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">newWithCapacity</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">capacity</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">new</span><span class="p">(</span><span class="n">withCapacity</span> <span class="nv">capacity</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>capacity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The capacity-limit of the collection</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new collection instance initialised with <code>capacity</code></p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyMutableCollectionWithCapacityProtocol.h#L">Show on GitHub</a>
+                        <a href="https://github.com/tevelee/Funky/tree/master/Core/Public/Protocols/FunkyMutableCollectionWithCapacityProtocol.h#L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
