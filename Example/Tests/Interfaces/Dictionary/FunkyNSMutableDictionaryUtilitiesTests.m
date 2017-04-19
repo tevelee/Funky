@@ -39,4 +39,12 @@
     OCMVerify([mockedMutableDictionaryUtils merge:[OCMArg any]]);
 }
 
+- (void)test_filter_callsUtilitiesClass
+{
+    [dictionary filter:^BOOL(id key, id value) {
+        return YES;
+    }];
+    OCMVerify([mockedMutableDictionaryUtils filter:[OCMArg any]]);
+}
+
 @end

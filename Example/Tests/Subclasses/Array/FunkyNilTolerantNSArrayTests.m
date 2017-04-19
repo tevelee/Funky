@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <Funky/FunkyNilTolerantNSArray.h>
+#import <Funky/NSArray+FunkyCore.h>
 
 @interface FunkyNilTolerantNSArrayTests : XCTestCase
 
@@ -142,6 +143,33 @@
     
     id mutableCopyOfMutable = [mutableCopy mutableCopy];
     XCTAssertTrue([mutableCopyOfMutable isKindOfClass:[FunkyNilTolerantNSMutableArray class]]);
+}
+
+- (void)test_mutable
+{
+    Class class = [FunkyNilTolerantNSArray classForMutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilTolerantNSMutableArray class]);
+    
+    class = [FunkyNilTolerantNSMutableArray classForMutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilTolerantNSMutableArray class]);
+}
+
+- (void)test_immutable
+{
+    Class class = [FunkyNilTolerantNSArray classForImmutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilTolerantNSArray class]);
+    
+    class = [FunkyNilTolerantNSArray classForImmutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilTolerantNSArray class]);
+}
+
+- (void)test_flatten
+{
+    Class class = [FunkyNilTolerantNSArray classToFlatten];
+    XCTAssertEqualObjects(class, [NSArray class]);
+    
+    class = [FunkyNilTolerantNSMutableArray classToFlatten];
+    XCTAssertEqualObjects(class, [NSArray class]);
 }
 
 @end

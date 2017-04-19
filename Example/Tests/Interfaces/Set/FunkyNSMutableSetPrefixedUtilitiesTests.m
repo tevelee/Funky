@@ -52,6 +52,20 @@
     OCMVerify([mockedMutableSetUtils takeIntersection:[OCMArg any]]);
 }
 
+- (void)test_filter_callsUtilitiesClass
+{
+    [set funky_filter:^BOOL(id item) {
+        return YES;
+    }];
+    OCMVerify([mockedMutableSetUtils filter:[OCMArg any]]);
+}
+
+- (void)test_flatten_callsUtilitiesClass
+{
+    [set funky_flatten];
+    OCMVerify([mockedMutableSetUtils flatten]);
+}
+
 - (void)test_capacity_constructor
 {
     id result = [NSMutableSet newWithCapacity:1];

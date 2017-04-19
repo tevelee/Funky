@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <Funky/FunkyNilStoringNSDictionary.h>
+#import <Funky/NSDictionary+FunkyCore.h>
 
 @interface FunkyNilStoringNSDictionaryTests : XCTestCase
 
@@ -107,6 +108,47 @@
     
     id mutableCopyOfMutable = [mutableCopy mutableCopy];
     XCTAssertTrue([mutableCopyOfMutable isKindOfClass:[FunkyNilStoringNSMutableDictionary class]]);
+}
+
+- (void)test_allKeysForObject_nilKeys
+{
+    id nilValue = nil;
+    NSMutableDictionary* dictionary = [FunkyNilStoringNSMutableDictionary dictionaryWithObject:@0 forKey:nilValue];
+    [dictionary setObject:@0 forKey:nilValue];
+    [dictionary setObject:@3 forKey:@3];
+    
+    NSArray* expected = @[[NSNull null]];
+    XCTAssertEqualObjects([dictionary allKeysForObject:@0], expected);
+    
+    id copy = [dictionary copy];
+    XCTAssertEqualObjects([copy allKeysForObject:@0], expected);
+}
+
+- (void)test_mutable
+{
+    Class class = [FunkyNilStoringNSDictionary classForMutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSMutableDictionary class]);
+    
+    class = [FunkyNilStoringNSMutableDictionary classForMutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSMutableDictionary class]);
+}
+
+- (void)test_immutable
+{
+    Class class = [FunkyNilStoringNSDictionary classForImmutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSDictionary class]);
+    
+    class = [FunkyNilStoringNSMutableDictionary classForImmutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSDictionary class]);
+}
+
+- (void)test_flatten
+{
+    Class class = [FunkyNilStoringNSDictionary classToFlatten];
+    XCTAssertEqualObjects(class, [NSDictionary class]);
+    
+    class = [FunkyNilStoringNSMutableDictionary classToFlatten];
+    XCTAssertEqualObjects(class, [NSDictionary class]);
 }
 
 @end

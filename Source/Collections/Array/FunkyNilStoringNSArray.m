@@ -31,16 +31,6 @@
         return object;
 }
 
-- (NSUInteger)indexOfObject:(id)anObject inRange:(NSRange)range
-{
-    return [super indexOfObject:anObject ?: [NSNull null] inRange:range];
-}
-
-- (NSUInteger)indexOfObjectIdenticalTo:(id)anObject inRange:(NSRange)range
-{
-    return [super indexOfObjectIdenticalTo:anObject ?: [NSNull null] inRange:range];
-}
-
 #pragma mark - Counterpart
 
 + (Class)classForImmutableCounterPart
@@ -79,16 +69,6 @@
         return nil;
     else
         return object;
-}
-
-- (NSUInteger)indexOfObject:(id)anObject inRange:(NSRange)range
-{
-    return [super indexOfObject:anObject ?: [NSNull null] inRange:range];
-}
-
-- (NSUInteger)indexOfObjectIdenticalTo:(id)anObject inRange:(NSRange)range
-{
-    return [super indexOfObjectIdenticalTo:anObject ?: [NSNull null] inRange:range];
 }
 
 - (id)mutableCopy

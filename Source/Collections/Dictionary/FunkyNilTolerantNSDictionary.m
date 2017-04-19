@@ -10,14 +10,6 @@
 
 @implementation FunkyNilTolerantNSDictionary
 
-- (id)objectForKey:(id)aKey
-{
-    if (aKey == nil)
-        return nil;
-    else
-        return [super objectForKey:aKey];
-}
-
 + (instancetype)dictionaryWithObject:(id)object forKey:(id<NSCopying>)key
 {
     if (object == nil || key == nil)
@@ -61,12 +53,6 @@
 {
     if (anObject && aKey)
         [super setObject:anObject forKey:aKey];
-}
-
-- (void)addEntriesFromDictionary:(NSDictionary *)otherDictionary
-{
-    if (otherDictionary != nil)
-        [super addEntriesFromDictionary:otherDictionary];
 }
 
 #pragma mark - Counterpart

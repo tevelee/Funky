@@ -52,6 +52,28 @@
     OCMVerify([mockedMutableArrayUtils shuffle]);
 }
 
+- (void)test_flatten_callsUtilitiesClass
+{
+    [array funky_flatten];
+    OCMVerify([mockedMutableArrayUtils flatten]);
+}
+
+- (void)test_sort_callsUtilitiesClass
+{
+    [array funky_sort:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj1];
+    }];
+    OCMVerify([mockedMutableArrayUtils sort:[OCMArg any]]);
+}
+
+- (void)test_filter_callsUtilitiesClass
+{
+    [array funky_filter:^BOOL(id item) {
+        return YES;
+    }];
+    OCMVerify([mockedMutableArrayUtils filter:[OCMArg any]]);
+}
+
 - (void)test_merge_callsUtilitiesClass
 {
     [array funky_merge:@[@1]];

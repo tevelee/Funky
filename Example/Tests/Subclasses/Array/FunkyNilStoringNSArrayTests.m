@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <Funky/FunkyNilStoringNSArray.h>
+#import <Funky/NSArray+FunkyCore.h>
 
 @interface FunkyNilStoringNSArrayTests : XCTestCase
 
@@ -137,6 +138,22 @@
     XCTAssertEqual(index, 0);
 }
 
+- (void)test_indexOfObjectInRange
+{
+    NSUInteger index = [@[@0, @1, @2].nilStoring indexOfObject:@1 inRange:NSMakeRange(0, 3)];
+    XCTAssertEqual(index, 1);
+    
+    id nilValue = nil;
+    index = [[[FunkyNilStoringNSArray arrayWithObject:nilValue] arrayByAddingObject:nilValue] indexOfObject:nilValue];
+    XCTAssertEqual(index, 0);
+    
+    index = [[@[@0, @1, @2].mutableCopy nilStoring] indexOfObject:@1 inRange:NSMakeRange(0, 3)];
+    XCTAssertEqual(index, 1);
+    
+    index = [[[FunkyNilStoringNSMutableArray arrayWithObject:nilValue] arrayByAddingObject:nilValue] indexOfObject:nilValue];
+    XCTAssertEqual(index, 0);
+}
+
 - (void)test_indexOfObjectIndenticalTo
 {
     NSUInteger index = [@[@0, @1, @2].nilStoring indexOfObjectIdenticalTo:@1];
@@ -147,6 +164,22 @@
     XCTAssertEqual(index, 0);
     
     index = [[@[@0, @1, @2].mutableCopy nilStoring] indexOfObjectIdenticalTo:@1];
+    XCTAssertEqual(index, 1);
+    
+    index = [[[FunkyNilStoringNSMutableArray arrayWithObject:nilValue] arrayByAddingObject:nilValue] indexOfObject:nilValue];
+    XCTAssertEqual(index, 0);
+}
+
+- (void)test_indexOfObjectIndenticalToInRange
+{
+    NSUInteger index = [@[@0, @1, @2].nilStoring indexOfObjectIdenticalTo:@1 inRange:NSMakeRange(0, 3)];
+    XCTAssertEqual(index, 1);
+    
+    id nilValue = nil;
+    index = [[[FunkyNilStoringNSArray arrayWithObject:nilValue] arrayByAddingObject:nilValue] indexOfObject:nilValue];
+    XCTAssertEqual(index, 0);
+    
+    index = [[@[@0, @1, @2].mutableCopy nilStoring] indexOfObjectIdenticalTo:@1 inRange:NSMakeRange(0, 3)];
     XCTAssertEqual(index, 1);
     
     index = [[[FunkyNilStoringNSMutableArray arrayWithObject:nilValue] arrayByAddingObject:nilValue] indexOfObject:nilValue];
@@ -181,6 +214,33 @@
     
     id mutableCopyOfMutable = [mutableCopy mutableCopy];
     XCTAssertTrue([mutableCopyOfMutable isKindOfClass:[FunkyNilStoringNSMutableArray class]]);
+}
+
+- (void)test_mutable
+{
+    Class class = [FunkyNilStoringNSArray classForMutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSMutableArray class]);
+    
+    class = [FunkyNilStoringNSMutableArray classForMutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSMutableArray class]);
+}
+
+- (void)test_immutable
+{
+    Class class = [FunkyNilStoringNSArray classForImmutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSArray class]);
+    
+    class = [FunkyNilStoringNSMutableArray classForImmutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSArray class]);
+}
+
+- (void)test_flatten
+{
+    Class class = [FunkyNilStoringNSArray classToFlatten];
+    XCTAssertEqualObjects(class, [NSArray class]);
+    
+    class = [FunkyNilStoringNSMutableArray classToFlatten];
+    XCTAssertEqualObjects(class, [NSArray class]);
 }
 
 @end

@@ -73,6 +73,14 @@
     OCMVerify([mockedDictionaryUtils map:[OCMArg any]]);
 }
 
+- (void)test_nilTolerantMap_callsUtilitiesClass
+{
+    [dictionary funky_nilTolerantMap:^FunkyPair*(id key, id item) {
+        return [FunkyPair pairWithKey:key value:item];
+    }];
+    OCMVerify([mockedDictionaryUtils nilTolerantMap:[OCMArg any]]);
+}
+
 - (void)test_filtered_callsUtilitiesClass
 {
     [dictionary funky_filtered:^BOOL(id key, id item) {
@@ -100,6 +108,28 @@
     [dictionary funky_forEach:^(id key, id item) {
     }];
     OCMVerify([mockedDictionaryUtils forEach:[OCMArg any]]);
+}
+
+- (void)test_invertedObjectsAndKeys_callsUtilitiesClass
+{
+    [dictionary funky_invertedObjectsAndKeys];
+    OCMVerify([mockedDictionaryUtils invertedObjectsAndKeys]);
+}
+
+- (void)test_keys_callsUtilitiesClass
+{
+    [dictionary funky_keys:^BOOL(id key, id value) {
+        return YES;
+    }];
+    OCMVerify([mockedDictionaryUtils keys:[OCMArg any]]);
+}
+
+- (void)test_values_callsUtilitiesClass
+{
+    [dictionary funky_values:^BOOL(id key, id value) {
+        return YES;
+    }];
+    OCMVerify([mockedDictionaryUtils values:[OCMArg any]]);
 }
 
 @end

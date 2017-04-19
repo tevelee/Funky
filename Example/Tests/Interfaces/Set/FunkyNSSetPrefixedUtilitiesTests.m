@@ -74,6 +74,14 @@
     OCMVerify([mockedSetUtils map:[OCMArg any]]);
 }
 
+- (void)test_nilTolerantMap_callsUtilitiesClass
+{
+    [set funky_nilTolerantMap:^id(id item) {
+        return item;
+    }];
+    OCMVerify([mockedSetUtils nilTolerantMap:[OCMArg any]]);
+}
+
 - (void)test_flatMap_callsUtilitiesClass
 {
     [set funky_flatMap:^id(id item) {

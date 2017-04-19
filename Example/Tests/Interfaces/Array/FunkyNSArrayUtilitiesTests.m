@@ -74,12 +74,28 @@
     OCMVerify([mockedArrayUtils map:[OCMArg any]]);
 }
 
+- (void)test_nilTolerantMap_callsUtilitiesClass
+{
+    [array nilTolerantMap:^id(id item) {
+        return item;
+    }];
+    OCMVerify([mockedArrayUtils nilTolerantMap:[OCMArg any]]);
+}
+
 - (void)test_mapWithIndex_callsUtilitiesClass
 {
     [array mapWithIndex:^id(NSUInteger index, id item) {
         return item;
     }];
     OCMVerify([mockedArrayUtils mapWithIndex:[OCMArg any]]);
+}
+
+- (void)test_nilTolerantMapWithIndex_callsUtilitiesClass
+{
+    [array nilTolerantMapWithIndex:^id(NSUInteger index, id item) {
+        return item;
+    }];
+    OCMVerify([mockedArrayUtils nilTolerantMapWithIndex:[OCMArg any]]);
 }
 
 - (void)test_flatMap_callsUtilitiesClass

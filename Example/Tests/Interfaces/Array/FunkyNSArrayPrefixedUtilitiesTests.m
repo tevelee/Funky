@@ -74,12 +74,28 @@
     OCMVerify([mockedArrayUtils map:[OCMArg any]]);
 }
 
+- (void)test_nilTolerantMap_callsUtilitiesClass
+{
+    [array funky_nilTolerantMap:^id(id item) {
+        return item;
+    }];
+    OCMVerify([mockedArrayUtils nilTolerantMap:[OCMArg any]]);
+}
+
 - (void)test_mapWithIndex_callsUtilitiesClass
 {
     [array funky_mapWithIndex:^id(NSUInteger index, id item) {
         return item;
     }];
     OCMVerify([mockedArrayUtils mapWithIndex:[OCMArg any]]);
+}
+
+- (void)test_nilTolerantMapWithIndex_callsUtilitiesClass
+{
+    [array funky_nilTolerantMapWithIndex:^id(NSUInteger index, id item) {
+        return item;
+    }];
+    OCMVerify([mockedArrayUtils nilTolerantMapWithIndex:[OCMArg any]]);
 }
 
 - (void)test_flatMap_callsUtilitiesClass
@@ -124,6 +140,14 @@
 {
     [array funky_merged:@[@5, @6]];
     OCMVerify([mockedArrayUtils merged:[OCMArg any]]);
+}
+
+- (void)test_sorted_callsUtilitiesClass
+{
+    [array funky_sorted:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2];
+    }];
+    OCMVerify([mockedArrayUtils sorted:[OCMArg any]]);
 }
 
 - (void)test_forEach_callsUtilitiesClass

@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <Funky/FunkyNilStoringNSSet.h>
+#import <Funky/NSSet+FunkyCore.h>
 
 @interface FunkyNilStoringNSSetTests : XCTestCase
 
@@ -35,6 +36,21 @@
     id nilValue = nil;
     set = [[NSSet setWithArray:@[]].nilStoring setByAddingObject:nilValue];
     XCTAssertEqual(set.count, 1);
+}
+
+- (void)test_any
+{
+    NSSet* set = [[NSSet setWithArray:@[]].nilStoring setByAddingObject:@2];
+    XCTAssertEqualObjects(set.anyObject, @2);
+    
+    id nilValue = nil;
+    set = [[NSSet setWithArray:@[]].nilStoring setByAddingObject:nilValue];
+    XCTAssertNil(set.anyObject);
+    
+    set = [[[NSSet setWithArray:@[]].nilStoring setByAddingObject:@2] mutableCopy];
+    XCTAssertEqualObjects(set.anyObject, @2);
+    
+    set = [[[NSSet setWithArray:@[]].nilStoring setByAddingObject:nilValue] mutableCopy];
     XCTAssertNil(set.anyObject);
 }
 
@@ -93,6 +109,21 @@
     XCTAssertEqualObjects(set, expected);
 }
 
+- (void)test_mutable_remove
+{
+    NSSet* nilValue = nil;
+    NSSet* original = [[FunkyNilStoringNSMutableSet setWithArray:@[@1, @2]] setByAddingObject:nilValue];
+    NSMutableSet* set = original.mutableCopy;
+    [set removeObject:nilValue];
+    XCTAssertEqual(set.count, original.count - 1);
+    XCTAssertFalse([set containsObject:nilValue]);
+    
+    set = original.mutableCopy;
+    [set removeObject:@2];
+    NSSet* expected = [[FunkyNilStoringNSSet setWithObject:@1] setByAddingObject:nilValue];
+    XCTAssertEqualObjects(set, expected);
+}
+
 - (void)test_addNilSet_doesNotThrow
 {
     NSSet* nilValue = nil;
@@ -129,6 +160,33 @@
     
     id mutableCopyOfMutable = [mutableCopy mutableCopy];
     XCTAssertTrue([mutableCopyOfMutable isKindOfClass:[FunkyNilStoringNSMutableSet class]]);
+}
+
+- (void)test_mutable
+{
+    Class class = [FunkyNilStoringNSSet classForMutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSMutableSet class]);
+    
+    class = [FunkyNilStoringNSMutableSet classForMutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSMutableSet class]);
+}
+
+- (void)test_immutable
+{
+    Class class = [FunkyNilStoringNSSet classForImmutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSSet class]);
+    
+    class = [FunkyNilStoringNSMutableSet classForImmutableCounterPart];
+    XCTAssertEqualObjects(class, [FunkyNilStoringNSSet class]);
+}
+
+- (void)test_flatten
+{
+    Class class = [FunkyNilStoringNSSet classToFlatten];
+    XCTAssertEqualObjects(class, [NSSet class]);
+    
+    class = [FunkyNilStoringNSMutableSet classToFlatten];
+    XCTAssertEqualObjects(class, [NSSet class]);
 }
 
 @end
