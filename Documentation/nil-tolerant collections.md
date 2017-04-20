@@ -1,8 +1,29 @@
 # Nil-tolerant collections
 
-TBD
+## Subclasses
 
-Draft:
+Array
+
+- [nil-tolerant NSArray](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSArray)
+- [nil-tolerant NSMutableArray](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSMutableArray)
+
+Set
+
+- [nil-tolerant NSSet](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSSet)
+- [nil-tolerant NSMutableSet](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSMutableSet)
+
+Dictinoary
+
+- [nil-tolerant NSDictionary](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSDictionary)
+- [nil-tolerant NSMutableDictionary](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSMutableDictionary)
+
+## Easy access
+
+- [NSArray extension](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSArray): `NSArray* array = @[@1, @2, @3].nilTolerant`
+- [NSSet extension](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSSet): `NSSet* set = [NSSet setWithObject:@1].nilTolerant`
+- [NSDictionary extension](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSDictionary): `NSDictionary* dictionary = @{@1: @"1"}.nilTolerant`
+
+## Why?
 
 Funky comes with some special collections which make you handle nil values easily. It might happen that during a map operation you return nil in the block. Handling it in an easy way by adding an if statement can lead to much bigger issues later on, because you expect the same number of elements before and after the mapping, and maybe you just accidentally returned that nil value. 
 Not handling it on the other hand crashes the system, because foundation collection cannot hold nil values, they will crash.
@@ -21,10 +42,10 @@ NSLog(@"Items: %@", [array arrayByAddingObject:nil]);
 	
 It does what you expect, leaves the array as it is and doesn't crash your app.
 
-Funky provides nil-tolerant and also nil-storing collections. It serves with NSArray and NSMutableArray subclasses as well. 
+Funky provides nil-tolerant and also nil-Tolerant collections. It serves with NSArray and NSMutableArray subclasses as well. 
 
 ```obj-c
-NSMutableArray* array = [NSMutableArray arrayWithObject:@1].nilStoring;
+NSMutableArray* array = [NSMutableArray arrayWithObject:@1].nilTolerant;
 [array addObject:nil];
 [array addObject:@2];
 NSLog(@"Item: %@", array[1]);
