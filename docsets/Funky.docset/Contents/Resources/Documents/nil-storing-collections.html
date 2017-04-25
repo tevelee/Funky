@@ -77,9 +77,6 @@
                 <a class="nav-group-task-link" href="subpods.html">SubPods</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="summary.html">Summary</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="nil-storing-collections.html">nil-storing collections</a>
               </li>
               <li class="nav-group-task">
@@ -313,19 +310,67 @@
 <li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSMutableSet">nil-storing NSMutableSet</a></li>
 </ul>
 
-<p>Dictinoary</p>
+<p>Dictionary</p>
 
 <ul>
 <li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSDictionary">nil-storing NSDictionary</a></li>
 <li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSMutableDictionary">nil-storing NSMutableDictionary</a></li>
 </ul>
-<a href='#easy-access' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='easy-access'>Easy access</h2>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
 
-<ul>
-<li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSArray">NSArray extension</a>: <code>NSArray* array = @[@1, @2, @3].nilStoring</code></li>
-<li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSSet">NSSet extension</a>: <code>NSSet* set = [NSSet setWithObject:@1].nilStoring</code></li>
-<li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSDictionary">NSDictionary extension</a>: <code>NSDictionary* dictionary = @{@1: @&quot;1&quot;}.nilStoring</code></li>
-</ul>
+<p>Use the full library</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"FunkyObjC"</span>
+</code></pre>
+
+<p>or the <code>Collections</code> subpod only</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"FunkyObjC/Collections"</span>
+</code></pre>
+
+<p>For the <strong><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSArray">NSArray extension</a></strong></p>
+<pre class="highlight plaintext"><code>#import &lt;Funky/NSArray+NilStoring.h&gt;
+</code></pre>
+<pre class="highlight plaintext"><code>NSArray* array = @[@1, @2, @3].nilStoring
+</code></pre>
+
+<p>For the <strong><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSSet">NSSet extension</a></strong></p>
+<pre class="highlight plaintext"><code>#import &lt;Funky/NSSet+NilStoring.h&gt;
+</code></pre>
+<pre class="highlight plaintext"><code>NSSet* set = [NSSet setWithObject:@1].nilStoring
+</code></pre>
+
+<p>For the <strong><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSDictionary">NSDictionary extension</a></strong></p>
+<pre class="highlight plaintext"><code>#import &lt;Funky/NSSet+NilStoring.h&gt;
+</code></pre>
+<pre class="highlight plaintext"><code>NSDictionary* dictionary = @{@1: @"1"}.nilStoring
+</code></pre>
+<a href='#why' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='why'>Why?</h2>
+
+<p>Funky comes with some special collections which make you handle nil values easily. It might happen that during a map operation you return nil in the block. Handling it in an easy way by adding an if statement can lead to much bigger issues later on, because you expect the same number of elements before and after the mapping, and maybe you just accidentally returned that nil value. 
+Not handling it on the other hand crashes the system, because foundation collection cannot hold nil values, they will crash.</p>
+
+<p>To overcome this limitation I made up a set of special collections which CAN handle nil values properly. For example FunkyNilTolerantNSArray is a subclass of the NSArray class-cluster. It properly handles nil values, by ignoring them, excluding all from the collection and doesn&rsquo;t make your app crash.
+It&rsquo;s a proper NSArray subclass, based on Apple&rsquo;s guidance on how to create new subclasses in the NSArray class cluster. To validate it&rsquo;s behaviour, I heavily unit tested, that it won&rsquo;t crash and won&rsquo;t leak and work exactly like the built-in Foundation NSArray. </p>
+
+<p>To create on you can use NSArray&rsquo;s well known initialisers, but using this class, eg. <code>[FunkyNilTolerantNSArray arrayWithObject:@1];</code> or simly transform an existing array to a nil tolerant one using <code>@[@1, @2, @3].nilTolerant</code></p>
+
+<p>So consider the following exaple:</p>
+<pre class="highlight plaintext"><code>NSArray* array = @[@0, @1, @2].nilTolerant;
+NSLog(@"Items: %@", [array arrayByAddingObject:nil]);
+</code></pre>
+
+<p>It does what you expect, leaves the array as it is and doesn&rsquo;t crash your app.</p>
+
+<p>Funky provides nil-tolerant and nil-storing collections as well. It serves with NSArray, NSDictionary, NSSet subclasses and all their mutable counterparts are also included. </p>
+<pre class="highlight plaintext"><code>NSMutableArray* array = [NSMutableArray arrayWithObject:@1].nilTolerant;
+[array addObject:nil];
+[array addObject:@2];
+NSLog(@"Item: %@", array[1]);
+</code></pre>
+
+<p>This latter example under the hood transforms nil values to <code>[NSNull null]</code> objects, and transforms them back to nil values when accessing using <code>objectAtIndex:</code>. Works of course for addition, insertion, replacement and retrieval. Every use-case is covered properly, tests are providing coverage in all relevant areas.
+You can even copy or mutableCopy them, encode with coder or even transform back to original collection instances.</p>
+
+<p>See the <a href="https://tevelee.github.io/Funky/nil-tolerant-collections.html">nil-tolerant collections</a> page for more information on the nil-tolerant counterpart.</p>
 
           </div>
         </section>
@@ -334,7 +379,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-24)</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-26)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

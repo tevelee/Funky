@@ -77,9 +77,6 @@
                 <a class="nav-group-task-link" href="subpods.html">SubPods</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="summary.html">Summary</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="nil-storing-collections.html">nil-storing collections</a>
               </li>
               <li class="nav-group-task">
@@ -313,19 +310,39 @@
 <li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSMutableSet">nil-tolerant NSMutableSet</a></li>
 </ul>
 
-<p>Dictinoary</p>
+<p>Dictionary</p>
 
 <ul>
 <li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSDictionary">nil-tolerant NSDictionary</a></li>
 <li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSMutableDictionary">nil-tolerant NSMutableDictionary</a></li>
 </ul>
-<a href='#easy-access' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='easy-access'>Easy access</h2>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
 
-<ul>
-<li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSArray">NSArray extension</a>: <code>NSArray* array = @[@1, @2, @3].nilTolerant</code></li>
-<li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSSet">NSSet extension</a>: <code>NSSet* set = [NSSet setWithObject:@1].nilTolerant</code></li>
-<li><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSDictionary">NSDictionary extension</a>: <code>NSDictionary* dictionary = @{@1: @&quot;1&quot;}.nilTolerant</code></li>
-</ul>
+<p>Use the full library</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"FunkyObjC"</span>
+</code></pre>
+
+<p>or the <code>Collections</code> subpod only</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"FunkyObjC/Collections"</span>
+</code></pre>
+
+<p>For the <strong><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSArray">NSArray extension</a></strong></p>
+<pre class="highlight plaintext"><code>#import &lt;Funky/NSArray+NilTolerant.h&gt;
+</code></pre>
+<pre class="highlight plaintext"><code>NSArray* array = @[@1, @2, @3].nilTolerant
+</code></pre>
+
+<p>For the <strong><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSSet">NSSet extension</a></strong></p>
+<pre class="highlight plaintext"><code>#import &lt;Funky/NSSet+NilTolerant.h&gt;
+</code></pre>
+<pre class="highlight plaintext"><code>NSSet* set = [NSSet setWithObject:@1].nilTolerant
+</code></pre>
+
+<p>For the <strong><a href="https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSDictionary">NSDictionary extension</a></strong></p>
+<pre class="highlight plaintext"><code>#import &lt;Funky/NSSet+NilTolerant.h&gt;
+</code></pre>
+<pre class="highlight plaintext"><code>NSDictionary* dictionary = @{@1: @"1"}.nilTolerant
+</code></pre>
 <a href='#why' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='why'>Why?</h2>
 
 <p>Funky comes with some special collections which make you handle nil values easily. It might happen that during a map operation you return nil in the block. Handling it in an easy way by adding an if statement can lead to much bigger issues later on, because you expect the same number of elements before and after the mapping, and maybe you just accidentally returned that nil value. 
@@ -343,15 +360,17 @@ NSLog(@"Items: %@", [array arrayByAddingObject:nil]);
 
 <p>It does what you expect, leaves the array as it is and doesn&rsquo;t crash your app.</p>
 
-<p>Funky provides nil-tolerant and also nil-Tolerant collections. It serves with NSArray and NSMutableArray subclasses as well. </p>
+<p>Funky provides nil-tolerant and nil-storing collections as well. It serves with NSArray, NSDictionary, NSSet subclasses and all their mutable counterparts are also included. </p>
 <pre class="highlight plaintext"><code>NSMutableArray* array = [NSMutableArray arrayWithObject:@1].nilTolerant;
 [array addObject:nil];
 [array addObject:@2];
 NSLog(@"Item: %@", array[1]);
 </code></pre>
 
-<p>Under the hood it transforms nil values to <code>[NSNull null]</code> objects, and transforms them back to nil values when accessing using <code>objectAtIndex:</code>. Works of course for adding, insertion, replacing, retrieval. Every use-case is covered properly.
-You can even copy, mutableCopy them, encode with coder or transform back to original array instances.</p>
+<p>This latter example under the hood transforms nil values to <code>[NSNull null]</code> objects, and transforms them back to nil values when accessing using <code>objectAtIndex:</code>. Works of course for addition, insertion, replacement and retrieval. Every use-case is covered properly, tests are providing coverage in all relevant areas.
+You can even copy or mutableCopy them, encode with coder or even transform back to original collection instances.</p>
+
+<p>See the <a href="https://tevelee.github.io/Funky/nil-storing-collections.html">nil-storing collections</a> page for more information on the nil-storing counterpart.</p>
 
           </div>
         </section>
@@ -360,7 +379,7 @@ You can even copy, mutableCopy them, encode with coder or transform back to orig
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-24)</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-26)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
