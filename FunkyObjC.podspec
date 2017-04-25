@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FunkyObjC'
-  s.version          = '1.1'
+  s.version          = '1.2'
   s.summary          = 'Funky is a collection utility with functional extensions.'
 
   s.description      = <<-DESC
