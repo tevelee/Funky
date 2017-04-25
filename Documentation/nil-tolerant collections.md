@@ -17,11 +17,49 @@ Dictionary
 - [nil-tolerant NSDictionary](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSDictionary)
 - [nil-tolerant NSMutableDictionary](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSMutableDictionary)
 
-## Easy access
+## Usage
 
-- [NSArray extension](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSArray): `NSArray* array = @[@1, @2, @3].nilTolerant`
-- [NSSet extension](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSSet): `NSSet* set = [NSSet setWithObject:@1].nilTolerant`
-- [NSDictionary extension](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSDictionary): `NSDictionary* dictionary = @{@1: @"1"}.nilTolerant`
+Use the full library
+
+```ruby
+pod "FunkyObjC"
+```
+
+or the `Collections` subpod only
+
+```ruby
+pod "FunkyObjC/Collections"
+```
+
+For the **[NSArray extension](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSArray)**
+
+```obj-c
+#import <Funky/NSArray+NilTolerant.h>
+```
+
+```obj-c
+NSArray* array = @[@1, @2, @3].nilTolerant
+```
+
+For the **[NSSet extension](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSSet)**
+
+```obj-c
+#import <Funky/NSSet+NilTolerant.h>
+```
+
+```obj-c
+NSSet* set = [NSSet setWithObject:@1].nilTolerant
+```
+
+For the **[NSDictionary extension](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilTolerantNSDictionary)**
+
+```obj-c
+#import <Funky/NSSet+NilTolerant.h>
+```
+
+```obj-c
+NSDictionary* dictionary = @{@1: @"1"}.nilTolerant
+```
 
 ## Why?
 
@@ -42,7 +80,7 @@ NSLog(@"Items: %@", [array arrayByAddingObject:nil]);
 	
 It does what you expect, leaves the array as it is and doesn't crash your app.
 
-Funky provides nil-tolerant and also nil-Tolerant collections. It serves with NSArray and NSMutableArray subclasses as well. 
+Funky provides nil-tolerant and nil-storing collections as well. It serves with NSArray, NSDictionary, NSSet subclasses and all their mutable counterparts are also included. 
 
 ```obj-c
 NSMutableArray* array = [NSMutableArray arrayWithObject:@1].nilTolerant;
@@ -51,5 +89,7 @@ NSMutableArray* array = [NSMutableArray arrayWithObject:@1].nilTolerant;
 NSLog(@"Item: %@", array[1]);
 ```
 	
-Under the hood it transforms nil values to `[NSNull null]` objects, and transforms them back to nil values when accessing using `objectAtIndex:`. Works of course for adding, insertion, replacing, retrieval. Every use-case is covered properly.
-You can even copy, mutableCopy them, encode with coder or transform back to original array instances.
+This latter example under the hood transforms nil values to `[NSNull null]` objects, and transforms them back to nil values when accessing using `objectAtIndex:`. Works of course for addition, insertion, replacement and retrieval. Every use-case is covered properly, tests are providing coverage in all relevant areas.
+You can even copy or mutableCopy them, encode with coder or even transform back to original collection instances.
+
+See the [nil-storing collections](https://tevelee.github.io/Funky/nil-storing-collections.html) page for more information on the nil-storing counterpart.

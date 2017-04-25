@@ -46,16 +46,18 @@ bigNumbers = [numbers filter:^BOOL(NSNumber* item) {
     return item.intValue > 1000;
 }];
 ```
-See the full list of helpers here: 
+See the full list of helpers are available here: 
 
 - [NSArray+FunkyUtilities](https://tevelee.github.io/Funky/Categories/NSArray(FunkyUtilities).html)
 - [NSDictionary+FunkyUtilities](https://tevelee.github.io/Funky/Categories/NSDictionary(FunkyUtilities).html)
 - [NSSet+FunkyUtilities](https://tevelee.github.io/Funky/Categories/NSSet(FunkyUtilities).html)
 
-If the extensions cause a naming conflict with other utility libraries, you can use the PrefixedInterface subpod and its corresponding utilities:
+If the extensions cause a naming conflict with other utility libraries you may include, you can use the `PrefixedInterface` subpod and its corresponding utilities:
 
 - [NSArray+FunkyPrefixedUtilities](https://tevelee.github.io/Funky/Categories/NSArray(FunkyPrefixedUtilities).html)
 - [NSDictionary+FunkyPrefixedUtilities](https://tevelee.github.io/Funky/Categories/NSDictionary(FunkyPrefixedUtilities).html)
 - [NSSet+FunkyPrefixedUtilities](https://tevelee.github.io/Funky/Categories/NSSet(FunkyPrefixedUtilities).html)
 
-A quick note on the different subpods is available [here](https://tevelee.github.io/Funky/SubPods.html).
+A quick note on the different subpods is available [here](https://tevelee.github.io/Funky/subpods.html).
+
+Other useful information about nil-handling collections (included in *Funky*) are available [here](https://tevelee.github.io/Funky/nil-storing-collections.html) and [here](https://tevelee.github.io/Funky/nil-tolerant-collections.html).
