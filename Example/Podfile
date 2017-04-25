@@ -11,3 +11,18 @@ target 'iOS-Example' do
     pod 'Expecta'
   end
 end
+
+target 'macOS-Example' do
+  use_frameworks!
+  pod 'FunkyObjC', :path => '../'
+end
+
+target 'tvOS-Example' do
+  use_frameworks!
+  pod 'FunkyObjC', :path => '../'
+end
+
+target 'watchOS-Example' do
+  use_frameworks!
+  pod 'FunkyObjC', :path => '../'
+end

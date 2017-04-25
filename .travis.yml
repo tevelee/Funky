@@ -4,8 +4,12 @@ podfile: Example/Podfile
 env:
 - DOCS_PUBLISH_REPO_URL=git@github.com:tevelee/Funky.git
 before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
+before_script:
 - pod repo update --silent
-- pod install --project-directory=Example
+- pod install --project-directory=Example --verbose
+- carthage bootstrap --project-directory Example --verbose
 script:
 - rm -rf ./build || true
 - set -o pipefail
@@ -16,6 +20,7 @@ script:
   GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
   --color
 - pod lib lint
+- carthage build --no-skip-current --project-directory Example --verbose
 - danger || true
 - sleep 3
 after_success:
@@ -27,3 +32,4 @@ after_success:
 - git config --global user.name "Travis-CI"
 - rake docs:all || true
 - bash <(curl -s https://codecov.io/bash)
+- sleep 3

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0820"
-   version = "1.7">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BlueprintIdentifier = "3ABC54E71EAFB7A1001A28E0"
+               BuildableName = "tvOS-Example.app"
+               BlueprintName = "tvOS-Example"
                ReferencedContainer = "container:Funky.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,30 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
-               ReferencedContainer = "container:Funky.xcodeproj">
-            </BuildableReference>
-            <LocationScenarioReference
-               identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
-               referenceType = "1">
-            </LocationScenarioReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3ABC556D1EAFE789001A28E0"
-            BuildableName = "iOS-Example.app"
-            BlueprintName = "iOS-Example"
+            BlueprintIdentifier = "3ABC54E71EAFB7A1001A28E0"
+            BuildableName = "tvOS-Example.app"
+            BlueprintName = "tvOS-Example"
             ReferencedContainer = "container:Funky.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -70,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3ABC556D1EAFE789001A28E0"
-            BuildableName = "iOS-Example.app"
-            BlueprintName = "iOS-Example"
+            BlueprintIdentifier = "3ABC54E71EAFB7A1001A28E0"
+            BuildableName = "tvOS-Example.app"
+            BlueprintName = "tvOS-Example"
             ReferencedContainer = "container:Funky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -85,15 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "Tests.xctest"
-            BlueprintName = "Tests"
+            BlueprintIdentifier = "3ABC54E71EAFB7A1001A28E0"
+            BuildableName = "tvOS-Example.app"
+            BlueprintName = "tvOS-Example"
             ReferencedContainer = "container:Funky.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

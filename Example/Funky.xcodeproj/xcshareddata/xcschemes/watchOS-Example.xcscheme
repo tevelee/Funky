@@ -14,7 +14,21 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3ABC556D1EAFE789001A28E0"
+               BlueprintIdentifier = "3ABC55121EAFB7C3001A28E0"
+               BuildableName = "watchOS-Example.app"
+               BlueprintName = "watchOS-Example"
+               ReferencedContainer = "container:Funky.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6003F589195388D20070C39A"
                BuildableName = "iOS-Example.app"
                BlueprintName = "iOS-Example"
                ReferencedContainer = "container:Funky.xcodeproj">
@@ -26,26 +40,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
-               ReferencedContainer = "container:Funky.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3ABC556D1EAFE789001A28E0"
-            BuildableName = "iOS-Example.app"
-            BlueprintName = "iOS-Example"
+            BlueprintIdentifier = "3ABC55121EAFB7C3001A28E0"
+            BuildableName = "watchOS-Example.app"
+            BlueprintName = "watchOS-Example"
             ReferencedContainer = "container:Funky.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,16 +65,27 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.carousel"
+         RemotePath = "/iOS-Example">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3ABC556D1EAFE789001A28E0"
-            BuildableName = "iOS-Example.app"
-            BlueprintName = "iOS-Example"
+            BlueprintIdentifier = "3ABC55121EAFB7C3001A28E0"
+            BuildableName = "watchOS-Example.app"
+            BlueprintName = "watchOS-Example"
             ReferencedContainer = "container:Funky.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3ABC55121EAFB7C3001A28E0"
+            BuildableName = "watchOS-Example.app"
+            BlueprintName = "watchOS-Example"
+            ReferencedContainer = "container:Funky.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -81,16 +95,27 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.carousel"
+         RemotePath = "/iOS-Example">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3ABC556D1EAFE789001A28E0"
-            BuildableName = "iOS-Example.app"
-            BlueprintName = "iOS-Example"
+            BlueprintIdentifier = "3ABC55121EAFB7C3001A28E0"
+            BuildableName = "watchOS-Example.app"
+            BlueprintName = "watchOS-Example"
             ReferencedContainer = "container:Funky.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3ABC55121EAFB7C3001A28E0"
+            BuildableName = "watchOS-Example.app"
+            BlueprintName = "watchOS-Example"
+            ReferencedContainer = "container:Funky.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

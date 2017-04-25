@@ -35,7 +35,9 @@ FunkyTests.xctest.coverage.txt
 Pods/
 
 # Carthage
-Carthage/Build
+Carthage/
+Example/Carthage/
+Cartfile.resolved
 
 # fastlane
 fastlane/report.xml

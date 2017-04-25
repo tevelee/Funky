@@ -1,49 +1,49 @@
 PODS:
   - Expecta (1.0.5)
-  - FunkyObjC (1.0):
-    - FunkyObjC/Collections (= 1.0)
-    - FunkyObjC/Core (= 1.0)
-    - FunkyObjC/Interface (= 1.0)
-    - FunkyObjC/PrefixedInterface (= 1.0)
-  - FunkyObjC/Collections (1.0):
-    - FunkyObjC/Collections/Array (= 1.0)
-    - FunkyObjC/Collections/Dictionary (= 1.0)
-    - FunkyObjC/Collections/Set (= 1.0)
+  - FunkyObjC (1.1):
+    - FunkyObjC/Collections (= 1.1)
+    - FunkyObjC/Core (= 1.1)
+    - FunkyObjC/Interface (= 1.1)
+    - FunkyObjC/PrefixedInterface (= 1.1)
+  - FunkyObjC/Collections (1.1):
+    - FunkyObjC/Collections/Array (= 1.1)
+    - FunkyObjC/Collections/Dictionary (= 1.1)
+    - FunkyObjC/Collections/Set (= 1.1)
     - FunkyObjC/Core
-  - FunkyObjC/Collections/Array (1.0):
+  - FunkyObjC/Collections/Array (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/Collections/Dictionary (1.0):
+  - FunkyObjC/Collections/Dictionary (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/Collections/Set (1.0):
+  - FunkyObjC/Collections/Set (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/Core (1.0)
-  - FunkyObjC/Interface (1.0):
+  - FunkyObjC/Core (1.1)
+  - FunkyObjC/Interface (1.1):
     - FunkyObjC/Core
-    - FunkyObjC/Interface/Array (= 1.0)
-    - FunkyObjC/Interface/Dictionary (= 1.0)
-    - FunkyObjC/Interface/Object (= 1.0)
-    - FunkyObjC/Interface/Set (= 1.0)
-  - FunkyObjC/Interface/Array (1.0):
+    - FunkyObjC/Interface/Array (= 1.1)
+    - FunkyObjC/Interface/Dictionary (= 1.1)
+    - FunkyObjC/Interface/Object (= 1.1)
+    - FunkyObjC/Interface/Set (= 1.1)
+  - FunkyObjC/Interface/Array (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/Interface/Dictionary (1.0):
+  - FunkyObjC/Interface/Dictionary (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/Interface/Object (1.0):
+  - FunkyObjC/Interface/Object (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/Interface/Set (1.0):
+  - FunkyObjC/Interface/Set (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/PrefixedInterface (1.0):
+  - FunkyObjC/PrefixedInterface (1.1):
     - FunkyObjC/Core
-    - FunkyObjC/PrefixedInterface/Array (= 1.0)
-    - FunkyObjC/PrefixedInterface/Dictionary (= 1.0)
-    - FunkyObjC/PrefixedInterface/Object (= 1.0)
-    - FunkyObjC/PrefixedInterface/Set (= 1.0)
-  - FunkyObjC/PrefixedInterface/Array (1.0):
+    - FunkyObjC/PrefixedInterface/Array (= 1.1)
+    - FunkyObjC/PrefixedInterface/Dictionary (= 1.1)
+    - FunkyObjC/PrefixedInterface/Object (= 1.1)
+    - FunkyObjC/PrefixedInterface/Set (= 1.1)
+  - FunkyObjC/PrefixedInterface/Array (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/PrefixedInterface/Dictionary (1.0):
+  - FunkyObjC/PrefixedInterface/Dictionary (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/PrefixedInterface/Object (1.0):
+  - FunkyObjC/PrefixedInterface/Object (1.1):
     - FunkyObjC/Core
-  - FunkyObjC/PrefixedInterface/Set (1.0):
+  - FunkyObjC/PrefixedInterface/Set (1.1):
     - FunkyObjC/Core
   - OCMock (3.4)
   - Specta (1.0.6)
@@ -60,10 +60,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  FunkyObjC: 9a95064e2ee36d95bc4baed87e6e8694d34a00b1
+  FunkyObjC: f59fe86d8a4f60738f411f57bc42c7a48465a961
   OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: 44e947c69d0e23da1272caf67a602ad87f416e9f
+PODFILE CHECKSUM: 3455f009e6884d0ebadf062b57d484ff11f87279
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
