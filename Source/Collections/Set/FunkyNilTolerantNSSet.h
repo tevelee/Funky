@@ -22,7 +22,7 @@
 @end
 
 /**
- *  This is a subclass of the NSSet class-cluster, providing nil-tolerant behaviour to NSSet. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.
+ *  This is a subclass of the NSSet class-cluster, providing nil-tolerant behaviour to NSMutableSet. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.
  *
  *  @see Easy access via the category `NSMutableSet(FunkyNilTolerant)`
  *  @see Immutable counterpart `FunkyNilTolerantNSSet`

@@ -22,7 +22,7 @@
 @end
 
 /**
- *  This is a subclass of the NSArray class-cluster, providing nil-tolerant behaviour to NSArray. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.
+ *  This is a subclass of the NSArray class-cluster, providing nil-tolerant behaviour to NSMutableArray. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.
  *
  *  @see Easy access via the category `NSMutableArray(FunkyNilTolerant)`
  *  @see Immutable counterpart `FunkyNilTolerantNSArray`

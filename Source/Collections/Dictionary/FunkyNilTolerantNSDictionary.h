@@ -22,7 +22,7 @@
 @end
 
 /**
- *  This is a subclass of the NSDictionary class-cluster, providing nil-tolerant behaviour to NSDictionary. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.
+ *  This is a subclass of the NSDictionary class-cluster, providing nil-tolerant behaviour to NSMutableDictionary. Whenever you would insert nil values into the set, it will disregard those cases instead of crashing.
  *
  *  @see Easy access via the category `NSMutableDictionary(FunkyNilTolerant)`
  *  @see Immutable counterpart `FunkyNilTolerantNSDictionary`

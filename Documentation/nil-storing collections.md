@@ -12,7 +12,7 @@ Set
 - [nil-storing NSSet](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSSet)
 - [nil-storing NSMutableSet](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSMutableSet)
 
-Dictinoary
+Dictionary
 
 - [nil-storing NSDictionary](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSDictionary)
 - [nil-storing NSMutableDictionary](https://tevelee.github.io/Funky/Classes.html#/c:objc(cs)FunkyNilStoringNSMutableDictionary)

@@ -22,7 +22,7 @@
 @end
 
 /**
- *  This is a subclass of the NSSet class-cluster, providing nil-storing behaviour to NSSet. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.
+ *  This is a subclass of the NSSet class-cluster, providing nil-storing behaviour to NSMutableSet. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.
  *
  *  @see Easy access via the category `NSMutableSet(FunkyNilStoring)`
  *  @see Immutable counterpart `FunkyNilStoringNSSet`

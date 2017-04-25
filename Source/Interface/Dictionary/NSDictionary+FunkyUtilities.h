@@ -167,7 +167,7 @@
 #pragma mark - Merge
 
 /**
- *  Concatenates the current dictinoary (in place) with the one given in the parameter. It does this by putting the existing elements first, and the elements in the provided dictionary afterwards.
+ *  Concatenates the current dictionary (in place) with the one given in the parameter. It does this by putting the existing elements first, and the elements in the provided dictionary afterwards.
  *
  *  @param dictionary The other dictionary to merge with
  *  @see Immutable counterpart `-[NSDictionary(FunkyPrefixedUtilities) funky_merged:]`

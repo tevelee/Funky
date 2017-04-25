@@ -22,7 +22,7 @@
 @end
 
 /**
- *  This is a subclass of the NSArray class-cluster, providing nil-storing behaviour to NSArray. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.
+ *  This is a subclass of the NSArray class-cluster, providing nil-storing behaviour to NSMutableArray. Whenever you would insert nil values into the set, it will insert them instead of crashing. You can also get back these values via the getters.
  *
  *  @see Easy access via the category `NSMutableArray(FunkyNilStoring)`
  *  @see Immutable counterpart `FunkyNilStoringNSArray`
