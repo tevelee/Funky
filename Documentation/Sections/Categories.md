@@ -1,0 +1,1 @@
+These categories provide the essence of Funky, providing easy access to all the utilities and collection subclasses.
