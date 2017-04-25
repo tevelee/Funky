@@ -15,8 +15,10 @@ DESC
   s.header_dir = 'Funky'
   s.module_name = 'Funky'
 
-  s.ios.deployment_target = '8.0'
-  s.frameworks = 'Foundation'
+  s.ios.deployment_target = '7.0'
+  s.osx.deployment_target = '10.9'
+  s.watchos.deployment_target = '2.0'
+  s.tvos.deployment_target = '9.0'
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'Source/Core/**/*'
