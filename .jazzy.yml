@@ -5,7 +5,7 @@ readme: README.md
 documentation: Documentation/*.md
 
 module: Funky
-module_version: v1.1
+module_version: v1.2
 
 output: Documentation/Output
 theme: fullwidth
@@ -20,6 +20,7 @@ clean: true
 objc: true
 sdk: iphonesimulator
 
-framework_root: .
-umbrella_header: Example/Pods/Target Support Files/FunkyObjC/FunkyObjC-umbrella.h
+umbrella_header: Example/Pods/Target Support Files/FunkyObjC-iOS/FunkyObjC-iOS-umbrella.h
+
+framework_root: Source
 source_directory: .
