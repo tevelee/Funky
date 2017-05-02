@@ -4,6 +4,8 @@ podfile: Example/Podfile
 env:
 - DOCS_PUBLISH_REPO_URL=git@github.com:tevelee/Funky.git
 before_install:
+- rvm install 2.3.0
+- rvm use 2.3.0
 - brew update
 - brew outdated carthage || brew upgrade carthage
 before_script:
