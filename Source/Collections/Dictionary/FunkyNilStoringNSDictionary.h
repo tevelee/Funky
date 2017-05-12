@@ -44,7 +44,7 @@
  *  This method converts the regular NSDictionary into a nil-storing collection, with the same content.
  *
  *  @return A nil-storing NSDictionary (a.k.a. `FunkyNilStoringNSDictionary`) with the same content.
- *  @see Mutable counterpart `NSMutableDictionary(FunkyNilStoring)`
+ *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilStoring) nilStoring]`
  */
 - (FunkyNilStoringNSDictionary*)nilStoring;
 
@@ -61,7 +61,7 @@
  *  This method converts the regular NSMutableDictionary into a nil-storing collection, with the same content.
  *
  *  @return A nil-storing NSMutableDictionary (a.k.a. `FunkyNilStoringNSMutableDictionary`) with the same content.
- *  @see Immutable counterpart `NSDictionary(FunkyNilStoring)`
+ *  @see Immutable counterpart `-[NSDictionary(FunkyNilStoring) nilStoring]`
  */
 - (FunkyNilStoringNSMutableDictionary*)nilStoring;
 

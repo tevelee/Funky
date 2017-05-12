@@ -44,7 +44,7 @@
  *  This method converts the regular NSArray into a nil-tolerant collection, with the same content.
  *
  *  @return A nil-tolerant NSArray (a.k.a. `FunkyNilTolerantNSArray`) with the same content.
- *  @see Mutable counterpart `NSMutableArray(FunkyNilTolerant)`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyNilTolerant) nilTolerant]`
  */
 - (FunkyNilTolerantNSArray*)nilTolerant;
 
@@ -61,7 +61,7 @@
  *  This method converts the regular NSMutableArray into a nil-tolerant collection, with the same content.
  *
  *  @return A nil-tolerant NSMutableArray (a.k.a. `FunkyNilTolerantNSMutableArray`) with the same content.
- *  @see Immutable counterpart `NSArray(FunkyNilTolerant)`
+ *  @see Immutable counterpart `-[NSArray(FunkyNilTolerant) nilTolerant]`
  */
 - (FunkyNilTolerantNSMutableArray*)nilTolerant;
 

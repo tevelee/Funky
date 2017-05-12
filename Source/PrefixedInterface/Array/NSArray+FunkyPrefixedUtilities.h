@@ -551,8 +551,8 @@
  *
  *  @param comparator An NSComparator block to define the sort order.
  *  @return A new NSArray sorted by the comparator
- *  @see Mutable counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_sort]`
- *  @see Unprefixed counterpart `-[NSArray(FunkyUtilities) sorted]`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_sort:]`
+ *  @see Unprefixed counterpart `-[NSArray(FunkyUtilities) sorted:]`
  */
 - (NSArray<ObjectType>*)funky_sorted:(NSComparator)comparator;
 

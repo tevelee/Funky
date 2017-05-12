@@ -44,7 +44,7 @@
  *  This method converts the regular NSSet into a nil-storing collection, with the same content.
  *
  *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSSet`) with the same content.
- *  @see Mutable counterpart `NSMutableSet(FunkyNilStoring)`
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyNilStoring) nilStoring]`
  */
 - (FunkyNilStoringNSSet*)nilStoring;
 
@@ -61,7 +61,7 @@
  *  This method converts the regular NSMutableSet into a nil-storing collection, with the same content.
  *
  *  @return A nil-storing NSMutableSet (a.k.a. `FunkyNilStoringNSMutableSet`) with the same content.
- *  @see Immutable counterpart `NSSet(FunkyNilStoring)`
+ *  @see Immutable counterpart `-[NSSet(FunkyNilStoring) nilStoring]`
  */
 - (FunkyNilStoringNSMutableSet*)nilStoring;
 

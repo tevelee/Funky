@@ -1,6 +1,7 @@
 osx_image: xcode8.3
 language: objective-c
 podfile: Example/Podfile
+rvm: 2.3.0
 env:
 - DOCS_PUBLISH_REPO_URL=git@github.com:tevelee/Funky.git
 before_install:

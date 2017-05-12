@@ -170,8 +170,8 @@
  *  Concatenates the current dictionary (in place) with the one given in the parameter. It does this by putting the existing elements first, and the elements in the provided dictionary afterwards.
  *
  *  @param dictionary The other dictionary to merge with
- *  @see Immutable counterpart `-[NSDictionary(FunkyPrefixedUtilities) funky_merged:]`
- *  @see Unprefixed counterpart `-[NSMutableDictionary(FunkyUtilities) merge:]`
+ *  @see Immutable counterpart `-[NSDictionary(FunkyUtilities) merged:]`
+ *  @see Prefixed counterpart `-[NSMutableDictionary(FunkyPrefixedUtilities) funky_merge:]`
  */
 - (void)merge:(NSDictionary<KeyType, ObjectType>*)dictionary;
 

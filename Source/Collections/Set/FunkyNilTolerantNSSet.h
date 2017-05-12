@@ -44,7 +44,7 @@
  *  This method converts the regular NSSet into a nil-tolerant collection, with the same content.
  *
  *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSSet`) with the same content.
- *  @see Mutable counterpart `NSMutableSet(FunkyNilTolerant)`
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyNilTolerant) nilTolerant]`
  */
 - (FunkyNilTolerantNSSet*)nilTolerant;
 
@@ -61,7 +61,7 @@
  *  This method converts the regular NSMutableSet into a nil-tolerant collection, with the same content.
  *
  *  @return A nil-tolerant NSMutableSet (a.k.a. `FunkyNilTolerantNSMutableSet`) with the same content.
- *  @see Immutable counterpart `NSSet(FunkyNilTolerant)`
+ *  @see Immutable counterpart `-[NSSet(FunkyNilTolerant) nilTolerant]`
  */
 - (FunkyNilTolerantNSMutableSet*)nilTolerant;
 

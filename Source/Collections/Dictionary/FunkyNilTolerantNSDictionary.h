@@ -44,7 +44,7 @@
  *  This method converts the regular NSDictionary into a nil-tolerant collection, with the same content.
  *
  *  @return A nil-tolerant NSDictionary (a.k.a. `FunkyNilTolerantNSDictionary`) with the same content.
- *  @see Mutable counterpart `NSMutableDictionary(FunkyNilTolerant)`
+ *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilTolerant) nilTolerant]`
  */
 - (FunkyNilTolerantNSDictionary*)nilTolerant;
 
@@ -61,7 +61,7 @@
  *  This method converts the regular NSMutableDictionary into a nil-tolerant collection, with the same content.
  *
  *  @return A nil-tolerant NSMutableDictionary (a.k.a. `FunkyNilTolerantNSMutableDictionary`) with the same content.
- *  @see Immutable counterpart `NSDictionary(FunkyNilTolerant)`
+ *  @see Immutable counterpart `-[NSDictionary(FunkyNilTolerant) nilTolerant]`
  */
 - (FunkyNilTolerantNSMutableDictionary*)nilTolerant;
 

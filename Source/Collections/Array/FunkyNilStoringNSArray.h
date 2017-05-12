@@ -44,7 +44,7 @@
  *  This method converts the regular NSArray into a nil-storing collection, with the same content.
  *
  *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSArray`) with the same content.
- *  @see Mutable counterpart `NSMutableArray(FunkyNilStoring)`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyNilStoring) nilStoring]`
  */
 - (FunkyNilStoringNSArray*)nilStoring;
 
@@ -61,7 +61,7 @@
  *  This method converts the regular NSMutableArray into a nil-storing collection, with the same content.
  *
  *  @return A nil-storing NSMutableArray (a.k.a. `FunkyNilStoringNSMutableArray`) with the same content.
- *  @see Immutable counterpart `NSArray(FunkyNilStoring)`
+ *  @see Immutable counterpart `-[NSArray(FunkyNilStoring) nilStoring]`
  */
 - (FunkyNilStoringNSMutableArray*)nilStoring;
 

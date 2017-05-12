@@ -120,7 +120,7 @@
  *
  *  @param block The filtering predicate given as a BOOL expression
  *  @return A new NSArray instance where each element is selected from the original one where the block returned YES
- *  @see Mutable counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_filter:]`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyUtilities) filter:]`
  *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_filtered:]`
  */
 - (NSArray<ObjectType>*)filtered:(BOOL(^)(ObjectType item))block;
@@ -131,7 +131,7 @@
  *  Flattens the array, meaning that if it consisted of Array items, they are going to be flattened into one flat structure of elements. An array of arrays will transform to an array of elements from each of the previous arrays. This computation is performed deeply, meaning that it contontued flattening elements, until they produce a flat structure.
  *
  *  @return A new NSArray instance where the elements don't contain NSArrays
- *  @see Mutable counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_flattened]`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyUtilities) flatten]`
  *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_flattened]`
  */
 - (NSArray<ObjectType>*)flattened;
@@ -143,7 +143,7 @@
  *
  *  @param array The other collection to merge with
  *  @return A new NSArray which contains the elements of both arrays (self and the `array` parameter)
- *  @see Mutable counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_merge:]`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyUtilities) merge:]`
  *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_merged:]`
  */
 - (NSArray*)merged:(NSArray*)array;
@@ -472,7 +472,7 @@
  *  @param from The starting index.
  *  @param until The ending index.
  *  @return A subsequence of elements between the first occurences given indices
- *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_fromIndexExclusive:untilValueExclusive:]`
+ *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_fromIndexExclusive:untilIndexExclusive:]`
  */
 - (NSArray<ObjectType>*)fromIndexExclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
 
@@ -485,7 +485,7 @@
  *  @param from The starting index.
  *  @param until The ending index.
  *  @return A subsequence of elements between the first occurences given indices
- *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_fromIndexExclusive:untilValueInclusive:]`
+ *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_fromIndexExclusive:untilIndexInclusive:]`
  */
 - (NSArray<ObjectType>*)fromIndexExclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
 
@@ -498,7 +498,7 @@
  *  @param from The starting index.
  *  @param until The ending index.
  *  @return A subsequence of elements between the first occurences given indices
- *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_fromIndexInclusive:untilValueExclusive:]`
+ *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_fromIndexInclusive:untilIndexExclusive:]`
  */
 - (NSArray<ObjectType>*)fromIndexInclusive:(NSInteger)from untilIndexExclusive:(NSInteger)until;
 
@@ -511,7 +511,7 @@
  *  @param from The starting index.
  *  @param until The ending index.
  *  @return A subsequence of elements between the first occurences given indices
- *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_fromIndexInclusive:untilValueInclusive:]`
+ *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_fromIndexInclusive:untilIndexInclusive:]`
  */
 - (NSArray<ObjectType>*)fromIndexInclusive:(NSInteger)from untilIndexInclusive:(NSInteger)until;
 
@@ -522,7 +522,7 @@
  *  It checks equality using the `-isEqual:` method
  *
  *  @return A new NSArray consisting of unique objects
- *  @see Mutable counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_removeDuplicates]`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyUtilities) removeDuplicates]`
  *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_unique]`
  */
 - (NSArray<ObjectType>*)unique;
@@ -531,7 +531,7 @@
  *  Returns an array where the items are in a reversed order.
  *
  *  @return A new NSArray in reverese order compared to the original one
- *  @see Mutable counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_reverse]`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyUtilities) reverse]`
  *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_reversed]`
  */
 - (NSArray<ObjectType>*)reversed;
@@ -540,7 +540,7 @@
  *  Returns an array where the items are shuffled randomly.
  *
  *  @return A new NSArray consisting of the original objects in a shuffled order
- *  @see Mutable counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_shuffle]`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyUtilities) shuffle]`
  *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_shuffled]`
  */
 - (NSArray<ObjectType>*)shuffled;
@@ -552,8 +552,8 @@
  *
  *  @param comparator An NSComparator block to define the sort order.
  *  @return A new NSArray sorted by the comparator
- *  @see Mutable counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_sort]`
- *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_sorted]`
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyUtilities) sort:]`
+ *  @see Prefixed counterpart `-[NSArray(FunkyPrefixedUtilities) funky_sorted:]`
  */
 - (NSArray<ObjectType>*)sorted:(NSComparator)comparator;
 
@@ -565,7 +565,7 @@
  *  @param item The item to repeat
  *  @param repeat Number of times to repeat the `item` parameter
  *  @return A new NSArray instance with the given item repeated
- *  @see Mutable counterpart `+[NSMutableArray(FunkyPrefixedUtilities) funky_arrayWithItem:repeated:]`
+ *  @see Mutable counterpart `+[NSMutableArray(FunkyUtilities) arrayWithItem:repeated:]`
  *  @see Prefixed counterpart `+[NSArray(FunkyPrefixedUtilities) funky_arrayWithItem:repeated:]`
  */
 + (NSArray<ObjectType>*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
@@ -577,7 +577,7 @@
  *  @param block The block to compute the next item in the resulting array
  *  @param repeat Number of times to repeat calling the `block` parameter
  *  @return A new NSArray instance with items returned by the block
- *  @see Mutable counterpart `+[NSMutableArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:repeated:]`
+ *  @see Mutable counterpart `+[NSMutableArray(FunkyUtilities) arrayWithArray:nextItem:repeated:]`
  *  @see Prefixed counterpart `+[NSArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:repeated:]`
  */
 + (NSArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSArray* array))block repeated:(NSUInteger)repeat;
@@ -589,7 +589,7 @@
  *  @param block The block to compute the next item in the resulting array
  *  @param until Logic until the iteration should be repeated. Until the block returns YES, the constructor repeatedly callis the `block` parameter
  *  @return A new NSArray instance with items returned by the block
- *  @see Mutable counterpart `+[NSMutableArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:until:]`
+ *  @see Mutable counterpart `+[NSMutableArray(FunkyUtilities) arrayWithArray:nextItem:until:]`
  *  @see Prefixed counterpart `+[NSArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:until:]`
  */
 + (NSArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSArray* array))block until:(BOOL(^)(NSArray* array))until;
@@ -610,7 +610,7 @@
 /**
  *  Makes the array structure a squence with flat elements, containing no NSArrays
  *
- *  @see Immutable counterpart `-[NSArray(FunkyPrefixedUtilities) funky_flattened]`
+ *  @see Immutable counterpart `-[NSArray(FunkyUtilities) flattened]`
  *  @see Prefixed counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_flatten]`
  */
 - (void)flatten;
@@ -620,7 +620,7 @@
 /**
  *  Puts the containing items (in place) in a reversed order.
  *
- *  @see Immutable counterpart `-[NSArray(FunkyPrefixedUtilities) funky_reversed]`
+ *  @see Immutable counterpart `-[NSArray(FunkyUtilities) reversed]`
  *  @see Prefixed counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_reverse]`
  */
 - (void)reverse;
@@ -628,7 +628,7 @@
 /**
  *  Shuffles the containing items (in place) in a random fashion.
  *
- *  @see Immutable counterpart `-[NSArray(FunkyPrefixedUtilities) funky_shuffled]`
+ *  @see Immutable counterpart `-[NSArray(FunkyUtilities) shuffled]`
  *  @see Prefixed counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_shuffle]`
  */
 - (void)shuffle;
@@ -637,7 +637,7 @@
  *  Makes the array unique (in place) by removing the duplicated items from the containing items. The method does this keeping the first occurence and removes the further duplications.
  *  It checks equality using the `-isEqual:` method
  *
- *  @see Immutable counterpart `-[NSArray(FunkyPrefixedUtilities) funky_unique]`
+ *  @see Immutable counterpart `-[NSArray(FunkyUtilities) unique]`
  *  @see Prefixed counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_removeDuplicates]`
  */
 - (void)removeDuplicates;
@@ -648,7 +648,7 @@
  *  Concatenates the current array (in place) with the one given in the parameter. It does this by putting the existing elements first, and the elements in the provided array afterwards.
  *
  *  @param array The other collection to merge with
- *  @see Immutable counterpart `-[NSArray(FunkyPrefixedUtilities) funky_merged:]`
+ *  @see Immutable counterpart `-[NSArray(FunkyUtilities) merged:]`
  *  @see Prefixed counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_merge:]`
  */
 - (void)merge:(NSArray<ObjectType>*)array;
@@ -659,7 +659,7 @@
  *  Sorts the array (in place) using the given comparator.
  *
  *  @param comparator An NSComparator block to define the sort order.
- *  @see Immutable counterpart `-[NSArray(FunkyPrefixedUtilities) funky_sorted:]`
+ *  @see Immutable counterpart `-[NSArray(FunkyUtilities) sorted:]`
  *  @see Prefixed counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_sort:]`
  */
 - (void)sort:(NSComparator)comparator;
@@ -670,7 +670,7 @@
  *  Filters the array using the given predicate, keeping the elements that are passing the test.
  *
  *  @param block The predicate used to filter the results.
- *  @see Immutable counterpart `-[NSArray(FunkyPrefixedUtilities) funky_filtered:]`
+ *  @see Immutable counterpart `-[NSArray(FunkyUtilities) filtered:]`
  *  @see Prefixed counterpart `-[NSMutableArray(FunkyPrefixedUtilities) funky_filter:]`
  */
 - (void)filter:(BOOL(^)(ObjectType item))block;
@@ -683,8 +683,8 @@
  *  @param item The item to repeat
  *  @param repeat Number of times to repeat the `item` parameter
  *  @return A new NSMutableArray instance with the given item repeated
- *  @see Immutable counterpart `+[NSArray(FunkyPrefixedUtilities) funky_arrayWithItem:repeated:]`
- *  @see Prefixed counterpart `+[NSMutableArray(FunkyPrefixedUtilities) funky_funky_arrayWithItem:repeated:]`
+ *  @see Immutable counterpart `+[NSArray(FunkyUtilities) arrayWithItem:repeated:]`
+ *  @see Prefixed counterpart `+[NSMutableArray(FunkyPrefixedUtilities) funky_arrayWithItem:repeated:]`
  */
 + (NSMutableArray<ObjectType>*)arrayWithItem:(id)item repeated:(NSUInteger)repeat;
 
@@ -695,7 +695,7 @@
  *  @param block The block to compute the next item in the resulting array
  *  @param repeat Number of times to repeat calling the `block` parameter
  *  @return A new NSMutableArray instance with items returned by the block
- *  @see Immutable counterpart `+[NSArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:repeated:]`
+ *  @see Immutable counterpart `+[NSArray(FunkyUtilities) arrayWithArray:nextItem:repeated:]`
  *  @see Prefixed counterpart `+[NSMutableArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:repeated:]`
  */
 + (NSMutableArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSMutableArray* array))block repeated:(NSUInteger)repeat;
@@ -707,7 +707,7 @@
  *  @param block The block to compute the next item in the resulting array
  *  @param until Logic until the iteration should be repeated. Until the block returns YES, the constructor repeatedly callis the `block` parameter
  *  @return A new NSMutableArray instance with items returned by the block
- *  @see Immutable counterpart `+[NSArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:until:]`
+ *  @see Immutable counterpart `+[NSArray(FunkyUtilities) arrayWithArray:nextItem:until:]`
  *  @see Prefixed counterpart `+[NSMutableArray(FunkyPrefixedUtilities) funky_arrayWithArray:nextItem:until:]`
  */
 + (NSMutableArray<ObjectType>*)arrayWithArray:(NSArray<ObjectType>*)array nextItem:(id(^)(NSMutableArray* array))block until:(BOOL(^)(NSArray* array))until;

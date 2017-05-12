@@ -93,7 +93,7 @@
  *
  *  @param block The filtering predicate given as a BOOL expression
  *  @return A new NSSet instance where each element is selected from the original one where the block returned YES
- *  @see Mutable counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_filter:]`
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyUtilities) filter:]`
  *  @see Prefixed counterpart `-[NSSet(FunkyPrefixedUtilities) funky_filtered:]`
  */
 - (NSSet<ObjectType>*)filtered:(BOOL(^)(ObjectType item))block;
@@ -104,7 +104,7 @@
  *  Flattens the set, meaning that if it consisted of Set items, they are going to be flattened into one flat structure of elements. An set of sets will transform to an set of elements from each of the previous sets. This computation is performed deeply, meaning that it contontued flattening elements, until they produce a flat structure.
  *
  *  @return A new NSSet instance where the elements don't contain NSSets
- *  @see Mutable counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_flattened]`
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyUtilities) flattened]`
  *  @see Prefixed counterpart `-[NSSet(FunkyPrefixedUtilities) funky_flattened]`
  */
 - (NSSet<ObjectType>*)flattened;
@@ -116,7 +116,7 @@
  *
  *  @param set The other collection to union with
  *  @return A new NSSet which is the union of the two sets
- *  @see Immutable counterpart `-[NSSet(FunkyPrefixedUtilities) funky_takeUnion:]`
+ *  @see Immutable counterpart `-[NSSet(FunkyUtilities) takeUnion:]`
  *  @see Prefixed counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_takingUnion:]`
  */
 - (NSSet*)takingUnion:(NSSet*)set;
@@ -126,7 +126,7 @@
  *
  *  @param set The other collection to minus with
  *  @return A new NSSet which is the minus of the two sets
- *  @see Immutable counterpart `-[NSSet(FunkyPrefixedUtilities) funky_takeMinus:]`
+ *  @see Immutable counterpart `-[NSSet(FunkyUtilities) takeMinus:]`
  *  @see Prefixed counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_takingMinus:]`
  */
 - (NSSet<ObjectType>*)takingMinus:(NSSet<ObjectType>*)set;
@@ -136,7 +136,7 @@
  *
  *  @param set The other collection to intersect with
  *  @return A new NSSet which is the intersection of the two sets
- *  @see Immutable counterpart `-[NSSet(FunkyPrefixedUtilities) funky_takeIntersection:]`
+ *  @see Immutable counterpart `-[NSSet(FunkyUtilities) takeIntersection:]`
  *  @see Prefixed counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_takingIntersection:]`
  */
 - (NSSet<ObjectType>*)takingIntersection:(NSSet<ObjectType>*)set;
@@ -256,7 +256,7 @@
  *  Takes the union of the two sets
  *
  *  @param set The other collection to union with
- *  @see Immutable counterpart `-[NSSet(FunkyPrefixedUtilities) funky_takingUnion:]`
+ *  @see Immutable counterpart `-[NSSet(FunkyUtilities) takingUnion:]`
  *  @see Prefixed counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_takeUnion:]`
  */
 - (void)takeUnion:(NSSet*)set;
@@ -265,7 +265,7 @@
  *  Takes the minus of the two sets by taking the current minus the provided one.
  *
  *  @param set The other collection to minus with
- *  @see Immutable counterpart `-[NSSet(FunkyPrefixedUtilities) funky_takingMinus:]`
+ *  @see Immutable counterpart `-[NSSet(FunkyUtilities) takingMinus:]`
  *  @see Prefixed counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_takeMinus:]`
  */
 - (void)takeMinus:(NSSet<ObjectType>*)set;
@@ -274,7 +274,7 @@
  *  Takes the intersection of the two sets.
  *
  *  @param set The other collection to intersect with
- *  @see Immutable counterpart `-[NSSet(FunkyPrefixedUtilities) funky_takingIntersection:]`
+ *  @see Immutable counterpart `-[NSSet(FunkyUtilities) takingIntersection:]`
  *  @see Prefixed counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_takeIntersection:]`
  */
 - (void)takeIntersection:(NSSet<ObjectType>*)set;
@@ -285,7 +285,7 @@
  *  Filters the set using the given predicate, keeping the elements that are passing the test.
  *
  *  @param block The predicate used to filter the results.
- *  @see Immutable counterpart `-[NSSet(FunkyPrefixedUtilities) funky_filtered:]`
+ *  @see Immutable counterpart `-[NSSet(FunkyUtilities) filtered:]`
  *  @see Prefixed counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_filter:]`
  */
 - (void)filter:(BOOL(^)(ObjectType item))block;
@@ -295,7 +295,7 @@
 /**
  *  Makes the set structure a squence with flat elements, containing no NSSets
  *
- *  @see Immutable counterpart `-[NSSet(FunkyPrefixedUtilities) funky_flattened]`
+ *  @see Immutable counterpart `-[NSSet(FunkyUtilities) flattened]`
  *  @see Prefixed counterpart `-[NSMutableSet(FunkyPrefixedUtilities) funky_flatten]`
  */
 - (void)flatten;

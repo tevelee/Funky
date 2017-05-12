@@ -141,7 +141,7 @@
  *
  *  @param block The condition given as a BOOL expression
  *  @return A list of keys where the condition matches
- *  @see Prefixed counterpart `-[NSDictionary(FunkyUtilities) keys:]`
+ *  @see Unprefixed counterpart `-[NSDictionary(FunkyUtilities) keys:]`
  */
 - (NSArray<KeyType>*)funky_keys:(BOOL(^)(id key, id value))block;
 
@@ -150,7 +150,7 @@
  *
  *  @param block The condition given as a BOOL expression
  *  @return A list of values where the condition matches
- *  @see Prefixed counterpart `-[NSDictionary(FunkyUtilities) values:]`
+ *  @see Unprefixed counterpart `-[NSDictionary(FunkyUtilities) values:]`
  */
 - (NSArray<ObjectType>*)funky_values:(BOOL(^)(id key, id value))block;
 
@@ -172,7 +172,7 @@
  *
  *  @param dictionary The other dictionary to merge with
  *  @see Immutable counterpart `-[NSDictionary(FunkyPrefixedUtilities) funky_merged:]`
- *  @see Prefixed counterpart `-[NSMutableDictionary(FunkyUtilities) merge:]`
+ *  @see Unprefixed counterpart `-[NSMutableDictionary(FunkyUtilities) merge:]`
  */
 - (void)funky_merge:(NSDictionary<KeyType, ObjectType>*)dictionary;
 
