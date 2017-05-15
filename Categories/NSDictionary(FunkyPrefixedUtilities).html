@@ -303,13 +303,11 @@
               </div>
             <p>This extension provides simple and easy to use functional and general utilities for NSDictionary.
   All the methods in this category are prefixed with the <code>funky_</code> keyword for compatibility reasons. If you prefer unprefixed utilities, you should import <code>NSDictionary+FunkyUtilities.h</code>.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code>NSDictionary(FunkyUtilities)</code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Mutable counterpart <code>NSMutableDictionary(FunkyPrefixedUtilities)</code>
@@ -344,7 +342,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new NSDictionary instance with the same amount of elements, where each element is transformed to another by returning a new object in the block parameter.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)map:">-[NSDictionary(FunkyUtilities) map:]</a></code>
@@ -378,7 +375,6 @@
                               <td>
                                 <div>
                                   <p>The transformator code which should return a new value based on the existing one.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -388,7 +384,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSDictionary instance where each element is formed by the result of the block calls</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L31">Show on GitHub</a>
@@ -410,7 +405,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new NSDictionary instance where each element is transformed to another by returning a new object in the block parameter. It ignores the nil parameters returned from the block.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)nilTolerantMap:">-[NSDictionary(FunkyUtilities) nilTolerantMap:]</a></code>
@@ -445,7 +439,6 @@
                               <td>
                                 <div>
                                   <p>The transformator code which should return a new value based on the existing one.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -455,7 +448,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSDictionary instance where each element is formed by the result of the block calls</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L40">Show on GitHub</a>
@@ -488,13 +480,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new NSDictionary instance, in which concatenates the two dictionaries by putting the existing elements first, and the elements in the provided dictionary after them.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Mutable counterpart <code><a href="../Categories/NSMutableDictionary(FunkyPrefixedUtilities).html#/c:objc(cs)NSMutableDictionary(im)funky_merge:">-[NSMutableDictionary(FunkyPrefixedUtilities) funky_merge:]</a></code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)merged:">-[NSDictionary(FunkyUtilities) merged:]</a></code>
@@ -528,7 +518,6 @@
                               <td>
                                 <div>
                                   <p>The other dictionary to merge with</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -538,7 +527,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSDictionary which contains the elements of both dictionaries (self and the <code>other</code> parameter)</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L52">Show on GitHub</a>
@@ -571,7 +559,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Calls every element of the dictionary once.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)forEach:">-[NSDictionary(FunkyUtilities) forEach:]</a></code>
@@ -605,7 +592,6 @@
                               <td>
                                 <div>
                                   <p>A block, giving the current item and its key in each iteration.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -643,7 +629,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new NSDictionary instance, in which uses the current values as the dictionary and keys and vice-versa. If multiple values are holding the same key, the result (which key is used) is unpredictable.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code>-[NSDictionary(FunkyUtilities) invertedObjectsAndKeys:]</code>
@@ -667,7 +652,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSDictionary with the inverted values and keys</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L72">Show on GitHub</a>
@@ -700,13 +684,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Filters the dictionary using the given predicate, keeping the elements that are passing the test.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Mutable counterpart <code><a href="../Categories/NSMutableDictionary(FunkyPrefixedUtilities).html#/c:objc(cs)NSMutableDictionary(im)funky_filter:">-[NSMutableDictionary(FunkyPrefixedUtilities) funky_filter:]</a></code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)filtered:">-[NSDictionary(FunkyUtilities) filtered:]</a></code>
@@ -741,7 +723,6 @@
                               <td>
                                 <div>
                                   <p>The predicate used to filter the results.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -779,7 +760,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether the condition matches all elements in the dictionary</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)all:">-[NSDictionary(FunkyUtilities) all:]</a></code>
@@ -813,7 +793,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -823,7 +802,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>YES if condition matches all elements, NO otherwise</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L94">Show on GitHub</a>
@@ -845,7 +823,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether the condition matches no elements in the dictionary</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)none:">-[NSDictionary(FunkyUtilities) none:]</a></code>
@@ -879,7 +856,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -889,7 +865,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>NO if condition matches any of the elements, YES otherwise</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L103">Show on GitHub</a>
@@ -911,7 +886,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether the condition matches at least one element in the dictionary</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)contains:">-[NSDictionary(FunkyUtilities) contains:]</a></code>
@@ -945,7 +919,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -955,7 +928,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>YES if condition matches any of the elements, NO otherwise</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L112">Show on GitHub</a>
@@ -988,7 +960,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the number of elements the given condition matches in the dictionary, like if you would filter the dictionary.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)count:">-[NSDictionary(FunkyUtilities) count:]</a></code>
@@ -1022,7 +993,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1032,7 +1002,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Number of occasions where the condition matches in the dictionary</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L123">Show on GitHub</a>
@@ -1065,7 +1034,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Produces an aggregated value based on the elements of the dictionary.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)reduce:withInitialValue:">-[NSDictionary(FunkyUtilities) reduce:withInitialValue:]</a></code>
@@ -1100,7 +1068,6 @@
                               <td>
                                 <div>
                                   <p>The value to start with. At first this is going to be the rolling value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1113,7 +1080,6 @@
                               <td>
                                 <div>
                                   <p>The computation logic, which takes the rolling value and the current item with its index and aggregates them using some custom logic.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1123,7 +1089,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A custom value which is produced by computing all the elements with a custom logic, returned in <code>block</code></p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L135">Show on GitHub</a>
@@ -1156,10 +1121,9 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all the keys where the given predicate matches the elements of the dictionary.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    Prefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)keys:">-[NSDictionary(FunkyUtilities) keys:]</a></code>
+    Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)keys:">-[NSDictionary(FunkyUtilities) keys:]</a></code>
 
 </div>
 
@@ -1190,7 +1154,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1200,7 +1163,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A list of keys where the condition matches</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L146">Show on GitHub</a>
@@ -1222,10 +1184,9 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all the values where the given predicate matches the elements of the dictionary.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    Prefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)values:">-[NSDictionary(FunkyUtilities) values:]</a></code>
+    Unprefixed counterpart <code><a href="../Categories/NSDictionary(FunkyUtilities).html#/c:objc(cs)NSDictionary(im)values:">-[NSDictionary(FunkyUtilities) values:]</a></code>
 
 </div>
 
@@ -1256,7 +1217,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1266,7 +1226,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A list of values where the condition matches</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/PrefixedInterface/Dictionary/NSDictionary+FunkyPrefixedUtilities.h#L155">Show on GitHub</a>
@@ -1282,8 +1241,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-26)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-05-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

@@ -1,19 +1,19 @@
 {
   "warnings": [
     {
-      "file": "/Users/travis/build/tevelee/Funky/Example/Pods/Target Support Files/FunkyObjC-iOS/FunkyObjC-iOS-umbrella.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Example/Pods/Target Support Files/FunkyObjC-iOS/FunkyObjC-iOS-umbrella.h",
       "line": 43,
       "symbol": "FunkyVersionNumber",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/tevelee/Funky/Example/Pods/Target Support Files/FunkyObjC-iOS/FunkyObjC-iOS-umbrella.h",
+      "file": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional/Example/Pods/Target Support Files/FunkyObjC-iOS/FunkyObjC-iOS-umbrella.h",
       "line": 44,
       "symbol": "FunkyVersionString",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/travis/build/tevelee/Funky"
+  "source_directory": "/Users/laszloteveli/Dropbox/Personal/Dev/Apps/LTFunctional"
 }

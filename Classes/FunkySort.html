@@ -341,7 +341,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A comparator to use when sorting collections</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Core/Public/Helpers/FunkySort.h#L22">Show on GitHub</a>
@@ -392,7 +391,6 @@
                               <td>
                                 <div>
                                   <p>The block to map the current element into a comparable one</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -402,7 +400,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A comparator to use when sorting collections</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Core/Public/Helpers/FunkySort.h#L30">Show on GitHub</a>
@@ -424,7 +421,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Provides a special comparator for comparing objects, but when only interested in their asending or descending information. It is usually used when comparing numbers in an array, like <code>return obj1 &lt; obj2</code> to have an ascending collection</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     The type of block to can provide is <code><a href="../Type Definitions.html#/c:FunkySortComparableProtocol.h@T@FunkySortBoolComparableBlock">FunkySortBoolComparableBlock</a></code>
@@ -458,7 +454,6 @@
                               <td>
                                 <div>
                                   <p>The block to use when comparing two objects</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -468,7 +463,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A comparator to use when sorting collections</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Core/Public/Helpers/FunkySort.h#L39">Show on GitHub</a>
@@ -518,7 +512,6 @@
                               <td>
                                 <div>
                                   <p>The list of comparators to use in order</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -528,7 +521,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A comparator to use when sorting collections</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Core/Public/Helpers/FunkySort.h#L47">Show on GitHub</a>
@@ -563,13 +555,11 @@
                         <p>A composite comparator using buckets. It orders the list in a way, that it uses so called buckets which represent a subset of the elements. So the order is going to be made up of the order of these buckets. 
   There is a special bucket, called collector bucket (<code>-[FunkySortingBucket bucketWithAllTheRest]</code>) which hold all the remaining element which couldn&rsquo;t fit in any of the other concrete buckets. This collector bucket can be placed even in the middle of the list of buckets, so you can achieve to order a bucket at last. By default the collector is at the end.
   In this method the default inner bucket comparator is the lexicographical one.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     The buckets to provide are <code><a href="../Classes/FunkySortingBucket.html">FunkySortingBucket</a></code> instances
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Comparator with custom inner-bucket comparator <code><a href="../Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:defaultInnerBucketComparator:">+[FunkySort comparatorWithBuckets:defaultInnerBucketComparator:]</a></code>
@@ -603,7 +593,6 @@
                               <td>
                                 <div>
                                   <p>The list of buckets to use in order</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -613,7 +602,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A comparator to use when sorting collections</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Core/Public/Helpers/FunkySort.h#L61">Show on GitHub</a>
@@ -635,13 +623,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Same as <code><a href="../Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:">+[FunkySort comparatorWithBuckets:]</a></code> but with an addition to set the default inner bucket comparator.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     The buckets to provide are <code><a href="../Classes/FunkySortingBucket.html">FunkySortingBucket</a></code> instances
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Comparator with the default lexicographical inner-bucket comparator <code><a href="../Classes/FunkySort.html#/c:objc(cs)FunkySort(cm)comparatorWithBuckets:">+[FunkySort comparatorWithBuckets:]</a></code>
@@ -677,7 +663,6 @@
                               <td>
                                 <div>
                                   <p>The list of buckets to use in order</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -690,7 +675,6 @@
                               <td>
                                 <div>
                                   <p>The default comparator to use instead of the lexicographical one</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -700,7 +684,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A comparator to use when sorting collections</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Core/Public/Helpers/FunkySort.h#L72">Show on GitHub</a>
@@ -716,8 +699,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-26)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-05-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

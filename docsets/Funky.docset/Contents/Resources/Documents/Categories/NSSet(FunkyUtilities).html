@@ -303,13 +303,11 @@
               </div>
             <p>This extension provides simple and easy to use functional and general utilities for NSSet.
   If you need to prefix the extension methods in this category, you should import <code>NSSet+FunkyPrefixedUtilities.h</code>, where every utility method is prefixed with the <code>funky_</code> keyword for compatiblitiy reasons.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code>NSSet(FunkyPrefixedUtilities)</code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Mutable counterpart <code>NSMutableSet(FunkyUtilities)</code>
@@ -344,7 +342,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether the condition matches all elements in the set</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_all:">-[NSSet(FunkyPrefixedUtilities) funky_all:]</a></code>
@@ -378,7 +375,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -388,7 +384,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>YES if condition matches all elements, NO otherwise</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L29">Show on GitHub</a>
@@ -410,7 +405,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether the condition matches no elements in the set</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_none:">-[NSSet(FunkyPrefixedUtilities) funky_none:]</a></code>
@@ -444,7 +438,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -454,7 +447,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>NO if condition matches any of the elements, YES otherwise</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L38">Show on GitHub</a>
@@ -476,7 +468,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether the condition matches at least one element in the set</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_contains:">-[NSSet(FunkyPrefixedUtilities) funky_contains:]</a></code>
@@ -510,7 +501,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -520,7 +510,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>YES if condition matches any of the elements, NO otherwise</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L47">Show on GitHub</a>
@@ -553,7 +542,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the number of elements the given condition matches in the set, like if you would filter the set.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_count:">-[NSSet(FunkyPrefixedUtilities) funky_count:]</a></code>
@@ -587,7 +575,6 @@
                               <td>
                                 <div>
                                   <p>The condition given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -597,7 +584,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Number of occasions where the condition matches in the set</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L58">Show on GitHub</a>
@@ -630,7 +616,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new NSSet instance with the same amount of elements, where each element is transformed to another by returning a new object in the block parameter.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_map:">-[NSSet(FunkyPrefixedUtilities) funky_map:]</a></code>
@@ -664,7 +649,6 @@
                               <td>
                                 <div>
                                   <p>The transformator code which should return a new value based on the existing one.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -674,7 +658,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSSet instance where each element is formed by the result of the block calls</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L69">Show on GitHub</a>
@@ -696,7 +679,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new NSSet instance where each element is transformed to another by returning a new object in the block parameter. It ignores the nil parameters returned from the block.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_nilTolerantMap:">-[NSSet(FunkyPrefixedUtilities) funky_nilTolerantMap:]</a></code>
@@ -730,7 +712,6 @@
                               <td>
                                 <div>
                                   <p>The transformator code which should return a new value based on the existing one.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -740,7 +721,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSSet instance where each element is formed by the result of the block calls</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L78">Show on GitHub</a>
@@ -762,7 +742,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new NSSet instance with the same amount of elements, where each element is transformed to another by returning a new object in the block parameter. Same as map, but the result is going to be flattened, so if you return an NSSet any iteration, it is going to be converted into a flat structure, not an set of sets.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_flatMap:">-[NSSet(FunkyPrefixedUtilities) funky_flatMap:]</a></code>
@@ -796,7 +775,6 @@
                               <td>
                                 <div>
                                   <p>The transformator code which should return a new value based on the existing one.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -806,7 +784,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSSet instance where each element is formed by the result of the flattened block calls</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L87">Show on GitHub</a>
@@ -839,13 +816,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new NSSet instance with the element, that are passing the returned expression in the original set.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    Mutable counterpart <code><a href="../Categories/NSMutableSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSMutableSet(im)funky_filter:">-[NSMutableSet(FunkyPrefixedUtilities) funky_filter:]</a></code>
+    Mutable counterpart <code><a href="../Categories/NSMutableSet(FunkyUtilities).html#/c:objc(cs)NSMutableSet(im)filter:">-[NSMutableSet(FunkyUtilities) filter:]</a></code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_filtered:">-[NSSet(FunkyPrefixedUtilities) funky_filtered:]</a></code>
@@ -879,7 +854,6 @@
                               <td>
                                 <div>
                                   <p>The filtering predicate given as a BOOL expression</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -889,7 +863,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSSet instance where each element is selected from the original one where the block returned YES</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L99">Show on GitHub</a>
@@ -922,13 +895,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Flattens the set, meaning that if it consisted of Set items, they are going to be flattened into one flat structure of elements. An set of sets will transform to an set of elements from each of the previous sets. This computation is performed deeply, meaning that it contontued flattening elements, until they produce a flat structure.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    Mutable counterpart <code>-[NSMutableSet(FunkyPrefixedUtilities) funky_flattened]</code>
+    Mutable counterpart <code>-[NSMutableSet(FunkyUtilities) flattened]</code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_flattened">-[NSSet(FunkyPrefixedUtilities) funky_flattened]</a></code>
@@ -952,7 +923,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSSet instance where the elements don&rsquo;t contain NSSets</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L110">Show on GitHub</a>
@@ -985,13 +955,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Takes the union of the two sets.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    Immutable counterpart <code>-[NSSet(FunkyPrefixedUtilities) funky_takeUnion:]</code>
+    Immutable counterpart <code>-[NSSet(FunkyUtilities) takeUnion:]</code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code>-[NSMutableSet(FunkyPrefixedUtilities) funky_takingUnion:]</code>
@@ -1025,7 +993,6 @@
                               <td>
                                 <div>
                                   <p>The other collection to union with</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1035,7 +1002,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSSet which is the union of the two sets</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L122">Show on GitHub</a>
@@ -1057,13 +1023,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Takes a set which is the current minus the provided one.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    Immutable counterpart <code>-[NSSet(FunkyPrefixedUtilities) funky_takeMinus:]</code>
+    Immutable counterpart <code>-[NSSet(FunkyUtilities) takeMinus:]</code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code>-[NSMutableSet(FunkyPrefixedUtilities) funky_takingMinus:]</code>
@@ -1097,7 +1061,6 @@
                               <td>
                                 <div>
                                   <p>The other collection to minus with</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1107,7 +1070,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSSet which is the minus of the two sets</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L132">Show on GitHub</a>
@@ -1129,13 +1091,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Takes the intersection of the two sets.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    Immutable counterpart <code>-[NSSet(FunkyPrefixedUtilities) funky_takeIntersection:]</code>
+    Immutable counterpart <code>-[NSSet(FunkyUtilities) takeIntersection:]</code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code>-[NSMutableSet(FunkyPrefixedUtilities) funky_takingIntersection:]</code>
@@ -1169,7 +1129,6 @@
                               <td>
                                 <div>
                                   <p>The other collection to intersect with</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1179,7 +1138,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A new NSSet which is the intersection of the two sets</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L142">Show on GitHub</a>
@@ -1212,7 +1170,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Calls every element of the set once.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_forEach:">-[NSSet(FunkyPrefixedUtilities) funky_forEach:]</a></code>
@@ -1246,7 +1203,6 @@
                               <td>
                                 <div>
                                   <p>A block, giving the current item in each iteration.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1284,7 +1240,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Groups elements to an NSDictionary, where the returned element serves as a key, and the objects as the value. If multiple elements are returned with the same key, the result (of which is going to get included) is unpredicatble.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code>-[NSSet(FunkyPrefixedUtilities) funky_groupByUsingFirst:]</code>
@@ -1318,7 +1273,6 @@
                               <td>
                                 <div>
                                   <p>A block which returns a key (based on the passed element) used as the key in the dictionary for that element.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1328,7 +1282,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>An NSDictionary where keys are produced by the result of the block call, and the values are the original elements</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L163">Show on GitHub</a>
@@ -1350,7 +1303,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Groups elements to an NSDictionary, where the returned element serves as a key, and the objects as the value. The elements in the resulting Dictionary are sets, so if multiple elements return the same keys, all of them are going to be included in the value.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_associateBy:">-[NSSet(FunkyPrefixedUtilities) funky_associateBy:]</a></code>
@@ -1385,7 +1337,6 @@
                               <td>
                                 <div>
                                   <p>A block which returns a key (based on the passed element) used as the key in the dictionary.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1395,7 +1346,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>An NSDictionary where keys are produced by the result of the blocks, and the values are an set of original elements</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L172">Show on GitHub</a>
@@ -1428,7 +1378,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Produces an aggregated value based on the elements of the set.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_reduce:withInitialValue:">-[NSSet(FunkyPrefixedUtilities) funky_reduce:withInitialValue:]</a></code>
@@ -1462,7 +1411,6 @@
                               <td>
                                 <div>
                                   <p>The value to start with. At first this is going to be the rolling value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1475,7 +1423,6 @@
                               <td>
                                 <div>
                                   <p>The computation logic, which takes the rolling value and the current item and aggregates them using some custom logic.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1485,7 +1432,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A custom value which is produced by computing all the elements with a custom logic, returned in <code>block</code></p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L184">Show on GitHub</a>
@@ -1507,7 +1453,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A special use-case of reduce, which summarises the returned double values for each element in the set.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_sum:">-[NSSet(FunkyPrefixedUtilities) funky_sum:]</a></code>
@@ -1541,7 +1486,6 @@
                               <td>
                                 <div>
                                   <p>A block which returns double value, based on the current element.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1551,7 +1495,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>The sum of all elements, where the numbers are computed are transformed based on the original elements</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L193">Show on GitHub</a>
@@ -1573,7 +1516,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A special use-case of reduce, which takes the average value of the returned double values for each element in the set.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_average:">-[NSSet(FunkyPrefixedUtilities) funky_average:]</a></code>
@@ -1607,7 +1549,6 @@
                               <td>
                                 <div>
                                   <p>A block which returns double value, based on the current element.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1617,7 +1558,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>The average of all elements, where the numbers are computed are transformed based on the original elements</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L202">Show on GitHub</a>
@@ -1650,7 +1590,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A special use-case of reduce, which takes the minimum of the returned double values for each element in the set.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_minValue:">-[NSSet(FunkyPrefixedUtilities) funky_minValue:]</a></code>
@@ -1684,7 +1623,6 @@
                               <td>
                                 <div>
                                   <p>A block which returns double value, based on the current element.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1694,7 +1632,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>The minimum of all elements, where the numbers are computed are transformed based on the original elements</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L213">Show on GitHub</a>
@@ -1716,7 +1653,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A special use-case of reduce, which takes the maximum of the returned double values for each element in the set.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_maxValue:">-[NSSet(FunkyPrefixedUtilities) funky_maxValue:]</a></code>
@@ -1750,7 +1686,6 @@
                               <td>
                                 <div>
                                   <p>A block which returns double value, based on the current element.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1760,7 +1695,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>The maximum of all elements, where the numbers are computed are transformed based on the original elements</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L222">Show on GitHub</a>
@@ -1782,7 +1716,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an set with all the minimal value elements in the set, where the minimum was computed by the returned double value for each element in the set.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_minItems:">-[NSSet(FunkyPrefixedUtilities) funky_minItems:]</a></code>
@@ -1816,7 +1749,6 @@
                               <td>
                                 <div>
                                   <p>A block which returns double value, based on the current element.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1826,7 +1758,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>The set of elements with the minimal value, where the numbers are computed are transformed based on the original elements</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L231">Show on GitHub</a>
@@ -1848,7 +1779,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an set with all the maximal value elements in the set, where the maximum was computed by the returned double value for each element in the set.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     Prefixed counterpart <code><a href="../Categories/NSSet(FunkyPrefixedUtilities).html#/c:objc(cs)NSSet(im)funky_maxItems:">-[NSSet(FunkyPrefixedUtilities) funky_maxItems:]</a></code>
@@ -1882,7 +1812,6 @@
                               <td>
                                 <div>
                                   <p>A block which returns double value, based on the current element.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1892,7 +1821,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>The set of elements with the maximal value, where the numbers are computed are transformed based on the original elements</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/tevelee/Funky/tree/master/Source/Interface/Set/NSSet+FunkyUtilities.h#L240">Show on GitHub</a>
@@ -1908,8 +1836,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-04-26)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="https://tevelee.github.io" target="_blank" rel="external">Laszlo Teveli</a>. All rights reserved. (Last updated: 2017-05-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
