@@ -10,19 +10,19 @@ before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
 before_script:
-- pod repo update --silent
-- pod install --project-directory=Example --verbose
+- bundle exec pod repo update --silent
+- bundle exec pod install --project-directory=Example --verbose
 - carthage bootstrap --project-directory Example --verbose
 script:
 - rm -rf ./build || true
 - set -o pipefail
 - xcodebuild clean build -workspace Example/Funky.xcworkspace -scheme iOS-Example
-  -sdk iphonesimulator10.3 -configuration Release | xcpretty --color
+  -sdk iphonesimulator10.3 -configuration Release | bundle exec xcpretty --color
 - xcodebuild test -workspace Example/Funky.xcworkspace -scheme iOS-Example -sdk iphonesimulator10.3
-  -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' ONLY_ACTIVE_ARCH=NO
-  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty
+  -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3.1' ONLY_ACTIVE_ARCH=NO
+  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | bundle exec xcpretty --color
   --color
-- pod lib lint
+- travis_wait 30 bundle exec pod lib lint
 - carthage build --no-skip-current --project-directory Example --verbose
 - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
     danger || true;
