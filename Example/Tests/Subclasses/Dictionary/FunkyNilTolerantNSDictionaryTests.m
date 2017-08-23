@@ -28,6 +28,26 @@
     XCTAssertTrue([nilTolerant isKindOfClass:[NSDictionary class]]);
 }
 
+- (void)test_nilTolerant_constructor
+{
+    NSDictionary* nilTolerant = [NSDictionary nilTolerantDictionary];
+    XCTAssertTrue([nilTolerant isKindOfClass:[FunkyNilTolerantNSDictionary class]]);
+    XCTAssertNotEqual([nilTolerant class], [NSDictionary class]);
+}
+
+- (void)test_nilTolerant_mutable_constructor
+{
+    NSDictionary* nilTolerant = [NSMutableDictionary nilTolerantDictionary];
+    XCTAssertTrue([nilTolerant isKindOfClass:[FunkyNilTolerantNSMutableDictionary class]]);
+    XCTAssertNotEqual([nilTolerant class], [NSDictionary class]);
+    XCTAssertNotEqual([nilTolerant class], [NSMutableDictionary class]);
+    
+    nilTolerant = [NSMutableDictionary nilTolerantDictionaryWithCapacity:2];
+    XCTAssertTrue([nilTolerant isKindOfClass:[FunkyNilTolerantNSMutableDictionary class]]);
+    XCTAssertNotEqual([nilTolerant class], [NSDictionary class]);
+    XCTAssertNotEqual([nilTolerant class], [NSMutableDictionary class]);
+}
+
 - (void)test_dictionaryWithObject
 {
     NSDictionary* dictionary = [FunkyNilTolerantNSDictionary dictionaryWithObject:@2 forKey:@2];

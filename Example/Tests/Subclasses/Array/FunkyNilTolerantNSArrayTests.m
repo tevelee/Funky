@@ -28,6 +28,26 @@
     XCTAssertTrue([nilTolerant isKindOfClass:[NSArray class]]);
 }
 
+- (void)test_nilTolerant_constructor
+{
+    NSArray* nilTolerant = [NSArray nilTolerantArray];
+    XCTAssertTrue([nilTolerant isKindOfClass:[FunkyNilTolerantNSArray class]]);
+    XCTAssertNotEqual([nilTolerant class], [NSArray class]);
+}
+
+- (void)test_nilTolerant_mutable_constructor
+{
+    NSArray* nilTolerant = [NSMutableArray nilTolerantArray];
+    XCTAssertTrue([nilTolerant isKindOfClass:[FunkyNilTolerantNSMutableArray class]]);
+    XCTAssertNotEqual([nilTolerant class], [NSArray class]);
+    XCTAssertNotEqual([nilTolerant class], [NSMutableArray class]);
+    
+    nilTolerant = [NSMutableArray nilTolerantArrayWithCapacity:2];
+    XCTAssertTrue([nilTolerant isKindOfClass:[FunkyNilTolerantNSMutableArray class]]);
+    XCTAssertNotEqual([nilTolerant class], [NSArray class]);
+    XCTAssertNotEqual([nilTolerant class], [NSMutableArray class]);
+}
+
 - (void)test_arrayByAddingObject
 {
     NSArray* array = [@[].nilTolerant arrayByAddingObject:@2];

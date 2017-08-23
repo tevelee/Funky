@@ -48,6 +48,14 @@
  */
 - (FunkyNilTolerantNSArray*)nilTolerant;
 
+/**
+ *  This method creates a new nil-tolerant collection.
+ *
+ *  @return A nil-tolerant NSArray (a.k.a. `FunkyNilTolerantNSArray`).
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyNilTolerant) nilTolerantArray]`
+ */
++ (FunkyNilTolerantNSArray*)nilTolerantArray;
+
 @end
 
 /**
@@ -64,5 +72,21 @@
  *  @see Immutable counterpart `-[NSArray(FunkyNilTolerant) nilTolerant]`
  */
 - (FunkyNilTolerantNSMutableArray*)nilTolerant;
+
+/**
+ *  This method creates a new nil-tolerant mutable collection.
+ *
+ *  @return A nil-tolerant NSMutableArray (a.k.a. `FunkyNilTolerantNSMutableArray`).
+ *  @see Immutable counterpart `-[NSArray(FunkyNilTolerant) nilTolerantArray]`
+ */
++ (FunkyNilTolerantNSMutableArray*)nilTolerantArray;
+
+/**
+ *  This method creates a new nil-tolerant mutable collection by providing its capacity.
+ *
+ *  @param capacity The desired capacity of the collection
+ *  @return A nil-tolerant NSMutableArray (a.k.a. `FunkyNilTolerantNSMutableArray`) with the given `capacity`.
+ */
++ (FunkyNilTolerantNSMutableArray *)nilTolerantArrayWithCapacity:(NSUInteger)capacity;
 
 @end

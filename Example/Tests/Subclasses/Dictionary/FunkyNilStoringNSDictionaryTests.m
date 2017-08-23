@@ -28,6 +28,26 @@
     XCTAssertTrue([nilStoring isKindOfClass:[NSDictionary class]]);
 }
 
+- (void)test_nilStoring_constructor
+{
+    NSDictionary* nilStoring = [NSDictionary nilStoringDictionary];
+    XCTAssertTrue([nilStoring isKindOfClass:[FunkyNilStoringNSDictionary class]]);
+    XCTAssertNotEqual([nilStoring class], [NSDictionary class]);
+}
+
+- (void)test_nilStoring_mutable_constructor
+{
+    NSDictionary* nilStoring = [NSMutableDictionary nilStoringDictionary];
+    XCTAssertTrue([nilStoring isKindOfClass:[FunkyNilStoringNSMutableDictionary class]]);
+    XCTAssertNotEqual([nilStoring class], [NSDictionary class]);
+    XCTAssertNotEqual([nilStoring class], [NSMutableDictionary class]);
+    
+    nilStoring = [NSMutableDictionary nilStoringDictionaryWithCapacity:2];
+    XCTAssertTrue([nilStoring isKindOfClass:[FunkyNilStoringNSMutableDictionary class]]);
+    XCTAssertNotEqual([nilStoring class], [NSDictionary class]);
+    XCTAssertNotEqual([nilStoring class], [NSMutableDictionary class]);
+}
+
 - (void)test_dictionaryWithObject
 {
     NSDictionary* dictionary = [FunkyNilStoringNSDictionary dictionaryWithObject:@2 forKey:@2];

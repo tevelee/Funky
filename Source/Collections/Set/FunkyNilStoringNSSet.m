@@ -119,6 +119,11 @@
     return [FunkyNilStoringNSSet setWithSet:self];
 }
 
++ (FunkyNilStoringNSSet *)nilStoringSet
+{
+    return [FunkyNilStoringNSSet set];
+}
+
 @end
 
 @implementation NSMutableSet (FunkyNilStoring)
@@ -126,6 +131,16 @@
 - (FunkyNilStoringNSMutableSet *)nilStoring
 {
     return [FunkyNilStoringNSMutableSet setWithSet:self];
+}
+
++ (FunkyNilStoringNSMutableSet *)nilStoringSet
+{
+    return [FunkyNilStoringNSMutableSet set];
+}
+
++ (FunkyNilStoringNSMutableSet *)nilStoringSetWithCapacity:(NSUInteger)capacity
+{
+    return [FunkyNilStoringNSMutableSet setWithCapacity:capacity];
 }
 
 @end

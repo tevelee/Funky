@@ -48,6 +48,14 @@
  */
 - (FunkyNilTolerantNSSet*)nilTolerant;
 
+/**
+ *  This method creates a new nil-tolerant collection.
+ *
+ *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSSet`).
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyNilTolerant) nilTolerantSet]`
+ */
++ (FunkyNilTolerantNSSet*)nilTolerantSet;
+
 @end
 
 /**
@@ -64,5 +72,21 @@
  *  @see Immutable counterpart `-[NSSet(FunkyNilTolerant) nilTolerant]`
  */
 - (FunkyNilTolerantNSMutableSet*)nilTolerant;
+
+/**
+ *  This method creates a new nil-tolerant mutable collection.
+ *
+ *  @return A nil-tolerant NSMutableSet (a.k.a. `FunkyNilTolerantNSMutableSet`).
+ *  @see Immutable counterpart `-[NSSet(FunkyNilTolerant) nilTolerantSet]`
+ */
++ (FunkyNilTolerantNSMutableSet*)nilTolerantSet;
+
+/**
+ *  This method creates a new nil-tolerant mutable collection by providing its capacity.
+ *
+ *  @param capacity The desired capacity of the collection
+ *  @return A nil-tolerant NSMutableSet (a.k.a. `FunkyNilTolerantNSMutableSet`) with the given `capacity`.
+ */
++ (FunkyNilTolerantNSMutableSet *)nilTolerantSetWithCapacity:(NSUInteger)capacity;
 
 @end

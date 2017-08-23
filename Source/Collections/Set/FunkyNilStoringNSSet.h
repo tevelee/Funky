@@ -48,6 +48,14 @@
  */
 - (FunkyNilStoringNSSet*)nilStoring;
 
+/**
+ *  This method creates a new nil-storing collection.
+ *
+ *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSSet`).
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyNilStoring) nilStoringSet]`
+ */
++ (FunkyNilStoringNSSet*)nilStoringSet;
+
 @end
 
 /**
@@ -64,5 +72,21 @@
  *  @see Immutable counterpart `-[NSSet(FunkyNilStoring) nilStoring]`
  */
 - (FunkyNilStoringNSMutableSet*)nilStoring;
+
+/**
+ *  This method creates a new nil-storing mutable collection.
+ *
+ *  @return A nil-storing NSMutableSet (a.k.a. `FunkyNilStoringNSMutableSet`).
+ *  @see Immutable counterpart `-[NSSet(FunkyNilStoring) nilStoringSet]`
+ */
++ (FunkyNilStoringNSMutableSet*)nilStoringSet;
+
+/**
+ *  This method creates a new nil-storing mutable collection by providing its capacity.
+ *
+ *  @param capacity The desired capacity of the collection
+ *  @return A nil-storing NSMutableSet (a.k.a. `FunkyNilStoringNSMutableSet`) with the given `capacity`.
+ */
++ (FunkyNilStoringNSMutableSet *)nilStoringSetWithCapacity:(NSUInteger)capacity;
 
 @end

@@ -28,6 +28,26 @@
     XCTAssertTrue([nilTolerant isKindOfClass:[NSSet class]]);
 }
 
+- (void)test_nilTolerant_constructor
+{
+    NSSet* nilTolerant = [NSSet nilTolerantSet];
+    XCTAssertTrue([nilTolerant isKindOfClass:[FunkyNilTolerantNSSet class]]);
+    XCTAssertNotEqual([nilTolerant class], [NSSet class]);
+}
+
+- (void)test_nilTolerant_mutable_constructor
+{
+    NSSet* nilTolerant = [NSMutableSet nilTolerantSet];
+    XCTAssertTrue([nilTolerant isKindOfClass:[FunkyNilTolerantNSMutableSet class]]);
+    XCTAssertNotEqual([nilTolerant class], [NSSet class]);
+    XCTAssertNotEqual([nilTolerant class], [NSMutableSet class]);
+    
+    nilTolerant = [NSMutableSet nilTolerantSetWithCapacity:2];
+    XCTAssertTrue([nilTolerant isKindOfClass:[FunkyNilTolerantNSMutableSet class]]);
+    XCTAssertNotEqual([nilTolerant class], [NSSet class]);
+    XCTAssertNotEqual([nilTolerant class], [NSMutableSet class]);
+}
+
 - (void)test_setByAddingObject
 {
     NSSet* set = [[NSSet set].nilTolerant setByAddingObject:@2];

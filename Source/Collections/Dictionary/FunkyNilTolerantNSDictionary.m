@@ -83,6 +83,11 @@
     return [FunkyNilTolerantNSDictionary dictionaryWithDictionary:self];
 }
 
++ (FunkyNilTolerantNSDictionary *)nilTolerantDictionary
+{
+    return [FunkyNilTolerantNSDictionary dictionary];
+}
+
 @end
 
 @implementation NSMutableDictionary (FunkyNilTolerant)
@@ -90,6 +95,16 @@
 - (FunkyNilTolerantNSMutableDictionary *)nilTolerant
 {
     return [FunkyNilTolerantNSMutableDictionary dictionaryWithDictionary:self];
+}
+
++ (FunkyNilTolerantNSMutableDictionary *)nilTolerantDictionary
+{
+    return [FunkyNilTolerantNSMutableDictionary dictionary];
+}
+
++ (FunkyNilTolerantNSMutableDictionary *)nilTolerantDictionaryWithCapacity:(NSUInteger)capacity
+{
+    return [FunkyNilTolerantNSMutableDictionary dictionaryWithCapacity:capacity];
 }
 
 @end

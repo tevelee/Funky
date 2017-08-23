@@ -48,6 +48,14 @@
  */
 - (FunkyNilTolerantNSDictionary*)nilTolerant;
 
+/**
+ *  This method creates a new nil-tolerant collection.
+ *
+ *  @return A nil-tolerant NSDictionary (a.k.a. `FunkyNilTolerantNSDictionary`).
+ *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilTolerant) nilTolerantDictionary]`
+ */
++ (FunkyNilTolerantNSDictionary*)nilTolerantDictionary;
+
 @end
 
 /**
@@ -64,5 +72,21 @@
  *  @see Immutable counterpart `-[NSDictionary(FunkyNilTolerant) nilTolerant]`
  */
 - (FunkyNilTolerantNSMutableDictionary*)nilTolerant;
+
+/**
+ *  This method creates a new nil-tolerant mutable collection.
+ *
+ *  @return A nil-tolerant NSMutableDictionary (a.k.a. `FunkyNilTolerantNSMutableDictionary`).
+ *  @see Immutable counterpart `-[NSDictionary(FunkyNilTolerant) nilTolerantDictionary]`
+ */
++ (FunkyNilTolerantNSMutableDictionary*)nilTolerantDictionary;
+
+/**
+ *  This method creates a new nil-tolerant mutable collection by providing its capacity.
+ *
+ *  @param capacity The desired capacity of the collection
+ *  @return A nil-tolerant NSMutableDictionary (a.k.a. `FunkyNilTolerantNSMutableDictionary`) with the given `capacity`.
+ */
++ (FunkyNilTolerantNSMutableDictionary *)nilTolerantDictionaryWithCapacity:(NSUInteger)capacity;
 
 @end

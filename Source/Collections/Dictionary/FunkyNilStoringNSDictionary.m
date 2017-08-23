@@ -98,6 +98,11 @@
     return [FunkyNilStoringNSDictionary dictionaryWithDictionary:self];
 }
 
++ (FunkyNilStoringNSDictionary *)nilStoringDictionary
+{
+    return [FunkyNilStoringNSDictionary dictionary];
+}
+
 @end
 
 @implementation NSMutableDictionary (FunkyNilStoring)
@@ -105,6 +110,16 @@
 - (FunkyNilStoringNSMutableDictionary *)nilStoring
 {
     return [FunkyNilStoringNSMutableDictionary dictionaryWithDictionary:self];
+}
+
++ (FunkyNilStoringNSMutableDictionary *)nilStoringDictionary
+{
+    return [FunkyNilStoringNSMutableDictionary dictionary];
+}
+
++ (FunkyNilStoringNSMutableDictionary *)nilStoringDictionaryWithCapacity:(NSUInteger)capacity
+{
+    return [FunkyNilStoringNSMutableDictionary dictionaryWithCapacity:capacity];
 }
 
 @end

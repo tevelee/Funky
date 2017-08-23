@@ -28,6 +28,26 @@
     XCTAssertTrue([nilStoring isKindOfClass:[NSSet class]]);
 }
 
+- (void)test_nilStoring_constructor
+{
+    NSSet* nilStoring = [NSSet nilStoringSet];
+    XCTAssertTrue([nilStoring isKindOfClass:[FunkyNilStoringNSSet class]]);
+    XCTAssertNotEqual([nilStoring class], [NSSet class]);
+}
+
+- (void)test_nilStoring_mutable_constructor
+{
+    NSSet* nilStoring = [NSMutableSet nilStoringSet];
+    XCTAssertTrue([nilStoring isKindOfClass:[FunkyNilStoringNSMutableSet class]]);
+    XCTAssertNotEqual([nilStoring class], [NSSet class]);
+    XCTAssertNotEqual([nilStoring class], [NSMutableSet class]);
+    
+    nilStoring = [NSMutableSet nilStoringSetWithCapacity:2];
+    XCTAssertTrue([nilStoring isKindOfClass:[FunkyNilStoringNSMutableSet class]]);
+    XCTAssertNotEqual([nilStoring class], [NSSet class]);
+    XCTAssertNotEqual([nilStoring class], [NSMutableSet class]);
+}
+
 - (void)test_setByAddingObject
 {
     NSSet* set = [[NSSet setWithArray:@[]].nilStoring setByAddingObject:@2];
