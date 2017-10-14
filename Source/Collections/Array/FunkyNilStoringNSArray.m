@@ -7,6 +7,7 @@
 //
 
 #import "FunkyNilStoringNSArray.h"
+#import "FunkyNull.h"
 
 #pragma mark - NSArray Subclasses
 
@@ -14,18 +15,18 @@
 
 + (instancetype)arrayWithObject:(id)anObject
 {
-    return [super arrayWithObject:anObject ?: [NSNull null]];
+    return [super arrayWithObject:anObject ?: [FunkyNull null]];
 }
 
 - (NSArray *)arrayByAddingObject:(id)anObject
 {
-    return [self.NSArray arrayByAddingObject:anObject ?: [NSNull null]].nilStoring;
+    return [self.NSArray arrayByAddingObject:anObject ?: [FunkyNull null]].nilStoring;
 }
 
 - (id)objectAtIndex:(NSUInteger)index
 {
     id object = [super objectAtIndex:index];
-    if ([object isEqual:[NSNull null]])
+    if ([object isEqual:[FunkyNull null]])
         return nil;
     else
         return object;
@@ -54,18 +55,18 @@
 
 + (instancetype)arrayWithObject:(id)anObject
 {
-    return [super arrayWithObject:anObject ?: [NSNull null]];
+    return [super arrayWithObject:anObject ?: [FunkyNull null]];
 }
 
 - (NSArray *)arrayByAddingObject:(id)anObject
 {
-    return [self.NSMutableArray arrayByAddingObject:anObject ?: [NSNull null]].nilStoring;
+    return [self.NSMutableArray arrayByAddingObject:anObject ?: [FunkyNull null]].nilStoring;
 }
 
 - (id)objectAtIndex:(NSUInteger)index
 {
     id object = [super objectAtIndex:index];
-    if ([object isEqual:[NSNull null]])
+    if ([object isEqual:[FunkyNull null]])
         return nil;
     else
         return object;
@@ -80,17 +81,17 @@
 
 - (void)addObject:(id)anObject
 {
-    return [super addObject:anObject ?: [NSNull null]];
+    return [super addObject:anObject ?: [FunkyNull null]];
 }
 
 - (void)insertObject:(id)anObject atIndex:(NSUInteger)index
 {
-    [super insertObject:anObject ?: [NSNull null] atIndex:index];
+    [super insertObject:anObject ?: [FunkyNull null] atIndex:index];
 }
 
 - (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject
 {
-    [super replaceObjectAtIndex:index withObject:anObject ?: [NSNull null]];
+    [super replaceObjectAtIndex:index withObject:anObject ?: [FunkyNull null]];
 }
 
 #pragma mark - Counterpart

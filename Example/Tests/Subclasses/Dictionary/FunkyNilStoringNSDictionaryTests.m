@@ -48,6 +48,19 @@
     XCTAssertNotEqual([nilStoring class], [NSMutableDictionary class]);
 }
 
+- (void)test_nilStoring_storesNSNull
+{
+    NSDictionary* nilStoring = @{@"": [NSNull null]}.nilStoring;
+    XCTAssertEqualObjects(nilStoring[@""], [NSNull null]);
+    
+    id nilValue = nil;
+    NSMutableDictionary* nilStoringMutable = [NSMutableDictionary nilStoringDictionary];
+    [nilStoringMutable setObject:nilValue forKey:@"1"];
+    [nilStoringMutable setObject:[NSNull null] forKey:@"2"];
+    XCTAssertNil(nilStoringMutable[@"1"]);
+    XCTAssertEqualObjects(nilStoringMutable[@"2"], [NSNull null]);
+}
+
 - (void)test_dictionaryWithObject
 {
     NSDictionary* dictionary = [FunkyNilStoringNSDictionary dictionaryWithObject:@2 forKey:@2];
@@ -136,12 +149,10 @@
     NSMutableDictionary* dictionary = [FunkyNilStoringNSMutableDictionary dictionaryWithObject:@0 forKey:nilValue];
     [dictionary setObject:@0 forKey:nilValue];
     [dictionary setObject:@3 forKey:@3];
-    
-    NSArray* expected = @[[NSNull null]];
-    XCTAssertEqualObjects([dictionary allKeysForObject:@0], expected);
+    XCTAssertEqual([dictionary allKeysForObject:@0].count, 1);
     
     id copy = [dictionary copy];
-    XCTAssertEqualObjects([copy allKeysForObject:@0], expected);
+    XCTAssertEqual([copy allKeysForObject:@0].count, 1);
 }
 
 - (void)test_mutable

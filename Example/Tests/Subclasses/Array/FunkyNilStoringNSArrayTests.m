@@ -48,6 +48,19 @@
     XCTAssertNotEqual([nilStoring class], [NSMutableArray class]);
 }
 
+- (void)test_nilStoring_storesNSNull
+{
+    NSArray* nilStoring = @[[NSNull null]].nilStoring;
+    XCTAssertEqualObjects(nilStoring[0], [NSNull null]);
+    
+    id nilValue = nil;
+    NSMutableArray* nilStoringMutable = [NSMutableArray nilStoringArray];
+    [nilStoringMutable addObject:nilValue];
+    [nilStoringMutable addObject:[NSNull null]];
+    XCTAssertNil(nilStoringMutable[0]);
+    XCTAssertEqualObjects(nilStoringMutable[1], [NSNull null]);
+}
+
 - (void)test_arrayByAddingObject
 {
     NSArray* array = [@[].nilStoring arrayByAddingObject:@2];

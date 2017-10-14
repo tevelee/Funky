@@ -30,17 +30,17 @@ DESC
     ss.dependency 'FunkyObjC/Core'
 
     ss.subspec 'Array' do |sss|
-      sss.source_files = 'Source/Collections/Array/**/*'
+      sss.source_files = 'Source/Collections/Array/**/*', 'Source/Collections/Common/**/*'
       sss.public_header_files = 'Source/Collections/Array/*.h', 'Source/Collections/Array/**/*.h'
     end
 
     ss.subspec 'Set' do |sss|
-      sss.source_files = 'Source/Collections/Set/**/*'
+      sss.source_files = 'Source/Collections/Set/**/*', 'Source/Collections/Common/**/*'
       sss.public_header_files = 'Source/Collections/Set/*.h', 'Source/Collections/Set/**/*.h'
     end
 
     ss.subspec 'Dictionary' do |sss|
-      sss.source_files = 'Source/Collections/Dictionary/**/*'
+      sss.source_files = 'Source/Collections/Dictionary/**/*', 'Source/Collections/Common/**/*'
       sss.public_header_files = 'Source/Collections/Dictionary/*.h', 'Source/Collections/Dictionary/**/*.h'
     end
   end

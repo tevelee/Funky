@@ -7,23 +7,24 @@
 //
 
 #import "FunkyNilStoringNSSet.h"
+#import "FunkyNull.h"
 
 @implementation FunkyNilStoringNSSet
 
 + (instancetype)setWithObject:(id)object
 {
-    return [super setWithObject:object ?: [NSNull null]];
+    return [super setWithObject:object ?: [FunkyNull null]];
 }
 
 - (NSSet *)setByAddingObject:(id)anObject
 {
-    return [self.NSSet setByAddingObject:anObject ?: [NSNull null]].nilStoring;
+    return [self.NSSet setByAddingObject:anObject ?: [FunkyNull null]].nilStoring;
 }
 
 - (id)anyObject
 {
     id object = [super anyObject];
-    if ([object isEqual:[NSNull null]])
+    if ([object isEqual:[FunkyNull null]])
         return nil;
     else
         return object;
@@ -31,7 +32,7 @@
 
 - (BOOL)containsObject:(id)anObject
 {
-    return [super containsObject:anObject ?: [NSNull null]];
+    return [super containsObject:anObject ?: [FunkyNull null]];
 }
 
 #pragma mark - Counterpart
@@ -57,18 +58,18 @@
 
 + (instancetype)setWithObject:(id)object
 {
-    return [super setWithObject:object ?: [NSNull null]];
+    return [super setWithObject:object ?: [FunkyNull null]];
 }
 
 - (NSSet *)setByAddingObject:(id)anObject
 {
-    return [self.NSMutableSet setByAddingObject:anObject ?: [NSNull null]].nilStoring;
+    return [self.NSMutableSet setByAddingObject:anObject ?: [FunkyNull null]].nilStoring;
 }
 
 - (id)anyObject
 {
     id object = [super anyObject];
-    if ([object isEqual:[NSNull null]])
+    if ([object isEqual:[FunkyNull null]])
         return nil;
     else
         return object;
@@ -76,19 +77,19 @@
 
 - (BOOL)containsObject:(id)anObject
 {
-    return [super containsObject:anObject ?: [NSNull null]];
+    return [super containsObject:anObject ?: [FunkyNull null]];
 }
 
 #pragma mark -
 
 - (void)addObject:(id)anObject
 {
-    return [super addObject:anObject ?: [NSNull null]];
+    return [super addObject:anObject ?: [FunkyNull null]];
 }
 
 - (void)removeObject:(id)object
 {
-    return [super removeObject:object ?: [NSNull null]];
+    return [super removeObject:object ?: [FunkyNull null]];
 }
 
 #pragma mark - Counterpart
