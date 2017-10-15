@@ -143,7 +143,7 @@
  *  @return A list of keys where the condition matches
  *  @see Unprefixed counterpart `-[NSDictionary(FunkyUtilities) keys:]`
  */
-- (NSArray<KeyType>*)funky_keys:(BOOL(^)(id key, id value))block;
+- (NSSet<KeyType>*)funky_keys:(BOOL(^)(id key, id value))block;
 
 /**
  *  Returns all the values where the given predicate matches the elements of the dictionary.
@@ -152,7 +152,7 @@
  *  @return A list of values where the condition matches
  *  @see Unprefixed counterpart `-[NSDictionary(FunkyUtilities) values:]`
  */
-- (NSArray<ObjectType>*)funky_values:(BOOL(^)(id key, id value))block;
+- (NSSet<ObjectType>*)funky_values:(BOOL(^)(id key, id value))block;
 
 @end
 
@@ -163,7 +163,7 @@
  *  @see Unprefixed counterpart `NSMutableDictionary(FunkyUtilities)`
  *  @see Immutable counterpart `NSDictionary(FunkyPrefixedUtilities)`
  */
-@interface NSMutableDictionary<KeyType, ObjectType> (FunkyPrefixedUtilities) <FunkyMutableCollectionWithCapacity>
+@interface NSMutableDictionary<KeyType, ObjectType> (FunkyPrefixedUtilities)
 
 #pragma mark - Merge
 

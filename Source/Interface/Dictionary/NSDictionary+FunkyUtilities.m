@@ -66,12 +66,12 @@
     return [self.utilities reduce:block withInitialValue:start];
 }
 
-- (NSArray*)keys:(BOOL(^)(id key, id value))block
+- (NSSet*)keys:(BOOL(^)(id key, id value))block
 {
     return [self.utilities keys:block];
 }
 
-- (NSArray*)values:(BOOL(^)(id key, id value))block
+- (NSSet*)values:(BOOL(^)(id key, id value))block
 {
     return [self.utilities values:block];
 }

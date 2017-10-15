@@ -249,7 +249,7 @@
  *  @see Unprefixed counterpart `NSMutableSet(FunkyUtilities)`
  *  @see Immutable counterpart `NSSet(FunkyPrefixedUtilities)`
  */
-@interface NSMutableSet <ObjectType> (FunkyPrefixedUtilities) <FunkyMutableCollectionWithCapacity>
+@interface NSMutableSet <ObjectType> (FunkyPrefixedUtilities)
 
 #pragma mark - Set operations
 

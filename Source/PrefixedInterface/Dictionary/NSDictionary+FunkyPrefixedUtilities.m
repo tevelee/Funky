@@ -66,12 +66,12 @@
     return [self.utilities reduce:block withInitialValue:start];
 }
 
-- (NSArray*)funky_keys:(BOOL(^)(id key, id value))block
+- (NSSet*)funky_keys:(BOOL(^)(id key, id value))block
 {
     return [self.utilities keys:block];
 }
 
-- (NSArray*)funky_values:(BOOL(^)(id key, id value))block
+- (NSSet*)funky_values:(BOOL(^)(id key, id value))block
 {
     return [self.utilities values:block];
 }
@@ -79,13 +79,6 @@
 @end
 
 @implementation NSMutableDictionary (FunkyPrefixedUtilities)
-
-#pragma mark - FunkyMutableCollectionWithCapacity
-
-+ (id)newWithCapacity:(NSUInteger)capacity
-{
-    return [self dictionaryWithCapacity:capacity];
-}
 
 #pragma mark - Utilities
 

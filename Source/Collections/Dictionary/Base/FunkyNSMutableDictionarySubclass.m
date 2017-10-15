@@ -29,11 +29,9 @@
 {
     self = [super init];
     
-    if (self == nil) {
-        return nil;
+    if (self) {
+        _backingDictionary = [NSMutableDictionary dictionaryWithCapacity:numItems];
     }
-    
-    _backingDictionary = [NSMutableDictionary dictionaryWithCapacity:numItems];
     
     return self;
 }
@@ -42,11 +40,9 @@
 {
     self = [super init];
     
-    if (self == nil) {
-        return nil;
+    if (self) {
+        _backingDictionary = [NSMutableDictionary dictionaryWithDictionary:dictionary];
     }
-    
-    _backingDictionary = [NSMutableDictionary dictionaryWithDictionary:dictionary];
     
     return self;
 }
@@ -103,21 +99,21 @@
     return [FunkyNSDictionarySubclass class];
 }
 
-#pragma mark - <NSCopying>
+#pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone
 {
     return [[[self.class classForImmutableCounterPart] allocWithZone: zone] initWithDictionary:self];
 }
 
-#pragma mark - <NSMutableCopying>
+#pragma mark - NSMutableCopying
 
 - (id)mutableCopyWithZone:(NSZone *)zone
 {
     return [[[self.class classForMutableCounterPart] allocWithZone: zone] initWithDictionary:self];
 }
 
-#pragma mark - <NSCoding>
+#pragma mark - NSCoding
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-designated-initializers"

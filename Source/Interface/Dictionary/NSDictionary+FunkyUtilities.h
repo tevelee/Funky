@@ -142,7 +142,7 @@
  *  @return A list of keys where the condition matches
  *  @see Prefixed counterpart `-[NSDictionary(FunkyPrefixedUtilities) funky_keys:]`
  */
-- (NSArray<KeyType>*)keys:(BOOL(^)(id key, id value))block;
+- (NSSet<KeyType>*)keys:(BOOL(^)(id key, id value))block;
 
 /**
  *  Returns all the values where the given predicate matches the elements of the dictionary.
@@ -151,7 +151,7 @@
  *  @return A list of values where the condition matches
  *  @see Prefixed counterpart `-[NSDictionary(FunkyPrefixedUtilities) funky_values:]`
  */
-- (NSArray<ObjectType>*)values:(BOOL(^)(id key, id value))block;
+- (NSSet<ObjectType>*)values:(BOOL(^)(id key, id value))block;
 
 @end
 

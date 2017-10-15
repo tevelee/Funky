@@ -60,12 +60,18 @@
 
 - (void)test_setWithObject
 {
-    NSSet* set = [FunkyNilTolerantNSSet setWithObject:@2];
+    NSSet* set = [FunkyNilTolerantNSSet nilTolerantSetWithObject:@2];
     XCTAssertEqual(set.count, 1);
     
     id nilValue = nil;
-    set = [FunkyNilTolerantNSSet setWithObject:nilValue];
+    set = [FunkyNilTolerantNSSet nilTolerantSetWithObject:nilValue];
     XCTAssertEqual(set.count, 0);
+    
+    NSSet* mutable = [FunkyNilTolerantNSMutableSet nilTolerantSetWithObject:@2];
+    XCTAssertEqual(mutable.count, 1);
+    
+    mutable = [FunkyNilTolerantNSMutableSet nilTolerantSetWithObject:nilValue];
+    XCTAssertEqual(mutable.count, 0);
 }
 
 - (void)test_setWithSet
@@ -76,16 +82,6 @@
     
     set = [NSMutableSet nilTolerantSetWithSet:original];
     XCTAssertEqualObjects(set, original);
-}
-
-- (void)test_mutable_setWithObject
-{
-    id nilValue = nil;
-    NSSet* set = [FunkyNilTolerantNSMutableSet setWithObject:nilValue];
-    XCTAssertEqual(set.count, 0);
-    
-    set = [FunkyNilTolerantNSMutableSet setWithObject:@2];
-    XCTAssertEqual(set.count, 1);
 }
 
 - (void)test_mutable_setByAddingObject

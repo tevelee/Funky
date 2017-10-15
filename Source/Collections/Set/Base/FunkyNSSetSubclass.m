@@ -29,11 +29,9 @@
 {
     self = [super init];
     
-    if (self == nil) {
-        return nil;
+    if (self) {
+        _backingSet = [NSSet setWithSet:set];
     }
-    
-    _backingSet = [NSSet setWithSet:set];
     
     return self;
 }
@@ -81,21 +79,21 @@
     return [FunkyNSSetSubclass class];
 }
 
-#pragma mark - <NSCopying>
+#pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone
 {
     return [[[self.class classForImmutableCounterPart] allocWithZone: zone] initWithSet:self];
 }
 
-#pragma mark - <NSMutableCopying>
+#pragma mark - NSMutableCopying
 
 - (id)mutableCopyWithZone:(NSZone *)zone
 {
     return [[[self.class classForMutableCounterPart] allocWithZone: zone] initWithSet:self];
 }
 
-#pragma mark - <NSCoding>
+#pragma mark - NSCoding
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-designated-initializers"

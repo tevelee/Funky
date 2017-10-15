@@ -211,4 +211,13 @@
     XCTAssertEqualObjects(set, normal);
 }
 
+#pragma mark - initWithCoder
+
+- (void)test_initWithCoder {
+    NSMutableData* data = [NSMutableData data];
+    NSCoder* coder = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+    NSSet* set = [[FunkyNSSetSubclass alloc] initWithCoder:coder];
+    XCTAssertNotNil(set);
+}
+
 @end

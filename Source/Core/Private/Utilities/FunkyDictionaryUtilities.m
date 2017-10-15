@@ -125,24 +125,24 @@
     return mutatingValue;
 }
 
-- (NSArray*)keys:(BOOL(^)(id key, id value))block
+- (NSSet*)keys:(BOOL(^)(id key, id value))block
 {
-    NSMutableArray* keys = [NSMutableArray arrayWithCapacity:self.object.count];
+    NSMutableSet* keys = [NSMutableSet setWithCapacity:self.object.count];
     for (id key in self.object) {
         id value = self.object[key];
-        if (!block(key, value)) {
+        if (block(key, value)) {
             [keys addObject:key];
         }
     }
     return keys.copy;
 }
 
-- (NSArray*)values:(BOOL(^)(id key, id value))block
+- (NSSet*)values:(BOOL(^)(id key, id value))block
 {
-    NSMutableArray* values = [NSMutableArray arrayWithCapacity:self.object.count];
+    NSMutableSet* values = [NSMutableSet setWithCapacity:self.object.count];
     for (id key in self.object) {
         id value = self.object[key];
-        if (!block(key, value)) {
+        if (block(key, value)) {
             [values addObject:value];
         }
     }
@@ -162,8 +162,8 @@
 
 - (void)filter:(BOOL(^)(id key, id value))block
 {
-    NSArray* keys = [self keys:block];
-    [self.object removeObjectsForKeys:keys];
+    NSSet* keys = [self keys:block];
+    [self.object removeObjectsForKeys:keys.allObjects];
 }
 
 @end

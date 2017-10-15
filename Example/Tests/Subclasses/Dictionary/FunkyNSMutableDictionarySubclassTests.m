@@ -230,4 +230,17 @@
     XCTAssertEqualObjects(expected, dictionary);
 }
 
+#pragma mark - initWithCoder
+
+- (void)test_initWithCoder {
+    NSDictionary* original = [FunkyNSDictionarySubclass dictionaryWithDictionary:@{@0: @0, @1: @1, @2: @2}];
+    
+    NSData* archived = [NSKeyedArchiver archivedDataWithRootObject:original];
+    NSMutableData* data = archived.mutableCopy;
+    
+    NSCoder* coder = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+    NSDictionary* dictionary = [[FunkyNSMutableDictionarySubclass alloc] initWithCoder:coder];
+    XCTAssertNotNil(dictionary);
+}
+
 @end

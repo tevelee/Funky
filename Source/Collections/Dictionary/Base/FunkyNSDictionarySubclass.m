@@ -29,11 +29,9 @@
 {
     self = [super init];
     
-    if (self == nil) {
-        return nil;
-    }
-    
-    _backingDictionary = [NSDictionary dictionaryWithDictionary:dictionary];
+    if (self) {
+        _backingDictionary = [NSDictionary dictionaryWithDictionary:dictionary];
+    }    
     
     return self;
 }

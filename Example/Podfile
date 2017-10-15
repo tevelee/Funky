@@ -7,8 +7,10 @@ target 'iOS-Example' do
   target 'Tests' do
     inherit! :search_paths
     pod 'OCMock'
-    pod 'Specta'
-    pod 'Expecta'
+  end
+  
+  target 'IntegrationTests' do
+    inherit! :search_paths
   end
 end
 

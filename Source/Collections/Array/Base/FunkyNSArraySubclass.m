@@ -29,11 +29,9 @@
 {
     self = [super init];
     
-    if (self == nil) {
-        return nil;
+    if (self) {
+        _backingArray = [NSArray arrayWithArray:array];
     }
-    
-    _backingArray = [NSArray arrayWithArray:array];
     
     return self;
 }
@@ -76,21 +74,21 @@
     return [FunkyNSArraySubclass class];
 }
 
-#pragma mark - <NSCopying>
+#pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone
 {
     return [[[self.class classForImmutableCounterPart] allocWithZone: zone] initWithArray:self];
 }
 
-#pragma mark - <NSMutableCopying>
+#pragma mark - NSMutableCopying
 
 - (id)mutableCopyWithZone:(NSZone *)zone
 {
     return [[[self.class classForMutableCounterPart] allocWithZone: zone] initWithArray:self];
 }
 
-#pragma mark - <NSCoding>
+#pragma mark - NSCoding
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-designated-initializers"

@@ -28,8 +28,8 @@
 - (NSInteger)count:(BOOL(^)(id key, id value))block;
 - (id)reduce:(id(^)(id previousValue, id key, id value))block withInitialValue:(id)start;
 
-- (NSArray*)keys:(BOOL(^)(id key, id value))block;
-- (NSArray*)values:(BOOL(^)(id key, id value))block;
+- (NSSet*)keys:(BOOL(^)(id key, id value))block;
+- (NSSet*)values:(BOOL(^)(id key, id value))block;
 
 @end
 

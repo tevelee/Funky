@@ -106,4 +106,18 @@
     XCTAssertEqualObjects(result, @"012");
 }
 
+- (void)test_keys {
+    id result = [self.items keys:^BOOL(id key, id value) {
+        return [value isEqualToNumber:@2];
+    }];
+    XCTAssertEqualObjects(result, [NSSet setWithObject:@"c"]);
+}
+
+- (void)test_values {
+    id result = [self.items values:^BOOL(id key, id value) {
+        return [key isEqualToString:@"a"];
+    }];
+    XCTAssertEqualObjects(result, [NSSet setWithObject:@0]);
+}
+
 @end
