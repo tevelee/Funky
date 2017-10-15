@@ -52,7 +52,7 @@
  *  This method creates a new nil-storing collection.
  *
  *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSSet`).
- *  @see Mutable counterpart `-[NSMutableSet(FunkyNilStoring) nilStoringSet]`
+ *  @see Mutable counterpart `+[NSMutableSet(FunkyNilStoring) nilStoringSet]`
  */
 + (FunkyNilStoringNSSet*)nilStoringSet;
 
@@ -61,7 +61,7 @@
  *
  *  @param object The object parameter intended to be stored in the collection
  *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSSet`).
- *  @see Mutable counterpart `-[NSMutableSet(FunkyNilStoring) nilStoringSetWithObject:]`
+ *  @see Mutable counterpart `+[NSMutableSet(FunkyNilStoring) nilStoringSetWithObject:]`
  */
 + (FunkyNilStoringNSSet*)nilStoringSetWithObject:(ObjectType)object;
 
@@ -70,7 +70,7 @@
  *
  *  @param set The items intended to be stored in the collection
  *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSSet`).
- *  @see Mutable counterpart `-[NSMutableSet(FunkyNilStoring) nilStoringSetWithSet:]`
+ *  @see Mutable counterpart `+[NSMutableSet(FunkyNilStoring) nilStoringSetWithSet:]`
  */
 + (FunkyNilStoringNSSet*)nilStoringSetWithSet:(NSSet<ObjectType>*)set;
 
@@ -95,7 +95,7 @@
  *  This method creates a new nil-storing mutable collection.
  *
  *  @return A nil-storing NSMutableSet (a.k.a. `FunkyNilStoringNSMutableSet`).
- *  @see Immutable counterpart `-[NSSet(FunkyNilStoring) nilStoringSet]`
+ *  @see Immutable counterpart `+[NSSet(FunkyNilStoring) nilStoringSet]`
  */
 + (FunkyNilStoringNSMutableSet*)nilStoringSet;
 
@@ -112,7 +112,7 @@
  *
  *  @param object The object parameter intended to be stored in the collection
  *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSMutableSet`).
- *  @see Immutable counterpart `-[NSSet(FunkyNilStoring) nilStoringSetWithObject:]`
+ *  @see Immutable counterpart `+[NSSet(FunkyNilStoring) nilStoringSetWithObject:]`
  */
 + (FunkyNilStoringNSMutableSet*)nilStoringSetWithObject:(ObjectType)object;
 
@@ -121,7 +121,7 @@
  *
  *  @param set The items intended to be stored in the collection
  *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSMutableSet`).
- *  @see Immutable counterpart `-[NSSet(FunkyNilStoring) nilStoringSetWithSet:]`
+ *  @see Immutable counterpart `+[NSSet(FunkyNilStoring) nilStoringSetWithSet:]`
  */
 + (FunkyNilStoringNSMutableSet*)nilStoringSetWithSet:(NSSet<ObjectType>*)set;
 

@@ -52,7 +52,7 @@
  *  This method creates a new nil-tolerant collection.
  *
  *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSSet`).
- *  @see Mutable counterpart `-[NSMutableSet(FunkyNilTolerant) nilTolerantSet]`
+ *  @see Mutable counterpart `+[NSMutableSet(FunkyNilTolerant) nilTolerantSet]`
  */
 + (FunkyNilTolerantNSSet*)nilTolerantSet;
 
@@ -61,7 +61,7 @@
  *
  *  @param object The object parameter intended to be stored in the collection
  *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSSet`).
- *  @see Mutable counterpart `-[NSMutableSet(FunkyNilTolerant) nilTolerantSetWithObject:]`
+ *  @see Mutable counterpart `+[NSMutableSet(FunkyNilTolerant) nilTolerantSetWithObject:]`
  */
 + (FunkyNilTolerantNSSet*)nilTolerantSetWithObject:(ObjectType)object;
 
@@ -70,7 +70,7 @@
  *
  *  @param set The items intended to be stored in the collection
  *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSSet`).
- *  @see Mutable counterpart `-[NSMutableSet(FunkyNilTolerant) nilTolerantSetWithSet:]`
+ *  @see Mutable counterpart `+[NSMutableSet(FunkyNilTolerant) nilTolerantSetWithSet:]`
  */
 + (FunkyNilTolerantNSSet*)nilTolerantSetWithSet:(NSSet<ObjectType>*)set;
 
@@ -95,7 +95,7 @@
  *  This method creates a new nil-tolerant mutable collection.
  *
  *  @return A nil-tolerant NSMutableSet (a.k.a. `FunkyNilTolerantNSMutableSet`).
- *  @see Immutable counterpart `-[NSSet(FunkyNilTolerant) nilTolerantSet]`
+ *  @see Immutable counterpart `+[NSSet(FunkyNilTolerant) nilTolerantSet]`
  */
 + (FunkyNilTolerantNSMutableSet*)nilTolerantSet;
 
@@ -112,7 +112,7 @@
  *
  *  @param object The object parameter intended to be stored in the collection
  *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSMutableSet`).
- *  @see Immutable counterpart `-[NSSet(FunkyNilTolerant) nilTolerantSetWithObject:]`
+ *  @see Immutable counterpart `+[NSSet(FunkyNilTolerant) nilTolerantSetWithObject:]`
  */
 + (FunkyNilTolerantNSMutableSet*)nilTolerantSetWithObject:(ObjectType)object;
 
@@ -121,7 +121,7 @@
  *
  *  @param set The items intended to be stored in the collection
  *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSMutableSet`).
- *  @see Immutable counterpart `-[NSSet(FunkyNilTolerant) nilTolerantSetWithSet:]`
+ *  @see Immutable counterpart `+[NSSet(FunkyNilTolerant) nilTolerantSetWithSet:]`
  */
 + (FunkyNilTolerantNSMutableSet*)nilTolerantSetWithSet:(NSSet<ObjectType>*)set;
 

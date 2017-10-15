@@ -52,7 +52,7 @@
  *  This method creates a new nil-storing collection.
  *
  *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSArray`).
- *  @see Mutable counterpart `-[NSMutableArray(FunkyNilStoring) nilStoringArray]`
+ *  @see Mutable counterpart `+[NSMutableArray(FunkyNilStoring) nilStoringArray]`
  */
 + (FunkyNilStoringNSArray*)nilStoringArray;
 
@@ -61,7 +61,7 @@
  *
  *  @param object The object parameter intended to be stored in the collection
  *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSArray`).
- *  @see Mutable counterpart `-[NSMutableArray(FunkyNilStoring) nilStoringArrayWithObject:]`
+ *  @see Mutable counterpart `+[NSMutableArray(FunkyNilStoring) nilStoringArrayWithObject:]`
  */
 + (FunkyNilStoringNSArray*)nilStoringArrayWithObject:(ObjectType)object;
 
@@ -70,7 +70,7 @@
  *
  *  @param array The items intended to be stored in the collection
  *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSArray`).
- *  @see Mutable counterpart `-[NSMutableArray(FunkyNilStoring) nilStoringArrayWithArray:]`
+ *  @see Mutable counterpart `+[NSMutableArray(FunkyNilStoring) nilStoringArrayWithArray:]`
  */
 + (FunkyNilStoringNSArray*)nilStoringArrayWithArray:(NSArray<ObjectType>*)array;
 
@@ -95,7 +95,7 @@
  *  This method creates a new nil-storing mutable collection.
  *
  *  @return A nil-storing NSMutableArray (a.k.a. `FunkyNilStoringNSMutableArray`).
- *  @see Immutable counterpart `-[NSArray(FunkyNilStoring) nilStoringArray]`
+ *  @see Immutable counterpart `+[NSArray(FunkyNilStoring) nilStoringArray]`
  */
 + (FunkyNilStoringNSMutableArray*)nilStoringArray;
 
@@ -112,7 +112,7 @@
  *
  *  @param object The object parameter intended to be stored in the collection
  *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSMutableArray`).
- *  @see Immutable counterpart `-[NSArray(FunkyNilStoring) nilStoringArrayWithObject:]`
+ *  @see Immutable counterpart `+[NSArray(FunkyNilStoring) nilStoringArrayWithObject:]`
  */
 + (FunkyNilStoringNSMutableArray*)nilStoringArrayWithObject:(ObjectType)object;
 
@@ -121,7 +121,7 @@
  *
  *  @param array The items intended to be stored in the collection
  *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSMutableArray`).
- *  @see Immutable counterpart `-[NSArray(FunkyNilStoring) nilStoringArrayWithArray:]`
+ *  @see Immutable counterpart `+[NSArray(FunkyNilStoring) nilStoringArrayWithArray:]`
  */
 + (FunkyNilStoringNSMutableArray*)nilStoringArrayWithArray:(NSArray<ObjectType>*)array;
 

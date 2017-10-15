@@ -52,7 +52,7 @@
  *  This method creates a new nil-tolerant collection.
  *
  *  @return A nil-tolerant NSDictionary (a.k.a. `FunkyNilTolerantNSDictionary`).
- *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilTolerant) nilTolerantDictionary]`
+ *  @see Mutable counterpart `+[NSMutableDictionary(FunkyNilTolerant) nilTolerantDictionary]`
  */
 + (FunkyNilTolerantNSDictionary*)nilTolerantDictionary;
 
@@ -62,7 +62,7 @@
  *  @param object The object to be stored in the collection
  *  @param key The key under `object` should be put in
  *  @return A nil-tolerant NSDictionary (a.k.a. `FunkyNilTolerantNSDictionary`).
- *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilTolerant) nilTolerantDictionaryWithObject:forKey:]`
+ *  @see Mutable counterpart `+[NSMutableDictionary(FunkyNilTolerant) nilTolerantDictionaryWithObject:forKey:]`
  */
 + (FunkyNilTolerantNSDictionary*)nilTolerantDictionaryWithObject:(ObjectType)object forKey:(KeyType<NSCopying>)key;
 
@@ -70,7 +70,7 @@
  *  This method creates a new nil-tolerant collection, containing the original content of the passed dictionary parameter.
  *
  *  @return A nil-tolerant NSDictionary (a.k.a. `FunkyNilTolerantNSDictionary`).
- *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilTolerant) nilTolerantDictionaryWithDictionary:]`
+ *  @see Mutable counterpart `+[NSMutableDictionary(FunkyNilTolerant) nilTolerantDictionaryWithDictionary:]`
  */
 + (FunkyNilTolerantNSDictionary*)nilTolerantDictionaryWithDictionary:(NSDictionary<KeyType, ObjectType>*)dictionary;
 
@@ -95,7 +95,7 @@
  *  This method creates a new nil-tolerant mutable collection.
  *
  *  @return A nil-tolerant NSMutableDictionary (a.k.a. `FunkyNilTolerantNSMutableDictionary`).
- *  @see Immutable counterpart `-[NSDictionary(FunkyNilTolerant) nilTolerantDictionary]`
+ *  @see Immutable counterpart `+[NSDictionary(FunkyNilTolerant) nilTolerantDictionary]`
  */
 + (FunkyNilTolerantNSMutableDictionary*)nilTolerantDictionary;
 
@@ -113,7 +113,7 @@
  *  @param object The object to be stored in the collection
  *  @param key The key under `object` should be put in
  *  @return A nil-tolerant NSMutableDictionary (a.k.a. `FunkyNilTolerantNSMutableDictionary`).
- *  @see Immutable counterpart `-[NSDictionary(FunkyNilTolerant) nilTolerantDictionaryWithObject:forKey:]`
+ *  @see Immutable counterpart `+[NSDictionary(FunkyNilTolerant) nilTolerantDictionaryWithObject:forKey:]`
  */
 + (FunkyNilTolerantNSMutableDictionary*)nilTolerantDictionaryWithObject:(ObjectType)object forKey:(KeyType<NSCopying>)key;
 
@@ -121,7 +121,7 @@
  *  This method creates a new nil-tolerant mutable collection, containing the original content of the passed dictionary parameter.
  *
  *  @return A nil-tolerant NSMutableDictionary (a.k.a. `FunkyNilTolerantNSMutableDictionary`).
- *  @see Immutable counterpart `-[NSDictionary(FunkyNilTolerant) nilTolerantDictionaryWithDictionary:]`
+ *  @see Immutable counterpart `+[NSDictionary(FunkyNilTolerant) nilTolerantDictionaryWithDictionary:]`
  */
 + (FunkyNilTolerantNSMutableDictionary*)nilTolerantDictionaryWithDictionary:(NSDictionary<KeyType, ObjectType>*)dictionary;
 
