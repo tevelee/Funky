@@ -38,7 +38,7 @@
  *
  *  @see Mutable counterpart `NSMutableArray(FunkyNilStoring)`
  */
-@interface NSArray (FunkyNilStoring)
+@interface NSArray<ObjectType> (FunkyNilStoring)
 
 /**
  *  This method converts the regular NSArray into a nil-storing collection, with the same content.
@@ -56,6 +56,24 @@
  */
 + (FunkyNilStoringNSArray*)nilStoringArray;
 
+/**
+ *  This method creates a new nil-storing collection, containing the given object parameter.
+ *
+ *  @param object The object parameter intended to be stored in the collection
+ *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSArray`).
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyNilStoring) nilStoringArrayWithObject:]`
+ */
++ (FunkyNilStoringNSArray*)nilStoringArrayWithObject:(ObjectType)object;
+
+/**
+ *  This method creates a new nil-storing collection, containing the original content of the passed array parameter.
+ *
+ *  @param array The items intended to be stored in the collection
+ *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSArray`).
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyNilStoring) nilStoringArrayWithArray:]`
+ */
++ (FunkyNilStoringNSArray*)nilStoringArrayWithArray:(NSArray<ObjectType>*)array;
+
 @end
 
 /**
@@ -63,7 +81,7 @@
  *
  *  @see Immutable counterpart `NSArray(FunkyNilStoring)`
  */
-@interface NSMutableArray (FunkyNilStoring)
+@interface NSMutableArray<ObjectType> (FunkyNilStoring)
 
 /**
  *  This method converts the regular NSMutableArray into a nil-storing collection, with the same content.
@@ -88,5 +106,23 @@
  *  @return A nil-storing NSMutableArray (a.k.a. `FunkyNilStoringNSMutableArray`) with the given `capacity`.
  */
 + (FunkyNilStoringNSMutableArray *)nilStoringArrayWithCapacity:(NSUInteger)capacity;
+
+/**
+ *  This method creates a new nil-storing collection, containing the given object parameter.
+ *
+ *  @param object The object parameter intended to be stored in the collection
+ *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSMutableArray`).
+ *  @see Immutable counterpart `-[NSArray(FunkyNilStoring) nilStoringArrayWithObject:]`
+ */
++ (FunkyNilStoringNSMutableArray*)nilStoringArrayWithObject:(ObjectType)object;
+
+/**
+ *  This method creates a new nil-storing collection, containing the original content of the passed array parameter.
+ *
+ *  @param array The items intended to be stored in the collection
+ *  @return A nil-storing NSArray (a.k.a. `FunkyNilStoringNSMutableArray`).
+ *  @see Immutable counterpart `-[NSArray(FunkyNilStoring) nilStoringArrayWithArray:]`
+ */
++ (FunkyNilStoringNSMutableArray*)nilStoringArrayWithArray:(NSArray<ObjectType>*)array;
 
 @end

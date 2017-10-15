@@ -38,7 +38,7 @@
  *
  *  @see Mutable counterpart `NSMutableSet(FunkyNilStoring)`
  */
-@interface NSSet (FunkyNilStoring)
+@interface NSSet<ObjectType> (FunkyNilStoring)
 
 /**
  *  This method converts the regular NSSet into a nil-storing collection, with the same content.
@@ -56,6 +56,24 @@
  */
 + (FunkyNilStoringNSSet*)nilStoringSet;
 
+/**
+ *  This method creates a new nil-storing collection, containing the given object parameter.
+ *
+ *  @param object The object parameter intended to be stored in the collection
+ *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSSet`).
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyNilStoring) nilStoringSetWithObject:]`
+ */
++ (FunkyNilStoringNSSet*)nilStoringSetWithObject:(ObjectType)object;
+
+/**
+ *  This method creates a new nil-storing collection, containing the original content of the passed set parameter.
+ *
+ *  @param set The items intended to be stored in the collection
+ *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSSet`).
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyNilStoring) nilStoringSetWithSet:]`
+ */
++ (FunkyNilStoringNSSet*)nilStoringSetWithSet:(NSSet<ObjectType>*)set;
+
 @end
 
 /**
@@ -63,7 +81,7 @@
  *
  *  @see Immutable counterpart `NSSet(FunkyNilStoring)`
  */
-@interface NSMutableSet (FunkyNilStoring)
+@interface NSMutableSet<ObjectType> (FunkyNilStoring)
 
 /**
  *  This method converts the regular NSMutableSet into a nil-storing collection, with the same content.
@@ -88,5 +106,23 @@
  *  @return A nil-storing NSMutableSet (a.k.a. `FunkyNilStoringNSMutableSet`) with the given `capacity`.
  */
 + (FunkyNilStoringNSMutableSet *)nilStoringSetWithCapacity:(NSUInteger)capacity;
+
+/**
+ *  This method creates a new nil-storing collection, containing the given object parameter.
+ *
+ *  @param object The object parameter intended to be stored in the collection
+ *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSMutableSet`).
+ *  @see Immutable counterpart `-[NSSet(FunkyNilStoring) nilStoringSetWithObject:]`
+ */
++ (FunkyNilStoringNSMutableSet*)nilStoringSetWithObject:(ObjectType)object;
+
+/**
+ *  This method creates a new nil-storing collection, containing the original content of the passed set parameter.
+ *
+ *  @param set The items intended to be stored in the collection
+ *  @return A nil-storing NSSet (a.k.a. `FunkyNilStoringNSMutableSet`).
+ *  @see Immutable counterpart `-[NSSet(FunkyNilStoring) nilStoringSetWithSet:]`
+ */
++ (FunkyNilStoringNSMutableSet*)nilStoringSetWithSet:(NSSet<ObjectType>*)set;
 
 @end

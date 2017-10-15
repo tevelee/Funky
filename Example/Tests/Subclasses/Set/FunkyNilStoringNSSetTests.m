@@ -35,9 +35,9 @@
     XCTAssertNotEqual([nilStoring class], [NSSet class]);
 }
 
-- (void)test_nilStoring_mutable_constructor
+- (void)test_mutable_constructor
 {
-    NSSet* nilStoring = [NSMutableSet nilStoringSet];
+    NSMutableSet* nilStoring = [NSMutableSet nilStoringSet];
     XCTAssertTrue([nilStoring isKindOfClass:[FunkyNilStoringNSMutableSet class]]);
     XCTAssertNotEqual([nilStoring class], [NSSet class]);
     XCTAssertNotEqual([nilStoring class], [NSMutableSet class]);
@@ -48,7 +48,7 @@
     XCTAssertNotEqual([nilStoring class], [NSMutableSet class]);
 }
 
-- (void)test_nilStoring_storesNSNull
+- (void)test_storesNSNull
 {
     NSSet* nilStoring = [NSSet setWithArray:@[[NSNull null]]].nilStoring;
     XCTAssertEqualObjects(nilStoring.anyObject, [NSNull null]);
@@ -86,8 +86,20 @@
 
 - (void)test_setWithObject
 {
-    NSSet* set = [FunkyNilStoringNSSet setWithObject:@2];
+    NSSet* set = [NSSet nilStoringSetWithObject:@2];
     XCTAssertTrue([set member:@2]);
+    
+    id nilValue = nil;
+    set = [NSSet nilStoringSetWithObject:nilValue];
+    XCTAssertEqual(set.count, 1);
+    XCTAssertNil(set.anyObject);
+    
+    NSMutableSet* mutable = [NSMutableSet nilStoringSetWithObject:@2];
+    XCTAssertEqualObjects(mutable.anyObject, @2);
+    
+    mutable = [NSMutableSet nilStoringSetWithObject:nilValue];
+    XCTAssertNil(mutable.anyObject);
+    XCTAssertEqual(mutable.count, 1);
 }
 
 - (void)test_member
@@ -101,15 +113,14 @@
     XCTAssertNil(set.anyObject);
 }
 
-- (void)test_mutable_setWithObject
+- (void)test_setWithSet
 {
-    id nilValue = nil;
-    NSSet* set = [FunkyNilStoringNSMutableSet setWithObject:nilValue];
-    XCTAssertEqual(set.count, 1);
-    XCTAssertNil(set.anyObject);
+    NSSet* original = [NSSet setWithObject:@"1"];
+    NSSet* set = [NSSet nilStoringSetWithSet:original];
+    XCTAssertEqualObjects(set, original);
     
-    set = [FunkyNilStoringNSMutableSet setWithObject:@2];
-    XCTAssertEqual(set.count, 1);
+    set = [NSMutableSet nilStoringSetWithSet:original];
+    XCTAssertEqualObjects(set, original);
 }
 
 - (void)test_mutable_setByAddingObject

@@ -104,6 +104,16 @@
     return [FunkyNilStoringNSDictionary dictionary];
 }
 
++ (FunkyNilStoringNSDictionary *)nilStoringDictionaryWithObject:(id)object forKey:(id<NSCopying>)key
+{
+    return [FunkyNilStoringNSDictionary dictionaryWithObject:object forKey:key];
+}
+
++ (FunkyNilStoringNSDictionary *)nilStoringDictionaryWithDictionary:(NSDictionary *)dictionary
+{
+    return [FunkyNilStoringNSDictionary dictionaryWithDictionary:dictionary];
+}
+
 @end
 
 @implementation NSMutableDictionary (FunkyNilStoring)
@@ -121,6 +131,16 @@
 + (FunkyNilStoringNSMutableDictionary *)nilStoringDictionaryWithCapacity:(NSUInteger)capacity
 {
     return [FunkyNilStoringNSMutableDictionary dictionaryWithCapacity:capacity];
+}
+
++ (FunkyNilStoringNSMutableDictionary *)nilStoringDictionaryWithObject:(id)object forKey:(id<NSCopying>)key
+{
+    return [FunkyNilStoringNSMutableDictionary dictionaryWithObject:object forKey:key];
+}
+
++ (FunkyNilStoringNSMutableDictionary *)nilStoringDictionaryWithDictionary:(NSDictionary *)dictionary
+{
+    return [FunkyNilStoringNSMutableDictionary dictionaryWithDictionary:dictionary];
 }
 
 @end

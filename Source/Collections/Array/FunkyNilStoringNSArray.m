@@ -127,6 +127,16 @@
     return [FunkyNilStoringNSArray array];
 }
 
++ (FunkyNilStoringNSArray *)nilStoringArrayWithObject:(id)object
+{
+    return [FunkyNilStoringNSArray arrayWithObject:object];
+}
+
++ (FunkyNilStoringNSArray *)nilStoringArrayWithArray:(NSArray *)array
+{
+    return [FunkyNilStoringNSArray arrayWithArray:array];
+}
+
 @end
 
 @implementation NSMutableArray (FunkyNilStoring)
@@ -144,6 +154,16 @@
 + (FunkyNilStoringNSMutableArray *)nilStoringArrayWithCapacity:(NSUInteger)capacity
 {
     return [FunkyNilStoringNSMutableArray arrayWithCapacity:capacity];
+}
+
++ (FunkyNilStoringNSMutableArray *)nilStoringArrayWithObject:(id)object
+{
+    return [FunkyNilStoringNSMutableArray arrayWithObject:object];
+}
+
++ (FunkyNilStoringNSMutableArray *)nilStoringArrayWithArray:(NSArray *)array
+{
+    return [FunkyNilStoringNSMutableArray arrayWithArray:array];
 }
 
 @end

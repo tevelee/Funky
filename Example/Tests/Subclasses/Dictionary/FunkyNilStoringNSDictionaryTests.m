@@ -63,32 +63,38 @@
 
 - (void)test_dictionaryWithObject
 {
-    NSDictionary* dictionary = [FunkyNilStoringNSDictionary dictionaryWithObject:@2 forKey:@2];
+    NSDictionary* dictionary = [NSDictionary nilStoringDictionaryWithObject:@2 forKey:@2];
     XCTAssertEqual(dictionary.count, 1);
     
     id nilValue = nil;
-    dictionary = [FunkyNilStoringNSDictionary dictionaryWithObject:@1 forKey:nilValue];
+    dictionary = [NSDictionary nilStoringDictionaryWithObject:@1 forKey:nilValue];
     XCTAssertEqual(dictionary.count, 1);
     XCTAssertEqualObjects([dictionary objectForKey:nilValue], @1);
     
-    dictionary = [FunkyNilStoringNSDictionary dictionaryWithObject:nilValue forKey:@1];
+    dictionary = [NSDictionary nilStoringDictionaryWithObject:nilValue forKey:@1];
     XCTAssertEqual(dictionary.count, 1);
     XCTAssertNil([dictionary objectForKey:@1]);
     
-    dictionary = [FunkyNilStoringNSDictionary dictionaryWithObject:nilValue forKey:nilValue];
-    XCTAssertEqual(dictionary.count, 1);
-    XCTAssertNil([dictionary objectForKey:nilValue]);
-}
-
-- (void)test_mutable_dictionaryWithObject
-{
-    id nilValue = nil;
-    NSDictionary* dictionary = [FunkyNilStoringNSMutableDictionary dictionaryWithObject:nilValue forKey:nilValue];
+    dictionary = [NSDictionary nilStoringDictionaryWithObject:nilValue forKey:nilValue];
     XCTAssertEqual(dictionary.count, 1);
     XCTAssertNil([dictionary objectForKey:nilValue]);
     
-    dictionary = [FunkyNilStoringNSMutableDictionary dictionaryWithObject:@2 forKey:@2];
-    XCTAssertEqual(dictionary.count, 1);
+    NSMutableDictionary* mutable = [NSMutableDictionary nilStoringDictionaryWithObject:nilValue forKey:nilValue];
+    XCTAssertEqual(mutable.count, 1);
+    XCTAssertNil([mutable objectForKey:nilValue]);
+    
+    mutable = [NSMutableDictionary nilStoringDictionaryWithObject:@2 forKey:@2];
+    XCTAssertEqual(mutable.count, 1);
+}
+
+- (void)test_dictionaryWithDictionary
+{
+    NSDictionary* original = @{@"a": @"1", @"b": @"2"};
+    NSDictionary* dictionary = [NSDictionary nilStoringDictionaryWithDictionary:original];
+    XCTAssertEqualObjects(dictionary, original);
+    
+    dictionary = [NSMutableDictionary nilStoringDictionaryWithDictionary:original];
+    XCTAssertEqualObjects(dictionary, original);
 }
 
 - (void)test_mutable_add

@@ -38,7 +38,7 @@
  *
  *  @see Mutable counterpart `NSMutableDictionary(FunkyNilStoring)`
  */
-@interface NSDictionary (FunkyNilStoring)
+@interface NSDictionary<KeyType, ObjectType> (FunkyNilStoring)
 
 /**
  *  This method converts the regular NSDictionary into a nil-storing collection, with the same content.
@@ -56,6 +56,24 @@
  */
 + (FunkyNilStoringNSDictionary*)nilStoringDictionary;
 
+/**
+ *  This method creates a new nil-storing collection, containing the given object parameter under the specified key.
+ *
+ *  @param object The object to be stored in the collection
+ *  @param key The key under `object` should be put in
+ *  @return A nil-storing NSDictionary (a.k.a. `FunkyNilStoringNSDictionary`).
+ *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilStoring) nilStoringDictionaryWithObject:forKey:]`
+ */
++ (FunkyNilStoringNSDictionary*)nilStoringDictionaryWithObject:(ObjectType)object forKey:(KeyType<NSCopying>)key;
+
+/**
+ *  This method creates a new nil-storing collection, containing the original content of the passed dictionary parameter.
+ *
+ *  @return A nil-storing NSDictionary (a.k.a. `FunkyNilStoringNSDictionary`).
+ *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilStoring) nilStoringDictionaryWithDictionary:]`
+ */
++ (FunkyNilStoringNSDictionary*)nilStoringDictionaryWithDictionary:(NSDictionary<KeyType, ObjectType>*)dictionary;
+
 @end
 
 /**
@@ -63,7 +81,7 @@
  *
  *  @see Immutable counterpart `NSDictionary(FunkyNilStoring)`
  */
-@interface NSMutableDictionary (FunkyNilStoring)
+@interface NSMutableDictionary<KeyType, ObjectType> (FunkyNilStoring)
 
 /**
  *  This method converts the regular NSMutableDictionary into a nil-storing collection, with the same content.
@@ -87,6 +105,24 @@
  *  @param capacity The desired capacity of the collection
  *  @return A nil-storing NSMutableDictionary (a.k.a. `FunkyNilStoringNSMutableDictionary`) with the given `capacity`.
  */
-+ (FunkyNilStoringNSMutableDictionary *)nilStoringDictionaryWithCapacity:(NSUInteger)capacity;
++ (FunkyNilStoringNSMutableDictionary*)nilStoringDictionaryWithCapacity:(NSUInteger)capacity;
+
+/**
+ *  This method creates a new nil-storing mutable collection, containing the given object parameter under the specified key.
+ *
+ *  @param object The object to be stored in the collection
+ *  @param key The key under `object` should be put in
+ *  @return A nil-storing NSMutableDictionary (a.k.a. `FunkyNilStoringNSMutableDictionary`).
+ *  @see Immutable counterpart `-[NSDictionary(FunkyNilStoring) nilStoringDictionaryWithObject:forKey:]`
+ */
++ (FunkyNilStoringNSMutableDictionary*)nilStoringDictionaryWithObject:(ObjectType)object forKey:(KeyType<NSCopying>)key;
+
+/**
+ *  This method creates a new nil-storing mutable collection, containing the original content of the passed dictionary parameter.
+ *
+ *  @return A nil-storing NSMutableDictionary (a.k.a. `FunkyNilStoringNSMutableDictionary`).
+ *  @see Immutable counterpart `-[NSDictionary(FunkyNilStoring) nilStoringDictionaryWithDictionary:]`
+ */
++ (FunkyNilStoringNSMutableDictionary*)nilStoringDictionaryWithDictionary:(NSDictionary<KeyType, ObjectType>*)dictionary;
 
 @end
