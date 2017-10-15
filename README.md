@@ -59,7 +59,7 @@ bigNumbers = [numbers filter:^BOOL(NSNumber* item) {
 }];
 ```
 
-**For the full list of utils, please check out [tevelee.github.io/Funky](https://tevelee.github.io/Funky)**
+**[Click here for the full list of utils](https://tevelee.github.io/Funky/Categories/NSArray(FunkyUtilities).html), or visit [tevelee.github.io/Funky](https://tevelee.github.io/Funky) for a detailed documentation**
 
 The framework includes some cool nil-tolerant collection behaviours as well:
 
