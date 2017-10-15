@@ -38,7 +38,7 @@
  *
  *  @see Mutable counterpart `NSMutableArray(FunkyNilTolerant)`
  */
-@interface NSArray (FunkyNilTolerant)
+@interface NSArray<ObjectType> (FunkyNilTolerant)
 
 /**
  *  This method converts the regular NSArray into a nil-tolerant collection, with the same content.
@@ -56,6 +56,24 @@
  */
 + (FunkyNilTolerantNSArray*)nilTolerantArray;
 
+/**
+ *  This method creates a new nil-tolerant collection, containing the given object parameter.
+ *
+ *  @param object The object parameter intended to be stored in the collection
+ *  @return A nil-tolerant NSArray (a.k.a. `FunkyNilTolerantNSArray`).
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyNilTolerant) nilTolerantArrayWithObject:]`
+ */
++ (FunkyNilTolerantNSArray*)nilTolerantArrayWithObject:(ObjectType)object;
+
+/**
+ *  This method creates a new nil-tolerant collection, containing the original content of the passed array parameter.
+ *
+ *  @param array The items intended to be stored in the collection
+ *  @return A nil-tolerant NSArray (a.k.a. `FunkyNilTolerantNSArray`).
+ *  @see Mutable counterpart `-[NSMutableArray(FunkyNilTolerant) nilTolerantArrayWithArray:]`
+ */
++ (FunkyNilTolerantNSArray*)nilTolerantArrayWithArray:(NSArray<ObjectType>*)array;
+
 @end
 
 /**
@@ -63,7 +81,7 @@
  *
  *  @see Immutable counterpart `NSArray(FunkyNilTolerant)`
  */
-@interface NSMutableArray (FunkyNilTolerant)
+@interface NSMutableArray<ObjectType> (FunkyNilTolerant)
 
 /**
  *  This method converts the regular NSMutableArray into a nil-tolerant collection, with the same content.
@@ -88,5 +106,23 @@
  *  @return A nil-tolerant NSMutableArray (a.k.a. `FunkyNilTolerantNSMutableArray`) with the given `capacity`.
  */
 + (FunkyNilTolerantNSMutableArray *)nilTolerantArrayWithCapacity:(NSUInteger)capacity;
+
+/**
+ *  This method creates a new nil-tolerant collection, containing the given object parameter.
+ *
+ *  @param object The object parameter intended to be stored in the collection
+ *  @return A nil-tolerant NSArray (a.k.a. `FunkyNilTolerantNSMutableArray`).
+ *  @see Immutable counterpart `-[NSArray(FunkyNilTolerant) nilTolerantArrayWithObject:]`
+ */
++ (FunkyNilTolerantNSMutableArray*)nilTolerantArrayWithObject:(ObjectType)object;
+
+/**
+ *  This method creates a new nil-tolerant collection, containing the original content of the passed array parameter.
+ *
+ *  @param array The items intended to be stored in the collection
+ *  @return A nil-tolerant NSArray (a.k.a. `FunkyNilTolerantNSMutableArray`).
+ *  @see Immutable counterpart `-[NSArray(FunkyNilTolerant) nilTolerantArrayWithArray:]`
+ */
++ (FunkyNilTolerantNSMutableArray*)nilTolerantArrayWithArray:(NSArray<ObjectType>*)array;
 
 @end

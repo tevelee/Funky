@@ -38,7 +38,7 @@
  *
  *  @see Mutable counterpart `NSMutableSet(FunkyNilTolerant)`
  */
-@interface NSSet (FunkyNilTolerant)
+@interface NSSet<ObjectType> (FunkyNilTolerant)
 
 /**
  *  This method converts the regular NSSet into a nil-tolerant collection, with the same content.
@@ -56,6 +56,24 @@
  */
 + (FunkyNilTolerantNSSet*)nilTolerantSet;
 
+/**
+ *  This method creates a new nil-tolerant collection, containing the given object parameter.
+ *
+ *  @param object The object parameter intended to be stored in the collection
+ *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSSet`).
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyNilTolerant) nilTolerantSetWithObject:]`
+ */
++ (FunkyNilTolerantNSSet*)nilTolerantSetWithObject:(ObjectType)object;
+
+/**
+ *  This method creates a new nil-tolerant collection, containing the original content of the passed set parameter.
+ *
+ *  @param set The items intended to be stored in the collection
+ *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSSet`).
+ *  @see Mutable counterpart `-[NSMutableSet(FunkyNilTolerant) nilTolerantSetWithSet:]`
+ */
++ (FunkyNilTolerantNSSet*)nilTolerantSetWithSet:(NSSet<ObjectType>*)set;
+
 @end
 
 /**
@@ -63,7 +81,7 @@
  *
  *  @see Immutable counterpart `NSSet(FunkyNilTolerant)`
  */
-@interface NSMutableSet (FunkyNilTolerant)
+@interface NSMutableSet<ObjectType> (FunkyNilTolerant)
 
 /**
  *  This method converts the regular NSMutableSet into a nil-tolerant collection, with the same content.
@@ -87,6 +105,24 @@
  *  @param capacity The desired capacity of the collection
  *  @return A nil-tolerant NSMutableSet (a.k.a. `FunkyNilTolerantNSMutableSet`) with the given `capacity`.
  */
-+ (FunkyNilTolerantNSMutableSet *)nilTolerantSetWithCapacity:(NSUInteger)capacity;
++ (FunkyNilTolerantNSMutableSet*)nilTolerantSetWithCapacity:(NSUInteger)capacity;
+
+/**
+ *  This method creates a new nil-tolerant collection, containing the given object parameter.
+ *
+ *  @param object The object parameter intended to be stored in the collection
+ *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSMutableSet`).
+ *  @see Immutable counterpart `-[NSSet(FunkyNilTolerant) nilTolerantSetWithObject:]`
+ */
++ (FunkyNilTolerantNSMutableSet*)nilTolerantSetWithObject:(ObjectType)object;
+
+/**
+ *  This method creates a new nil-tolerant collection, containing the original content of the passed set parameter.
+ *
+ *  @param set The items intended to be stored in the collection
+ *  @return A nil-tolerant NSSet (a.k.a. `FunkyNilTolerantNSMutableSet`).
+ *  @see Immutable counterpart `-[NSSet(FunkyNilTolerant) nilTolerantSetWithSet:]`
+ */
++ (FunkyNilTolerantNSMutableSet*)nilTolerantSetWithSet:(NSSet<ObjectType>*)set;
 
 @end

@@ -105,7 +105,7 @@
  *  @param capacity The desired capacity of the collection
  *  @return A nil-storing NSMutableSet (a.k.a. `FunkyNilStoringNSMutableSet`) with the given `capacity`.
  */
-+ (FunkyNilStoringNSMutableSet *)nilStoringSetWithCapacity:(NSUInteger)capacity;
++ (FunkyNilStoringNSMutableSet*)nilStoringSetWithCapacity:(NSUInteger)capacity;
 
 /**
  *  This method creates a new nil-storing collection, containing the given object parameter.

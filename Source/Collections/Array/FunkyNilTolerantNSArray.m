@@ -118,6 +118,16 @@
     return [FunkyNilTolerantNSArray array];
 }
 
++ (FunkyNilTolerantNSArray *)nilTolerantArrayWithObject:(id)object
+{
+    return [FunkyNilTolerantNSArray arrayWithObject:object];
+}
+
++ (FunkyNilTolerantNSArray *)nilTolerantArrayWithArray:(NSArray *)array
+{
+    return [FunkyNilTolerantNSArray arrayWithArray:array];
+}
+
 @end
 
 @implementation NSMutableArray (FunkyNilTolerant)
@@ -135,6 +145,16 @@
 + (FunkyNilTolerantNSMutableArray *)nilTolerantArrayWithCapacity:(NSUInteger)capacity
 {
     return [FunkyNilTolerantNSMutableArray arrayWithCapacity:capacity];
+}
+
++ (FunkyNilTolerantNSMutableArray *)nilTolerantArrayWithObject:(id)object
+{
+    return [FunkyNilTolerantNSMutableArray arrayWithObject:object];
+}
+
++ (FunkyNilTolerantNSMutableArray *)nilTolerantArrayWithArray:(NSArray *)array
+{
+    return [FunkyNilTolerantNSMutableArray arrayWithArray:array];
 }
 
 @end

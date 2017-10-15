@@ -68,6 +68,16 @@
     XCTAssertEqual(set.count, 0);
 }
 
+- (void)test_setWithSet
+{
+    NSSet* original = [NSSet setWithObject:@"1"];
+    NSSet* set = [NSSet nilTolerantSetWithSet:original];
+    XCTAssertEqualObjects(set, original);
+    
+    set = [NSMutableSet nilTolerantSetWithSet:original];
+    XCTAssertEqualObjects(set, original);
+}
+
 - (void)test_mutable_setWithObject
 {
     id nilValue = nil;

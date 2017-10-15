@@ -50,22 +50,28 @@
 
 - (void)test_dictionaryWithObject
 {
-    NSDictionary* dictionary = [FunkyNilTolerantNSDictionary dictionaryWithObject:@2 forKey:@2];
+    NSDictionary* dictionary = [NSDictionary nilTolerantDictionaryWithObject:@2 forKey:@2];
     XCTAssertEqual(dictionary.count, 1);
     
     id nilValue = nil;
-    dictionary = [FunkyNilTolerantNSDictionary dictionaryWithObject:nilValue forKey:nilValue];
+    dictionary = [NSDictionary nilTolerantDictionaryWithObject:nilValue forKey:nilValue];
     XCTAssertEqual(dictionary.count, 0);
+
+    NSDictionary* mutable = [NSMutableDictionary nilTolerantDictionaryWithObject:nilValue forKey:nilValue];
+    XCTAssertEqual(mutable.count, 0);
+    
+    mutable = [NSMutableDictionary nilTolerantDictionaryWithObject:@2 forKey:@2];
+    XCTAssertEqual(mutable.count, 1);
 }
 
-- (void)test_mutable_dictionaryWithObject
+- (void)test_dictionaryWithDictionary
 {
-    id nilValue = nil;
-    NSDictionary* dictionary = [FunkyNilTolerantNSMutableDictionary dictionaryWithObject:nilValue forKey:nilValue];
-    XCTAssertEqual(dictionary.count, 0);
+    NSDictionary* original = @{@"a": @"1", @"b": @"2"};
+    NSDictionary* dictionary = [NSDictionary nilTolerantDictionaryWithDictionary:original];
+    XCTAssertEqualObjects(dictionary, original);
     
-    dictionary = [FunkyNilTolerantNSMutableDictionary dictionaryWithObject:@2 forKey:@2];
-    XCTAssertEqual(dictionary.count, 1);
+    dictionary = [NSMutableDictionary nilTolerantDictionaryWithDictionary:original];
+    XCTAssertEqualObjects(dictionary, original);
 }
 
 - (void)test_mutable_add

@@ -60,22 +60,28 @@
 
 - (void)test_arrayWithObject
 {
-    NSArray* array = [FunkyNilTolerantNSArray arrayWithObject:@2];
+    NSArray* array = [NSArray nilTolerantArrayWithObject:@2];
     XCTAssertEqual(array.count, 1);
     
     id nilValue = nil;
-    array = [FunkyNilTolerantNSArray arrayWithObject:nilValue];
+    array = [NSArray nilTolerantArrayWithObject:nilValue];
     XCTAssertEqual(array.count, 0);
+
+    NSMutableArray* mutable = [NSMutableArray nilTolerantArrayWithObject:@2];
+    XCTAssertEqual(mutable.count, 1);
+    
+    mutable = [NSMutableArray nilTolerantArrayWithObject:nilValue];
+    XCTAssertEqual(mutable.count, 0);
 }
 
-- (void)test_mutable_arrayWithObject
+- (void)test_arrayWithArray
 {
-    id nilValue = nil;
-    NSArray* array = [FunkyNilTolerantNSMutableArray arrayWithObject:nilValue];
-    XCTAssertEqual(array.count, 0);
+    NSArray* original = @[@"1", @"2"];
+    NSArray* array = [NSArray nilTolerantArrayWithArray:original];
+    XCTAssertEqualObjects(array, original);
     
-    array = [FunkyNilTolerantNSMutableArray arrayWithObject:@2];
-    XCTAssertEqual(array.count, 1);
+    array = [NSMutableArray nilTolerantArrayWithArray:original];
+    XCTAssertEqualObjects(array, original);
 }
 
 - (void)test_mutable_arrayByAddingObject

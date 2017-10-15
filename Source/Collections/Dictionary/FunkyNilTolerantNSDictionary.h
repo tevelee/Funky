@@ -38,7 +38,7 @@
  *
  *  @see Mutable counterpart `NSMutableDictionary(FunkyNilTolerant)`
  */
-@interface NSDictionary (FunkyNilTolerant)
+@interface NSDictionary<KeyType, ObjectType> (FunkyNilTolerant)
 
 /**
  *  This method converts the regular NSDictionary into a nil-tolerant collection, with the same content.
@@ -56,6 +56,24 @@
  */
 + (FunkyNilTolerantNSDictionary*)nilTolerantDictionary;
 
+/**
+ *  This method creates a new nil-tolerant collection, containing the given object parameter under the specified key.
+ *
+ *  @param object The object to be stored in the collection
+ *  @param key The key under `object` should be put in
+ *  @return A nil-tolerant NSDictionary (a.k.a. `FunkyNilTolerantNSDictionary`).
+ *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilTolerant) nilTolerantDictionaryWithObject:forKey:]`
+ */
++ (FunkyNilTolerantNSDictionary*)nilTolerantDictionaryWithObject:(ObjectType)object forKey:(KeyType<NSCopying>)key;
+
+/**
+ *  This method creates a new nil-tolerant collection, containing the original content of the passed dictionary parameter.
+ *
+ *  @return A nil-tolerant NSDictionary (a.k.a. `FunkyNilTolerantNSDictionary`).
+ *  @see Mutable counterpart `-[NSMutableDictionary(FunkyNilTolerant) nilTolerantDictionaryWithDictionary:]`
+ */
++ (FunkyNilTolerantNSDictionary*)nilTolerantDictionaryWithDictionary:(NSDictionary<KeyType, ObjectType>*)dictionary;
+
 @end
 
 /**
@@ -63,7 +81,7 @@
  *
  *  @see Immutable counterpart `NSDictionary(FunkyNilTolerant)`
  */
-@interface NSMutableDictionary (FunkyNilTolerant)
+@interface NSMutableDictionary<KeyType, ObjectType> (FunkyNilTolerant)
 
 /**
  *  This method converts the regular NSMutableDictionary into a nil-tolerant collection, with the same content.
@@ -87,6 +105,24 @@
  *  @param capacity The desired capacity of the collection
  *  @return A nil-tolerant NSMutableDictionary (a.k.a. `FunkyNilTolerantNSMutableDictionary`) with the given `capacity`.
  */
-+ (FunkyNilTolerantNSMutableDictionary *)nilTolerantDictionaryWithCapacity:(NSUInteger)capacity;
++ (FunkyNilTolerantNSMutableDictionary*)nilTolerantDictionaryWithCapacity:(NSUInteger)capacity;
+
+/**
+ *  This method creates a new nil-tolerant mutable collection, containing the given object parameter under the specified key.
+ *
+ *  @param object The object to be stored in the collection
+ *  @param key The key under `object` should be put in
+ *  @return A nil-tolerant NSMutableDictionary (a.k.a. `FunkyNilTolerantNSMutableDictionary`).
+ *  @see Immutable counterpart `-[NSDictionary(FunkyNilTolerant) nilTolerantDictionaryWithObject:forKey:]`
+ */
++ (FunkyNilTolerantNSMutableDictionary*)nilTolerantDictionaryWithObject:(ObjectType)object forKey:(KeyType<NSCopying>)key;
+
+/**
+ *  This method creates a new nil-tolerant mutable collection, containing the original content of the passed dictionary parameter.
+ *
+ *  @return A nil-tolerant NSMutableDictionary (a.k.a. `FunkyNilTolerantNSMutableDictionary`).
+ *  @see Immutable counterpart `-[NSDictionary(FunkyNilTolerant) nilTolerantDictionaryWithDictionary:]`
+ */
++ (FunkyNilTolerantNSMutableDictionary*)nilTolerantDictionaryWithDictionary:(NSDictionary<KeyType, ObjectType>*)dictionary;
 
 @end

@@ -110,6 +110,16 @@
     return [FunkyNilTolerantNSSet set];
 }
 
++ (FunkyNilTolerantNSSet *)nilTolerantSetWithObject:(id)object
+{
+    return [FunkyNilTolerantNSSet setWithObject:object];
+}
+
++ (FunkyNilTolerantNSSet *)nilTolerantSetWithSet:(NSSet *)set
+{
+    return [FunkyNilTolerantNSSet setWithSet:set];
+}
+
 @end
 
 @implementation NSMutableSet (FunkyNilTolerant)
@@ -127,6 +137,16 @@
 + (FunkyNilTolerantNSMutableSet *)nilTolerantSetWithCapacity:(NSUInteger)capacity
 {
     return [FunkyNilTolerantNSMutableSet setWithCapacity:capacity];
+}
+
++ (FunkyNilTolerantNSMutableSet *)nilTolerantSetWithObject:(id)object
+{
+    return [FunkyNilTolerantNSMutableSet setWithObject:object];
+}
+
++ (FunkyNilTolerantNSMutableSet *)nilTolerantSetWithSet:(NSSet *)set
+{
+    return [FunkyNilTolerantNSMutableSet setWithSet:set];
 }
 
 @end
